@@ -32,7 +32,7 @@ define( 'DB_USER', 'dbmasteruser' );
 define( 'DB_PASSWORD', 'N$K+O5[({+U3EN!!FLB_0bLCtD,g<MZq' );
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'monadocs.xyz' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
