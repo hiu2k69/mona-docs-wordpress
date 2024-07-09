@@ -29,7 +29,7 @@ define( 'DB_USER', 'dbmasteruser' );
 define( 'DB_PASSWORD', ':992SA3>2jkeRp7fEE]tf_jafbp?=;x!' );
 
 /** Database hostname */
-define( 'DB_HOST', 'https://monadocs.xyz/' );
+define( 'DB_HOST', 'ls-bf0d0dbdf5408b0e7859fe0c0406a6129051c928.cpguw2umq7hh.us-east-1.rds.amazonaws.com' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
