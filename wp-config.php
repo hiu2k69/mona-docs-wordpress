@@ -20,6 +20,9 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+
+define( 'HOST', 'localhost' );
+
 define( 'DB_NAME', 'mona-wordpress-1' );
 
 /** Database username */
