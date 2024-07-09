@@ -29,7 +29,7 @@ define( 'DB_USER', 'dbmasteruser' );
 define( 'DB_PASSWORD', ':992SA3>2jkeRp7fEE]tf_jafbp?=;x!' );
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'https://monadocs.xyz/' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -58,8 +58,8 @@ define( 'LOGGED_IN_SALT',   'u_RWcP52VVOVrqx4?~pOu:=FE!R65y[WtTq01qH5II;Iq3iXc(C
 define( 'NONCE_SALT',       'VlopEnCV654>8i [hS@N$Jy^%s]q..qJC$.%a>7.2!_sQcWvG[<_Dcr3upmL^Qw' );
 
 
-define('WP_HOME', 'http://localhost/mona-docs-wordpress');
-define('WP_SITEURL', 'http://localhost/mona-docs-wordpress');
+define('WP_HOME', 'https://monadocs.xyz/');
+define('WP_SITEURL', 'https://monadocs.xyz/');
 /**#@-*/
 
 /**
