@@ -196,7 +196,7 @@ h2.title-last-post.text-white.text-center.p-5 {
         - Last post -
             </h2>        <div class="row pb-5">
             <?php for ($i = 1; $i <= 6; $i++) { ?>
-                <div class="col-lg-6 col-md-6 col-6 mb-3">
+                <div class="col-lg-6 col-md-6 col-12 mb-3">
                     <div class="box-last">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
                         <div class="box-content-t">
@@ -216,7 +216,7 @@ h2.title-last-post.text-white.text-center.p-5 {
         - Monad hub Tweet -
             </h2>
         <div class="row pb-5">
-            <div class="col-lg-4 col-md-4 col-6 mb-5">
+        <div class="col-lg-4 col-md-4 col-12 mb-5">
                 <div class="box-last-post" id="tweet-container">
                     <blockquote class="twitter-tweet">
                         <p lang="qst" dir="ltr">Wow <a href="https://t.co/U5moS9rg8z">https://t.co/U5moS9rg8z</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1810420372635799765?ref_src=twsrc%5Etfw">July 8, 2024</a>
@@ -224,7 +224,7 @@ h2.title-last-post.text-white.text-center.p-5 {
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-6 mb-5">
+            <div class="col-lg-4 col-md-4 col-12 mb-5">
                 <div class="box-last-post" id="tweet-container">
                     <blockquote class="twitter-tweet">
                         <p lang="qst" dir="ltr">Wow <a href="https://t.co/U5moS9rg8z">https://t.co/U5moS9rg8z</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1810420372635799765?ref_src=twsrc%5Etfw">July 8, 2024</a>
@@ -232,7 +232,7 @@ h2.title-last-post.text-white.text-center.p-5 {
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-6 mb-5">
+            <div class="col-lg-4 col-md-4 col-12 mb-5">
                 <div class="box-last-post" id="tweet-container">
                     <blockquote class="twitter-tweet">
                         <p lang="qst" dir="ltr">Wow <a href="https://t.co/U5moS9rg8z">https://t.co/U5moS9rg8z</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1810420372635799765?ref_src=twsrc%5Etfw">July 8, 2024</a>
