@@ -5,7 +5,16 @@
 	Order Deny,Allow
 	Deny from all
 </IfModule>
-
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
 # Apache 2.4
 <IfModule mod_authz_core.c>
 	Require all denied
@@ -13,10 +22,6 @@
 
 # Akismet CSS and JS
 <FilesMatch "^(form\.js|akismet(-frontend|-admin)?\.js|akismet(-admin)?(-rtl)?\.css|inter\.css)$">
-	<IfModule !mod_authz_core.c>
-		Allow from all
-	</IfModule>
-	
 	<IfModule mod_authz_core.c>
 		Require all granted
 	</IfModule>
@@ -24,11 +29,8 @@
 
 # Akismet images
 <FilesMatch "^(logo-(a|full)-2x\.png|akismet-refresh-logo\.svg|akismet-refresh-logo@2x\.png|arrow-left\.svg|icon-external\.svg)$">
-	<IfModule !mod_authz_core.c>
-		Allow from all
-	</IfModule>
-	
 	<IfModule mod_authz_core.c>
 		Require all granted
 	</IfModule>
 </FilesMatch>
+

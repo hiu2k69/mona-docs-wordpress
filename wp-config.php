@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'mona-wordpress' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'dbmasteruser' );
 
 /** Database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', ':992SA3>2jkeRp7fEE]tf_jafbp?=;x!' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
