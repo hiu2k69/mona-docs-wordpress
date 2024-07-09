@@ -20,9 +20,6 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-
-define( 'HOST', 'localhost' );
-
 define( 'DB_NAME', 'mona-wordpress-1' );
 
 /** Database username */
@@ -32,7 +29,7 @@ define( 'DB_USER', 'dbmasteruser' );
 define( 'DB_PASSWORD', 'N$K+O5[({+U3EN!!FLB_0bLCtD,g<MZq' );
 
 /** Database hostname */
-define( 'DB_HOST', 'monadocs.xyz' );
+define( 'DB_HOST', 'ls-d93df6d26015fd38120cff5e11561bac935e4af9.cpguw2umq7hh.us-east-1.rds.amazonaws.com' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -59,8 +56,6 @@ define( 'AUTH_SALT',        'Wztq[(v YZP6[ok!&lxyJ-e6G^#;<Ux+-zZ6upM).%dTj]v<2Gr
 define( 'SECURE_AUTH_SALT', 'AO>IC2_!/ZO!A0rqdes/MUr<?fFMzP(iL$GDoad G!uS$h6RN1</<c5?qxL9Wca' );
 define( 'LOGGED_IN_SALT',   'u_RWcP52VVOVrqx4?~pOu:=FE!R65y[WtTq01qH5II;Iq3iXc(Cp_upBE.yc8e' );
 define( 'NONCE_SALT',       'VlopEnCV654>8i [hS@N$Jy^%s]q..qJC$.%a>7.2!_sQcWvG[<_Dcr3upmL^Qw' );
-
-
 
 /**#@-*/
 
