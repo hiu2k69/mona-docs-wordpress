@@ -28,7 +28,7 @@
     <div class="header-container">
         <div class="site-branding">
             <a href="<?php echo home_url(); ?>" class="logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/monad.png" alt="Logo">
             </a>
         </div>
         <nav id="site-navigation" class="main-navigation">

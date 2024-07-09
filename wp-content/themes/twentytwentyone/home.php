@@ -167,7 +167,7 @@ h2.title-last-post.text-white.text-center.p-5 {
 <section class="main-content-center">
     <div class="container">
         <div class="h2 title-content-main text-center p-5">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Description" class="img-title"> - All you need is here
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/monad.png" alt="Description" class="img-title"> - All you need is here
         </div>
         <div class="row pb-5">
             <?php for ($i = 1; $i <= 9; $i++) { ?>
