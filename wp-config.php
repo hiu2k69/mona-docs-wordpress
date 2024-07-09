@@ -23,13 +23,13 @@
 define( 'DB_NAME', 'mona-wordpress' );
 
 /** Database username */
-define( 'DB_USER', 'dbmasteruser' );
+define( 'DB_USER', 'root' );
 
 /** Database password */
-define( 'DB_PASSWORD', ':992SA3>2jkeRp7fEE]tf_jafbp?=;x!' );
+define( 'DB_PASSWORD', '' );
 
 /** Database hostname */
-define( 'DB_HOST', 'ls-bf0d0dbdf5408b0e7859fe0c0406a6129051c928.cpguw2umq7hh.us-east-1.rds.amazonaws.com' );
+define( 'DB_HOST', 'localhost' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -58,8 +58,8 @@ define( 'LOGGED_IN_SALT',   'u_RWcP52VVOVrqx4?~pOu:=FE!R65y[WtTq01qH5II;Iq3iXc(C
 define( 'NONCE_SALT',       'VlopEnCV654>8i [hS@N$Jy^%s]q..qJC$.%a>7.2!_sQcWvG[<_Dcr3upmL^Qw' );
 
 
-define('WP_HOME', 'https://monadocs.xyz/');
-define('WP_SITEURL', 'https://monadocs.xyz/');
+define('WP_HOME', 'http://localhost/mona-docs-wordpress');
+define('WP_SITEURL', 'http://localhost/mona-docs-wordpress');
 /**#@-*/
 
 /**
