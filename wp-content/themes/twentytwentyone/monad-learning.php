@@ -24,7 +24,20 @@
 nav#site-navigation {
     position: absolute;
     right: 18%;
+}a.see-more img {
+    width: 25px !important;
 }
+
+h1.text-2xl.font-bold.text-white.text-foreground {
+    color: white !important;
+    font-family: 'Segoe UI';
+}
+h2.name-title.ml-5.art {
+    margin-left: 23px;
+}
+/* // */
+
+
    </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -127,24 +140,23 @@ nav#site-navigation {
             <div class="tab-container pt-5 ">
                <div class="tab active" data-target="monad-learning"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn about monad.svg" alt=""><h2 class="name-title ml-5 active">Learn about Monad</h2>
                </div>
-               <div class="tab" data-target="tab2"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad ecosystem.svg" alt=""><h2 class="name-title ml-5">Monad Ecosystem</h2>
+               <div class="tab" data-target="tab2"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad ecosystem.svg" alt=""><h2 class="name-title ml-5"> &nbsp;Monad Ecosystem</h2>
                </div>
                <div class="tab" data-target="tab3"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community News.svg" alt=""><h2 class="name-title ml-5">Community News</h2>
                </div>
                <div class="tab" data-target="community-culture"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community culture.svg" alt=""><h2 class="name-title ml-5">Community Culture</h2>
                </div>
-               <div class="tab" data-target="contribute"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/How to contribute.svg" alt=""><h2 class="name-title ml-5">How to Contribute</h2>
+               <div class="tab" data-target="contribute"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/How to contribute.svg" alt=""><h2 class="name-title ml-5">&nbsp;How to Contribute</h2>
                </div>
-               <div class="tab" data-target="tab6"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Artists and Gallery.svg" alt=""><h2 class="name-title ml-5">Artists and Gallery</h2>
+               <div class="tab " data-target="tab6"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Artists and Gallery.svg" alt=""><h2 class="name-title ml-5 art">Artists and Gallery</h2>
                </div>
-               <div class="tab" data-target="member"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad team members.svg" alt=""><h2 class="name-title ml-5">Monad Team Members</h2>
+               <div class="tab" data-target="member"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad team members.svg" alt=""><h2 class="name-title ml-5">Team Members</h2>
                </div>
-               <div class="tab" data-target="tab8"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monacomics.svg" alt=""><h2 class="name-title ml-5">Monacomics</h2>
+               <div class="tab" data-target="tab8"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monacomics.svg" alt=""><h2 class="name-title ml-5"> &nbsp; Monacomics</h2>
                </div>
-               <div class="tab" data-target="faq"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/FAQs.svg" alt=""><h2 class="name-title ml-5">FAQs</h2>
+               <div class="tab" data-target="faq"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/FAQs.svg" alt=""><h2 class="name-title ml-5 art">&nbsp;FAQs</h2>
                </div>
             </div>
-         
          </div>
          <div class="col-lg-8">
             <div class="tab-content mt-5">
@@ -167,7 +179,7 @@ nav#site-navigation {
                               <div class="box-content-t1">
                                  <h2>10 funfacts in monad community</h2>
                                  <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
-                                 <span>4/7/2024</span>
+                                 <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
                               </div>
                            </div>
                         </div>
@@ -263,7 +275,7 @@ nav#site-navigation {
                <div class="tab-pane" id="contribute">
                   <div class="container pb-5">
                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5">
-                     <h1 class="text-2xl font-bold text-white text-foreground">Monad: High-performance EVM blockchain</h1>
+                     <h1 class="text-2xl font-bold text-white text-foreground title">Monad: High-performance EVM blockchain</h1>
                      <p class="mt-4 p-content italic">You've probably heard about the Monad blockchain by now.</p>
                      <p class="mt-4 p-content italic">
                         Basically, it's a platform that takes the technological design of the blockchain and optimizes it for fast and reliable transaction processing, making it attractive for enterprise-level
@@ -322,16 +334,16 @@ nav#site-navigation {
                         </h2>
                         <div class="row pb-5">
                            <?php for ($i = 1; $i <= 4; $i++) { ?>
-                           <div class="col-lg-6 col-md-6 col-12 mb-3">
-                              <div class="box-last">
-                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
-                                 <div class="box-content-t">
-                                    <h2>10 funfacts in monad community</h2>
-                                    <p>This is a place containing articles to help you understand monads and their technology; we will</p>
-                                    <span>4/7/2024</span>
-                                 </div>
-                              </div>
-                           </div>
+                          <div class="col-lg-6 col-md-6 col-12 mb-3">
+                    <div class="box-last">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
+                        <div class="box-content-t1">
+                            <h2>10 funfacts in monad community</h2>
+                            <p>This is a place containing articles to help you understand monads and their technology; we will</p>
+                            <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
+                        </div>
+                    </div>
+                </div>
                            <?php } ?>
                         </div>
                      </div>
@@ -340,7 +352,7 @@ nav#site-navigation {
                <div class="tab-pane" id="member">
                   <div class="container pb-5">
                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5">
-                     <h1 class="text-2xl font-bold text-white text-foreground">Monad: High-performance EVM blockchain</h1>
+                     <h1 class="text-2xl font-bold text-white text-foreground title">Monad: High-performance EVM blockchain</h1>
                      <p class="mt-4 p-content italic">You've probably heard about the Monad blockchain by now.</p>
                      <p class="mt-4 p-content italic">
                         Basically, it's a platform that takes the technological design of the blockchain and optimizes it for fast and reliable transaction processing, making it attractive for enterprise-level
@@ -399,16 +411,16 @@ nav#site-navigation {
                         </h2>
                         <div class="row pb-5">
                            <?php for ($i = 1; $i <= 4; $i++) { ?>
-                           <div class="col-lg-6 col-md-6 col-12 mb-3">
-                              <div class="box-last">
-                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
-                                 <div class="box-content-t">
-                                    <h2>10 funfacts in monad community</h2>
-                                    <p>This is a place containing articles to help you understand monads and their technology; we will</p>
-                                    <span>4/7/2024</span>
-                                 </div>
-                              </div>
-                           </div>
+                          <div class="col-lg-6 col-md-6 col-12 mb-3">
+                    <div class="box-last">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
+                        <div class="box-content-t1">
+                            <h2>10 funfacts in monad community</h2>
+                            <p>This is a place containing articles to help you understand monads and their technology; we will</p>
+                            <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
+                        </div>
+                    </div>
+                </div>
                            <?php } ?>
                         </div>
                      </div>
@@ -417,7 +429,7 @@ nav#site-navigation {
                <div class="tab-pane" id="faq">
                   <div class="container pb-5">
                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5">
-                     <h1 class="text-2xl font-bold text-white text-foreground">Monad: High-performance EVM blockchain</h1>
+                     <h1 class="text-2xl font-bold text-white text-foreground title">Monad: High-performance EVM blockchain</h1>
                      <p class="mt-4 p-content italic">You've probably heard about the Monad blockchain by now.</p>
                      <p class="mt-4 p-content italic">
                         Basically, it's a platform that takes the technological design of the blockchain and optimizes it for fast and reliable transaction processing, making it attractive for enterprise-level
@@ -476,16 +488,16 @@ nav#site-navigation {
                         </h2>
                         <div class="row pb-5">
                            <?php for ($i = 1; $i <= 4; $i++) { ?>
-                           <div class="col-lg-6 col-md-6 col-12 mb-3">
-                              <div class="box-last">
-                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
-                                 <div class="box-content-t">
-                                    <h2>10 funfacts in monad community</h2>
-                                    <p>This is a place containing articles to help you understand monads and their technology; we will</p>
-                                    <span>4/7/2024</span>
-                                 </div>
-                              </div>
-                           </div>
+                          <div class="col-lg-6 col-md-6 col-12 mb-3">
+                    <div class="box-last">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
+                        <div class="box-content-t1">
+                            <h2>10 funfacts in monad community</h2>
+                            <p>This is a place containing articles to help you understand monads and their technology; we will</p>
+                            <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
+                        </div>
+                    </div>
+                </div>
                            <?php } ?>
                         </div>
                      </div>

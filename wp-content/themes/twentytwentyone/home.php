@@ -40,7 +40,7 @@ transition: all .2s ease-in-out;
 .box-image-last:hover {
 transform: scale(1.2);}
 .box-content-t {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -48,6 +48,13 @@ transform: scale(1.2);}
 h2.title-last-post.text-white.text-center.p-5 {
     font-weight: revert;
     font-size: 47px;
+    font-family: 'Segoe UI';
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    text-align: center;
+    font: normal normal bold 47px / 63px Segoe UI;
+    letter-spacing: 0px;
+    color: #FFFFFF;
 }
 .box-content-t h2 {
     font-size: 24px;
@@ -59,13 +66,17 @@ h2.title-last-post.text-white.text-center.p-5 {
     flex-grow: 1;
     margin: 10px 0;
     font-size: 20px;
-	color: #E4ECF2;
-	
+    color: #E4ECF2;
+    text-align: left;
+    font: normal normal normal 17px / 27px Segoe UI;
+    letter-spacing: 0px;
 }
 
 .box-content-t span {
-    font-size: 20px;
+    font-size: 18px;
     color: #00FFF2;
+    font-family: 'Segoe UI';
+
 	
 }
 
@@ -106,6 +117,7 @@ h2.title-last-post.text-white.text-center.p-5 {
     right: 10px;
     top: 10px;
     color: #836EF9;
+    font-family: 'Segoe UI';
     border-radius: 20px;
 }
 
@@ -128,12 +140,16 @@ h2.title-last-post.text-white.text-center.p-5 {
         color: #E4ECF2;
     }
 
-    .box-content a {
-        color: #24C1E0;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 1rem;
-    }
+    .box-content p {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #E4ECF2;
+    text-align: left;
+    font: normal normal normal 19px / 26px Segoe UI;
+    letter-spacing: 0px;
+    color: #E4ECF2;
+    font-family: 'Segoe UI';
+}
 
     .box-content a:hover {
         text-decoration: underline;
@@ -153,10 +169,13 @@ h2.title-last-post.text-white.text-center.p-5 {
         border-radius: 10px;
         font-size: 1rem;
         transition: background-color 0.3s ease;
+        font-family: 'Segoe UI';
+    font-weight: bolder;
     }
 
     a.see-more:hover {
-        background-color: #1b9dbb;
+        background-color: #00FFF2;
+        color:#2F2F37;
     }
 
 
@@ -180,19 +199,21 @@ h2.title-last-post.text-white.text-center.p-5 {
         <div class="row pb-5">
             <?php for ($i = 1; $i <= 9; $i++) { ?>
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="box-content-main">
+                <a href="<?php echo home_url('/monad-learning'); ?>" target="_blank">
+                <div class="box-content-main">
                         <div class="box-image">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (3).png" class alt="Description">
                         </div>
                         <div class="box-artist">
-                            Artist: <span>Linad</span>
+                         <a href="https://x.com/zhangliu_eth" target="_blank" rel="noopener noreferrer">Artist: <span>Linad</span></a>　
                         </div>
                         <div class="box-content">
                             <h3>Learn about Monad</h3>
                             <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
                             <a href="#" class="see-more">    <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" />        &nbsp;   &nbsp;  Read more</a>
                         </div>
-                    </div>
+                    </div></a>
+                    
                 </div>
             <?php } ?>
         </div>
@@ -210,7 +231,7 @@ h2.title-last-post.text-white.text-center.p-5 {
                         <div class="box-content-t">
                             <h2>10 funfacts in monad community</h2>
                             <p>This is a place containing articles to help you understand monads and their technology; we will</p>
-                            <span>4/7/2024</span>
+                            <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
                         </div>
                     </div>
                 </div>
@@ -226,25 +247,19 @@ h2.title-last-post.text-white.text-center.p-5 {
         <div class="row pb-5">
         <div class="col-lg-4 col-md-4 col-12 mb-5">
                 <div class="box-last-post" id="tweet-container">
-                    <blockquote class="twitter-tweet">
-                        <p lang="qst" dir="ltr">Wow <a href="https://t.co/U5moS9rg8z">https://t.co/U5moS9rg8z</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1810420372635799765?ref_src=twsrc%5Etfw">July 8, 2024</a>
-                    </blockquote>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">i and Lollipop hang out and put ice bear into jail, that&#39;s life :)))<br>Thanks <a href="https://twitter.com/Hagen_web3?ref_src=twsrc%5Etfw">@Hagen_web3</a> for put me into his art, i love itttttttttttttttttttttttttttttttttttttttttttttt <a href="https://t.co/P1qIlDUebz">https://t.co/P1qIlDUebz</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1808699644144406603?ref_src=twsrc%5Etfw">July 4, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-12 mb-5">
                 <div class="box-last-post" id="tweet-container">
-                    <blockquote class="twitter-tweet">
-                        <p lang="qst" dir="ltr">Wow <a href="https://t.co/U5moS9rg8z">https://t.co/U5moS9rg8z</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1810420372635799765?ref_src=twsrc%5Etfw">July 8, 2024</a>
-                    </blockquote>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Omgggg i love itttttttt <a href="https://t.co/uvgTB6P2hQ">https://t.co/uvgTB6P2hQ</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1808895817132167320?ref_src=twsrc%5Etfw">July 4, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-12 mb-5">
                 <div class="box-last-post" id="tweet-container">
-                    <blockquote class="twitter-tweet">
-                        <p lang="qst" dir="ltr">Wow <a href="https://t.co/U5moS9rg8z">https://t.co/U5moS9rg8z</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1810420372635799765?ref_src=twsrc%5Etfw">July 8, 2024</a>
-                    </blockquote>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Recap NPC DRAW EVENT Last night<br>ⓃⓅⒸ 18 pfps was made by <a href="https://twitter.com/medusa_apple?ref_src=twsrc%5Etfw">@medusa_apple</a> <br>ⓃⓅⒸ 18 ID Card &amp; animated pfps was made by me <a href="https://twitter.com/zhangliu_eth?ref_src=twsrc%5Etfw">@zhangliu_eth</a> <br>ⓃⓅⒸ Gathering great singers like:<br>♥️ <a href="https://twitter.com/cryptoaga_?ref_src=twsrc%5Etfw">@cryptoaga_</a> Sweet prince gunha<br>♥️ <a href="https://twitter.com/reganz211?ref_src=twsrc%5Etfw">@reganz211</a> Reganz the king of sad song<br>♥️ <a href="https://twitter.com/Toadster69?ref_src=twsrc%5Etfw">@Toadster69</a> Leading the… <a href="https://t.co/Iqvhknf7nu">pic.twitter.com/Iqvhknf7nu</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1810521540456591582?ref_src=twsrc%5Etfw">July 9, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>

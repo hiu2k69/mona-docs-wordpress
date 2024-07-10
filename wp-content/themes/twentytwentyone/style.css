@@ -2698,6 +2698,8 @@ figure.wp-caption a:focus img {
     color: #fff;
     text-decoration: none;
     font-size: 20px !important;
+	font-family: 'Segoe UI';
+
 }
 
 .main-navigation .menu li a:hover {
@@ -7669,22 +7671,6 @@ p select.wpcf7-form-control.wpcf7-select {
 	color : #61616D;
 }
 
-body{
-	font-family: 'mona-font'!important ;
-}
-
-
-@font-face {
-    font-family: 'mona-font';
-    src: url('<?php echo get_template_directory_uri(); ?>/assets/font/ORIOND.TTF') format('ORIOND'),
-         url('<?php echo get_template_directory_uri(); ?>/assets/font/segoeui.ttf') format('segoeui'),
-         url('<?php echo get_template_directory_uri(); ?>/assets/font/segoeuib.ttf') format('segoeuib');
-    font-weight: normal;
-    font-style: normal;
-}
-*{
-	font-family: 'mona-font'!important ;
-}
 
 .box-content {
     margin: 1rem;
@@ -7722,6 +7708,8 @@ section.second{
 .h2.title-content-main.text-center.p-5 {
     font-size: 47px;
     color: white;
+	font-family: 'Segoe UI';
+    font-weight: bolder;
 }
 img.img-title {
     width: 220px;
@@ -7823,12 +7811,27 @@ h2.title-last-post.text-white.text-center.p-5 {
    }
    h1.text-3xl.font-bold.text-white {
     font-size: 47px;
+	font-family: 'Segoe UI';
+
 }
 
 
-   .bg-090909 {
-   background: #090909;
-   }
+.bg-090909 {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-090909::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #090909;
+    opacity: 0.54;
+    z-index: -1;
+}
    .tab {
    font: normal normal 600 22px/30px Segoe UI;
    letter-spacing: 0px;
@@ -7846,8 +7849,9 @@ h2.title-last-post.text-white.text-center.p-5 {
 }
 
    .box-top {
-	width: 145px;
-    height: 204px;
+	width: 167px;
+    height: 230px;
+
     background: var(--unnamed-color-836ef9) 0% 0% no-repeat padding-box;
     background: #836EF9 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000059;
@@ -7878,6 +7882,7 @@ p.dis {
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
+	margin-top: 20px;
 }
    .name-title {
     transition: color 0.3s;  /* Smooth transition effect */
@@ -7945,7 +7950,7 @@ p.text-sm.text-purple-400.mb-6 {
     color: #E4ECF2;
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
-    font: normal normal normal 20px / 27px Segoe UI;
+    font: normal normal normal 17px / 27px Segoe UI;
     letter-spacing: 0px;
     color: #E4ECF2;
     opacity: 1;
@@ -7967,10 +7972,12 @@ span.text-right {
     color: #FFFFFF;
     opacity: 1;
 }
-   .box-content-t1 span {
-   font-size: 20px;
-   color: #00FFF2;
-   }
+.box-content-t1 span {
+    font-size: 18px;
+    color: #00FFF2;
+    font-family: 'Segoe UI';
+    display: flex;
+}
    .search-container {
    position: relative;
    }
@@ -8015,4 +8022,28 @@ span.text-right {
    position: relative;
    }h2.name-title.ml-5 {
     font-size: 20px;
+	font-family: 'Segoe UI';
+    letter-spacing: 0px;
+}
+
+
+@font-face {
+    font-family: 'ORIOND';
+    src: local("SourceCodePro"), url('../twentytwentyone/assets/font/ORIOND.TTF') format("truetype")
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: local("SourceCodePro"), url('../twentytwentyone/assets/font/segoeui.ttf') format("truetype")
+}
+@font-face {
+    font-family: 'segoeuib';
+    src: local("SourceCodePro"), url('../twentytwentyone/assets/font/segoeuib.ttf') format("truetype")
+}
+
+@font-face {
+    font-family: 'seguisb.ttf';
+    src: local("SourceCodePro"), url('../twentytwentyone/assets/font/seguisb.ttf') format("truetype")
+}
+img.img-logo-footer.img-fluid {
+    width: 60%;
 }

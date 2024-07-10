@@ -18,7 +18,7 @@
 
 <?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
-<footer class="footer-m" style="background:#07070A; padding: 50px 0;">
+<footer class="footer-m" style="background:#07070A; padding: 20px 0;">
     <div class="container pt-3">
         <div class="row">
             <div class="col-lg-3">
