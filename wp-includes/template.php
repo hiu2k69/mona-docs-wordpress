@@ -566,7 +566,7 @@ function get_single_template() {
 		$templates[] = "single-{$object->post_type}.php";
 	}
 
-	$templates[] = 'single.php';
+	$templates[] = 'monad-learning.php';
 
 	return get_query_template( 'single', $templates );
 }

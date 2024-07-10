@@ -20,6 +20,8 @@
     <?php wp_head(); ?>
     <title><?php wp_title(); ?></title>
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.png">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/all.min.css')">
+
 </head>
 
 <body <?php body_class(); ?>>

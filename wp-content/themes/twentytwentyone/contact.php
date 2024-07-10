@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                         data-aos-easing="ease-in-sine" style="font-size:40px">WE ARE HIRING ! </h1>
                     <h1 class="text-white text-center" data-aos="fade-right" data-aos-offset="300" data-aos-delay="300"
                         data-aos-easing="ease-in-sine" style="font-size:30px">
-                        Come and work with us. BridSoft hires top trained professionals
+                        Come and work with us.  hires top trained professionals
                     <br>
 with a curiosity for new things, growth and self-fulfilment.
                     </h1>

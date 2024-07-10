@@ -4383,23 +4383,7 @@ section.section-three-service3.p-30 ul.slick-dots {
     bottom: -25px;
 }
 
-.banner-header.container-fluid {
-	padding: 200px;
-	background-image: url('https://bridsoft.com/wp-content/uploads/2022/12/bac.webp');
-	/* background-repeat: round; */
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
 
-.banner-contact.container-fluid {
-	padding: 200px;
-	background-image: url('https://bridsoft.com/wp-content/uploads/2022/12/pexels-photo-6476263.webp');
-	/* background-repeat: round; */
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
 footer#colophon {
 	max-width: 1920px;
 	padding: 20px;
@@ -6881,14 +6865,7 @@ article.article-list__item2 h2.text-left.pt-0.article-list__item__title {
     z-index: 999;
 }
 
-.get_started_area {
-    padding: 50px 0px 80px;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    background-image: url(https://bridsoft.com/wp-content/uploads/2022/12/orient-homepage-background-9-1.jpg);
-	transform: skewY(-5deg);
-}
+
 .get_started_area  .col-lg-6.d-flex.align-items-center {
     transform: skewY(4deg);
     margin-top: 50px;
@@ -7085,10 +7062,7 @@ h2.f_700.f_p.f_size_40.l_height50.mb_20.wow.fadeInLeft {
     top: 0;
     left: 0;
 }
-.wprt-section.works {
-    background-image: url(https://bridsoft.com/wp-content/uploads/2022/12/bg-section-1.jpg);
-    background-position: center center;
-}
+
 section.about.mt-3 {
     border-top: 1px solid gray;
 }

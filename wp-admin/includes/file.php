@@ -30,6 +30,7 @@ $wp_file_descriptions = array(
 	'category.php'          => __( 'Category Template' ),
 	'tag.php'               => __( 'Tag Template' ),
 	'home.php'              => __( 'Posts Page' ),
+	'monad-learning.php'    => __( 'Monad Learing' ),
 	'search.php'            => __( 'Search Results' ),
 	'date.php'              => __( 'Date Template' ),
 	// Content.
