@@ -28,7 +28,7 @@ get_header();
 box.disclaimer1 {
     position: fixed;
     left: 2%;
-    top: 30%;
+    bottom: 10%;
     z-index: 3;
 }
 .box-image-last {
@@ -96,21 +96,20 @@ h2.title-last-post.text-white.text-center.p-5 {
     .box-image img:hover {
     transform: scale(1.2);
 }
-    .box-artist {
-        background-color: #24C1E0;
-        padding: 0.2rem 0.5rem;
-        text-align: center;
-        font-size: 0.9rem;
-        font-weight: bold;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        border-radius: 20px;
-    }
+.box-artist {
+    background-color: #00FFF2;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #836EF9;
+    border-radius: 20px;
+}
 
-    .box-artist span {
-        color: #fff;
-    }
+    
 
     .box-content {
         padding: 1rem;
@@ -148,10 +147,10 @@ h2.title-last-post.text-white.text-center.p-5 {
     a.see-more {
         display: inline-block;
         padding: 0.5rem 1rem;
-        background-color: #24C1E0;
+        background-color: #836EF9;
         color: #fff;
         text-decoration: none;
-        border-radius: 20px;
+        border-radius: 10px;
         font-size: 1rem;
         transition: background-color 0.3s ease;
     }
@@ -191,7 +190,7 @@ h2.title-last-post.text-white.text-center.p-5 {
                         <div class="box-content">
                             <h3>Learn about Monad</h3>
                             <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
-                            <a href="#" class="see-more">Read more</a>
+                            <a href="#" class="see-more">    <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" />        &nbsp;   &nbsp;  Read more</a>
                         </div>
                     </div>
                 </div>
@@ -260,8 +259,8 @@ h2.title-last-post.text-white.text-center.p-5 {
                     </p>
                 </div>
                 <div class="box-bottom d-flex mt-2">
-                <img aria-hidden="true" alt="chat-bubble" src="https://openui.fly.dev/openui/24x24.svg?text=💬" />
-                &nbsp;   &nbsp;  <span class="text-right text-black">Contact Us</span>
+                <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact.svg" />
+                &nbsp;   &nbsp;  <span class="text-right text-white">Contact Us</span>
                 </div>
             </box>
 </div>

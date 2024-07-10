@@ -10,6 +10,22 @@
    
    get_header();
    ?>
+   <style>
+      .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+nav#site-navigation {
+    position: absolute;
+    right: 18%;
+}
+   </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
@@ -108,60 +124,31 @@
    <div class="container-fluid ">
       <div class="row">
          <div class="col-lg-2 relative  bg-090909">
-            <div class="tab-container pt-3  ">
-               <div class="tab active" data-target="tab1">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn about monad.svg" alt=""> &nbsp; 
-                  <h2 class="name-title ml-5 active">Learn about Monad</h2>
+            <div class="tab-container pt-5 ">
+               <div class="tab active" data-target="monad-learning"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn about monad.svg" alt=""><h2 class="name-title ml-5 active">Learn about Monad</h2>
                </div>
-               <div class="tab" data-target="tab2">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad ecosystem.svg" alt=""> &nbsp; 
-                  <h2 class="name-title ml-5">Monad Ecosystem</h2>
+               <div class="tab" data-target="tab2"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad ecosystem.svg" alt=""><h2 class="name-title ml-5">Monad Ecosystem</h2>
                </div>
-               <div class="tab" data-target="tab3">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community News.svg" alt=""> &nbsp; 
-                  <h2 class="name-title ml-5">Community News</h2>
+               <div class="tab" data-target="tab3"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community News.svg" alt=""><h2 class="name-title ml-5">Community News</h2>
                </div>
-               <div class="tab" data-target="tab4">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community culture.svg" alt=""> &nbsp; 
-                  <h2 class="name-title ml-5">Community Culture</h2>
+               <div class="tab" data-target="community-culture"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community culture.svg" alt=""><h2 class="name-title ml-5">Community Culture</h2>
                </div>
-               <div class="tab" data-target="contribute">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/How to contribute.svg" alt=""> &nbsp; 
-                  <h2 class="name-title ml-5">How to Contribute</h2>
+               <div class="tab" data-target="contribute"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/How to contribute.svg" alt=""><h2 class="name-title ml-5">How to Contribute</h2>
                </div>
-               <div class="tab" data-target="tab6">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Artists and Gallery.svg" alt=""> &nbsp; 
-                  <h2 class="name-title ml-5">Artists and Gallery</h2>
+               <div class="tab" data-target="tab6"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Artists and Gallery.svg" alt=""><h2 class="name-title ml-5">Artists and Gallery</h2>
                </div>
-               <div class="tab" data-target="member">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad team members.svg" alt=""> &nbsp; 
-                  <h2 class="name-title ml-5">Monad Team Members</h2>
+               <div class="tab" data-target="member"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad team members.svg" alt=""><h2 class="name-title ml-5">Monad Team Members</h2>
                </div>
-               <div class="tab" data-target="tab8">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monacomics.svg" alt=""> &nbsp; 
-                  <h2 class="name-title ml-5">Monacomics</h2>
+               <div class="tab" data-target="tab8"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monacomics.svg" alt=""><h2 class="name-title ml-5">Monacomics</h2>
                </div>
-               <div class="tab" data-target="faq">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/FAQs.svg" alt=""> &nbsp; 
-                  <h2 class="name-title ml-5">FAQs</h2>
+               <div class="tab" data-target="faq"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/FAQs.svg" alt=""><h2 class="name-title ml-5">FAQs</h2>
                </div>
             </div>
-            <box class="disclaimer ">
-                <div class="box-top">
-                    <h1 class="title-disc text-white text-bold">Disclaimer</h1>
-                    <p class="dis">
-                    "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
-                    </p>
-                </div>
-                <div class="box-bottom d-flex mt-2">
-                <img aria-hidden="true" alt="chat-bubble" src="https://openui.fly.dev/openui/24x24.svg?text=💬" />
-                &nbsp;   &nbsp;   <span class="text-right text-black">Contact Us</span>
-                </div>
-            </box>
+         
          </div>
          <div class="col-lg-8">
             <div class="tab-content mt-5">
-               <div class="tab-pane active" id="tab1">
+               <div class="tab-pane active" id="monad-learning">
                   <div class="container">
                      <div class="flex justify-between items-center mb-4">
                         <h1 class="text-3xl font-bold text-white">Learn about monad</h1>
@@ -192,7 +179,8 @@
                   <div class="p-3 from-blue-900 to-green-900 text-white min-h-screen">
                      <div class=" mx-auto">
                         <div class="flex justify-between items-center mb-4">
-                           <h1 class="text-3xl font-bold">Monad ecosystem</h1>
+                           <h1 class="text-3xl font-bold text-white">Monad ecosystem</h1>
+
                            <div class="relative">
                               <input type="text" placeholder="Search" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
                               <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
@@ -206,7 +194,7 @@
                               <thead>
                                  <tr class="text-left border- border-zinc-700">
                                     <th class="py-3 px-4">Dapps</th>
-                                    <th class="py-3 px-4">Field <img aria-hidden="true" alt="filter" src="https://openui.fly.dev/openui/16x16.svg?text=🔽" class="inline-block ml-1" /></th>
+                                    <th class="py-3 px-4">Field</th>
                                     <th class="py-3 px-4">Fund raise</th>
                                     <th class="py-3 px-4 text-center">Social accounts</th>
                                  </tr>
@@ -245,7 +233,7 @@
                      </div>
                   </div>
                </div>
-               <div class="tab-pane" id="tab4">
+               <div class="tab-pane" id="community-culture">
                   <div class="container">
                      <div class="flex justify-between items-center mb-4">
                         <h1 class="text-3xl font-bold text-white">Community culture</h1>
@@ -276,13 +264,13 @@
                   <div class="container pb-5">
                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5">
                      <h1 class="text-2xl font-bold text-white text-foreground">Monad: High-performance EVM blockchain</h1>
-                     <p class="mt-4 p-content">You've probably heard about the Monad blockchain by now.</p>
-                     <p class="mt-4 p-content">
+                     <p class="mt-4 p-content italic">You've probably heard about the Monad blockchain by now.</p>
+                     <p class="mt-4 p-content italic">
                         Basically, it's a platform that takes the technological design of the blockchain and optimizes it for fast and reliable transaction processing, making it attractive for enterprise-level
                         applications and financial services.
                      </p>
-                     <p class="mt-4 p-content">In this guide, we’ll explore Monad’s origin story and dive into its tech to highlight everything you need to know.</p>
-                     <p class="mt-4 p-content">Let’s get right to it!</p>
+                     <p class="mt-4 p-content italic">In this guide, we’ll explore Monad’s origin story and dive into its tech to highlight everything you need to know.</p>
+                     <p class="mt-4 p-content italic mb-2">Let’s get right to it!</p>
                      <h1 class="text-2xl font-bold text-white text-foreground">Monad origin story</h2>
                      <p class="mt-4 p-content">
                         Monad Labs was founded by <span class="text-muted-foreground">[Name]</span>, <span class="text-muted-foreground">[Name]</span>, and <span class="text-muted-foreground">[Name]</span> in 2022.
@@ -353,13 +341,13 @@
                   <div class="container pb-5">
                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5">
                      <h1 class="text-2xl font-bold text-white text-foreground">Monad: High-performance EVM blockchain</h1>
-                     <p class="mt-4 p-content">You've probably heard about the Monad blockchain by now.</p>
-                     <p class="mt-4 p-content">
+                     <p class="mt-4 p-content italic">You've probably heard about the Monad blockchain by now.</p>
+                     <p class="mt-4 p-content italic">
                         Basically, it's a platform that takes the technological design of the blockchain and optimizes it for fast and reliable transaction processing, making it attractive for enterprise-level
                         applications and financial services.
                      </p>
-                     <p class="mt-4 p-content">In this guide, we’ll explore Monad’s origin story and dive into its tech to highlight everything you need to know.</p>
-                     <p class="mt-4 p-content">Let’s get right to it!</p>
+                     <p class="mt-4 p-content italic">In this guide, we’ll explore Monad’s origin story and dive into its tech to highlight everything you need to know.</p>
+                     <p class="mt-4 p-content italic mb-2">Let’s get right to it!</p>
                      <h1 class="text-2xl font-bold text-white text-foreground">Monad origin story</h2>
                      <p class="mt-4 p-content">
                         Monad Labs was founded by <span class="text-muted-foreground">[Name]</span>, <span class="text-muted-foreground">[Name]</span>, and <span class="text-muted-foreground">[Name]</span> in 2022.
@@ -430,13 +418,13 @@
                   <div class="container pb-5">
                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5">
                      <h1 class="text-2xl font-bold text-white text-foreground">Monad: High-performance EVM blockchain</h1>
-                     <p class="mt-4 p-content">You've probably heard about the Monad blockchain by now.</p>
-                     <p class="mt-4 p-content">
+                     <p class="mt-4 p-content italic">You've probably heard about the Monad blockchain by now.</p>
+                     <p class="mt-4 p-content italic">
                         Basically, it's a platform that takes the technological design of the blockchain and optimizes it for fast and reliable transaction processing, making it attractive for enterprise-level
                         applications and financial services.
                      </p>
-                     <p class="mt-4 p-content">In this guide, we’ll explore Monad’s origin story and dive into its tech to highlight everything you need to know.</p>
-                     <p class="mt-4 p-content">Let’s get right to it!</p>
+                     <p class="mt-4 p-content italic">In this guide, we’ll explore Monad’s origin story and dive into its tech to highlight everything you need to know.</p>
+                     <p class="mt-4 p-content italic mb-2">Let’s get right to it!</p>
                      <h1 class="text-2xl font-bold text-white text-foreground">Monad origin story</h2>
                      <p class="mt-4 p-content">
                         Monad Labs was founded by <span class="text-muted-foreground">[Name]</span>, <span class="text-muted-foreground">[Name]</span>, and <span class="text-muted-foreground">[Name]</span> in 2022.
@@ -505,8 +493,19 @@
                </div>
             </div>
          </div>
-         <div class="col-lg-2">
-            
+         <div class="col-lg-1">
+         <box class="disclaimer ">
+                <div class="box-top">
+                    <h1 class="title-disc text-white text-bold">Disclaimer</h1>
+                    <p class="dis">
+                    "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
+                    </p>
+                </div>
+                <div class="box-bottom d-flex mt-2">
+                <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact.svg" />
+                &nbsp;   &nbsp;  <span class="text-right text-white">Contact Us</span>
+                </div>
+            </box>
          </div>
       </div>
    </div>
@@ -535,17 +534,16 @@
    });
 </script>
 <script>
-   const data = [
-     { dapp: 'DE-fi', field: '5M', fund: '5M' },
-     { dapp: 'Liquidity', field: '5M', fund: '5M' },
-     { dapp: 'NFTs', field: '-', fund: '-' },
-     { dapp: 'Stablecoin', field: '2M', fund: '2M' },
-     { dapp: 'NFTs', field: '-', fund: '-' },
-     { dapp: 'Stablecoin', field: '-', fund: '-' },
-     { dapp: 'Stablecoin', field: '-', fund: '-' },
-     { dapp: 'DE-fi', field: '-', fund: '-' },
-     { dapp: 'Lending/borrow', field: '-', fund: '-' },
-   ];
+ const data = [
+    { dapp: '', field: 'DE-fi', fund: '5M' },
+    { dapp: '', field: 'Liquidity', fund: '5M' },
+    { dapp: '', field: 'NFTs', fund: '-' },
+    { dapp: '', field: 'Stablecoin', fund: '2M' },
+    { dapp: '', field: 'NFTs', fund: '-' },
+    { dapp: '', field: 'Stablecoin', fund: '-' },
+    { dapp: '', field: 'DE-fi', fund: '-' },
+    { dapp: '', field: 'Lending/borrow', fund: '-' },
+];
    
    const tableBody = document.getElementById('table-body');
    
@@ -558,12 +556,28 @@
        <td class="py-3 px-4">${row.field}</td>
        <td class="py-3 px-4">${row.fund}</td>
        <td class="py-3 px-4 flex space-x-2 text-center just-content-center">
-         <img aria-hidden="true" alt="globe" src="https://openui.fly.dev/openui/24x24.svg?text=🌐" class="image-spacing">
-         <img aria-hidden="true" alt="twitter" src="https://openui.fly.dev/openui/24x24.svg?text=🐦" class="image-spacing">
-         <img aria-hidden="true" alt="discord" src="https://openui.fly.dev/openui/24x24.svg?text=💬" class="image-spacing">
+         <img aria-hidden="true" alt="globe" src="<?php echo get_template_directory_uri(); ?>/assets/images/FontAwsome (globe).svg" class="image-spacing">
+         <img aria-hidden="true" alt="twitter" src="<?php echo get_template_directory_uri(); ?>/assets/images/FontAwsome (twitter).svg" class="image-spacing">
+         <img aria-hidden="true" alt="discord" src="<?php echo get_template_directory_uri(); ?>/assets/images/FontAwsome (discord).svg" class="image-spacing">
        </td>
      `;
    
      tableBody.appendChild(tr);
    });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var url = window.location.pathname;
+    var tabName = url.split('/').pop();
+
+    var tabToActivate = document.querySelector('.tab[data-target="' + tabName + '"]');
+    
+    if (tabToActivate) {
+        var allTabs = document.querySelectorAll('.tab');
+        allTabs.forEach(function(tab) {
+            tab.classList.remove('active');
+        });
+        tabToActivate.classList.add('active');
+    }
+});
 </script>
