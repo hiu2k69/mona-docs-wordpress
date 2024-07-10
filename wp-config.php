@@ -20,18 +20,20 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'mona-wordpress' );
+define( 'DB_NAME', 'mona-wordpress-final' );
 
 /** Database username */
 define( 'DB_USER', 'dbmasteruser' );
 
 /** Database password */
-define( 'DB_PASSWORD', '4a4?.aqEZ%GbZK(lnCBG}O_=M8K+hDj.' );
+define( 'DB_PASSWORD', 'm-ROu49#?hK%Q70>-=+eBR5#|CdFFXdq' );
 
 /** Database hostname */
-define( 'DB_HOST', 'ls-79a8c837f2ddc52fba7131d95bba05746eef44f3.cdcgamaes6s7.ap-southeast-1.rds.amazonaws.com:3306' );
+define( 'DB_HOST', 'ls-eac578c70b42de9f17c0099f3161018378e2d289.cdcgamaes6s7.ap-southeast-1.rds.amazonaws.com' );
 
-/** Database charset to use in creating database tables. */
+/** Database charset to use in creating database tables. */The database server could be connected to (which means your username and password is okay) but the mona-wordpress database could not be selected.
+
+
 define( 'DB_CHARSET', 'utf8' );
 
 /** The database collate type. Don't change this if in doubt. */
