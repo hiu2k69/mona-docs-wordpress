@@ -29,7 +29,7 @@ define( 'DB_USER', 'dbmasteruser' );
 define( 'DB_PASSWORD', '4a4?.aqEZ%GbZK(lnCBG}O_=M8K+hDj.' );
 
 /** Database hostname */
-define( 'DB_HOST', 'ls-79a8c837f2ddc52fba7131d95bba05746eef44f3.cdcgamaes6s7.ap-southeast-1.rds.amazonaws.com' );
+define( 'DB_HOST', 'ls-79a8c837f2ddc52fba7131d95bba05746eef44f3.cdcgamaes6s7.ap-southeast-1.rds.amazonaws.com:3306' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
