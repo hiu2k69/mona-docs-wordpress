@@ -413,7 +413,6 @@ function twenty_twenty_one_scripts() {
 
 	// Print styles.
  	wp_enqueue_style( 'twenty-twenty-one-bootstrap', get_template_directory_uri() . '/boostrap/css/bootstrap.min.css');
- 	wp_enqueue_style( 'twenty-twenty-one-fontawesome', get_template_directory_uri() . '/asset/css/all.min.css');
 
 	// wp_enqueue_style( 'twenty-twenty-one-slickcss', get_template_directory_uri() . '/slick/slick/slick.css');
 	// wp_enqueue_style( 'twenty-twenty-one-slicksscss', get_template_directory_uri() . '/slick/slick/slick-theme.css');

@@ -568,16 +568,20 @@ nav#site-navigation {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var url = window.location.pathname;
-    var tabName = url.split('/').pop();
-
+    var segments = url.split('/');
+    var tabName = segments.filter(segment => segment !== '').pop();
+   console.log(tabName);
     var tabToActivate = document.querySelector('.tab[data-target="' + tabName + '"]');
-    
+
     if (tabToActivate) {
         var allTabs = document.querySelectorAll('.tab');
         allTabs.forEach(function(tab) {
             tab.classList.remove('active');
         });
+
+        // Thêm lớp 'active' vào tab phù hợp
         tabToActivate.classList.add('active');
     }
 });
 </script>
+
