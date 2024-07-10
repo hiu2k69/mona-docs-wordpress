@@ -568,9 +568,9 @@ nav#site-navigation {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var url = window.location.pathname;
+
     var segments = url.split('/');
     var tabName = segments.filter(segment => segment !== '').pop();
-   console.log(tabName);
     var tabToActivate = document.querySelector('.tab[data-target="' + tabName + '"]');
 
     if (tabToActivate) {
@@ -578,9 +578,16 @@ document.addEventListener('DOMContentLoaded', function() {
         allTabs.forEach(function(tab) {
             tab.classList.remove('active');
         });
-
-        // Thêm lớp 'active' vào tab phù hợp
         tabToActivate.classList.add('active');
+    }
+    var paneToActivate = document.querySelector('.tab-pane#' + tabName);
+
+    if (paneToActivate) {
+        var allPanes = document.querySelectorAll('.tab-pane');
+        allPanes.forEach(function(pane) {
+            pane.classList.remove('active');
+        });
+        paneToActivate.classList.add('active');
     }
 });
 </script>
