@@ -12,5 +12,5 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /mona-docs-wordpress/index.php [L]
 </IfModule>
-
+ 
 # END WordPress

@@ -22,7 +22,15 @@ get_header();
     margin: 10px;
  
 }
-
+.relative{
+    position: relative;
+}
+box.disclaimer1 {
+    position: fixed;
+    left: 2%;
+    top: 30%;
+    z-index: 3;
+}
 .box-image-last {
     width: 150px;
     object-fit: cover;
@@ -164,6 +172,7 @@ h2.title-last-post.text-white.text-center.p-5 {
  
 
 </style>
+<div class="main relative">
 <section class="main-content-center">
     <div class="container">
         <div class="h2 title-content-main text-center p-5">
@@ -174,7 +183,7 @@ h2.title-last-post.text-white.text-center.p-5 {
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="box-content-main">
                         <div class="box-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Feature_img2.png" class alt="Description">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (3).png" class alt="Description">
                         </div>
                         <div class="box-artist">
                             Artist: <span>Linad</span>
@@ -243,4 +252,18 @@ h2.title-last-post.text-white.text-center.p-5 {
         </div>
     </div>
 </section>
+<box class="disclaimer1">
+                <div class="box-top">
+                    <h1 class="title-disc text-white text-bold">Disclaimer</h1>
+                    <p class="dis">
+                    "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
+                    </p>
+                </div>
+                <div class="box-bottom d-flex mt-2">
+                <img aria-hidden="true" alt="chat-bubble" src="https://openui.fly.dev/openui/24x24.svg?text=💬" />
+                &nbsp;   &nbsp;  <span class="text-right text-black">Contact Us</span>
+                </div>
+            </box>
+</div>
+
 <?php get_footer(); ?>

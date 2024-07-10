@@ -10,135 +10,7 @@
    
    get_header();
    ?>
-<style>
-    h2.title-last-post.text-white.text-left.p-2 {
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-ffffff);
-    text-align: left;
-    font: normal normal bold 35px / 40px Orion Esperanto Dika;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-}
-   section.learn {
-   background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss1.png');
-   background-size: cover;
-   background-repeat: no-repeat;
-   position: relative;
-   z-index: 1;
-   }
-   h1.text-2xl.font-bold.text-white.text-foreground {
-    color: #836EF9 !important;
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-836ef9);
-    text-align: left;
-    font: normal normal bold 40px / 38px Arial;
-    letter-spacing: 0px;
-    color: #836EF9;
-}
-   td.py-3.px-4.flex.space-x-2.text-center.just-content-center {
-   justify-content: center;
-   }
-   .image-spacing {
-   margin-right: 35px !important;
-   }
-   section.learn .container-fluid {
-   padding-left: 0;
-   padding-right: 0;
-   }
-   .tab-container {
-   top: 20px;
-   left: 20px;
-   display: flex;
-   flex-direction: column;
-   }
-   .bg-090909 {
-   background: #090909;
-   }
-   .tab {
-   font: normal normal 600 22px/30px Segoe UI;
-   letter-spacing: 0px;
-   color: #949494;
-   opacity: 1;
-   cursor: pointer;
-   padding: 23px 10px;
-   transition: background-color 0.3s ease, color 0.3s ease;
-   display: flex;
-   }
-   .tab.active {
-   color: #836EF9;
-   }
-   .tab-content .tab-pane {
-   display: none;
-   }
-   .tab-content .tab-pane.active {
-   display: block;
-   overflow: auto;
-   }
-   .box-content-t1 {
-   padding: 5px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   }
-   .box-content-t1 h2 {
-   font-size: 21px;
-   margin: 0;
-   color: #836EF9;
-   }
-   p.mt-4.p-content {
 
-    letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-d4d4d4);
-text-align: left;
-font: normal normal normal 25px/38px Arial;
-letter-spacing: 0px;
-color: #D4D4D4;
-}
-   .box-content-t1 p {
-   flex-grow: 1;
-   margin: 10px 0;
-   font-size: 17px;
-   color: #E4ECF2;
-   }
-   .box-content-t1 span {
-   font-size: 20px;
-   color: #00FFF2;
-   }
-   .search-container {
-   position: relative;
-   }
-   .img-search {
-   position: absolute;
-   left: 10px;
-   top: 50%;
-   transform: translateY(-50%);
-   width: 20px;
-   height: 20px;
-   }
-   .form-control {
-   padding-left: 45px; /* Adjust padding to prevent overlap */
-   }
-   .search-label {
-   margin-left: 10px;
-   position: absolute;
-   top: 24%;
-   color: #E4ECF2;
-   left: 8%;
-   transition: opacity 0.3s;
-   }
-   .search-label.hidden {
-   opacity: 0;
-   }
-   input.form-control.float-right {
-   background: black;
-   border-radius: 20px;
-   color: white;
-   }
-   .relative {
-   position: relative;
-   }
-</style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
 <script type="text/javascript">
@@ -233,13 +105,13 @@ color: #D4D4D4;
    }
 </style>
 <section class="learn">
-   <div class="container pt-5">
+   <div class="container-fluid ">
       <div class="row">
-         <div class="col-lg-3 mb-5">
-            <div class="tab-container pt-3  bg-090909">
-               <div class="tab" data-target="tab1">
+         <div class="col-lg-2 relative  bg-090909">
+            <div class="tab-container pt-3  ">
+               <div class="tab active" data-target="tab1">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn about monad.svg" alt=""> &nbsp; 
-                  <h2 class="name-title ml-5">Learn about Monad</h2>
+                  <h2 class="name-title ml-5 active">Learn about Monad</h2>
                </div>
                <div class="tab" data-target="tab2">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad ecosystem.svg" alt=""> &nbsp; 
@@ -274,9 +146,21 @@ color: #D4D4D4;
                   <h2 class="name-title ml-5">FAQs</h2>
                </div>
             </div>
+            <box class="disclaimer ">
+                <div class="box-top">
+                    <h1 class="title-disc text-white text-bold">Disclaimer</h1>
+                    <p class="dis">
+                    "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
+                    </p>
+                </div>
+                <div class="box-bottom d-flex mt-2">
+                <img aria-hidden="true" alt="chat-bubble" src="https://openui.fly.dev/openui/24x24.svg?text=💬" />
+                &nbsp;   &nbsp;   <span class="text-right text-black">Contact Us</span>
+                </div>
+            </box>
          </div>
-         <div class="col-lg-9">
-            <div class="tab-content">
+         <div class="col-lg-8">
+            <div class="tab-content mt-5">
                <div class="tab-pane active" id="tab1">
                   <div class="container">
                      <div class="flex justify-between items-center mb-4">
@@ -620,6 +504,9 @@ color: #D4D4D4;
                   </div>
                </div>
             </div>
+         </div>
+         <div class="col-lg-2">
+            
          </div>
       </div>
    </div>
