@@ -19,11 +19,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <?php wp_head(); ?>
     <title><?php wp_title(); ?></title>
-    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.png">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/all.min.css')">
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
 
 </head>
+<style>
+ 
 
+
+
+ .main-navigation .menu li a:hover {
+    color: #836EF9;
+    text-decoration: underline !important;
+}
+
+
+.main-navigation .menu li a.active {
+    color: #836EF9;
+}
+</style>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <header id="masthead" class="site-header-">
@@ -35,11 +48,11 @@
         </div>
         <nav id="site-navigation" class="main-navigation">
             <ul class="menu">
-                <li><a href="<?php echo home_url(); ?>">Home</a></li>
-                <li><a href="<?php echo home_url('/monad-learning'); ?>">Monad Learning</a></li>
-                <li><a href="<?php echo home_url('/community-culture'); ?>">Community Culture</a></li>
-                <li><a href="<?php echo home_url('/news'); ?>">News</a></li>
-                <li><a href="<?php echo home_url('/about-monadhub'); ?>">About MonadHub</a></li>
+                <li><a href="<?php echo home_url(); ?>" class="item-nav active">Home</a></li>
+                <li><a href="<?php echo home_url('/monad-learning'); ?>" class="item-nav">Monad Learning</a></li>
+                <li><a href="<?php echo home_url('/community-culture'); ?>" class="item-nav">Community Culture</a></li>
+                <li><a href="<?php echo home_url('/news'); ?>" class="item-nav">News</a></li>
+                <li><a href="<?php echo home_url('/about-monadhub'); ?>" class="item-nav">About MonadHub</a></li>
             </ul>
         </nav>
     </div>

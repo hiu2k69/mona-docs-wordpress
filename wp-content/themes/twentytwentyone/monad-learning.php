@@ -37,7 +37,32 @@ h2.name-title.ml-5.art {
 }
 /* // */
 
+.box-last {
+    transition: box-shadow 0.3s;
+}input#search-input {
+    /* background-color: black; */
+    color: white;
+    /* border-radius: 9999px; */
+    padding-left: 57px;
+    padding-right: 40px;
+    /* padding-top: 8px; */
+    padding-bottom: 8px;
+    outline: none;
+}
 
+.box-last:hover {
+    box-shadow: 0 0 20px #5A3DFF;
+}
+.box-content-t1 {
+   margin-left : 10px !important;
+   }
+   input.bg-black.text-white.rounded-full.pl-4.pr-10.py-2.focus\:outline-none {
+    width: 350px;
+    border: none;
+    border-radius: 20px;
+}.right-3 {
+    right: 19.75rem;
+}
    </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -165,17 +190,18 @@ h2.name-title.ml-5.art {
                      <div class="flex justify-between items-center mb-4">
                         <h1 class="text-3xl font-bold text-white">Learn about monad</h1>
                         <div class="relative">
-                           <input type="text" placeholder="Search" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                           <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                            <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
                            </span>
+                           <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                           
                         </div>
                      </div>
                      <div class="row pb-5">
                         <?php for ($i = 1; $i <= 14; $i++) { ?>
                         <div class="col-lg-6 col-md-6 col-12 mb-3">
                            <div class="box-last">
-                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
                               <div class="box-content-t1">
                                  <h2>10 funfacts in monad community</h2>
                                  <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
@@ -233,11 +259,11 @@ h2.name-title.ml-5.art {
                         <?php for ($i = 1; $i <= 14; $i++) { ?>
                         <div class="col-lg-6 col-md-6 col-12 mb-3">
                            <div class="box-last">
-                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
                               <div class="box-content-t1">
                                  <h2>10 funfacts in monad community</h2>
                                  <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
-                                 <span>4/7/2024</span>
+                                 <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
                               </div>
                            </div>
                         </div>
@@ -260,11 +286,11 @@ h2.name-title.ml-5.art {
                         <?php for ($i = 1; $i <= 14; $i++) { ?>
                         <div class="col-lg-6 col-md-6 col-12 mb-3">
                            <div class="box-last">
-                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
                               <div class="box-content-t1">
                                  <h2>10 funfacts in monad community</h2>
                                  <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
-                                 <span>4/7/2024</span>
+                                 <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
                               </div>
                            </div>
                         </div>
@@ -336,7 +362,7 @@ h2.name-title.ml-5.art {
                            <?php for ($i = 1; $i <= 4; $i++) { ?>
                           <div class="col-lg-6 col-md-6 col-12 mb-3">
                     <div class="box-last">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
                         <div class="box-content-t1">
                             <h2>10 funfacts in monad community</h2>
                             <p>This is a place containing articles to help you understand monads and their technology; we will</p>
@@ -413,7 +439,7 @@ h2.name-title.ml-5.art {
                            <?php for ($i = 1; $i <= 4; $i++) { ?>
                           <div class="col-lg-6 col-md-6 col-12 mb-3">
                     <div class="box-last">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
                         <div class="box-content-t1">
                             <h2>10 funfacts in monad community</h2>
                             <p>This is a place containing articles to help you understand monads and their technology; we will</p>
@@ -490,7 +516,7 @@ h2.name-title.ml-5.art {
                            <?php for ($i = 1; $i <= 4; $i++) { ?>
                           <div class="col-lg-6 col-md-6 col-12 mb-3">
                     <div class="box-last">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
                         <div class="box-content-t1">
                             <h2>10 funfacts in monad community</h2>
                             <p>This is a place containing articles to help you understand monads and their technology; we will</p>

@@ -2698,7 +2698,7 @@ figure.wp-caption a:focus img {
     color: #fff;
     text-decoration: none;
     font-size: 20px !important;
-	font-family: 'Segoe UI';
+	font-family: 'seguisb.ttf';
 
 }
 
@@ -7903,6 +7903,7 @@ p.dis {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   margin-left : 10px !important;
    }
    .box-content-t1 h2 {
     font-size: 21px;

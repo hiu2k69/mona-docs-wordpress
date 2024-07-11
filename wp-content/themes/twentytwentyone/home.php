@@ -12,6 +12,15 @@ get_header();
 ?>
 <style>
 
+.box-last-post blockquote .twitter-tweet .twitter-tweet-rendered iframe {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.box-last-post img {
+    width: 100% !important;
+    height: auto !important;
+}
 .box-last {
     display: flex;
     background-color: #2a2a2a;
@@ -22,6 +31,14 @@ get_header();
     margin: 10px;
  
 }
+.box-last {
+    transition: box-shadow 0.3s;
+}
+
+.box-last:hover {
+    box-shadow: 0 0 20px #5A3DFF;
+}
+
 .relative{
     position: relative;
 }
@@ -79,6 +96,13 @@ h2.title-last-post.text-white.text-center.p-5 {
 
 	
 }
+.box-content-main {
+    transition: box-shadow 0.3s;
+}
+
+.box-content-main:hover {
+    box-shadow: 0 0 20px #5A3DFF;
+}
 
     .box-content-main {
         background-color: #1b1b1b;
@@ -87,8 +111,8 @@ h2.title-last-post.text-white.text-center.p-5 {
         font-family: 'mona-font', sans-serif !important;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         position: relative;
-        border-radius: 10px; /* Thêm bo tròn cho box */
-        margin-bottom: 1.5rem; /* Khoảng cách giữa các box */
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
     }
   
 
@@ -106,6 +130,8 @@ h2.title-last-post.text-white.text-center.p-5 {
     }
     .box-image img:hover {
     transform: scale(1.2);
+}a.artist {
+    color: #836EF9;
 }
 .box-artist {
     background-color: #00FFF2;
@@ -119,6 +145,7 @@ h2.title-last-post.text-white.text-center.p-5 {
     color: #836EF9;
     font-family: 'Segoe UI';
     border-radius: 20px;
+    border: 3px solid #836EF9;
 }
 
     
@@ -132,16 +159,12 @@ h2.title-last-post.text-white.text-center.p-5 {
         margin: 0;
         color: #836EF9;
         text-align: left;
+        font-family : 'seguisb.ttf';
     }
 
-    .box-content p {
-        margin: 1rem 0;
-        font-size: 0.9rem;
-        color: #E4ECF2;
-    }
 
     .box-content p {
-    margin: 1rem 0;
+    margin: 0.2rem 0 1rem 0;
     font-size: 0.9rem;
     color: #E4ECF2;
     text-align: left;
@@ -166,7 +189,7 @@ h2.title-last-post.text-white.text-center.p-5 {
         background-color: #836EF9;
         color: #fff;
         text-decoration: none;
-        border-radius: 10px;
+        border-radius: 5px;
         font-size: 1rem;
         transition: background-color 0.3s ease;
         font-family: 'Segoe UI';
@@ -202,10 +225,10 @@ h2.title-last-post.text-white.text-center.p-5 {
                 <a href="<?php echo home_url('/monad-learning'); ?>" target="_blank">
                 <div class="box-content-main">
                         <div class="box-image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (3).png" class alt="Description">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" class alt="Description">
                         </div>
                         <div class="box-artist">
-                         <a href="https://x.com/zhangliu_eth" target="_blank" rel="noopener noreferrer">Artist: <span>Linad</span></a>　
+                         <a href="https://x.com/zhangliu_eth" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span>Linad</span></a>　
                         </div>
                         <div class="box-content">
                             <h3>Learn about Monad</h3>
@@ -227,7 +250,7 @@ h2.title-last-post.text-white.text-center.p-5 {
             <?php for ($i = 1; $i <= 6; $i++) { ?>
                 <div class="col-lg-6 col-md-6 col-12 mb-3">
                     <div class="box-last">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/NoPath - Copy (6).png" alt="Image Description" class="box-image-last">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
                         <div class="box-content-t">
                             <h2>10 funfacts in monad community</h2>
                             <p>This is a place containing articles to help you understand monads and their technology; we will</p>
@@ -245,19 +268,25 @@ h2.title-last-post.text-white.text-center.p-5 {
         - Monad hub Tweet -
             </h2>
         <div class="row pb-5">
-        <div class="col-lg-4 col-md-4 col-12 mb-5">
+        <div class="col-lg-3 col-md-3 col-12 mb-5">
                 <div class="box-last-post" id="tweet-container">
                 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">i and Lollipop hang out and put ice bear into jail, that&#39;s life :)))<br>Thanks <a href="https://twitter.com/Hagen_web3?ref_src=twsrc%5Etfw">@Hagen_web3</a> for put me into his art, i love itttttttttttttttttttttttttttttttttttttttttttttt <a href="https://t.co/P1qIlDUebz">https://t.co/P1qIlDUebz</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1808699644144406603?ref_src=twsrc%5Etfw">July 4, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-12 mb-5">
+        <div class="col-lg-3 col-md-3 col-12 mb-5">
                 <div class="box-last-post" id="tweet-container">
                 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Omgggg i love itttttttt <a href="https://t.co/uvgTB6P2hQ">https://t.co/uvgTB6P2hQ</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1808895817132167320?ref_src=twsrc%5Etfw">July 4, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-12 mb-5">
+        <div class="col-lg-3 col-md-3 col-12 mb-5">
+                <div class="box-last-post" id="tweet-container">
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Recap NPC DRAW EVENT Last night<br>ⓃⓅⒸ 18 pfps was made by <a href="https://twitter.com/medusa_apple?ref_src=twsrc%5Etfw">@medusa_apple</a> <br>ⓃⓅⒸ 18 ID Card &amp; animated pfps was made by me <a href="https://twitter.com/zhangliu_eth?ref_src=twsrc%5Etfw">@zhangliu_eth</a> <br>ⓃⓅⒸ Gathering great singers like:<br>♥️ <a href="https://twitter.com/cryptoaga_?ref_src=twsrc%5Etfw">@cryptoaga_</a> Sweet prince gunha<br>♥️ <a href="https://twitter.com/reganz211?ref_src=twsrc%5Etfw">@reganz211</a> Reganz the king of sad song<br>♥️ <a href="https://twitter.com/Toadster69?ref_src=twsrc%5Etfw">@Toadster69</a> Leading the… <a href="https://t.co/Iqvhknf7nu">pic.twitter.com/Iqvhknf7nu</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1810521540456591582?ref_src=twsrc%5Etfw">July 9, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        <div class="col-lg-3 col-md-3 col-12 mb-5">
                 <div class="box-last-post" id="tweet-container">
                 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Recap NPC DRAW EVENT Last night<br>ⓃⓅⒸ 18 pfps was made by <a href="https://twitter.com/medusa_apple?ref_src=twsrc%5Etfw">@medusa_apple</a> <br>ⓃⓅⒸ 18 ID Card &amp; animated pfps was made by me <a href="https://twitter.com/zhangliu_eth?ref_src=twsrc%5Etfw">@zhangliu_eth</a> <br>ⓃⓅⒸ Gathering great singers like:<br>♥️ <a href="https://twitter.com/cryptoaga_?ref_src=twsrc%5Etfw">@cryptoaga_</a> Sweet prince gunha<br>♥️ <a href="https://twitter.com/reganz211?ref_src=twsrc%5Etfw">@reganz211</a> Reganz the king of sad song<br>♥️ <a href="https://twitter.com/Toadster69?ref_src=twsrc%5Etfw">@Toadster69</a> Leading the… <a href="https://t.co/Iqvhknf7nu">pic.twitter.com/Iqvhknf7nu</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1810521540456591582?ref_src=twsrc%5Etfw">July 9, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
