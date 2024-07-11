@@ -22,7 +22,7 @@
     <div class="container pt-3">
         <div class="row">
             <div class="col-lg-3">
-                <h5 class="text-white">Monad social</h5>
+                <h5 class="text-white ttee">Monad social</h5>
                 <ul class="list-unstyled">
                     <li><a href="#" class="text-61616D">Twitter</a></li>
                     <li><a href="#" class="text-61616D">Discord</a></li>
@@ -30,14 +30,14 @@
                 </ul>
             </div>
             <div class="col-lg-3">
-                <h5 class="text-white">Apply</h5>
+                <h5 class="text-white ttee">Apply</h5>
                 <ul class="list-unstyled">
                     <li><a href="#" class="text-61616D">Apply for content creator</a></li>
                     <li><a href="#" class="text-61616D">Apply for video editor</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
-                <h5 class="text-white">Monadhub.xyz</h5>
+                <h5 class="text-white ttee">Monadhub.xyz</h5>
                 <ul class="list-unstyled">
                     <li><a href="#" class="text-61616D">About</a></li>
                     <li><a href="#" class="text-61616D">Vision</a></li>

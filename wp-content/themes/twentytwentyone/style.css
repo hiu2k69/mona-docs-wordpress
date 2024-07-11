@@ -7612,6 +7612,10 @@ section.contact-us textarea {
     -moz-transition: border ease .238s;
     transition: border ease .238s;
 }
+h5.text-white.ttee {
+    font-size: 20px;
+    font-family: 'seguisb.ttf';
+}
 section.contact-us button#submit {
     font-weight: 500;
     background-color:#2db0b6;
@@ -7668,7 +7672,9 @@ p select.wpcf7-form-control.wpcf7-select {
 
 
 .text-61616D{
-	color : #61616D;
+    color: #61616D;
+    font-family: 'seguisb.ttf';
+    font-size: 20px;
 }
 
 
@@ -7678,7 +7684,7 @@ p select.wpcf7-form-control.wpcf7-select {
     /* width: 88%; */
     padding: 6px;
     border-left: 6px solid #836EF9;
-    border-radius: 2px;
+    border-radius: 6px;
 }
 .main-content-center{
 	background-image: url('../twentytwentyone/assets/images/BG-ss1.png');
@@ -7810,7 +7816,7 @@ h2.title-last-post.text-white.text-center.p-5 {
 
    }
    h1.text-3xl.font-bold.text-white {
-    font-size: 47px;
+    font-size: 40px;
 	font-family: 'Segoe UI';
 
 }
@@ -7858,11 +7864,8 @@ h2.title-last-post.text-white.text-center.p-5 {
     border-radius: 7px;
     opacity: 1;
     padding: 5px;
-}box.disclaimer {
-    position: fixed;
-    right: 5%;
-    bottom: 30%;
 }
+
    .tab.active {
    color: #836EF9;
    }
@@ -7925,6 +7928,7 @@ p.dis {
     letter-spacing: 0px;
     color: #836EF9;
     opacity: 1;
+	font-family: 'seguisb.ttf';
 }
    p.mt-4.p-content {
 
@@ -7939,7 +7943,7 @@ p.text-sm.text-purple-400.mb-6 {
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-836ef9);
     text-align: left;
-    font: normal normal normal 25px / 33px Segoe UI;
+    font: normal normal normal 18px / 33px Segoe UI;
     letter-spacing: 0px;
     color: #836EF9;
     opacity: 1;

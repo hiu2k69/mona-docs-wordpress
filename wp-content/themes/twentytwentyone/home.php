@@ -200,6 +200,14 @@ h2.title-last-post.text-white.text-center.p-5 {
         background-color: #00FFF2;
         color:#2F2F37;
     }
+    img.see{
+        transition: filter 0.3s ease;
+
+    }
+    a.see-more:hover img.see {
+        filter: brightness(50%);
+
+    }
 
 
     @keyframes rotation_481 {
@@ -233,7 +241,7 @@ h2.title-last-post.text-white.text-center.p-5 {
                         <div class="box-content">
                             <h3>Learn about Monad</h3>
                             <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
-                            <a href="#" class="see-more">    <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" />        &nbsp;   &nbsp;  Read more</a>
+                            <a href="#" class="see-more">    <img aria-hidden="true" alt="chat-bubble" class="see" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" />        &nbsp;   &nbsp;  Read more</a>
                         </div>
                     </div></a>
                     

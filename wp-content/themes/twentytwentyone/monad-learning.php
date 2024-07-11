@@ -27,7 +27,15 @@ nav#site-navigation {
 }a.see-more img {
     width: 25px !important;
 }
+box.disclaimer {
+   text-align: center;
+    justify-content: center;
+    margin-left: 56px;
+    align-content: center;
+    align-self: center;
+    justify-items: center;
 
+}
 h1.text-2xl.font-bold.text-white.text-foreground {
     color: white !important;
     font-family: 'Segoe UI';
@@ -49,7 +57,9 @@ h2.name-title.ml-5.art {
     padding-bottom: 8px;
     outline: none;
 }
-
+td.py-3.px-4 {
+    border: 1px solid #836EF9;
+}
 .box-last:hover {
     box-shadow: 0 0 20px #5A3DFF;
 }
@@ -159,7 +169,7 @@ h2.name-title.ml-5.art {
    }
 </style>
 <section class="learn">
-   <div class="container-fluid ">
+   <div class="container-fluid">
       <div class="row">
          <div class="col-lg-2 relative  bg-090909">
             <div class="tab-container pt-5 ">
@@ -181,7 +191,20 @@ h2.name-title.ml-5.art {
                </div>
                <div class="tab" data-target="faq"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/FAQs.svg" alt=""><h2 class="name-title ml-5 art">&nbsp;FAQs</h2>
                </div>
+               <box class="disclaimer pt-5">
+                <div class="box-top">
+                    <h1 class="title-disc text-white text-bold">Disclaimer</h1>
+                    <p class="dis">
+                    "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
+                    </p>
+                </div>
+                <div class="box-bottom d-flex mt-2">
+                <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact.svg" />
+                &nbsp;   &nbsp;  <span class="text-right text-white">Contact Us</span>
+                </div>
+            </box>
             </div>
+            
          </div>
          <div class="col-lg-8">
             <div class="tab-content mt-5">
@@ -220,17 +243,18 @@ h2.name-title.ml-5.art {
                            <h1 class="text-3xl font-bold text-white">Monad ecosystem</h1>
 
                            <div class="relative">
-                              <input type="text" placeholder="Search" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                              <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                              <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                              </span>
-                           </div>
+                        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                           <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                           </span>
+                           <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                           
+                        </div>
                         </div>
                         <p class="text-sm text-purple-400 mb-6">Last updated: 15 June 2024</p>
                         <div class="overflow-x-auto">
                            <table class="min-w-full bg-black bg-opacity-50 rounded-lg">
                               <thead>
-                                 <tr class="text-left border- border-zinc-700">
+                                 <tr class="text-left ">
                                     <th class="py-3 px-4">Dapps</th>
                                     <th class="py-3 px-4">Field</th>
                                     <th class="py-3 px-4">Fund raise</th>
@@ -532,18 +556,7 @@ h2.name-title.ml-5.art {
             </div>
          </div>
          <div class="col-lg-1">
-         <box class="disclaimer ">
-                <div class="box-top">
-                    <h1 class="title-disc text-white text-bold">Disclaimer</h1>
-                    <p class="dis">
-                    "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
-                    </p>
-                </div>
-                <div class="box-bottom d-flex mt-2">
-                <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact.svg" />
-                &nbsp;   &nbsp;  <span class="text-right text-white">Contact Us</span>
-                </div>
-            </box>
+        
          </div>
       </div>
    </div>
