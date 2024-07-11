@@ -192,7 +192,7 @@ td.py-3.px-4 {
                <div class="tab" data-target="faq"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/FAQs.svg" alt=""><h2 class="name-title ml-5 art">&nbsp;FAQs</h2>
                </div>
               
-               <box class="disclaimer pt-5">
+               <box class="disclaimer p-4">
                 <div class="box-top">
                     <h1 class="title-disc text-white text-bold">Disclaimer</h1>
                     <p class="dis">

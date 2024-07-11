@@ -8087,7 +8087,14 @@ img.img-logo-footer.img-fluid {
 	}
 }
 
+.image-spacing {
+    margin-right: 35px !important;
+    opacity: 0.7;
+}
 
+.image-spacing:hover {
+    opacity: 1; 
+}
 
 
 /* mobile */
