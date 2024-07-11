@@ -7966,8 +7966,25 @@ p.text-sm.text-purple-400.mb-6 {
     border-radius: 7px;
     padding: 5px;
     box-shadow: 0px 3px 6px #00000059;
-    border-radius: 7px;
+    border-radius: 10px;
+	position: relative;
+	z-index: 1;
 }
+
+.box-bottom.d-flex.mt-2 ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	background: #FFFFFF;
+    opacity: 0.15;
+    z-index: -1;
+    border-radius: 7px;
+
+}
+
 span.text-right {
     letter-spacing: var(--unnamed-character-spacing-0);
     color: black;
@@ -8051,4 +8068,23 @@ span.text-right {
 }
 img.img-logo-footer.img-fluid {
     width: 60%;
+}
+
+
+/* 27in */
+@media only screen and (min-width: 1920px) {
+ 
+}
+
+
+/* 24 in */
+
+@media only screen and (min-width: 1780px) {
+}
+
+
+
+
+/* mobile */
+@media only screen and (max-width: 414px) {
 }
