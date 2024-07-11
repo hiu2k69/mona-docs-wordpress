@@ -8080,6 +8080,11 @@ img.img-logo-footer.img-fluid {
 /* 24 in */
 
 @media only screen and (min-width: 1780px) {
+	h2.name-title.ml-5 {
+		font-size: 18px;
+		font-family: 'Segoe UI';
+		letter-spacing: 0px;
+	}
 }
 
 
@@ -8087,4 +8092,37 @@ img.img-logo-footer.img-fluid {
 
 /* mobile */
 @media only screen and (max-width: 414px) {
+	.box-content-t1 p {
+		font: normal normal normal 11px / 27px Segoe UI;
+	}
+	.box-content-t1 h2 {
+		font: normal normal 600 18px / 32px Segoe UI;
+			
+		}
+		.box-content-t1 span {
+			font-size: 13px;
+		}
+		.right-3 {
+			right: 10.75rem;
+		}
+		input.bg-black.text-white.rounded-full.pl-4.pr-10.py-2.focus\:outline-none {
+			width: 199px;
+		}
+		
+		.box-content-t span {
+			font-size: 13px;
+		}
+		.box-content-t h2 {
+			font: normal normal 600 18px / 32px Segoe UI;
+
+		}
+
+		.box-content-t p {
+			font: normal normal normal 13px / 27px Segoe UI;
+		}
+		.site-branding {
+			float: right;
+			margin-left: 100px;
+		}
+		
 }

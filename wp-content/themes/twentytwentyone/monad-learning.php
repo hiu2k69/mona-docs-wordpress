@@ -171,7 +171,7 @@ td.py-3.px-4 {
 <section class="learn">
    <div class="container-fluid">
       <div class="row">
-         <div class="col-lg-2 relative  bg-090909">
+         <div class="col-lg-2 col-md-3 relative  bg-090909">
             <div class="tab-container pt-5 ">
                <div class="tab active" data-target="monad-learning"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn about monad.svg" alt=""><h2 class="name-title ml-5 active">Learn about Monad</h2>
                </div>
@@ -191,6 +191,7 @@ td.py-3.px-4 {
                </div>
                <div class="tab" data-target="faq"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/FAQs.svg" alt=""><h2 class="name-title ml-5 art">&nbsp;FAQs</h2>
                </div>
+              
                <box class="disclaimer pt-5">
                 <div class="box-top">
                     <h1 class="title-disc text-white text-bold">Disclaimer</h1>
@@ -206,7 +207,7 @@ td.py-3.px-4 {
             </div>
             
          </div>
-         <div class="col-lg-8">
+         <div class="col-lg-9 col-md-9">
             <div class="tab-content mt-5">
                <div class="tab-pane active" id="monad-learning">
                   <div class="container">
@@ -273,10 +274,11 @@ td.py-3.px-4 {
                      <div class="flex justify-between items-center mb-4">
                         <h1 class="text-3xl font-bold text-white">Community News</h1>
                         <div class="relative">
-                           <input type="text" placeholder="Search" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                           <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                            <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
                            </span>
+                           <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                           
                         </div>
                      </div>
                      <div class="row pb-5">
@@ -300,10 +302,11 @@ td.py-3.px-4 {
                      <div class="flex justify-between items-center mb-4">
                         <h1 class="text-3xl font-bold text-white">Community culture</h1>
                         <div class="relative">
-                           <input type="text" placeholder="Search" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                           <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                            <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
                            </span>
+                           <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                           
                         </div>
                      </div>
                      <div class="row pb-5">
@@ -555,9 +558,9 @@ td.py-3.px-4 {
                </div>
             </div>
          </div>
-         <div class="col-lg-1">
+         <!-- <div class="col-lg-1">
         
-         </div>
+         </div> -->
       </div>
    </div>
 </section>
