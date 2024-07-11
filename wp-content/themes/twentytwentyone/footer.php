@@ -24,7 +24,7 @@
         <div class="col-lg-3 col-6 mb-2">
                 <h5 class="text-white ttee">Monad social</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-6616D">Twitter</a></li>
+                    <li><a href="#" class="text-61616D">Twitter</a></li>
                     <li><a href="#" class="text-61616D">Discord</a></li>
                     <li><a href="#" class="text-61616D">Website</a></li>
                 </ul>
