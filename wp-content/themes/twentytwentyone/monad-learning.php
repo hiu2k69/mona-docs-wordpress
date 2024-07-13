@@ -57,8 +57,35 @@ h2.name-title.ml-5.art {
     padding-bottom: 8px;
     outline: none;
 }
+.text-center.just-content-center.box-social.flex.space-x-2 {
+    justify-content: center;
+}
 td.py-3.px-4 {
-    border: 1px solid #836EF9;
+   border: none ;
+
+    border-bottom: 1px solid #836EF9;
+}
+td.py-3.px-4:first-child {
+    border-left: 1px solid #836EF9;
+}
+td.py-3.px-4:last-child {
+    border-right: 1px solid #836EF9;
+}
+th.py-3.px-4 {
+    border-top: 1px solid #836EF9;
+    border-bottom: 1px solid #836EF9;
+    border-right  : none ;
+}
+table td, table th, .wp-block-table td, .wp-block-table th {
+    padding: calc(0.5* var(--global--spacing-unit));
+    border: none;
+}
+th.py-3.px-4:first-child {
+    border-left: 1px solid #836EF9;
+}
+
+th.py-3.px-4:last-child {
+    border-right: 1px solid #836EF9;
 }
 .box-last:hover {
     box-shadow: 0 0 20px #5A3DFF;
@@ -253,7 +280,7 @@ td.py-3.px-4 {
                         </div>
                         <p class="text-sm text-purple-400 mb-6">Last updated: 15 June 2024</p>
                         <div class="overflow-x-auto">
-                           <table class="min-w-full bg-black bg-opacity-50 rounded-lg">
+                           <table class="">
                               <thead>
                                  <tr class="text-left ">
                                     <th class="py-3 px-4">Dapps</th>
@@ -609,11 +636,13 @@ td.py-3.px-4 {
        <td class="py-3 px-4">${row.dapp}</td>
        <td class="py-3 px-4">${row.field}</td>
        <td class="py-3 px-4">${row.fund}</td>
-       <td class="py-3 px-4 flex space-x-2 text-center just-content-center">
+       <td class="py-3 px-4  ">
+       <div class="text-center just-content-center box-social flex space-x-2">
          <img aria-hidden="true" alt="globe" src="<?php echo get_template_directory_uri(); ?>/assets/images/FontAwsome (globe).svg" class="image-spacing">
          <img aria-hidden="true" alt="twitter" src="<?php echo get_template_directory_uri(); ?>/assets/images/FontAwsome (twitter).svg" class="image-spacing">
          <img aria-hidden="true" alt="discord" src="<?php echo get_template_directory_uri(); ?>/assets/images/FontAwsome (discord).svg" class="image-spacing">
-       </td>
+         </
+         </td>
      `;
    
      tableBody.appendChild(tr);
