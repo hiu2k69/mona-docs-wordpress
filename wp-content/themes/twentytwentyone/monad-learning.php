@@ -1,164 +1,237 @@
 <?php
+
 /**
  * Template Name: monad-learning
  */
 
 // Exit if accessed directly.
 if (!defined("ABSPATH")) {
-    exit();
+   exit();
 }
 
 get_header();
 ?>
-   <style>
-
-img[src*="Writer.svg"] {
-    filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
-}
-
-.purple-icon {
-   filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
-}.box-por {
-    display: flex;
-}
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 2rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-nav#site-navigation {
-    position: absolute;
-    right: 18%;
-}a.see-more img {
-    width: 25px !important;
-}
-box.disclaimer {
-   text-align: center;
-    justify-content: center;
-    margin-left: 23px;
-    align-content: center;
-    align-self: center;
-    justify-items: center;
-
-}
-h1.text-2xl.font-bold.text-white.text-foreground {
-    color: white !important;
-    font-family: 'Segoe UI';
-}
-h2.name-title.ml-5.art {
-    margin-left: 23px;
-}
-/* // */
-
-.box-last {
-    transition: box-shadow 0.3s;
-}input#search-input {
-    /* background-color: black; */
-    color: white;
-    /* border-radius: 9999px; */
-    padding-left: 57px;
-    padding-right: 40px;
-    /* padding-top: 8px; */
-    padding-bottom: 8px;
-    outline: none;
-}
-.text-center.just-content-center.box-social.flex.space-x-2 {
-    justify-content: center;
-}
-td.py-3.px-4 {
-   border: none ;
-
-    border-bottom: 1px solid #836EF9;
-}
-td.py-3.px-4:first-child {
-    border-left: 1px solid #836EF9;
-}
-td.py-3.px-4:last-child {
-    border-right: 1px solid #836EF9;
-}
-th.py-3.px-4 {
-    border-top: 1px solid #836EF9;
-    border-bottom: 1px solid #836EF9;
-    border-right  : none ;
-}
-.col-lg-2.col-md-3.relative.bg-090909 {
-    width: 14%;
-}
-table td, table th, .wp-block-table td, .wp-block-table th {
-    padding: calc(0.5* var(--global--spacing-unit));
-    border: none;
-}
-th.py-3.px-4:first-child {
-    border-left: 1px solid #836EF9;
-}
-
-th.py-3.px-4:last-child {
-    border-right: 1px solid #836EF9;
-}
-.box-last:hover {
-    box-shadow: 0 0 20px #5A3DFF;
-}
-.box-content-t1 {
-   margin-left : 10px !important;
+<style>
+   img[src*="Writer.svg"] {
+      filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
    }
+
+   .purple-icon {
+      filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
+   }
+
+   .box-por {
+      display: flex;
+   }
+
+   .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+      box-sizing: border-box;
+   }
+
+   nav#site-navigation {
+      position: absolute;
+      right: 18%;
+   }
+
+   a.see-more img {
+      width: 25px !important;
+   }
+
+   box.disclaimer {
+      text-align: center;
+      justify-content: center;
+      margin-left: 23px;
+      align-content: center;
+      align-self: center;
+      justify-items: center;
+
+   }
+
+   h1.text-2xl.font-bold.text-white.text-foreground {
+      color: white !important;
+      font-family: 'Segoe UI';
+   }
+
+   h2.name-title.ml-5.art {
+      margin-left: 23px;
+   }
+
+   .ml-5 {
+      margin-left: 0 !important;
+   }
+
+   /* // */
+
+   .box-last {
+      transition: box-shadow 0.3s;
+      border-radius: 10px !important;
+   }
+
+   input#search-input {
+      /* background-color: black; */
+      color: white;
+      /* border-radius: 9999px; */
+      padding-left: 57px;
+      padding-right: 40px;
+      /* padding-top: 8px; */
+      padding-bottom: 8px;
+      outline: none;
+   }
+
+   .text-center.just-content-center.box-social.flex.space-x-2 {
+      justify-content: center;
+   }
+
+   td.py-3.px-4 {
+      border: none;
+
+      border-bottom: 1px solid #836EF9;
+   }
+
+   td.py-3.px-4:first-child {
+      border-left: 1px solid #836EF9;
+   }
+
+   td.py-3.px-4:last-child {
+      border-right: 1px solid #836EF9;
+   }
+
+   th.py-3.px-4 {
+      border-top: 1px solid #836EF9;
+      border-bottom: 1px solid #836EF9;
+      border-right: none;
+   }
+
+   .col-lg-2.col-md-3.relative.bg-090909 {
+      width: 14%;
+   }
+
+   table td,
+   table th,
+   .wp-block-table td,
+   .wp-block-table th {
+      padding: calc(0.5* var(--global--spacing-unit));
+      border: none;
+   }
+
+   th.py-3.px-4:first-child {
+      border-left: 1px solid #836EF9;
+   }
+
+   th.py-3.px-4:last-child {
+      border-right: 1px solid #836EF9;
+   }
+
+   .box-last:hover {
+      box-shadow: 0 0 20px #5A3DFF;
+   }
+
+   .box-content-t1 {
+      margin-left: 10px !important;
+   }
+
    input.bg-black.text-white.rounded-full.pl-4.pr-10.py-2.focus\:outline-none {
-    width: 350px;
-    border: none;
-    border-radius: 20px;
-}.right-3 {
-    right: 19.75rem;
-}
-   </style>
+      width: 350px;
+      border: none;
+      border-radius: 20px;
+   }
+
+   .right-3 {
+      right: 19.75rem;
+   }
+
+   .img-cate {
+      width: 40px;
+      height: 25px;
+      object-fit: cover;
+   }
+
+   .gap-05 {
+      gap: 0.5rem;
+      padding: 14px 20px !important;
+   }
+
+   .home-title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+   }
+
+   .box-image-last {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      transition: all .2s ease-in-out;
+
+   }
+
+   .box-image-last:hover {
+      transform: scale(1.2);
+   }
+
+   .color-content p,
+   .color-content ul li,
+   .color-content h1,
+   .color-content h2,
+   .color-content h3,
+   .color-content h4 {
+      font-size: 18px;
+      color: white !important;
+   }
+</style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
 <script type="text/javascript">
    window.tailwind.config = {
-   	darkMode: ['class'],
-   	theme: {
-   		extend: {
-   			colors: {
-   				border: 'hsl(var(--border))',
-   				input: 'hsl(var(--input))',
-   				ring: 'hsl(var(--ring))',
-   				background: 'hsl(var(--background))',
-   				foreground: 'hsl(var(--foreground))',
-   				primary: {
-   					DEFAULT: 'hsl(var(--primary))',
-   					foreground: 'hsl(var(--primary-foreground))'
-   				},
-   				secondary: {
-   					DEFAULT: 'hsl(var(--secondary))',
-   					foreground: 'hsl(var(--secondary-foreground))'
-   				},
-   				destructive: {
-   					DEFAULT: 'hsl(var(--destructive))',
-   					foreground: 'hsl(var(--destructive-foreground))'
-   				},
-   				muted: {
-   					DEFAULT: 'hsl(var(--muted))',
-   					foreground: 'hsl(var(--muted-foreground))'
-   				},
-   				accent: {
-   					DEFAULT: 'hsl(var(--accent))',
-   					foreground: 'hsl(var(--accent-foreground))'
-   				},
-   				popover: {
-   					DEFAULT: 'hsl(var(--popover))',
-   					foreground: 'hsl(var(--popover-foreground))'
-   				},
-   				card: {
-   					DEFAULT: 'hsl(var(--card))',
-   					foreground: 'hsl(var(--card-foreground))'
-   				},
-   			},
-   		}
-   	}
+      darkMode: ['class'],
+      theme: {
+         extend: {
+            colors: {
+               border: 'hsl(var(--border))',
+               input: 'hsl(var(--input))',
+               ring: 'hsl(var(--ring))',
+               background: 'hsl(var(--background))',
+               foreground: 'hsl(var(--foreground))',
+               primary: {
+                  DEFAULT: 'hsl(var(--primary))',
+                  foreground: 'hsl(var(--primary-foreground))'
+               },
+               secondary: {
+                  DEFAULT: 'hsl(var(--secondary))',
+                  foreground: 'hsl(var(--secondary-foreground))'
+               },
+               destructive: {
+                  DEFAULT: 'hsl(var(--destructive))',
+                  foreground: 'hsl(var(--destructive-foreground))'
+               },
+               muted: {
+                  DEFAULT: 'hsl(var(--muted))',
+                  foreground: 'hsl(var(--muted-foreground))'
+               },
+               accent: {
+                  DEFAULT: 'hsl(var(--accent))',
+                  foreground: 'hsl(var(--accent-foreground))'
+               },
+               popover: {
+                  DEFAULT: 'hsl(var(--popover))',
+                  foreground: 'hsl(var(--popover-foreground))'
+               },
+               card: {
+                  DEFAULT: 'hsl(var(--card))',
+                  foreground: 'hsl(var(--card-foreground))'
+               },
+            },
+         }
+      }
    }
 </script>
 <style type="text/tailwindcss">
@@ -213,398 +286,180 @@ th.py-3.px-4:last-child {
       <div class="row">
          <div class="col-lg-2 col-md-3 relative  bg-090909">
             <div class="tab-container pt-5 ">
-               <div class="tab active" data-target="monad-learning"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""><h2 class="name-title ml-5 active ml-again">Learn about Monad</h2>
-               </div>
-               <div class="tab" data-target="tab2"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad-ecosystem.svg" alt=""><h2 class="name-title ml-5 ml-again"> Monad Ecosystem</h2>
-               </div>
-               <div class="tab" data-target="tab3"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">Community News</h2>
-               </div>
-               <div class="tab" data-target="community-culture"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community-culture.svg" alt=""><h2 class="name-title ml-5 ml-again">Community Culture</h2>
-               </div>
-               <div class="tab" data-target="contribute"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/How-to-contribute.svg" alt=""><h2 class="name-title ml-5 ml-again">How to Contribute</h2>
-               </div>
-               <div class="tab " data-target="tab6"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Union 1.svg" alt=""><h2 class="name-title ml-5 art">   Artists and Gallery</h2>
-               </div>
-               <div class="tab" data-target="member"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Team-members.svg" alt=""><h2 class="name-title ml-5">   Team Members</h2>
-               </div>
-               <div class="tab" data-target="tab8"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monacomics.svg" alt=""><h2 class="name-title ml-5">  Monacomics</h2>
-               </div>
-               <div class="tab" data-target="tab8"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad-media-kit.svg" alt=""><h2 class="name-title ml-5">  Monad media kit</h2>
-               </div>
-               <div class="tab" data-target="faq"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/FAQs.svg" alt=""><h2 class="name-title ml-5 art">FAQs</h2>
-               </div>
-              
+               <?php
+               $categories = get_terms(array(
+                  'taxonomy' => 'category',
+                  'hide_empty' => false,
+                  'orderby' => 'term_id',
+                  'order' => 'DESC'
+               ));
+               foreach ($categories as $category) {
+
+                  $image_url =  z_taxonomy_image_url($category->term_id);
+                  $cate = get_term_by('id', $category->term_id, 'category');
+                  $count_post = $cate->count;
+                  $tab = $category->slug;
+                  if ($image_url) {
+
+                     echo  '<div class="tab gap-05" data-target="' . $tab . '"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
+                </div>';
+                  } else {
+                     echo '<div class="tab" data-target="' . $tab . '"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </div>';
+                  }
+               }
+               ?>
+
+
                <box class="disclaimer p-4">
-                <div class="box-top">
-                    <h1 class="title-disc text-white text-bold">Disclaimer</h1>
-                    <p class="dis">
-                    "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
-                    </p>
-                </div>
-                <div class="box-bottom d-flex mt-2">
-                <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact.svg" />
-                &nbsp;   &nbsp;  <span class="text-right text-white">Contact Us</span>
-                </div>
-            </box>
+                  <div class="box-top">
+                     <h1 class="title-disc text-white text-bold">Disclaimer</h1>
+                     <p class="dis">
+                        "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
+                     </p>
+                  </div>
+                  <div class="box-bottom d-flex mt-2">
+                     <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact.svg" />
+                     &nbsp; &nbsp; <span class="text-right text-white">Contact Us</span>
+                  </div>
+               </box>
             </div>
-            
+
          </div>
          <div class="col-lg-9 col-md-9">
             <div class="tab-content mt-5">
-               <div class="tab-pane active" id="monad-learning">
-                  <div class="container">
-                     <div class="flex justify-between items-center mb-4">
-                        <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""> &nbsp; Learn about monad</h1>
-                        <div class="relative">
-                        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                           <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                           </span>
-                           <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                           
-                        </div>
-                     </div>
-                     <div class="row pb-5">
-                        <?php for ($i = 1; $i <= 8; $i++) { ?>
-                        <div class="col-lg-6 col-md-6 col-12 mb-3">
-                           <div class="box-last">
-                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
-                              <div class="box-content-t1 ">
-                                 <h2>10 funfacts in monad community</h2>
-                                 <p class="ml-2">This is a place containing articles to help you understand monads and their technology; we will update regularly.we will update regularly.</p>
-                                 <span class="text-secondary-foreground mt-2 m;- flex items-center">
-                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">                             
-                                   &nbsp;  Last update 10/07/2024 &nbsp;   <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1">   &nbsp;&nbsp; Zhangliu.eth</span></span></span> 
-                              </div>
-                           </div>
-                        </div>
-                        <?php } ?>
-                     </div>
-                  </div>
-               </div>
-               <div class="tab-pane" id="tab2">
-                  <div class="p-3 from-blue-900 to-green-900 text-white min-h-screen">
-                     <div class=" mx-auto">
-                        <div class="flex justify-between items-center mb-4">
-                           <h1 class="text-3xl font-bold text-white">Monad ecosystem</h1>
+               <?php
 
-                           <div class="relative">
-                        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                           <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                           </span>
-                           <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                           
-                        </div>
-                        </div>
-                        <p class="text-sm text-purple-400 mb-6">Last updated: 15 June 2024</p>
-                        <div class="overflow-x-auto">
-                           <table class="">
-                              <thead>
-                                 <tr class="text-left ">
-                                    <th class="py-3 px-4">Dapps</th>
-                                    <th class="py-3 px-4">Field</th>
-                                    <th class="py-3 px-4">Fund raise</th>
-                                    <th class="py-3 px-4 text-center">Social accounts</th>
-                                 </tr>
-                              </thead>
-                              <tbody id="table-body">
-                              </tbody>
-                           </table>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="tab-pane" id="tab3">
-                  <div class="container">
-                     <div class="flex justify-between items-center mb-4">
-                        <h1 class="text-3xl font-bold text-white">Community News</h1>
-                        <div class="relative">
-                        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                           <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                           </span>
-                           <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                           
-                        </div>
-                     </div>
-                     <div class="row pb-5">
-                            <?php for ($i = 1; $i <= 8; $i++) { ?>
-                        <div class="col-lg-6 col-md-6 col-12 mb-3">
-                           <div class="box-last">
-                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
-                              <div class="box-content-t1 ">
-                                 <h2>10 funfacts in monad community</h2>
-                                 <p class="ml-2">This is a place containing articles to help you understand monads and their technology; we will update regularly.we will update regularly.</p>
-                                 <span class="text-secondary-foreground mt-2 m;- flex items-center">
-                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">                             
-                                   &nbsp;  Last update 10/07/2024 &nbsp;   <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1">   &nbsp;&nbsp; Zhangliu.eth</span></span></span> 
+               foreach ($categories as $category) {
+                  // var_dump($category);
+                  // $cate = get_term_by('id', $category->term_id, 'category');
+                  // $count_post = $cate->count;
+                  $tab = $category->slug;
+
+               ?>
+                  <div class="tab-pane " id="<?php echo $tab ?>">
+                     <?php
+                     $args = array(
+                        'category' => $category->term_id,
+                     );
+
+                     $posts = get_posts($args);
+                     if (count($posts) > 1) {
+                     ?>
+                        <div class="container">
+                           <div class="flex justify-between items-center mb-4">
+                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""> &nbsp; <?php echo $category->name ?></h1>
+                              <div class="relative">
+                                 <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                                    <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                                 </span>
+                                 <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+
                               </div>
                            </div>
-                        </div>
-                        <?php } ?>
-                     </div>
-                  </div>
-               </div>
-               <div class="tab-pane" id="community-culture">
-                  <div class="container">
-                     <div class="flex justify-between items-center mb-4">
-                        <h1 class="text-3xl font-bold text-white">Community culture</h1>
-                        <div class="relative">
-                        <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                           <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                           </span>
-                           <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                           
-                        </div>
-                     </div>
-                     <div class="row pb-5">
-                            <?php for ($i = 1; $i <= 8; $i++) { ?>
-                        <div class="col-lg-6 col-md-6 col-12 mb-3">
-                           <div class="box-last">
-                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
-                              <div class="box-content-t1 ">
-                                 <h2>10 funfacts in monad community</h2>
-                                 <p class="ml-2">This is a place containing articles to help you understand monads and their technology; we will update regularly.we will update regularly.</p>
-                                 <span class="text-secondary-foreground mt-2 m;- flex items-center">
-                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">                             
-                                   &nbsp;  Last update 10/07/2024 &nbsp;   <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1">   &nbsp;&nbsp; Zhangliu.eth</span></span></span> 
-                              </div>
+                           <div class="row pb-5">
+                              <?php
+                              foreach ($posts as $post) {
+                                 setup_postdata($post);
+                                 $post_id = get_the_ID(); // Lấy ID của bài viết hiện tại
+
+                                 $post_link = get_permalink($post_id); // Lấy đường dẫn của bài viết
+                              ?>
+                                 <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                    <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
+                                       <div class="box-last">
+                                          <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
+                                          <div class="box-content-t1 ">
+                                             <h2 class="home-title"><?php the_title(); ?></h2>
+                                             <p class="ml-2 home-title"><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
+                                                                        echo $trimmed_content; ?></p>
+
+                                             <span class="text-secondary-foreground flex items-center">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
+                                                &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1"> &nbsp; <?php echo get_the_author(); ?></span></span></span>
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                              <?php } ?>
                            </div>
                         </div>
-                        <?php } ?>
-                     </div>
+                        <?php } elseif (count($posts) == 1) {
+                        foreach ($posts as $post) {
+                           setup_postdata($post);
+                           $post_id = get_the_ID(); // Lấy ID của bài viết hiện tại
+                           $post_link = get_permalink($post_id); // Lấy đường dẫn của bài viết 
+                        ?>
+                           <div class="container pb-5 color-content">
+                              <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="" class="banner img-fluid mb-5">
+                              <h1 class="text-2xl font-bold text-white text-foreground title"><?php the_title(); ?></h1>
+                              <p class="mt-4 p-content italic "><?php the_content(); ?></p>
+                           </div>
+
+                           <div class="container">
+                              <h2 class="title-last-post text-white text-center p-5">
+                                 - Last post -
+                              </h2>
+                              <div class="row pb-5">
+                                 <?php
+                                 $args = array(
+                                    'posts_per_page' => -1,
+                                    'post_type' => 'post',
+                                    'post_status' => 'publish',
+                                    'orderby' => 'date',
+                                    'order' => 'DESC'
+                                 );
+
+                                 $posts = get_posts($args);
+                                 foreach ($posts as $post) {
+                                    setup_postdata($post);
+                                    $post_id = get_the_ID();
+
+                                    $post_link = get_permalink($post_id);
+                                 ?>
+                                    <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                       <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
+                                          <div class="box-last">
+                                             <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
+                                             <div class="box-content-t1 ">
+                                                <h2 class="home-title"><?php the_title(); ?></h2>
+                                                <p class="ml-2 home-title"><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
+                                                                           echo $trimmed_content; ?></p>
+
+                                                <span class="text-secondary-foreground flex items-center">
+                                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
+                                                   &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1"> &nbsp; <?php echo get_the_author(); ?></span></span></span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                    </div>
+                                 <?php } ?>
+                              </div>
+                           </div>
+
+
+                        <?php }
+                     } else {
+                        ?>
+                        <div class="container">
+                           <div class="flex justify-between items-center mb-4">
+                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""> &nbsp; <?php echo $category->name ?></h1>
+                              <div class="relative">
+                                 <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                                    <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                                 </span>
+                                 <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+
+                              </div>
+                           </div>
+                           <div class="row pb-5">
+                           </div>
+                        </div>
+                        </script>
+                     <?php
+                     }
+                     ?>
                   </div>
-               </div>
-               <div class="tab-pane" id="contribute">
-                  <div class="container pb-5">
-                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5">
-                     <h1 class="text-2xl font-bold text-white text-foreground title">Monad: High-performance EVM blockchain</h1>
-                     <p class="mt-4 p-content italic">You've probably heard about the Monad blockchain by now.</p>
-                     <p class="mt-4 p-content italic">
-                        Basically, it's a platform that takes the technological design of the blockchain and optimizes it for fast and reliable transaction processing, making it attractive for enterprise-level
-                        applications and financial services.
-                     </p>
-                     <p class="mt-4 p-content italic">In this guide, we’ll explore Monad’s origin story and dive into its tech to highlight everything you need to know.</p>
-                     <p class="mt-4 p-content italic mb-2">Let’s get right to it!</p>
-                     <h1 class="text-2xl font-bold text-white text-foreground">Monad origin story</h2>
-                     <p class="mt-4 p-content">
-                        Monad Labs was founded by <span class="text-muted-foreground">[Name]</span>, <span class="text-muted-foreground">[Name]</span>, and <span class="text-muted-foreground">[Name]</span> in 2022.
-                     </p>
-                     <p class="mt-4 p-content">
-                        Before diving into the world of blockchain, both Keone and James spent eight years at <span class="text-muted-foreground">[Company]</span>. Here, Keone led a high-frequency trading (HFT) team,
-                        and James built an ultra-low-latency trading system responsible for tens of billions of notional daily volume in major futures markets. Eunice was previously in trading at BofA Merrill Lynch,
-                        and led product teams building enterprise trading systems at Broadway Technology, and payments and licensing at Shutterstock.
-                     </p>
-                     <p class="mt-4 p-content">
-                        The trio founded Monad Labs after realizing that it's possible to implement a series of fundamental optimizations for Ethereum in general, and the Ethereum Virtual Machine (EVM) in particular.
-                        These optimizations aimed to help the Ethereum ecosystem overcome the challenges it faced since its inception: modest throughput, high gas fees, and limited scalability.
-                     </p>
-                     <p class="mt-4 p-content">To solve for these limitations, Monad Labs built the Monad blockchain.</p>
-                     <h1 class="text-2xl font-bold text-white text-foreground mt-3">What is Monad?</h2>
-                     <p class="mt-4 p-content">
-                        Monad is a cutting-edge Layer 1 blockchain that leverages the Ethereum Virtual Machine (EVM)—the software that powers the Ethereum blockchain, and all networks built on top of it.
-                     </p>
-                     <p class="mt-4 p-content">
-                        This approach enables Monad to support all existing Ethereum smart contracts and applications without any need for modification. This compatibility is crucial for encouraging adoption among
-                        Ethereum developers, who can migrate their applications to Monad with ease and without facing interoperability issues.
-                     </p>
-                     <p class="mt-4 p-content">
-                        Having said that, Monad is attempting to build a more streamlined version of the EVM from the ground up. The goal is to address the EVM's shortcomings, which have led to scalability and
-                        performance issues on the Ethereum blockchain, as well as relatively steep transaction costs.
-                     </p>
-                     <p class="mt-4 p-content">
-                        For example, Ethereum only processes approximately 10 transactions per second (TPS), while the fastest EVM chain, Binance Chain, runs at approximately 200 TPS. As a comparison, Solana's true TPS
-                        fluctuates between <span class="text-muted-foreground">[Number]</span>.
-                     </p>
-                     <p class="mt-4 p-content">
-                        The limitations of EVM chains mainly boil down to the same weakness: sequential execution. Sequential execution, naturally, is highly inefficient; while parallelized execution is more powerful
-                        and capable.
-                     </p>
-                     <p class="mt-4 p-content">
-                        Solana, for example, leverages parallel execution to achieve higher transaction speeds. Monad Labs is adopting Solana's approach by introducing parallel execution as well, with the goal of
-                        significantly increasing transaction speeds of the EVM, and consequently the Monad blockchain—making consumer-grade, decentralized applications possible.
-                     </p>
-                     <p class="mt-4 p-content">Currently, Monad is working on a testnet, with the mainnet launch scheduled for sometime in 2024.</p>
-                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5 mt-4">
-                     <p class="mt-4 p-content">
-                        Solana, for example, leverages parallel execution to achieve higher transaction speeds. Monad Labs is adopting Solana's approach by introducing parallel execution as well, with the goal of
-                        significantly increasing transaction speeds of the EVM, and consequently the Monad blockchain—making consumer-grade, decentralized applications possible.
-                     </p>
-                     <p class="mt-4 p-content">Currently, Monad is working on a testnet, with the mainnet launch scheduled for sometime in 2024.</p>
-                     <div class="container">
-                        <h2 class="title-last-post text-white text-left p-2">
-                           - Last post -
-                        </h2>
-                        <div class="row pb-5">
-                           <?php for ($i = 1; $i <= 4; $i++) { ?>
-                          <div class="col-lg-6 col-md-6 col-12 mb-3">
-                    <div class="box-last">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
-                        <div class="box-content-t1">
-                            <h2>10 funfacts in monad community</h2>
-                            <p>This is a place containing articles to help you understand monads and their technology; we will</p>
-                            <span style="color:#9C9C9F"><img src="http://localhost/mona-docs-wordpress/wp-content/themes/twentytwentyone/assets/images/Writer.svg" alt="Image Description" class="purple-icon">
- &nbsp; Last updated 4/7/202 </span> by  <span class="by">Zhangliu.eth</span>
-                        </div>
-                    </div>
-                </div>
-                           <?php } ?>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="tab-pane" id="member">
-                  <div class="container pb-5">
-                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5">
-                     <h1 class="text-2xl font-bold text-white text-foreground title">Monad: High-performance EVM blockchain</h1>
-                     <p class="mt-4 p-content italic">You've probably heard about the Monad blockchain by now.</p>
-                     <p class="mt-4 p-content italic">
-                        Basically, it's a platform that takes the technological design of the blockchain and optimizes it for fast and reliable transaction processing, making it attractive for enterprise-level
-                        applications and financial services.
-                     </p>
-                     <p class="mt-4 p-content italic">In this guide, we’ll explore Monad’s origin story and dive into its tech to highlight everything you need to know.</p>
-                     <p class="mt-4 p-content italic mb-2">Let’s get right to it!</p>
-                     <h1 class="text-2xl font-bold text-white text-foreground">Monad origin story</h2>
-                     <p class="mt-4 p-content">
-                        Monad Labs was founded by <span class="text-muted-foreground">[Name]</span>, <span class="text-muted-foreground">[Name]</span>, and <span class="text-muted-foreground">[Name]</span> in 2022.
-                     </p>
-                     <p class="mt-4 p-content">
-                        Before diving into the world of blockchain, both Keone and James spent eight years at <span class="text-muted-foreground">[Company]</span>. Here, Keone led a high-frequency trading (HFT) team,
-                        and James built an ultra-low-latency trading system responsible for tens of billions of notional daily volume in major futures markets. Eunice was previously in trading at BofA Merrill Lynch,
-                        and led product teams building enterprise trading systems at Broadway Technology, and payments and licensing at Shutterstock.
-                     </p>
-                     <p class="mt-4 p-content">
-                        The trio founded Monad Labs after realizing that it's possible to implement a series of fundamental optimizations for Ethereum in general, and the Ethereum Virtual Machine (EVM) in particular.
-                        These optimizations aimed to help the Ethereum ecosystem overcome the challenges it faced since its inception: modest throughput, high gas fees, and limited scalability.
-                     </p>
-                     <p class="mt-4 p-content">To solve for these limitations, Monad Labs built the Monad blockchain.</p>
-                     <h1 class="text-2xl font-bold text-white text-foreground mt-3">What is Monad?</h2>
-                     <p class="mt-4 p-content">
-                        Monad is a cutting-edge Layer 1 blockchain that leverages the Ethereum Virtual Machine (EVM)—the software that powers the Ethereum blockchain, and all networks built on top of it.
-                     </p>
-                     <p class="mt-4 p-content">
-                        This approach enables Monad to support all existing Ethereum smart contracts and applications without any need for modification. This compatibility is crucial for encouraging adoption among
-                        Ethereum developers, who can migrate their applications to Monad with ease and without facing interoperability issues.
-                     </p>
-                     <p class="mt-4 p-content">
-                        Having said that, Monad is attempting to build a more streamlined version of the EVM from the ground up. The goal is to address the EVM's shortcomings, which have led to scalability and
-                        performance issues on the Ethereum blockchain, as well as relatively steep transaction costs.
-                     </p>
-                     <p class="mt-4 p-content">
-                        For example, Ethereum only processes approximately 10 transactions per second (TPS), while the fastest EVM chain, Binance Chain, runs at approximately 200 TPS. As a comparison, Solana's true TPS
-                        fluctuates between <span class="text-muted-foreground">[Number]</span>.
-                     </p>
-                     <p class="mt-4 p-content">
-                        The limitations of EVM chains mainly boil down to the same weakness: sequential execution. Sequential execution, naturally, is highly inefficient; while parallelized execution is more powerful
-                        and capable.
-                     </p>
-                     <p class="mt-4 p-content">
-                        Solana, for example, leverages parallel execution to achieve higher transaction speeds. Monad Labs is adopting Solana's approach by introducing parallel execution as well, with the goal of
-                        significantly increasing transaction speeds of the EVM, and consequently the Monad blockchain—making consumer-grade, decentralized applications possible.
-                     </p>
-                     <p class="mt-4 p-content">Currently, Monad is working on a testnet, with the mainnet launch scheduled for sometime in 2024.</p>
-                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5 mt-4">
-                     <p class="mt-4 p-content">
-                        Solana, for example, leverages parallel execution to achieve higher transaction speeds. Monad Labs is adopting Solana's approach by introducing parallel execution as well, with the goal of
-                        significantly increasing transaction speeds of the EVM, and consequently the Monad blockchain—making consumer-grade, decentralized applications possible.
-                     </p>
-                     <p class="mt-4 p-content">Currently, Monad is working on a testnet, with the mainnet launch scheduled for sometime in 2024.</p>
-                     <div class="container">
-                        <h2 class="title-last-post text-white text-left p-2">
-                           - Last post -
-                        </h2>
-                        <div class="row pb-5">
-                           <?php for ($i = 1; $i <= 4; $i++) { ?>
-                          <div class="col-lg-6 col-md-6 col-12 mb-3">
-                    <div class="box-last">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
-                        <div class="box-content-t1">
-                            <h2>10 funfacts in monad community</h2>
-                            <p>This is a place containing articles to help you understand monads and their technology; we will</p>
-                            <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
-                        </div>
-                    </div>
-                </div>
-                           <?php } ?>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="tab-pane" id="faq">
-                  <div class="container pb-5">
-                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5">
-                     <h1 class="text-2xl font-bold text-white text-foreground title">Monad: High-performance EVM blockchain</h1>
-                     <p class="mt-4 p-content italic">You've probably heard about the Monad blockchain by now.</p>
-                     <p class="mt-4 p-content italic">
-                        Basically, it's a platform that takes the technological design of the blockchain and optimizes it for fast and reliable transaction processing, making it attractive for enterprise-level
-                        applications and financial services.
-                     </p>
-                     <p class="mt-4 p-content italic">In this guide, we’ll explore Monad’s origin story and dive into its tech to highlight everything you need to know.</p>
-                     <p class="mt-4 p-content italic mb-2">Let’s get right to it!</p>
-                     <h1 class="text-2xl font-bold text-white text-foreground">Monad origin story</h2>
-                     <p class="mt-4 p-content">
-                        Monad Labs was founded by <span class="text-muted-foreground">[Name]</span>, <span class="text-muted-foreground">[Name]</span>, and <span class="text-muted-foreground">[Name]</span> in 2022.
-                     </p>
-                     <p class="mt-4 p-content">
-                        Before diving into the world of blockchain, both Keone and James spent eight years at <span class="text-muted-foreground">[Company]</span>. Here, Keone led a high-frequency trading (HFT) team,
-                        and James built an ultra-low-latency trading system responsible for tens of billions of notional daily volume in major futures markets. Eunice was previously in trading at BofA Merrill Lynch,
-                        and led product teams building enterprise trading systems at Broadway Technology, and payments and licensing at Shutterstock.
-                     </p>
-                     <p class="mt-4 p-content">
-                        The trio founded Monad Labs after realizing that it's possible to implement a series of fundamental optimizations for Ethereum in general, and the Ethereum Virtual Machine (EVM) in particular.
-                        These optimizations aimed to help the Ethereum ecosystem overcome the challenges it faced since its inception: modest throughput, high gas fees, and limited scalability.
-                     </p>
-                     <p class="mt-4 p-content">To solve for these limitations, Monad Labs built the Monad blockchain.</p>
-                     <h1 class="text-2xl font-bold text-white text-foreground mt-3">What is Monad?</h2>
-                     <p class="mt-4 p-content">
-                        Monad is a cutting-edge Layer 1 blockchain that leverages the Ethereum Virtual Machine (EVM)—the software that powers the Ethereum blockchain, and all networks built on top of it.
-                     </p>
-                     <p class="mt-4 p-content">
-                        This approach enables Monad to support all existing Ethereum smart contracts and applications without any need for modification. This compatibility is crucial for encouraging adoption among
-                        Ethereum developers, who can migrate their applications to Monad with ease and without facing interoperability issues.
-                     </p>
-                     <p class="mt-4 p-content">
-                        Having said that, Monad is attempting to build a more streamlined version of the EVM from the ground up. The goal is to address the EVM's shortcomings, which have led to scalability and
-                        performance issues on the Ethereum blockchain, as well as relatively steep transaction costs.
-                     </p>
-                     <p class="mt-4 p-content">
-                        For example, Ethereum only processes approximately 10 transactions per second (TPS), while the fastest EVM chain, Binance Chain, runs at approximately 200 TPS. As a comparison, Solana's true TPS
-                        fluctuates between <span class="text-muted-foreground">[Number]</span>.
-                     </p>
-                     <p class="mt-4 p-content">
-                        The limitations of EVM chains mainly boil down to the same weakness: sequential execution. Sequential execution, naturally, is highly inefficient; while parallelized execution is more powerful
-                        and capable.
-                     </p>
-                     <p class="mt-4 p-content">
-                        Solana, for example, leverages parallel execution to achieve higher transaction speeds. Monad Labs is adopting Solana's approach by introducing parallel execution as well, with the goal of
-                        significantly increasing transaction speeds of the EVM, and consequently the Monad blockchain—making consumer-grade, decentralized applications possible.
-                     </p>
-                     <p class="mt-4 p-content">Currently, Monad is working on a testnet, with the mainnet launch scheduled for sometime in 2024.</p>
-                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss2.png" alt="" class="banner img-fluid mb-5 mt-4">
-                     <p class="mt-4 p-content">
-                        Solana, for example, leverages parallel execution to achieve higher transaction speeds. Monad Labs is adopting Solana's approach by introducing parallel execution as well, with the goal of
-                        significantly increasing transaction speeds of the EVM, and consequently the Monad blockchain—making consumer-grade, decentralized applications possible.
-                     </p>
-                     <p class="mt-4 p-content">Currently, Monad is working on a testnet, with the mainnet launch scheduled for sometime in 2024.</p>
-                     <div class="container">
-                        <h2 class="title-last-post text-white text-left p-2">
-                           - Last post -
-                        </h2>
-                        <div class="row pb-5">
-                           <?php for ($i = 1; $i <= 4; $i++) { ?>
-                          <div class="col-lg-6 col-md-6 col-12 mb-3">
-                    <div class="box-last">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
-                        <div class="box-content-t1">
-                            <h2>10 funfacts in monad community</h2>
-                            <p>This is a place containing articles to help you understand monads and their technology; we will</p>
-                            <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
-                        </div>
-                    </div>
-                </div>
-                           <?php } ?>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+               <?php } ?>
             </div>
          </div>
          <!-- <div class="col-lg-1">
@@ -618,43 +473,74 @@ th.py-3.px-4:last-child {
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-XX+q43XXb5v2nYp12xNX+PGerfIy/4mU5AXf1F8gH15i0LY0+eERn3nifds5xP/7" crossorigin="anonymous">
 <script>
    $(document).ready(function() {
-       $(".tab").click(function() {
-           var targetId = $(this).data("target");
-           $(".tab").removeClass("active");
-           $(this).addClass("active");
-   
-           $(".tab-pane").removeClass("active");
-           $("#" + targetId).addClass("active");
-       });
-   
-       $('#search-input').on('focus', function() {
-           $('#search-label').addClass('hidden');
-       }).on('blur', function() {
-           if ($(this).val() === '') {
-               $('#search-label').removeClass('hidden');
-           }
-       });
+      $(".tab").click(function() {
+         var targetId = $(this).data("target");
+         $(".tab").removeClass("active");
+         $(this).addClass("active");
+
+         $(".tab-pane").removeClass("active");
+         $("#" + targetId).addClass("active");
+      });
+
+      $('#search-input').on('focus', function() {
+         $('#search-label').addClass('hidden');
+      }).on('blur', function() {
+         if ($(this).val() === '') {
+            $('#search-label').removeClass('hidden');
+         }
+      });
    });
 </script>
 <script>
- const data = [
-    { dapp: '', field: 'DE-fi', fund: '5M' },
-    { dapp: '', field: 'Liquidity', fund: '5M' },
-    { dapp: '', field: 'NFTs', fund: '-' },
-    { dapp: '', field: 'Stablecoin', fund: '2M' },
-    { dapp: '', field: 'NFTs', fund: '-' },
-    { dapp: '', field: 'Stablecoin', fund: '-' },
-    { dapp: '', field: 'DE-fi', fund: '-' },
-    { dapp: '', field: 'Lending/borrow', fund: '-' },
-];
-   
+   const data = [{
+         dapp: '',
+         field: 'DE-fi',
+         fund: '5M'
+      },
+      {
+         dapp: '',
+         field: 'Liquidity',
+         fund: '5M'
+      },
+      {
+         dapp: '',
+         field: 'NFTs',
+         fund: '-'
+      },
+      {
+         dapp: '',
+         field: 'Stablecoin',
+         fund: '2M'
+      },
+      {
+         dapp: '',
+         field: 'NFTs',
+         fund: '-'
+      },
+      {
+         dapp: '',
+         field: 'Stablecoin',
+         fund: '-'
+      },
+      {
+         dapp: '',
+         field: 'DE-fi',
+         fund: '-'
+      },
+      {
+         dapp: '',
+         field: 'Lending/borrow',
+         fund: '-'
+      },
+   ];
+
    const tableBody = document.getElementById('table-body');
-   
+
    data.forEach(row => {
-     const tr = document.createElement('tr');
-     tr.className = 'border-b border-zinc-700';
-   
-     tr.innerHTML = `
+      const tr = document.createElement('tr');
+      tr.className = 'border-b border-zinc-700';
+
+      tr.innerHTML = `
        <td class="py-3 px-4">${row.dapp}</td>
        <td class="py-3 px-4">${row.field}</td>
        <td class="py-3 px-4">${row.fund}</td>
@@ -666,34 +552,33 @@ th.py-3.px-4:last-child {
          </
          </td>
      `;
-   
-     tableBody.appendChild(tr);
+
+      tableBody.appendChild(tr);
    });
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var url = window.location.pathname;
+   document.addEventListener('DOMContentLoaded', function() {
+      var url = window.location.pathname;
 
-    var segments = url.split('/');
-    var tabName = segments.filter(segment => segment !== '').pop();
-    var tabToActivate = document.querySelector('.tab[data-target="' + tabName + '"]');
+      var segments = url.split('/');
+      var tabName = segments.filter(segment => segment !== '').pop();
+      var tabToActivate = document.querySelector('.tab[data-target="' + tabName + '"]');
 
-    if (tabToActivate) {
-        var allTabs = document.querySelectorAll('.tab');
-        allTabs.forEach(function(tab) {
+      if (tabToActivate) {
+         var allTabs = document.querySelectorAll('.tab');
+         allTabs.forEach(function(tab) {
             tab.classList.remove('active');
-        });
-        tabToActivate.classList.add('active');
-    }
-    var paneToActivate = document.querySelector('.tab-pane#' + tabName);
+         });
+         tabToActivate.classList.add('active');
+      }
+      var paneToActivate = document.querySelector('.tab-pane#' + tabName);
 
-    if (paneToActivate) {
-        var allPanes = document.querySelectorAll('.tab-pane');
-        allPanes.forEach(function(pane) {
+      if (paneToActivate) {
+         var allPanes = document.querySelectorAll('.tab-pane');
+         allPanes.forEach(function(pane) {
             pane.classList.remove('active');
-        });
-        paneToActivate.classList.add('active');
-    }
-});
+         });
+         paneToActivate.classList.add('active');
+      }
+   });
 </script>
-
