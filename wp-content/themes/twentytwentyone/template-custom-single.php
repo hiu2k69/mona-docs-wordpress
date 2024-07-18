@@ -277,11 +277,11 @@ if ($post) {
     setup_postdata($post);
 
 ?>
-    <section class="learn">
+    <section class="learn pt-5">
         <div class="container">
             <div class="row">
             <div class=" pb-5 color-content">
-                              <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="" class="banner img-fluid mb-5">
+                              <!-- <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="" class="banner img-fluid mb-5"> -->
                               <h1 class="text-2xl font-bold text-white text-foreground title"><?php the_title(); ?></h1>
                               <div  class="mt-4 p-content text-lg text-white italic color-content"><?php the_content(); ?></div>
                            </div>
