@@ -1,17 +1,27 @@
 <?php
-   /**
-    * Template Name: monad-learning
-    */
-   
-   // Exit if accessed directly.
-   if (!defined("ABSPATH")) {
-       exit();
-   }
-   
-   get_header();
-   ?>
+/**
+ * Template Name: monad-learning
+ */
+
+// Exit if accessed directly.
+if (!defined("ABSPATH")) {
+    exit();
+}
+
+get_header();
+?>
    <style>
-      .header-container {
+
+img[src*="Writer.svg"] {
+    filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
+}
+
+.purple-icon {
+   filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
+}.box-por {
+    display: flex;
+}
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +40,7 @@ nav#site-navigation {
 box.disclaimer {
    text-align: center;
     justify-content: center;
-    margin-left: 56px;
+    margin-left: 23px;
     align-content: center;
     align-self: center;
     justify-items: center;
@@ -75,6 +85,9 @@ th.py-3.px-4 {
     border-top: 1px solid #836EF9;
     border-bottom: 1px solid #836EF9;
     border-right  : none ;
+}
+.col-lg-2.col-md-3.relative.bg-090909 {
+    width: 14%;
 }
 table td, table th, .wp-block-table td, .wp-block-table th {
     padding: calc(0.5* var(--global--spacing-unit));
@@ -200,23 +213,25 @@ th.py-3.px-4:last-child {
       <div class="row">
          <div class="col-lg-2 col-md-3 relative  bg-090909">
             <div class="tab-container pt-5 ">
-               <div class="tab active" data-target="monad-learning"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn about monad.svg" alt=""><h2 class="name-title ml-5 active">Learn about Monad</h2>
+               <div class="tab active" data-target="monad-learning"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""><h2 class="name-title ml-5 active ml-again">Learn about Monad</h2>
                </div>
-               <div class="tab" data-target="tab2"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad ecosystem.svg" alt=""><h2 class="name-title ml-5"> &nbsp;Monad Ecosystem</h2>
+               <div class="tab" data-target="tab2"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad-ecosystem.svg" alt=""><h2 class="name-title ml-5 ml-again"> Monad Ecosystem</h2>
                </div>
-               <div class="tab" data-target="tab3"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community News.svg" alt=""><h2 class="name-title ml-5">Community News</h2>
+               <div class="tab" data-target="tab3"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">Community News</h2>
                </div>
-               <div class="tab" data-target="community-culture"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community culture.svg" alt=""><h2 class="name-title ml-5">Community Culture</h2>
+               <div class="tab" data-target="community-culture"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Community-culture.svg" alt=""><h2 class="name-title ml-5 ml-again">Community Culture</h2>
                </div>
-               <div class="tab" data-target="contribute"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/How to contribute.svg" alt=""><h2 class="name-title ml-5">&nbsp;How to Contribute</h2>
+               <div class="tab" data-target="contribute"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/How-to-contribute.svg" alt=""><h2 class="name-title ml-5 ml-again">How to Contribute</h2>
                </div>
-               <div class="tab " data-target="tab6"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Artists and Gallery.svg" alt=""><h2 class="name-title ml-5 art">Artists and Gallery</h2>
+               <div class="tab " data-target="tab6"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Union 1.svg" alt=""><h2 class="name-title ml-5 art">   Artists and Gallery</h2>
                </div>
-               <div class="tab" data-target="member"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad team members.svg" alt=""><h2 class="name-title ml-5">Team Members</h2>
+               <div class="tab" data-target="member"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Team-members.svg" alt=""><h2 class="name-title ml-5">   Team Members</h2>
                </div>
-               <div class="tab" data-target="tab8"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monacomics.svg" alt=""><h2 class="name-title ml-5"> &nbsp; Monacomics</h2>
+               <div class="tab" data-target="tab8"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monacomics.svg" alt=""><h2 class="name-title ml-5">  Monacomics</h2>
                </div>
-               <div class="tab" data-target="faq"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/FAQs.svg" alt=""><h2 class="name-title ml-5 art">&nbsp;FAQs</h2>
+               <div class="tab" data-target="tab8"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Monad-media-kit.svg" alt=""><h2 class="name-title ml-5">  Monad media kit</h2>
+               </div>
+               <div class="tab" data-target="faq"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/FAQs.svg" alt=""><h2 class="name-title ml-5 art">FAQs</h2>
                </div>
               
                <box class="disclaimer p-4">
@@ -239,7 +254,7 @@ th.py-3.px-4:last-child {
                <div class="tab-pane active" id="monad-learning">
                   <div class="container">
                      <div class="flex justify-between items-center mb-4">
-                        <h1 class="text-3xl font-bold text-white">Learn about monad</h1>
+                        <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""> &nbsp; Learn about monad</h1>
                         <div class="relative">
                         <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                            <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
@@ -249,14 +264,16 @@ th.py-3.px-4:last-child {
                         </div>
                      </div>
                      <div class="row pb-5">
-                        <?php for ($i = 1; $i <= 14; $i++) { ?>
+                        <?php for ($i = 1; $i <= 8; $i++) { ?>
                         <div class="col-lg-6 col-md-6 col-12 mb-3">
                            <div class="box-last">
                               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
-                              <div class="box-content-t1">
+                              <div class="box-content-t1 ">
                                  <h2>10 funfacts in monad community</h2>
-                                 <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
-                                 <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
+                                 <p class="ml-2">This is a place containing articles to help you understand monads and their technology; we will update regularly.we will update regularly.</p>
+                                 <span class="text-secondary-foreground mt-2 m;- flex items-center">
+                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">                             
+                                   &nbsp;  Last update 10/07/2024 &nbsp;   <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1">   &nbsp;&nbsp; Zhangliu.eth</span></span></span> 
                               </div>
                            </div>
                         </div>
@@ -309,14 +326,16 @@ th.py-3.px-4:last-child {
                         </div>
                      </div>
                      <div class="row pb-5">
-                        <?php for ($i = 1; $i <= 14; $i++) { ?>
+                            <?php for ($i = 1; $i <= 8; $i++) { ?>
                         <div class="col-lg-6 col-md-6 col-12 mb-3">
                            <div class="box-last">
                               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
-                              <div class="box-content-t1">
+                              <div class="box-content-t1 ">
                                  <h2>10 funfacts in monad community</h2>
-                                 <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
-                                 <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
+                                 <p class="ml-2">This is a place containing articles to help you understand monads and their technology; we will update regularly.we will update regularly.</p>
+                                 <span class="text-secondary-foreground mt-2 m;- flex items-center">
+                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">                             
+                                   &nbsp;  Last update 10/07/2024 &nbsp;   <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1">   &nbsp;&nbsp; Zhangliu.eth</span></span></span> 
                               </div>
                            </div>
                         </div>
@@ -337,14 +356,16 @@ th.py-3.px-4:last-child {
                         </div>
                      </div>
                      <div class="row pb-5">
-                        <?php for ($i = 1; $i <= 14; $i++) { ?>
+                            <?php for ($i = 1; $i <= 8; $i++) { ?>
                         <div class="col-lg-6 col-md-6 col-12 mb-3">
                            <div class="box-last">
                               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="box-image-last">
-                              <div class="box-content-t1">
+                              <div class="box-content-t1 ">
                                  <h2>10 funfacts in monad community</h2>
-                                 <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
-                                 <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
+                                 <p class="ml-2">This is a place containing articles to help you understand monads and their technology; we will update regularly.we will update regularly.</p>
+                                 <span class="text-secondary-foreground mt-2 m;- flex items-center">
+                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">                             
+                                   &nbsp;  Last update 10/07/2024 &nbsp;   <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1">   &nbsp;&nbsp; Zhangliu.eth</span></span></span> 
                               </div>
                            </div>
                         </div>
@@ -420,7 +441,8 @@ th.py-3.px-4:last-child {
                         <div class="box-content-t1">
                             <h2>10 funfacts in monad community</h2>
                             <p>This is a place containing articles to help you understand monads and their technology; we will</p>
-                            <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; Last updated 4/7/2024</span>
+                            <span style="color:#9C9C9F"><img src="http://localhost/mona-docs-wordpress/wp-content/themes/twentytwentyone/assets/images/Writer.svg" alt="Image Description" class="purple-icon">
+ &nbsp; Last updated 4/7/202 </span> by  <span class="by">Zhangliu.eth</span>
                         </div>
                     </div>
                 </div>

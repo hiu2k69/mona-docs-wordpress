@@ -7727,7 +7727,7 @@ img.img-title {
 .box-last {
     display: flex;
     background-color: #2a2a2a;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     overflow: hidden;
     color: white;
     font-family: Arial, sans-serif;
@@ -7817,7 +7817,7 @@ h2.title-last-post.text-white.text-center.p-5 {
    }
    h1.text-3xl.font-bold.text-white {
     font-size: 40px;
-	font-family: 'Segoe UI';
+	font-family: 'Calibri';
 
 }
 
@@ -7850,9 +7850,7 @@ h2.title-last-post.text-white.text-center.p-5 {
    transition: background-color 0.3s ease, color 0.3s ease;
    display: flex;
    }
-   .tab img {
-    margin-right: 10px; /* Adjust icon/text spacing */
-}
+ 
 
    .box-top {
 	width: 167px;
@@ -7902,7 +7900,7 @@ p.dis {
    overflow: auto;
    }
    .box-content-t1 {
-   padding: 5px;
+   padding: 10px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -7915,9 +7913,9 @@ p.dis {
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-836ef9);
     text-align: left;
-    font: normal normal 600 24px / 32px Segoe UI;
-    letter-spacing: 0px;
+	font: normal normal bold 23px/27px Calibri;    letter-spacing: 0px;
     color: #836EF9;
+	font-weight: bolder;
     opacity: 1;
    }
    th.py-3.px-4 {
@@ -7955,7 +7953,7 @@ p.text-sm.text-purple-400.mb-6 {
     color: #E4ECF2;
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
-    font: normal normal normal 17px / 27px Segoe UI;
+    font: normal normal normal 18px / 32px Calibri;
     letter-spacing: 0px;
     color: #E4ECF2;
     opacity: 1;
@@ -7983,6 +7981,9 @@ p.text-sm.text-purple-400.mb-6 {
     z-index: -1;
     border-radius: 7px;
 
+}span.by-t {
+    color: #949494;
+    font-family: 'Calibri';
 }
 
 span.text-right {
@@ -7994,10 +7995,15 @@ span.text-right {
     color: #FFFFFF;
     opacity: 1;
 }
+span.text-primary.ml-1 {
+    color: #949494 !important;
+    font-family: 'Calibri';
+    text-decoration: underline;
+}
 .box-content-t1 span {
     font-size: 18px;
-    color: #00FFF2;
-    font-family: 'Segoe UI';
+    color: #836EF9;
+    font-family: 'Calibri';
     display: flex;
 }
    .search-container {
@@ -8066,11 +8072,11 @@ span.text-right {
     font-family: 'seguisb.ttf';
     src: local("SourceCodePro"), url('../twentytwentyone/assets/font/seguisb.ttf') format("truetype")
 }
-img.img-logo-footer.img-fluid {
-    width: 60%;
+
+@font-face {
+    font-family: 'Calibri';
+    src: local("SourceCodePro"), url('../twentytwentyone/assets/font/calibri.ttf') format("truetype")
 }
-
-
 /* 27in */
 @media only screen and (min-width: 1920px) {
  
