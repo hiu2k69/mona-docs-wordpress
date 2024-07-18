@@ -291,7 +291,7 @@ get_header();
                   'taxonomy' => 'category',
                   'hide_empty' => false,
                   'orderby' => 'term_id',
-                  'order' => 'DESC'
+                  'order' => 'ASC'
                ));
                foreach ($categories as $category) {
 
@@ -406,7 +406,7 @@ get_header();
                                     'post_type' => 'post',
                                     'post_status' => 'publish',
                                     'orderby' => 'date',
-                                    'order' => 'DESC'
+                                    'order' => 'ASC'
                                  );
 
                                  $posts = get_posts($args);
