@@ -262,19 +262,19 @@ get_header();
             <div class="row pb-5">
                 <?php
                 $args = array(
-                    'posts_per_page' => -1, // Số lượng bài viết cần lấy, -1 để lấy tất cả
-                    'post_type' => 'post', // Loại bài viết, ví dụ 'post', 'page', 'product' (nếu sử dụng WooCommerce), etc.
-                    'post_status' => 'publish', // Chỉ lấy các bài viết đã xuất bản
-                    'orderby' => 'date', // Sắp xếp bài viết theo ngày đăng, có thể sử dụng 'title', 'author', 'ID', etc.
-                    'order' => 'DESC' // Sắp xếp theo thứ tự giảm dần, có thể sử dụng 'ASC' để sắp xếp tăng dần
+                    'posts_per_page' => -1,
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'orderby' => 'date', 
+                    'order' => 'DESC' 
                 );
 
                 $posts = get_posts($args);
                 foreach ($posts as $post) {
                     setup_postdata($post);
-                    $post_id = get_the_ID(); // Lấy ID của bài viết hiện tại
+                    $post_id = get_the_ID(); 
 
-                    $post_link = get_permalink($post_id); // Lấy đường dẫn của bài viết
+                    $post_link = get_permalink($post_id); 
                 ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
@@ -310,19 +310,19 @@ get_header();
             <div class="row pb-5">
                 <?php
                 $args = array(
-                    'posts_per_page' => -1, // Số lượng bài viết cần lấy, -1 để lấy tất cả
-                    'post_type' => 'post', // Loại bài viết, ví dụ 'post', 'page', 'product' (nếu sử dụng WooCommerce), etc.
-                    'post_status' => 'publish', // Chỉ lấy các bài viết đã xuất bản
-                    'orderby' => 'date', // Sắp xếp bài viết theo ngày đăng, có thể sử dụng 'title', 'author', 'ID', etc.
-                    'order' => 'DESC' // Sắp xếp theo thứ tự giảm dần, có thể sử dụng 'ASC' để sắp xếp tăng dần
+                    'posts_per_page' => -1,
+                    'post_type' => 'post',
+                    'post_status' => 'publish', 
+                    'orderby' => 'date', 
+                    'order' => 'DESC' 
                 );
 
                 $posts = get_posts($args);
                 foreach ($posts as $post) {
                     setup_postdata($post);
-                    $post_id = get_the_ID(); // Lấy ID của bài viết hiện tại
+                    $post_id = get_the_ID(); 
 
-                    $post_link = get_permalink($post_id); // Lấy đường dẫn của bài viết
+                    $post_link = get_permalink($post_id);
                 ?>
                     <div class="col-lg-6 col-md-6 col-12 mb-3">
                         <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
