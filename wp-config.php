@@ -29,8 +29,7 @@ define( 'DB_USER', 'dbmasteruser' );
 define( 'DB_PASSWORD', 'm-ROu49#?hK%Q70>-=+eBR5#|CdFFXdq' );
 
 /** Database hostname */
-define( 'DB_HOST', 'ls-eac578c70b42de9f17c0099f3161018378e2d289.cdcgamaes
-6s7.ap-southeast-1.rds.amazonaws.com' );
+define( 'DB_HOST', 'ls-eac578c70b42de9f17c0099f3161018378e2d289.cdcgamaes6s7.ap-southeast-1.rds.amazonaws.com' );
 
 
 
