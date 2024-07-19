@@ -263,7 +263,7 @@ get_header();
                 <?php
                 $args = array(
                     'posts_per_page' => -1,
-                    'post_type' => 'post',
+                    'post_type' => 'post', 
                     'post_status' => 'publish',
                     'orderby' => 'date', 
                     'order' => 'DESC' 
@@ -272,7 +272,7 @@ get_header();
                 $posts = get_posts($args);
                 foreach ($posts as $post) {
                     setup_postdata($post);
-                    $post_id = get_the_ID(); 
+                    $post_id = get_the_ID();
 
                     $post_link = get_permalink($post_id); 
                 ?>
@@ -312,7 +312,7 @@ get_header();
                 $args = array(
                     'posts_per_page' => -1,
                     'post_type' => 'post',
-                    'post_status' => 'publish', 
+                    'post_status' => 'publish',
                     'orderby' => 'date', 
                     'order' => 'DESC' 
                 );
@@ -320,7 +320,7 @@ get_header();
                 $posts = get_posts($args);
                 foreach ($posts as $post) {
                     setup_postdata($post);
-                    $post_id = get_the_ID(); 
+                    $post_id = get_the_ID();
 
                     $post_link = get_permalink($post_id);
                 ?>

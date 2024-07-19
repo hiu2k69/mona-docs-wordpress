@@ -29,9 +29,8 @@ define( 'DB_USER', 'dbmasteruser' );
 define( 'DB_PASSWORD', 'm-ROu49#?hK%Q70>-=+eBR5#|CdFFXdq' );
 
 /** Database hostname */
-define( 'DB_HOST', 'ls-eac578c70b42de9f17c0099f3161018378e2d289.cdcgamaes6s7.ap-southeast-1.rds.amazonaws.com' );
+define( 'DB_HOST', 'https://monadocs.xyz/' );
 
-/** Database charset to use in creating database tables. */The database server could be connected to (which means your username and password is okay) but the mona-wordpress database could not be selected.
 
 
 define( 'DB_CHARSET', 'utf8' );
@@ -84,6 +83,8 @@ $table_prefix = 'wp_';
  * @link https://wordpress.org/documentation/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
+define( 'FS_METHOD', 'direct' );
+
 
 /* Add any custom values between this line and the "stop editing" line. */
 
