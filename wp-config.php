@@ -20,7 +20,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'mona-wordpress-final' );
+define( 'DB_NAME', 'mona-wordpress' );
 
 /** Database username */
 define( 'DB_USER', 'dbmasteruser' );
@@ -59,6 +59,8 @@ define( 'LOGGED_IN_SALT',   'u_RWcP52VVOVrqx4?~pOu:=FE!R65y[WtTq01qH5II;Iq3iXc(C
 define( 'NONCE_SALT',       'VlopEnCV654>8i [hS@N$Jy^%s]q..qJC$.%a>7.2!_sQcWvG[<_Dcr3upmL^Qw' );
 
 
+define('WP_HOME', 'https://monadocs.xyz/');
+define('WP_SITEURL', 'https://monadocs.xyz/');
 
 /**#@-*/
 
