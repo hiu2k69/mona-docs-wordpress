@@ -8,11 +8,24 @@ get_header();
 
 ?>
 <style>
+    
     .box-last-post blockquote .twitter-tweet .twitter-tweet-rendered iframe {
         width: 100% !important;
         height: 100% !important;
     }
 
+    .mt-4.p-content.text-lg.text-white.italic.color-content img {
+    width: 100%;
+    color: white;
+}
+.mt-4.p-content.text-lg.text-white.italic.color-content h3 {
+    color: white;
+}
+.mt-4.p-content.text-lg.text-white.italic.color-content li {
+    line-height: 3;
+    font-size: 25px;
+	font-family: 'Calibri';
+}
     .box-last-post img {
         width: 100% !important;
         height: auto !important;
@@ -100,8 +113,39 @@ get_header();
         font-family: 'Segoe UI';
 
 
-    }
-
+    } .fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.content-comingsoon{
+      height: 50vh;
+      position: relative;
+   }
+   .content-comingsoon h2{
+   top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+   font-size: 50px;
+   font-family: 'Calibri';
+   color: #949494;
+   }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+nav#site-navigation {
+    position: absolute;
+    right: 18%;
+}
     .box-content-main {
         transition: box-shadow 0.3s;
     }
@@ -284,14 +328,6 @@ get_header();
       /* height: 25px; */
       object-fit: cover;
    }
-
-   .detail-page{
-    text-align: center;
-    padding: 10px;
-    position: sticky !important;
-    bottom: 0;
-    width: 100%;
-   }
 </style>
 <section class="learn ">
     <div class="container-fluid">
@@ -316,7 +352,7 @@ get_header();
                      echo  '<a class="tab gap-05" href="'.home_url('/category?slug='. $category->slug .'') .'"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
                 </a>';
                   } else {
-                     echo '<div class="tab gap-05" data-target="' . $tab . '"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </div>';
+                     echo '<a class="tab gap-05" href="'.home_url('/category?slug='. $category->slug .'') .'"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </a>';
                   }
                }
                ?>

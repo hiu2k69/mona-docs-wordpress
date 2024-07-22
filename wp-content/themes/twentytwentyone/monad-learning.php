@@ -23,7 +23,9 @@ get_header();
    .box-por {
       display: flex;
    }
-
+   footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relative {
+    height: 41px;
+}
    .header-container {
       display: flex;
       justify-content: space-between;
@@ -206,6 +208,12 @@ get_header();
    font-family: 'Calibri';
    color: #949494;
    }
+   .fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -447,7 +455,7 @@ get_header();
 
                                                 <span class="text-secondary-foreground flex items-center">
                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                                   &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1"> &nbsp; <?php echo get_the_author(); ?></span></span></span>
+                                                   &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1"> <?php echo get_the_author(); ?></span></span></span>
                                              </div>
                                           </div>
                                        </a>

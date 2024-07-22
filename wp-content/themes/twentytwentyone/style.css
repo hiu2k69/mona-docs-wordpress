@@ -7788,6 +7788,7 @@ h2.title-last-post.text-white.text-center.p-5 {
    background-repeat: no-repeat;
    position: relative;
    z-index: 1;
+   height: 100%;
    }
    h1.text-2xl.font-bold.text-white.text-foreground {
     color: #836EF9 !important;
@@ -7953,9 +7954,9 @@ p.text-sm.text-purple-400.mb-6 {
     color: #E4ECF2;
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
-    font: normal normal normal 18px / 32px Calibri;
+	font: normal normal normal 20px / 32px Calibri;
     letter-spacing: 0px;
-    color: #E4ECF2;
+    color: #949494;
     opacity: 1;
 }
    .box-bottom.d-flex.mt-2 {

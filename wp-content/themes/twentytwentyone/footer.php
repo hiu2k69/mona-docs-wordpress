@@ -22,7 +22,7 @@
     bottom: 18%;
 }
 footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relative {
-    height: 65px;
+    height: 41px;
 }
 .text-white{
     color: white;
@@ -39,6 +39,7 @@ footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relat
 a.text-account{
     color: gray;
 }
+
 </style>
 </main><!-- #main -->
 </div><!-- #primary -->
@@ -47,7 +48,7 @@ a.text-account{
 <?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
 
-<footer class="bg-black text-white py-4 flex items-center justify-center space-x-4 relative detail-page" >
+<footer class="bg-black text-white py-4 flex items-center justify-center space-x-4 relative detail-page fixed-footer">
     <div class="box-por">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.png" alt="Logo" class="img-logo-footer img-fluid" style="width:100px;">
     &nbsp;
