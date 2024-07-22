@@ -676,3 +676,18 @@ if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
 		return __( ', ', 'twentytwentyone' );
 	}
 endif;
+
+function add_custom_query_vars_filter($vars) {
+    $vars[] = 'slug';
+    return $vars;
+}
+add_filter('query_vars', 'add_custom_query_vars_filter');
+
+function custom_rewrite_rules() {
+    add_rewrite_rule(
+        '^category/([^/]*)/?',
+        'index.php?pagename=category&slug=$matches[1]',
+        'top'
+    );
+}
+add_action('init', 'custom_rewrite_rules');
