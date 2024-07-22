@@ -148,7 +148,7 @@ get_header();
    }
 
    .img-cate {
-      width: 27px;
+      width: 21px;
       /* height: 25px; */
       object-fit: cover;
    }
