@@ -7729,6 +7729,7 @@ img.img-title {
     background-color: #2a2a2a;
     /* border-radius: 10px; */
     overflow: hidden;
+	border: 1px solid #101016;
     color: white;
     font-family: Arial, sans-serif;
     margin: 10px;

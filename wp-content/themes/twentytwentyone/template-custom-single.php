@@ -215,8 +215,10 @@ nav#site-navigation {
         text-align: left;
         font-family: 'seguisb.ttf';
     }
-
-
+    .gap-05 {
+      gap: 0.5rem;
+      padding: 14px 20px !important;
+   }
     .box-content p {
         margin: 0.2rem 0 1rem 0;
         font-size: 0.9rem;
