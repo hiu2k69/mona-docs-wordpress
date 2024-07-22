@@ -54,7 +54,6 @@ get_header();
 
     .box-image-last {
         width: 150px;
-        height: 150px;
         object-fit: cover;
         transition: all .2s ease-in-out;
 
@@ -239,19 +238,25 @@ get_header();
         }
     }
 
-    .home-title{
+    .home-title {
         overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
     }
 
-    .image-home{
+    .home-content {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 1.25rem !important;
+    }
+
+    .image-home {
         height: 260px !important;
         object-fit: cover;
     }
-
-
 </style>
 <div class="main relative">
     <section class="main-content-center">
@@ -261,35 +266,35 @@ get_header();
             </div>
             <div class="row pb-5">
                 <?php
-                $args = array(
-                    'posts_per_page' => -1,
-                    'post_type' => 'post', 
-                    'post_status' => 'publish',
-                    'orderby' => 'date', 
-                    'order' => 'DESC' 
-                );
+                // $args = array(
+                //     'posts_per_page' => -1,
+                //     'post_type' => 'post', 
+                //     'post_status' => 'publish',
+                //     'orderby' => 'date', 
+                //     'order' => 'DESC' 
+                // );
 
-                $posts = get_posts($args);
-                foreach ($posts as $post) {
-                    setup_postdata($post);
-                    $post_id = get_the_ID();
+                // $posts = get_posts($args);
+                // foreach ($posts as $post) {
+                //     setup_postdata($post);
+                //     $post_id = get_the_ID();
 
-                    $post_link = get_permalink($post_id); 
+                //     $post_link = get_permalink($post_id); 
+                for ($i = 0; $i < 9; $i++) {
                 ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
+                        <a href="<?php echo esc_url(home_url('/monad-learning')); ?>">
                             <div class="box-content-main">
                                 <div class="box-image">
-                                <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="image-home">
+                                    <img src="https://monadocs.xyz/wp-content/uploads/2024/07/4.png" alt="Image Description" class="image-home">
                                 </div>
                                 <div class="box-artist">
-                                    <a href="https://x.com/zhangliu_eth" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php echo get_the_author(); ?></span></a>　
+                                    <a href="https://x.com/zhangliu_eth" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span>monadocs</span></a>　
                                 </div>
                                 <div class="box-content">
-                                    <h3 class="home-title"><?php the_title(); ?></h3>
-                                    <p class=""><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
-                                        echo $trimmed_content; ?></p>
-                                    <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>" class="see-more"> <img aria-hidden="true" alt="chat-bubble" class="see" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" /> &nbsp; &nbsp; Read more</a>
+                                    <h3 class="home-title">How to Contribute</h3>
+                                    <p class="">Hey! Thanks for joining us, we welcome everyones support and help. Here are a few ways you can contribute that...</p>
+                                    <a href="<?php echo esc_url(home_url('/monad-learning')); ?>" class="see-more"> <img aria-hidden="true" alt="chat-bubble" class="see" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" /> &nbsp; &nbsp; Read more</a>
                                 </div>
                             </div>
                         </a>
@@ -297,7 +302,7 @@ get_header();
                     </div>
                 <?php
                 }
-                wp_reset_postdata();
+                // wp_reset_postdata();
                 ?>
             </div>
         </div>
@@ -313,8 +318,8 @@ get_header();
                     'posts_per_page' => -1,
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'orderby' => 'date', 
-                    'order' => 'DESC' 
+                    'orderby' => 'date',
+                    'order' => 'DESC'
                 );
 
                 $posts = get_posts($args);
@@ -325,14 +330,17 @@ get_header();
                     $post_link = get_permalink($post_id);
                 ?>
                     <div class="col-lg-6 col-md-6 col-12 mb-3">
-                        <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
+                        <a href="<?php echo esc_url(home_url('/detail')); ?>?post_id=<?php echo $post->ID; ?>">
                             <div class="box-last">
                                 <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
-                                <div class="box-content-t">
+                                <div class="box-content-t1 ">
                                     <h2 class="home-title"><?php the_title(); ?></h2>
-                                    <p class="home-title"><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
-                                        echo $trimmed_content; ?></p>
-                                    <span style="color:#9C9C9F"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; <span><?php echo get_the_author(); ?></span> &nbsp; Last updated <?php echo esc_html(get_the_date()) ?></span>
+                                    <p class="ml-2 home-content text-xl"><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
+                                                                echo $trimmed_content; ?></p>
+
+                                    <span class="text-secondary-foreground flex items-center">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
+                                        &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"><?php echo get_the_author(); ?></span></span></span>
                                 </div>
                             </div>
                         </a>

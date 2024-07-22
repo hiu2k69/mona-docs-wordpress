@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: monad-learning
+ * Template Name: Category
  */
 
 // Exit if accessed directly.
@@ -161,16 +161,8 @@ get_header();
    .home-title {
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-   }
-
-   .home-content {
-      overflow: hidden;
-      display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      font-size: 1.25rem !important;
    }
 
    .box-image-last {
@@ -190,22 +182,24 @@ get_header();
    .color-content h2,
    .color-content h3,
    .color-content h4 {
-      font-size: 18px;
+      font-size: 20px;
       color: white !important;
    }
-   .content-comingsoon{
-      height: 50vh;
-      position: relative;
-   }
-   .content-comingsoon h2{
-   top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-   font-size: 50px;
-   font-family: 'Calibri';
-   color: #949494;
-   }
+
+   .home-title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    .home-content {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 1.25rem;
+    }
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -307,6 +301,10 @@ get_header();
          <div class="col-lg-2 col-md-3 relative  bg-090909">
             <div class="tab-container pt-5 ">
                <?php
+              
+             
+                $slug =  (isset($_GET['slug'])) ? sanitize_text_field($_GET['slug']) : "";
+                $categoryBySlug = get_category_by_slug($slug);
                $categories = get_terms(array(
                   'taxonomy' => 'category',
                   'hide_empty' => false,
@@ -321,11 +319,11 @@ get_header();
                   $tab = $category->slug;
                   if ($image_url) {
 
-                     echo  '<div class="tab gap-05" data-target="' . $tab . '"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
-                </div>';
-                  } else {
-                     echo '<div class="tab" data-target="' . $tab . '"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </div>';
-                  }
+                    echo  '<a class="tab '. ($tab == $slug ? "active" : "" ).' gap-05"  href="'.home_url('/category?slug='. $category->slug .'') .'"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
+                    </a>';
+                      } else {
+                         echo '<div class="tab gap-05" data-target="' . $tab . '"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </div>';
+                      }
                }
                ?>
 
@@ -347,27 +345,17 @@ get_header();
          </div>
          <div class="col-lg-9 col-md-9">
             <div class="tab-content mt-5">
-               <?php
-
-               foreach ($categories as $category) {
-                  // var_dump($category);
-                  // $cate = get_term_by('id', $category->term_id, 'category');
-                  // $count_post = $cate->count;
-                  $tab = $category->slug;
-
-               ?>
-                  <div class="tab-pane " id="<?php echo $tab ?>">
                      <?php
                      $args = array(
-                        'category' => $category->term_id,
+                        'category' => $categoryBySlug->term_id,
                      );
-
+                     
                      $posts = get_posts($args);
                      if (count($posts) > 1) {
                      ?>
                         <div class="container">
                            <div class="flex justify-between items-center mb-4">
-                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""> &nbsp; <?php echo $category->name ?></h1>
+                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""> &nbsp; <?php echo $categoryBySlug->name ?></h1>
                               <div class="relative">
                                  <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
@@ -380,12 +368,12 @@ get_header();
                               <?php
                               foreach ($posts as $post) {
                                  setup_postdata($post);
-                                 $post_id = get_the_ID(); // Lấy ID của bài viết hiện tại
+                                 $post_id = get_the_ID(); 
 
-                                 $post_link = get_permalink($post_id); // Lấy đường dẫn của bài viết
+                                 $post_link = get_permalink($post_id); 
                               ?>
                                  <div class="col-lg-6 col-md-6 col-12 mb-3">
-                                    <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
+                                    <a href="<?php echo esc_url(home_url('/detail')); ?>?post_id=<?php echo $post->ID; ?>">
                                        <div class="box-last">
                                           <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
                                           <div class="box-content-t1 ">
@@ -395,7 +383,7 @@ get_header();
 
                                              <span class="text-secondary-foreground flex items-center">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                                &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1">  <?php echo get_the_author(); ?></span></span></span>
+                                                &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span> &nbsp; <span class="text-primary ml-1">  <?php echo get_the_author(); ?></span></span></span>
                                           </div>
                                        </div>
                                     </a>
@@ -406,13 +394,13 @@ get_header();
                         <?php } elseif (count($posts) == 1) {
                         foreach ($posts as $post) {
                            setup_postdata($post);
-                           $post_id = get_the_ID(); // Lấy ID của bài viết hiện tại
-                           $post_link = get_permalink($post_id); // Lấy đường dẫn của bài viết 
+                           $post_id = get_the_ID(); 
+                           $post_link = get_permalink($post_id); 
                         ?>
                            <div class="container pb-5 color-content">
                               <!-- <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="" class="banner img-fluid mb-5"> -->
                               <h1 class="text-2xl font-bold text-white text-foreground title"><?php the_title(); ?></h1>
-                              <p class="mt-4 p-content italic "><?php the_content(); ?></p>
+                              <div class="mt-4 p-content italic "><?php the_content(); ?></div>
                            </div>
 
                            <div class="container">
@@ -437,7 +425,7 @@ get_header();
                                     $post_link = get_permalink($post_id);
                                  ?>
                                     <div class="col-lg-6 col-md-6 col-12 mb-3">
-                                       <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
+                                       <a href="<?php echo esc_url(home_url('/detail')); ?>?post_id=<?php echo $post->ID; ?>">
                                           <div class="box-last">
                                              <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
                                              <div class="box-content-t1 ">
@@ -447,7 +435,7 @@ get_header();
 
                                                 <span class="text-secondary-foreground flex items-center">
                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                                   &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1"> &nbsp; <?php echo get_the_author(); ?></span></span></span>
+                                                   &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1">  <?php echo get_the_author(); ?></span></span></span>
                                              </div>
                                           </div>
                                        </a>
@@ -462,7 +450,7 @@ get_header();
                         ?>
                         <div class="container">
                            <div class="flex justify-between items-center mb-4">
-                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""> &nbsp; <?php echo $category->name ?></h1>
+                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""> &nbsp; <?php echo $categoryBySlug->name ?></h1>
                               <div class="relative">
                                  <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
@@ -471,19 +459,15 @@ get_header();
 
                               </div>
                            </div>
-                           <div class="row pb-5 text-center">
-                              <div class="content-comingsoon">
-                                 <h2 class="text-2xl ">Coming soon...</h2>
-
-                              </div>
+                           <div class="row pb-5">
+                           <h3 class="text-2xl text-white">Coming soon...</h3>
                            </div>
                         </div>
                         </script>
                      <?php
                      }
                      ?>
-                  </div>
-               <?php } ?>
+                  
             </div>
          </div>
          <!-- <div class="col-lg-1">

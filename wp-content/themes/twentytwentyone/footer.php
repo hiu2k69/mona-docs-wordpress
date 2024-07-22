@@ -24,6 +24,21 @@
 footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relative {
     height: 65px;
 }
+.text-white{
+    color: white;
+}
+
+.text-gray{
+    color: gray;
+}
+
+.text-account:hover{
+    color: #836EF9;
+    text-decoration: underline;
+}
+a.text-account{
+    color: gray;
+}
 </style>
 </main><!-- #main -->
 </div><!-- #primary -->
@@ -32,14 +47,14 @@ footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relat
 <?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
 
-<footer class="bg-black text-white py-4 flex items-center justify-center space-x-4 relative" >
+<footer class="bg-black text-white py-4 flex items-center justify-center space-x-4 relative detail-page" >
     <div class="box-por">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.png" alt="Logo" class="img-logo-footer img-fluid" style="width:100px;">
     &nbsp;
-  <span class="text-muted-foreground">A Project By</span>
-  <a href="https://twitter.com/Zhangliu_Eth" class="text-blue-400 hover:underline">@Zhangliu_Eth</a>
+  <span class="text-muted-foreground text-white">A Project By</span>
+  <a href="https://twitter.com/Zhangliu_Eth" class="text-account">@Zhangliu_Eth</a>
   <span class="text-muted-poin">•</span>
-  <a href="https://twitter.com/Audi_Sneakers" class="text-blue-400 hover:underline">@Audi_Sneakers</a>
+  <a href="https://twitter.com/Audi_Sneakers" class="text-account">@Audi_Sneakers</a>
     </div>
 </footer>
 <?php wp_footer(); ?>
