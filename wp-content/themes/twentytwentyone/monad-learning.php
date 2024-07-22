@@ -149,7 +149,7 @@ get_header();
 
    .img-cate {
       width: 40px;
-      height: 25px;
+      /* height: 25px; */
       object-fit: cover;
    }
 
