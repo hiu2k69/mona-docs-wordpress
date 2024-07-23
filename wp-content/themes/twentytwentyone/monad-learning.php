@@ -113,7 +113,7 @@ get_header();
 
    @media only screen and (min-width: 1780px) {
 	h2.name-title.ml-5 {
-		font-size: 18px;
+		font-size: 16px;
 		font-family: 'Segoe UI';
 		letter-spacing: 0px;
 	}
