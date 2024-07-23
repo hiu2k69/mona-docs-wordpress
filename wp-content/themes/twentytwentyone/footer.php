@@ -25,7 +25,8 @@ footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relat
     height: 41px;
 }
 span.text-muted-foreground.mr-2 {
-    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 20px / 24px var(--unnamed-font-family-calibri);
+    font-family : 'Calibri';
+    font-size: 16px;
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
     letter-spacing: 0px;
@@ -44,7 +45,7 @@ a.text-account {
     color: gray;
     color: var(--unnamed-color-ffffff);
     text-align: left;
-    font: normal normal normal 20px / 24px Calibri;
+    font: normal normal normal 16px / 24px Calibri;
     letter-spacing: 0px;
     color: #FFFFFF;
     text-transform: capitalize;

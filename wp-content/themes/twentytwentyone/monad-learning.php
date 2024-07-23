@@ -165,7 +165,7 @@ get_header();
 
    .gap-05 {
       gap: 0.5rem;
-      padding: 14px 20px !important;
+      padding: 14px 21px !important;
    }
 
    .home-title {

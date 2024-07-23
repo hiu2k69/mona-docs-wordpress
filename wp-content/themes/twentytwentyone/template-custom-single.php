@@ -349,13 +349,20 @@ nav#site-navigation {
     padding: 10px;
     z-index: 1; /* Ensure it stays above other content */
 }
-
-/* Content column adjustment */
-.col-lg-9.col-md-9 {
-    margin-left: 16.66667%; /* Space for fixed sidebar */
-    padding-left: 20px; /* Additional space between sidebar and content */
+.box-top {
+    width: 147px;
+    height: 206px;
+    background: var(--unnamed-color-836ef9) 0% 0% no-repeat padding-box;
+    background: #836EF9 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000059;
+    border-radius: 7px;
+    opacity: 1;
+    padding: 5px;
 }
-
+.col-lg-9.col-md-9 {
+    margin-left: 28.66667%;
+    padding-left: 20px;
+}
 header#masthead {
     width: 100%;
     background-color: #000;
@@ -366,7 +373,10 @@ header#masthead {
     padding-bottom:  4rem;
     height: 81px;
 
+}.tab-content.mt-5 {
+    width: 77%;
 }
+
 </style>
 <section class="learn ">
 <div class="container-fluid">
