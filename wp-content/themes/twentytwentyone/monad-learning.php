@@ -21,7 +21,7 @@ get_header();
    <div class="container-fluid">
       <div class="row">
          <div class="col-lg-2 col-md-3 relative  bg-090909">
-         <div class="tab-container pt-5   ">
+         <div class="tab-container ">
                <?php
                $categories = get_terms(array(
                   'taxonomy' => 'category',
@@ -202,9 +202,6 @@ get_header();
                <?php } ?>
             </div>
          </div>
-         <!-- <div class="col-lg-1">
-        
-         </div> -->
       </div>
    </div>
 </section>

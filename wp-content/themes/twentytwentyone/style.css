@@ -7789,7 +7789,9 @@ h2.title-last-post.text-white.text-center.p-5 {
    background-repeat: no-repeat;
    position: relative;
    z-index: 1;
-   height: 100%;
+   padding-top: 4rem;
+   min-height: 100vh; 
+   background-position: center; 
    }
    h1.text-2xl.font-bold.text-white.text-foreground {
     color: #836EF9 !important;

@@ -10,10 +10,10 @@ get_header();
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/custom-single-post.css">
 
 <section class="learn ">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-2 col-md-3 relative ">
-            <div class="tab-container pt-5   bg-090909">
+<div class="container-fluid">
+      <div class="row">
+         <div class="col-lg-2 col-md-3 relative  bg-090909">
+         <div class="tab-container ">
                <?php
                $categories = get_terms(array(
                   'taxonomy' => 'category',
@@ -38,7 +38,7 @@ get_header();
                ?>
 
 
-               <box class="disclaimer p-4">
+               <box class="disclaimer">
                   <div class="box-top">
                      <h1 class="title-disc text-white text-bold">Disclaimer</h1>
                      <p class="dis">
@@ -51,7 +51,8 @@ get_header();
                   </div>
                </box>
             </div>
-            </div>
+
+         </div>
             <div class="col-lg-9 col-md-9">
                 <div class="tab-content mt-5">
                     <?php
