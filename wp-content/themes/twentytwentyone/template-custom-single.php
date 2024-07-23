@@ -217,7 +217,7 @@ nav#site-navigation {
     }
     .gap-05 {
         gap: 0.5rem;
-        padding: 17px 63px !important
+        padding: 14px 53px !important
     }
     .box-content p {
         margin: 0.2rem 0 1rem 0;
@@ -338,11 +338,15 @@ nav#site-navigation {
     background: #101016;
 }
 
-
+h2.name-title.ml-5 {
+    font-size: 18px;
+	font-family: 'Segoe UI';
+    letter-spacing: 0px;
+}
 /* Fixed sidebar styling */
 .col-lg-2.col-md-3 {
     position: fixed;
-    top:7%; /* Adjust as needed */
+    top:6%; /* Adjust as needed */
     left: -2%;
     width: 16.66667%; /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
     height: calc(100vh - 2%); /* Adjust height based on top position */
