@@ -24,22 +24,31 @@
 footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relative {
     height: 41px;
 }
-.text-white{
-    color: white;
+span.text-muted-foreground.mr-2 {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 20px / 24px var(--unnamed-font-family-calibri);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: left;
+    letter-spacing: 0px;
+    color: #949494;
+    text-transform: capitalize;
+    opacity: 1;
 }
 
-.text-gray{
-    color: gray;
-}
+
 
 .text-account:hover{
     color: #836EF9;
     text-decoration: underline;
 }
-a.text-account{
+a.text-account {
     color: gray;
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    font: normal normal normal 20px / 24px Calibri;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: capitalize;
 }
-
 </style>
 </main><!-- #main -->
 </div><!-- #primary -->
@@ -52,9 +61,9 @@ a.text-account{
     <div class="box-por">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.png" alt="Logo" class="img-logo-footer img-fluid" style="width:100px;">
     &nbsp;
-  <span class="text-muted-foreground text-white">A Project By</span>
+  <span class="text-muted-foreground mr-2">A Project By</span>
   <a href="https://twitter.com/Zhangliu_Eth" class="text-account">@Zhangliu_Eth</a>
-  <span class="text-muted-poin">•</span>
+  <span class="text-muted-poin ml-2">•</span>
   <a href="https://twitter.com/Audi_Sneakers" class="text-account">@Audi_Sneakers</a>
     </div>
 </footer>

@@ -406,6 +406,10 @@ function twenty_twenty_one_scripts() {
 	} else {
 		// If not IE, use the standard stylesheet.
 		wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/style.css', array(), '8.1.2');
+		wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/asset/css/home.css', array(), '8.1.2');
+		wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/asset/css/monad-learning.css', array(), '8.1.2');
+		wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/asset/css/custom-single-post.css', array(), '8.1.2');
+
 	}
 
 	// RTL styles.

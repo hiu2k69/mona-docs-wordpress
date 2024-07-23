@@ -11,309 +11,17 @@ if (!defined("ABSPATH")) {
 
 get_header();
 ?>
-<style>
-   img[src*="Writer.svg"] {
-      filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
-   }
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/monad-learning.css">
 
-   .purple-icon {
-      filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
-   }
-
-   .box-por {
-      display: flex;
-   }
-   footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relative {
-    height: 41px;
-}
-   .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0 2rem;
-      width: 100%;
-      box-sizing: border-box;
-   }
-
-   nav#site-navigation {
-      position: absolute;
-      right: 18%;
-   }
-
-   a.see-more img {
-      width: 25px !important;
-   }
-
-   box.disclaimer {
-      text-align: center;
-      justify-content: center;
-      margin-left: 23px;
-      align-content: center;
-      align-self: center;
-      justify-items: center;
-
-   }
-
-   h1.text-2xl.font-bold.text-white.text-foreground {
-      color: white !important;
-      font-family: 'Segoe UI';
-   }
-
-   h2.name-title.ml-5.art {
-      margin-left: 23px;
-   }
-
-   .ml-5 {
-      margin-left: 0 !important;
-   }
-
-   /* // */
-
-   .box-last {
-      transition: box-shadow 0.3s;
-      border-radius: 10px !important;
-   }
-
-   input#search-input {
-      /* background-color: black; */
-      color: white;
-      /* border-radius: 9999px; */
-      padding-left: 57px;
-      padding-right: 40px;
-      /* padding-top: 8px; */
-      padding-bottom: 8px;
-      outline: none;
-   }
-
-   .text-center.just-content-center.box-social.flex.space-x-2 {
-      justify-content: center;
-   }
-
-   td.py-3.px-4 {
-      border: none;
-
-      border-bottom: 1px solid #836EF9;
-   }
-
-   td.py-3.px-4:first-child {
-      border-left: 1px solid #836EF9;
-   }
-
-   td.py-3.px-4:last-child {
-      border-right: 1px solid #836EF9;
-   }
-
-   th.py-3.px-4 {
-      border-top: 1px solid #836EF9;
-      border-bottom: 1px solid #836EF9;
-      border-right: none;
-   }
-
-   .col-lg-2.col-md-3.relative.bg-090909 {
-      width: 14%;
-   }
-
-   table td,
-   table th,
-   .wp-block-table td,
-   .wp-block-table th {
-      padding: calc(0.5* var(--global--spacing-unit));
-      border: none;
-   }
-
-   th.py-3.px-4:first-child {
-      border-left: 1px solid #836EF9;
-   }
-
-   th.py-3.px-4:last-child {
-      border-right: 1px solid #836EF9;
-   }
-
-   .box-last:hover {
-      box-shadow: 0 0 20px #5A3DFF;
-   }
-
-   .box-content-t1 {
-      margin-left: 10px !important;
-   }
-
-   input.bg-black.text-white.rounded-full.pl-4.pr-10.py-2.focus\:outline-none {
-      width: 350px;
-      border: none;
-      border-radius: 20px;
-   }
-
-   .right-3 {
-      right: 19.75rem;
-   }
-
-   .img-cate {
-      width: 21px;
-      /* height: 25px; */
-      object-fit: cover;
-   }
-
-   .gap-05 {
-      gap: 0.5rem;
-      padding: 14px 20px !important;
-   }
-
-   .home-title {
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-   }
-
-   .home-content {
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      font-size: 1.25rem !important;
-   }
-
-   .box-image-last {
-      width: 150px;
-      object-fit: cover;
-      transition: all .2s ease-in-out;
-
-   }
-
-   .box-image-last:hover {
-      transform: scale(1.2);
-   }
-
-   .color-content p,
-   .color-content ul li,
-   .color-content h1,
-   .color-content h2,
-   .color-content h3,
-   .color-content h4 {
-      font-size: 18px;
-      color: white !important;
-   }
-   .content-comingsoon{
-      height: 50vh;
-      position: relative;
-   }
-   .content-comingsoon h2{
-   top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-   font-size: 50px;
-   font-family: 'Calibri';
-   color: #949494;
-   }
-   .fixed-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-}
-</style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-<script type="text/javascript">
-   window.tailwind.config = {
-      darkMode: ['class'],
-      theme: {
-         extend: {
-            colors: {
-               border: 'hsl(var(--border))',
-               input: 'hsl(var(--input))',
-               ring: 'hsl(var(--ring))',
-               background: 'hsl(var(--background))',
-               foreground: 'hsl(var(--foreground))',
-               primary: {
-                  DEFAULT: 'hsl(var(--primary))',
-                  foreground: 'hsl(var(--primary-foreground))'
-               },
-               secondary: {
-                  DEFAULT: 'hsl(var(--secondary))',
-                  foreground: 'hsl(var(--secondary-foreground))'
-               },
-               destructive: {
-                  DEFAULT: 'hsl(var(--destructive))',
-                  foreground: 'hsl(var(--destructive-foreground))'
-               },
-               muted: {
-                  DEFAULT: 'hsl(var(--muted))',
-                  foreground: 'hsl(var(--muted-foreground))'
-               },
-               accent: {
-                  DEFAULT: 'hsl(var(--accent))',
-                  foreground: 'hsl(var(--accent-foreground))'
-               },
-               popover: {
-                  DEFAULT: 'hsl(var(--popover))',
-                  foreground: 'hsl(var(--popover-foreground))'
-               },
-               card: {
-                  DEFAULT: 'hsl(var(--card))',
-                  foreground: 'hsl(var(--card-foreground))'
-               },
-            },
-         }
-      }
-   }
-</script>
-<style type="text/tailwindcss">
-   @layer base {
-   :root {
-   --background: 0 0% 100%;
-   --foreground: 240 10% 3.9%;
-   --card: 0 0% 100%;
-   --card-foreground: 240 10% 3.9%;
-   --popover: 0 0% 100%;
-   --popover-foreground: 240 10% 3.9%;
-   --primary: 240 5.9% 10%;
-   --primary-foreground: 0 0% 98%;
-   --secondary: 240 4.8% 95.9%;
-   --secondary-foreground: 240 5.9% 10%;
-   --muted: 240 4.8% 95.9%;
-   --muted-foreground: 240 3.8% 46.1%;
-   --accent: 240 4.8% 95.9%;
-   --accent-foreground: 240 5.9% 10%;
-   --destructive: 0 84.2% 60.2%;
-   --destructive-foreground: 0 0% 98%;
-   --border: 240 5.9% 90%;
-   --input: 240 5.9% 90%;
-   --ring: 240 5.9% 10%;
-   --radius: 0.5rem;
-   }
-   .dark {
-   --background: 240 10% 3.9%;
-   --foreground: 0 0% 98%;
-   --card: 240 10% 3.9%;
-   --card-foreground: 0 0% 98%;
-   --popover: 240 10% 3.9%;
-   --popover-foreground: 0 0% 98%;
-   --primary: 0 0% 98%;
-   --primary-foreground: 240 5.9% 10%;
-   --secondary: 240 3.7% 15.9%;
-   --secondary-foreground: 0 0% 98%;
-   --muted: 240 3.7% 15.9%;
-   --muted-foreground: 240 5% 64.9%;
-   --accent: 240 3.7% 15.9%;
-   --accent-foreground: 0 0% 98%;
-   --destructive: 0 62.8% 30.6%;
-   --destructive-foreground: 0 0% 98%;
-   --border: 240 3.7% 15.9%;
-   --input: 240 3.7% 15.9%;
-   --ring: 240 4.9% 83.9%;
-   }
-   }
-</style>
+
 <section class="learn">
    <div class="container-fluid">
       <div class="row">
          <div class="col-lg-2 col-md-3 relative  bg-090909">
-            <div class="tab-container pt-5 ">
+         <div class="tab-container pt-5   ">
                <?php
                $categories = get_terms(array(
                   'taxonomy' => 'category',
@@ -329,10 +37,10 @@ get_header();
                   $tab = $category->slug;
                   if ($image_url) {
 
-                     echo  '<div class="tab gap-05" data-target="' . $tab . '"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
-                </div>';
+                     echo  '<a class="tab gap-05" href="'.home_url('/'. $category->slug .'') .'"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
+                </a>';
                   } else {
-                     echo '<div class="tab" data-target="' . $tab . '"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </div>';
+                     echo '<a class="tab gap-05" href="'.home_url('/'. $category->slug .'') .'"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </a>';
                   }
                }
                ?>
@@ -375,7 +83,7 @@ get_header();
                      ?>
                         <div class="container">
                            <div class="flex justify-between items-center mb-4">
-                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""> &nbsp; <?php echo $category->name ?></h1>
+                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> &nbsp; <?php echo $category->name ?></h1>
                               <div class="relative">
                                  <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
@@ -470,7 +178,7 @@ get_header();
                         ?>
                         <div class="container">
                            <div class="flex justify-between items-center mb-4">
-                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Learn-about-monad.svg" alt=""> &nbsp; <?php echo $category->name ?></h1>
+                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> &nbsp; <?php echo $category->name ?></h1>
                               <div class="relative">
                                  <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
