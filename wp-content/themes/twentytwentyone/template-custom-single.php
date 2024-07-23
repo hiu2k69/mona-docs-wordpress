@@ -142,16 +142,9 @@ get_header();
     width: 100%;
     box-sizing: border-box;
 }
-.main-navigation .menu {
-    list-style: none;
-    display: flex;
-    gap: 9rem;
-    margin: 0;
-    padding: 0;
-}
 nav#site-navigation {
     position: absolute;
-    right: 15%;
+    right: 18%;
 }
     .box-content-main {
         transition: box-shadow 0.3s;
@@ -349,7 +342,7 @@ nav#site-navigation {
 /* Fixed sidebar styling */
 .col-lg-2.col-md-3 {
     position: fixed;
-    top:6%; /* Adjust as needed */
+    top:7%; /* Adjust as needed */
     left: -2%;
     width: 16.66667%; /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
     height: calc(100vh - 2%); /* Adjust height based on top position */
@@ -387,6 +380,7 @@ header#masthead {
 
 }.tab-content.mt-5 {
     width: 77%;
+    margin-top: 7rem !important;
 }
 .detail-post{
     ba
