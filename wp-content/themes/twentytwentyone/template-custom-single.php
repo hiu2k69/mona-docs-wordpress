@@ -142,9 +142,16 @@ get_header();
     width: 100%;
     box-sizing: border-box;
 }
+.main-navigation .menu {
+    list-style: none;
+    display: flex;
+    gap: 9rem;
+    margin: 0;
+    padding: 0;
+}
 nav#site-navigation {
     position: absolute;
-    right: 18%;
+    right: 15%;
 }
     .box-content-main {
         transition: box-shadow 0.3s;
@@ -217,7 +224,7 @@ nav#site-navigation {
     }
     .gap-05 {
         gap: 0.5rem;
-        padding: 14px 53px !important;
+        padding: 17px 63px !important
     }
     .box-content p {
         margin: 0.2rem 0 1rem 0;
@@ -290,6 +297,7 @@ nav#site-navigation {
 
     .color-content p {
         color: white !important;
+        line-height: 2.2;
     }
 
 
@@ -319,7 +327,7 @@ nav#site-navigation {
       object-fit: cover;
    }
    box.disclaimer {
-    padding: 4rem 0 5rem 5rem;
+    padding: 0 0 5rem 5rem;
 }
 
    /* .tab-container {
@@ -333,11 +341,15 @@ nav#site-navigation {
     align-content: stretch;
     flex-direction: column;
 } */
+.detail-post {
+    background: #101016;
+}
+
 
 /* Fixed sidebar styling */
 .col-lg-2.col-md-3 {
     position: fixed;
-    top:2%; /* Adjust as needed */
+    top:6%; /* Adjust as needed */
     left: -2%;
     width: 16.66667%; /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
     height: calc(100vh - 2%); /* Adjust height based on top position */
@@ -376,9 +388,12 @@ header#masthead {
 }.tab-content.mt-5 {
     width: 77%;
 }
+.detail-post{
+    ba
+}
 
 </style>
-<section class="learn ">
+<section class="detail-post">
 <div class="container-fluid">
       <div class="row">
          <div class="col-lg-2 col-md-3 relative  bg-090909">

@@ -111,17 +111,7 @@ get_header();
       border-right: none;
    }
 
-   @media only screen and (min-width: 1780px) {
-	h2.name-title.ml-5 {
-		font-size: 16px;
-		font-family: 'Segoe UI';
-		letter-spacing: 0px;
-	}
-	box.disclaimer {
-		margin-left: 9px;
-	}
-}
-
+ 
 
    table td,
    table th,
@@ -165,7 +155,7 @@ get_header();
 
    .gap-05 {
       gap: 0.5rem;
-      padding: 14px 21px !important;
+      padding: 14px 52px !important;
    }
 
    .home-title {
@@ -194,7 +184,8 @@ get_header();
       transform: scale(1.2);
    }
    img.icon-title {
-    width: 40px;
+    width: 35px;
+    margin-right: 4px;
 }
    .color-content p,
    .color-content ul li,
@@ -321,7 +312,7 @@ get_header();
                      ?>
                         <div class="container">
                            <div class="flex justify-between items-center mb-4">
-                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> &nbsp; <?php echo $category->name ?></h1>
+                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name ?></h1>
                               <div class="relative">
                                  <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
