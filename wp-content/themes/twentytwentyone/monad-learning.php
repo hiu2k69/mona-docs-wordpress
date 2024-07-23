@@ -11,8 +11,246 @@ if (!defined("ABSPATH")) {
 
 get_header();
 ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/monad-learning.css">
+<style>
+      img[src*="Writer.svg"] {
+      filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
+   }
 
+   .purple-icon {
+      filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
+   }
+
+   .box-por {
+      display: flex;
+   }
+   footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relative {
+    height: 41px;
+}
+   .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+      box-sizing: border-box;
+   }
+
+   nav#site-navigation {
+      position: absolute;
+      right: 18%;
+   }
+
+   a.see-more img {
+      width: 25px !important;
+   }
+
+   box.disclaimer {
+      text-align: center;
+      justify-content: center;
+      margin-left: 23px;
+      align-content: center;
+      align-self: center;
+      justify-items: center;
+
+   }
+
+   h1.text-2xl.font-bold.text-white.text-foreground {
+      color: white !important;
+      font-family: 'Segoe UI';
+   }
+
+   h2.name-title.ml-5.art {
+      margin-left: 23px;
+   }
+
+   .ml-5 {
+      margin-left: 0 !important;
+   }
+
+   /* // */
+
+   .box-last {
+      transition: box-shadow 0.3s;
+      border-radius: 10px !important;
+   }
+
+   input#search-input {
+      /* background-color: black; */
+      color: white;
+      /* border-radius: 9999px; */
+      padding-left: 57px;
+      padding-right: 40px;
+      /* padding-top: 8px; */
+      padding-bottom: 8px;
+      outline: none;
+   }
+
+   .text-center.just-content-center.box-social.flex.space-x-2 {
+      justify-content: center;
+   }
+
+   td.py-3.px-4 {
+      border: none;
+
+      border-bottom: 1px solid #836EF9;
+   }
+
+   td.py-3.px-4:first-child {
+      border-left: 1px solid #836EF9;
+   }
+
+   td.py-3.px-4:last-child {
+      border-right: 1px solid #836EF9;
+   }
+
+   th.py-3.px-4 {
+      border-top: 1px solid #836EF9;
+      border-bottom: 1px solid #836EF9;
+      border-right: none;
+   }
+
+   @media only screen and (min-width: 1780px) {
+	h2.name-title.ml-5 {
+		font-size: 18px;
+		font-family: 'Segoe UI';
+		letter-spacing: 0px;
+	}
+	box.disclaimer {
+		margin-left: 9px;
+	}
+}
+
+
+   table td,
+   table th,
+   .wp-block-table td,
+   .wp-block-table th {
+      padding: calc(0.5* var(--global--spacing-unit));
+      border: none;
+   }
+
+   th.py-3.px-4:first-child {
+      border-left: 1px solid #836EF9;
+   }
+
+   th.py-3.px-4:last-child {
+      border-right: 1px solid #836EF9;
+   }
+
+   .box-last:hover {
+      box-shadow: 0 0 20px #5A3DFF;
+   }
+
+   .box-content-t1 {
+      margin-left: 10px !important;
+   }
+
+   input.bg-black.text-white.rounded-full.pl-4.pr-10.py-2.focus\:outline-none {
+      width: 350px;
+      border: none;
+      border-radius: 20px;
+   }
+
+   .right-3 {
+      right: 19.75rem;
+   }
+
+   .img-cate {
+      width: 21px;
+      /* height: 25px; */
+      object-fit: cover;
+   }
+
+   .gap-05 {
+      gap: 0.5rem;
+      padding: 14px 20px !important;
+   }
+
+   .home-title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+   }
+
+   .home-content {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-size: 1.25rem !important;
+   }
+
+   .box-image-last {
+      width: 150px;
+      object-fit: cover;
+      transition: all .2s ease-in-out;
+
+   }
+
+   .box-image-last:hover {
+      transform: scale(1.2);
+   }
+   img.icon-title {
+    width: 40px;
+}
+   .color-content p,
+   .color-content ul li,
+   .color-content h1,
+   .color-content h2,
+   .color-content h3,
+   .color-content h4 {
+      font-size: 18px;
+      color: white !important;
+   }
+   .content-comingsoon{
+      height: 50vh;
+      position: relative;
+   }
+   .content-comingsoon h2{
+   top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+   font-size: 50px;
+   font-family: 'Calibri';
+   color: #949494;
+   }
+   .fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;}
+/* Fixed sidebar styling */
+.col-lg-2.col-md-3 {
+   position: fixed;
+   top: 6.5%; /* Adjust as needed */
+   left: 0;
+   width: 16.66667%; /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
+   height: calc(100vh - 10.5%); /* Adjust height based on top position */
+   display: flex;
+   flex-wrap: wrap;
+   align-items: baseline;
+   justify-content: center;
+   flex-direction: column;
+   z-index: 1; 
+}
+.col-lg-9.col-md-9 {
+   margin-left: 16.66667%; /* Space for fixed sidebar */
+   padding-left: 20px; /* Additional space between sidebar and content */
+}
+
+    header#masthead {
+      width: 100%;
+      background-color: #000;
+      padding: 1rem 0;
+      box-sizing: border-box;
+      position: fixed;
+      z-index: 100;
+  }
+</style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>

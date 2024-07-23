@@ -7,8 +7,367 @@
 get_header();
 
 ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/custom-single-post.css">
+<style>
+        
+        .box-last-post blockquote .twitter-tweet .twitter-tweet-rendered iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+  
+    .mt-4.p-content.text-lg.text-white.italic.color-content img {
+    width: 100%;
+    color: white;
+}
+.mt-4.p-content.text-lg.text-white.italic.color-content h3 {
+    color: white;
+}
+.mt-4.p-content.text-lg.text-white.italic.color-content li {
+    line-height: 3;
+    font-size: 25px;
+	font-family: 'Calibri';
+}
+    .box-last-post img {
+        width: 100% !important;
+        height: auto !important;
+    }
 
+    .box-last {
+        display: flex;
+        background-color: #2a2a2a;
+        border-radius: 10px;
+        overflow: hidden;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 10px;
+
+    }
+
+    .box-last {
+        transition: box-shadow 0.3s;
+    }
+
+    .box-last:hover {
+        box-shadow: 0 0 20px #5A3DFF;
+    }
+
+    .relative {
+        position: relative;
+    }
+
+    box.disclaimer1 {
+        position: fixed;
+        left: 2%;
+        bottom: 10%;
+        z-index: 3;
+    }
+
+    .box-image-last {
+        width: 150px;
+        object-fit: cover;
+        transition: all .2s ease-in-out;
+
+    }
+
+    .box-image-last:hover {
+        transform: scale(1.2);
+    }
+
+    .box-content-t {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h2.title-last-post.text-white.text-center.p-5 {
+        font-weight: revert;
+        font-size: 47px;
+        font-family: 'Segoe UI';
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-ffffff);
+        text-align: center;
+        font: normal normal bold 47px / 63px Segoe UI;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+    }
+
+    .box-content-t h2 {
+        font-size: 24px;
+        margin: 0;
+        color: #836EF9;
+    }
+
+    .box-content-t p {
+        flex-grow: 1;
+        margin: 10px 0;
+        font-size: 20px;
+        color: #E4ECF2;
+        text-align: left;
+        font: normal normal normal 17px / 27px Segoe UI;
+        letter-spacing: 0px;
+    }
+
+    .box-content-t span {
+        font-size: 18px;
+        color: #00FFF2;
+        font-family: 'Segoe UI';
+
+
+    } .fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.content-comingsoon{
+      height: 50vh;
+      position: relative;
+   }
+   .content-comingsoon h2{
+   top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+   font-size: 50px;
+   font-family: 'Calibri';
+   color: #949494;
+   }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+nav#site-navigation {
+    position: absolute;
+    right: 18%;
+}
+    .box-content-main {
+        transition: box-shadow 0.3s;
+    }
+
+    .box-content-main:hover {
+        box-shadow: 0 0 20px #5A3DFF;
+    }
+
+    .box-content-main {
+        background-color: #1b1b1b;
+        overflow: hidden;
+        color: #fff;
+        font-family: 'mona-font', sans-serif !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+    }
+
+
+    .box-image {
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .box-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: all .2s ease-in-out;
+    }
+
+    .box-image img:hover {
+        transform: scale(1.2);
+    }
+
+    a.artist {
+        color: #836EF9;
+    }
+
+    .box-artist {
+        background-color: #00FFF2;
+        padding: 0.2rem 0.5rem;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: bold;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #836EF9;
+        font-family: 'Segoe UI';
+        border-radius: 20px;
+        border: 3px solid #836EF9;
+    }
+
+
+
+    .box-content {
+        padding: 1rem;
+    }
+
+    .box-content h3 {
+        font-size: 1.5rem;
+        margin: 0;
+        color: #836EF9;
+        text-align: left;
+        font-family: 'seguisb.ttf';
+    }
+    .gap-05 {
+        gap: 0.5rem;
+        padding: 14px 53px !important;
+    }
+    .box-content p {
+        margin: 0.2rem 0 1rem 0;
+        font-size: 0.9rem;
+        color: #E4ECF2;
+        text-align: left;
+        font: normal normal normal 19px / 26px Segoe UI;
+        letter-spacing: 0px;
+        color: #E4ECF2;
+        font-family: 'Segoe UI';
+    }
+
+    .box-content a:hover {
+        text-decoration: underline;
+    }
+
+    a.see-more {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: #836EF9;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+        font-family: 'Segoe UI';
+        font-weight: bolder;
+    }
+
+    a.see-more:hover {
+        background-color: #00FFF2;
+        color: #2F2F37;
+    }
+
+    img.see {
+        transition: filter 0.3s ease;
+
+    }
+
+    a.see-more:hover img.see {
+        filter: brightness(50%);
+
+    }
+
+
+    @keyframes rotation_481 {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .title {
+        font-size: 3rem;
+        text-align: center;
+        color: #836EF9;
+    }
+
+    .bg-none {
+        background-color: none !important;
+    }
+
+    .post-content p {
+        font-size: 1.5rem;
+        text-align: left !important;
+    }
+
+    .color-content p {
+        color: white !important;
+    }
+
+
+    .home-title {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    .home-content {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-size: 1.25rem;
+    }
+
+    .d-flex {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .img-cate {
+        width: 21px;
+      /* height: 25px; */
+      object-fit: cover;
+   }
+   box.disclaimer {
+    padding: 4rem 0 5rem 5rem;
+}
+
+   /* .tab-container {
+    top: 10.5%;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    align-items: baseline;
+    justify-content: center;
+    align-content: stretch;
+    flex-direction: column;
+} */
+
+/* Fixed sidebar styling */
+.col-lg-2.col-md-3 {
+    position: fixed;
+    top:2%; /* Adjust as needed */
+    left: -2%;
+    width: 16.66667%; /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
+    height: calc(100vh - 2%); /* Adjust height based on top position */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 1; /* Ensure it stays above other content */
+}
+
+/* Content column adjustment */
+.col-lg-9.col-md-9 {
+    margin-left: 16.66667%; /* Space for fixed sidebar */
+    padding-left: 20px; /* Additional space between sidebar and content */
+}
+
+header#masthead {
+    width: 100%;
+    background-color: #000;
+    padding: 1rem 0;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 100;
+    padding-bottom:  4rem;
+    height: 81px;
+
+}
+</style>
 <section class="learn ">
 <div class="container-fluid">
       <div class="row">
