@@ -336,6 +336,8 @@ nav#site-navigation {
 } */
 .detail-post {
     background: #101016;
+    position: relative;
+    z-index: 1;
 }
 
 h2.name-title.ml-5 {
@@ -383,11 +385,8 @@ header#masthead {
     height: 81px;
 
 }.tab-content.mt-5 {
-    width: 77%;
+    width: 73%;
     margin-top: 7rem !important;
-}
-.detail-post{
-    ba
 }
 
 </style>
