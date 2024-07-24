@@ -18,8 +18,8 @@ get_header();
         color: white;
     }
 
-    .mt-4.p-content.text-lg.text-white.italic.color-content h3 {
-        color: white;
+    .mt-4.p-content.text-lg.text-white.italic.color-content h3, .mt-4.p-content.text-lg.text-white.italic.color-content h4, .mt-4.p-content.text-lg.text-white.italic.color-content h5 {
+        color: #836EF9;
     }
 
     .mt-4.p-content.text-lg.text-white.italic.color-content li {
@@ -226,10 +226,12 @@ get_header();
     }
 
     .gap-05 {
-        gap: 0.5rem;
-        padding: 14px 53px !important
-    }
-
+      gap: 0.5rem;
+      padding:11px 54px !important
+   }
+    .box-bottom.d-flex.mt-2 img {
+    width: 24px;
+}
     .box-content p {
         margin: 0.2rem 0 1rem 0;
         font-size: 0.9rem;
@@ -301,7 +303,7 @@ get_header();
 
     .color-content p {
         color: white !important;
-        line-height: 2.2;
+        line-height: 2;
     }
 
 
@@ -367,7 +369,7 @@ get_header();
     .col-lg-2.col-md-3 {
       position: fixed;
       top: 7.5%;
-      left: 0;
+      left: -1.7%;
       width: 16.66667%;
       /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
       height: calc(100vh - 10.5%);

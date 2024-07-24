@@ -124,7 +124,20 @@ get_header();
       padding: calc(0.5* var(--global--spacing-unit));
       border: none;
    }
+   .mt-4.p-content.text-lg.text-white.italic.color-content img {
+        width: 100%;
+        color: white;
+    }
 
+    .mt-4.p-content.text-lg.text-white.italic.color-content h3, .mt-4.p-content.text-lg.text-white.italic.color-content h4, .mt-4.p-content.text-lg.text-white.italic.color-content h5 {
+        color: #836EF9;
+    }
+
+    .mt-4.p-content.text-lg.text-white.italic.color-content li {
+        line-height: 3;
+        font-size: 25px;
+        font-family: 'Calibri';
+    }
    th.py-3.px-4:first-child {
       border-left: 1px solid #836EF9;
    }
@@ -156,10 +169,13 @@ get_header();
       /* height: 25px; */
       object-fit: cover;
    }
-
+   .color-content p {
+        color: white !important;
+        line-height: 2;
+    }
    .gap-05 {
       gap: 0.5rem;
-      padding: 14px 52px !important;
+      padding:11px 54px !important
    }h2.home-title {
     margin-bottom: -11px;
 }
@@ -235,7 +251,9 @@ get_header();
       color: #836EF9;
     line-height: 1.6;
 
-   }
+   }.box-bottom.d-flex.mt-2 img {
+    width: 24px;
+}
 
    .fixed-footer {
       position: fixed;
@@ -248,8 +266,7 @@ get_header();
    .col-lg-2.col-md-3 {
       position: fixed;
       top: 7.5%;
-      /* Adjust as needed */
-      left: 0;
+      left: -1.7%;
       width: 16.66667%;
       /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
       height: calc(100vh - 10.5%);
