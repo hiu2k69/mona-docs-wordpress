@@ -361,23 +361,21 @@ get_header();
 
     /* Fixed sidebar styling */
     .col-lg-2.col-md-3 {
-        position: fixed;
-        top: 6%;
-        /* Adjust as needed */
-        left: -2%;
-        width: 16.66667%;
-        /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
-        height: calc(100vh - 2%);
-        /* Adjust height based on top position */
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: center;
-        flex-direction: column;
-        padding: 10px;
-        z-index: 1;
-        /* Ensure it stays above other content */
-    }
+      position: fixed;
+      top: 7.5%;
+      left: 0;
+      width: 16.66667%;
+      /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
+      height: calc(100vh - 10.5%);
+      /* Adjust height based on top position */
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 1;
+   }
+
 
     .box-top {
         width: 147px;
