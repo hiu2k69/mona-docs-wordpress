@@ -247,7 +247,7 @@ get_header();
    /* Fixed sidebar styling */
    .col-lg-2.col-md-3 {
       position: fixed;
-      top: 6.5%;
+      top: 7.5%;
       /* Adjust as needed */
       left: 0;
       width: 16.66667%;
@@ -416,9 +416,7 @@ get_header();
       text-decoration: underline;
    }
 
-   .col-lg-2.col-md-3 {
-      top: 10.5%;
-   }
+  
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
