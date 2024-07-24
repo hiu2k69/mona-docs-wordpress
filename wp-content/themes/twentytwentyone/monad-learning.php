@@ -698,7 +698,7 @@ get_header();
             </div>
             <div class="row pb-5 text-center">
                 <div class="content-comingsoon">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banhmi-moyaki-512.gif" alt="" class="coming-soon">
+                    <img src="https://monadocs.xyz/wp-content/uploads/2024/07/banhmi-moyaki-512.gif" alt="" class="coming-soon">
                     <br>
                     <h3 class="text-2xl">"nothing here, but you can eat banhmi moyaki before leave"</h3>
                 </div>
