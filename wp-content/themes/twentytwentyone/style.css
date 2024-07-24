@@ -7729,7 +7729,7 @@ img.img-title {
     background-color: #2a2a2a;
     /* border-radius: 10px; */
     overflow: hidden;
-	border: 1px solid #101016;
+	/* border: 1px solid #101016; */
     color: white;
     font-family: Arial, sans-serif;
     margin: 10px;
@@ -7911,13 +7911,13 @@ p.dis {
    margin-left : 10px !important;
    }
    .box-content-t1 h2 {
-    font-size: 21px;
+    font-size: 20px;
     margin: 0;
     color: #836EF9;
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-836ef9);
     text-align: left;
-	font: normal normal bold 23px/27px Calibri;    letter-spacing: 0px;
+	font: normal normal bold 20px/27px Calibri;    letter-spacing: 0px;
     color: #836EF9;
 	font-weight: bolder;
     opacity: 1;
@@ -7957,7 +7957,7 @@ p.text-sm.text-purple-400.mb-6 {
     color: #E4ECF2;
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
-	font: normal normal normal 20px / 32px Calibri;
+	font: normal normal normal 16px / 32px Calibri;
     letter-spacing: 0px;
     color: #949494;
     opacity: 1;

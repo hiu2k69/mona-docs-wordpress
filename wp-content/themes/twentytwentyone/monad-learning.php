@@ -14,6 +14,8 @@ get_header();
 <style>
    img[src*="Writer.svg"] {
       filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
+      width: 17px;
+    margin-bottom: 1px;
    }
 
    .purple-icon {
@@ -172,13 +174,13 @@ get_header();
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      font-size: 1.25rem !important;
    }
    .box-content {
     margin: 0;
     background: #090909;
     padding: 6px;
     border-radius: 6px;
+    border-left : none !important;
 }
    .box-image-last {
       width: 150px;

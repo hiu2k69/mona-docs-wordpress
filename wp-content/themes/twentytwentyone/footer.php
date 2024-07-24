@@ -64,8 +64,7 @@ a.text-account {
     &nbsp;
   <span class="text-muted-foreground mr-2">A Project By</span>
   <a href="https://twitter.com/Zhangliu_Eth" class="text-account">@Zhangliu_Eth</a>
-  <span class="text-muted-poin ml-2">•</span>
-  <a href="https://twitter.com/Audi_Sneakers" class="text-account">@Audi_Sneakers</a>
+  <span class="text-muted-poin ml-2">•</span><a href="https://twitter.com/Audi_Sneakers" class="text-account">@Audi_Sneakers</a>
     </div>
 </footer>
 <?php wp_footer(); ?>
