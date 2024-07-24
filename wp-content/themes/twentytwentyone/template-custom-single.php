@@ -333,9 +333,13 @@ get_header();
     }
 
     box.disclaimer {
-        padding: 0 0 5rem 5rem;
-    }
-
+    text-align: center;
+    justify-content: center;
+    margin-left: 62px;
+    align-content: center;
+    align-self: center;
+    justify-items: center;
+}
     /* .tab-container {
     top: 10.5%;
     left: 0;
