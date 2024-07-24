@@ -8,24 +8,26 @@ get_header();
 
 ?>
 <style>
-        
-        .box-last-post blockquote .twitter-tweet .twitter-tweet-rendered iframe {
+    .box-last-post blockquote .twitter-tweet .twitter-tweet-rendered iframe {
         width: 100% !important;
         height: 100% !important;
     }
-  
+
     .mt-4.p-content.text-lg.text-white.italic.color-content img {
-    width: 100%;
-    color: white;
-}
-.mt-4.p-content.text-lg.text-white.italic.color-content h3 {
-    color: white;
-}
-.mt-4.p-content.text-lg.text-white.italic.color-content li {
-    line-height: 3;
-    font-size: 25px;
-	font-family: 'Calibri';
-}
+        width: 100%;
+        color: white;
+    }
+
+    .mt-4.p-content.text-lg.text-white.italic.color-content h3 {
+        color: white;
+    }
+
+    .mt-4.p-content.text-lg.text-white.italic.color-content li {
+        line-height: 3;
+        font-size: 25px;
+        font-family: 'Calibri';
+    }
+
     .box-last-post img {
         width: 100% !important;
         height: auto !important;
@@ -113,39 +115,46 @@ get_header();
         font-family: 'Segoe UI';
 
 
-    } .fixed-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-}
-.content-comingsoon{
-      height: 50vh;
-      position: relative;
-   }
-   .content-comingsoon h2{
-   top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-   font-size: 50px;
-   font-family: 'Calibri';
-   color: #949494;
-   }
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 2rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-nav#site-navigation {
-    position: absolute;
-    right: 18%;
-}
+    }
+
+    .fixed-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .content-comingsoon {
+        height: 50vh;
+        position: relative;
+    }
+
+    .content-comingsoon h2 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        font-size: 50px;
+        font-family: 'Calibri';
+        color: #949494;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    nav#site-navigation {
+        position: absolute;
+        right: 18%;
+    }
+
     .box-content-main {
         transition: box-shadow 0.3s;
     }
@@ -215,10 +224,12 @@ nav#site-navigation {
         text-align: left;
         font-family: 'seguisb.ttf';
     }
+
     .gap-05 {
         gap: 0.5rem;
         padding: 14px 53px !important
     }
+
     .box-content p {
         margin: 0.2rem 0 1rem 0;
         font-size: 0.9rem;
@@ -314,16 +325,18 @@ nav#site-navigation {
         justify-content: space-between;
 
     }
+
     .img-cate {
         width: 21px;
-      /* height: 25px; */
-      object-fit: cover;
-   }
-   box.disclaimer {
-    padding: 0 0 5rem 5rem;
-}
+        /* height: 25px; */
+        object-fit: cover;
+    }
 
-   /* .tab-container {
+    box.disclaimer {
+        padding: 0 0 5rem 5rem;
+    }
+
+    /* .tab-container {
     top: 10.5%;
     left: 0;
     display: flex;
@@ -334,113 +347,123 @@ nav#site-navigation {
     align-content: stretch;
     flex-direction: column;
 } */
-.detail-post {
-    background: #101016;
-    position: relative;
-    z-index: 1;
-}
+    .detail-post {
+        background: #101016;
+        position: relative;
+        z-index: 1;
+    }
 
-h2.name-title.ml-5 {
-    font-size: 18px;
-	font-family: 'Segoe UI';
-    letter-spacing: 0px;
-}
-/* Fixed sidebar styling */
-.col-lg-2.col-md-3 {
-    position: fixed;
-    top:6%; /* Adjust as needed */
-    left: -2%;
-    width: 16.66667%; /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
-    height: calc(100vh - 2%); /* Adjust height based on top position */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
-    z-index: 1; /* Ensure it stays above other content */
-}
-.box-top {
-    width: 147px;
-    height: 206px;
-    background: var(--unnamed-color-836ef9) 0% 0% no-repeat padding-box;
-    background: #836EF9 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #00000059;
-    border-radius: 7px;
-    opacity: 1;
-    padding: 5px;
-}
-.col-lg-9.col-md-9 {
-    margin-left: 28.66667%;
-    padding-left: 20px;
-}
-header#masthead {
-    width: 100%;
-    background-color: #000;
-    padding: 1rem 0;
-    box-sizing: border-box;
-    position: fixed;
-    z-index: 100;
-    padding-bottom:  4rem;
-    height: 81px;
+    h2.name-title.ml-5 {
+        font-size: 18px;
+        font-family: 'Segoe UI';
+        letter-spacing: 0px;
+    }
 
-}.tab-content.mt-5 {
-    width: 73%;
-    margin-top: 7rem !important;
-}
+    /* Fixed sidebar styling */
+    .col-lg-2.col-md-3 {
+        position: fixed;
+        top: 6%;
+        /* Adjust as needed */
+        left: -2%;
+        width: 16.66667%;
+        /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
+        height: calc(100vh - 2%);
+        /* Adjust height based on top position */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        z-index: 1;
+        /* Ensure it stays above other content */
+    }
 
+    .box-top {
+        width: 147px;
+        height: 206px;
+        background: var(--unnamed-color-836ef9) 0% 0% no-repeat padding-box;
+        background: #836EF9 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000059;
+        border-radius: 7px;
+        opacity: 1;
+        padding: 5px;
+    }
+
+    .col-lg-9.col-md-9 {
+        margin-left: 28.66667%;
+        padding-left: 20px;
+    }
+
+    header#masthead {
+        width: 100%;
+        background-color: #000;
+        padding: 1rem 0;
+        box-sizing: border-box;
+        position: fixed;
+        z-index: 100;
+        padding-bottom: 4rem;
+        height: 81px;
+
+    }
+
+    .tab-content.mt-5 {
+        width: 73%;
+        margin-top: 7rem !important;
+    }
 </style>
 <section class="detail-post">
-<div class="container-fluid">
-      <div class="row">
-         <div class="col-lg-2 col-md-3 relative  bg-090909">
-         <div class="tab-container ">
-               <?php
-               $categories = get_terms(array(
-                  'taxonomy' => 'category',
-                  'hide_empty' => false,
-                  'orderby' => 'term_id',
-                  'order' => 'ASC'
-               ));
-               foreach ($categories as $category) {
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-md-3 relative  bg-090909">
+                <div class="tab-container ">
+                    <?php
+                    $categories = get_terms(array(
+                        'taxonomy' => 'category',
+                        'hide_empty' => false,
+                        'orderby' => 'term_id',
+                        'order' => 'ASC'
+                    ));
+                    foreach ($categories as $category) {
 
-                  $image_url =  z_taxonomy_image_url($category->term_id);
-                  $cate = get_term_by('id', $category->term_id, 'category');
-                  $count_post = $cate->count;
-                  $tab = $category->slug;
-                  if ($image_url) {
+                        $image_url =  z_taxonomy_image_url($category->term_id);
+                        $cate = get_term_by('id', $category->term_id, 'category');
+                        $count_post = $cate->count;
+                        $tab = $category->slug;
+                        if ($image_url) {
 
-                     echo  '<a class="tab gap-05" href="'.home_url('/'. $category->slug .'') .'"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
+                            echo  '<a class="tab gap-05" href="' . home_url('/' . $category->slug . '') . '"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
                 </a>';
-                  } else {
-                     echo '<a class="tab gap-05" href="'.home_url('/'. $category->slug .'') .'"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </a>';
-                  }
-               }
-               ?>
+                        } else {
+                            echo '<a class="tab gap-05" href="' . home_url('/' . $category->slug . '') . '"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </a>';
+                        }
+                    }
+                    ?>
 
 
-               <box class="disclaimer">
-                  <div class="box-top">
-                     <h1 class="title-disc text-white text-bold">Disclaimer</h1>
-                     <p class="dis">
-                        "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
-                     </p>
-                  </div>
-                  <div class="box-bottom d-flex mt-2">
-                     <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact.svg" />
-                     &nbsp; &nbsp; <span class="text-right text-white">Contact Us</span>
-                  </div>
-               </box>
+                    <box class="disclaimer">
+                        <div class="box-top">
+                            <h1 class="title-disc text-white text-bold">Disclaimer</h1>
+                            <p class="dis">
+                                "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
+                            </p>
+                        </div>
+                        <div class="box-bottom d-flex mt-2">
+                            <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact.svg" />
+                            &nbsp; &nbsp; <span class="text-right text-white">Contact Us</span>
+                        </div>
+                    </box>
+                </div>
+
             </div>
-
-         </div>
             <div class="col-lg-9 col-md-9">
                 <div class="tab-content mt-5">
                     <?php
 
-                    $post_id = isset($_GET['post_id']) ? intval($_GET['post_id']) : 0;
+                    global $wp_query;
+                    $post_slug = $wp_query->query_vars['custom_post_slug'];
 
-                    $post = get_post($post_id);
+                    $post = get_page_by_path($post_slug, OBJECT, 'post');
 
                     if ($post) {
                         setup_postdata($post);
@@ -484,19 +507,20 @@ header#masthead {
                                 $post_id = get_the_ID();
 
                                 $post_link = get_permalink($post_id);
+                                $post_slug = get_post_field('post_name', get_the_ID());
                             ?>
                                 <div class="col-lg-6 col-md-6 col-12 mb-3">
-                                    <a href="<?php echo esc_url(home_url('/detail')); ?>?post_id=<?php echo $post->ID; ?>">
+                                    <a href="<?php echo esc_url(home_url('/detail/')).$post_slug; ?>">
                                         <div class="box-last">
                                             <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
                                             <div class="box-content-t1 ">
                                                 <h2 class="home-title"><?php the_title();  ?></h2>
                                                 <p class="ml-2 home-content"><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
-                                                                            echo $trimmed_content; ?></p>
+                                                                                echo $trimmed_content; ?></p>
 
                                                 <span class="text-secondary-foreground flex items-center">
                                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                                    &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1">  <?php echo get_the_author(); ?></span></span></span>
+                                                    &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"> <?php echo get_the_author(); ?></span></span></span>
                                             </div>
                                         </div>
                                     </a>
