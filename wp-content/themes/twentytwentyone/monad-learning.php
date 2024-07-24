@@ -265,7 +265,7 @@ get_header();
    /* Fixed sidebar styling */
    .col-lg-2.col-md-3 {
       position: fixed;
-      top: 7.5%;
+      top: 4.5%;
       left: -1.7%;
       width: 16.66667%;
       /* Ensure this is the width of col-lg-2 (2/12 of the grid) */

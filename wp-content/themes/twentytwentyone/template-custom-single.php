@@ -358,17 +358,30 @@ get_header();
         position: relative;
         z-index: 1;
     }
-
+    .box-content-t1 span {
+    font-size: 16px;
+    color: #836EF9;
+    font-family: 'Calibri';
+    display: flex;
+}
     h2.name-title.ml-5 {
         font-size: 18px;
         font-family: 'Segoe UI';
         letter-spacing: 0px;
     }
+    .mr-2 {
+    margin-right: 0.5rem;
+}
+
+<style>
+.ml-2 {
+    margin-left: 0.5rem;
+}
 
     /* Fixed sidebar styling */
     .col-lg-2.col-md-3 {
       position: fixed;
-      top: 7.5%;
+      top: 4.5%;
       left: -1.7%;
       width: 16.66667%;
       /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
