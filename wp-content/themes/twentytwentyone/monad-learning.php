@@ -273,7 +273,7 @@ get_header();
    }
 
    ul.tab-links {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
    }
 
    .tab-links li {
@@ -355,7 +355,7 @@ get_header();
       font-weight: bold;
       position: absolute;
       right: 10px;
-      top: 200px;
+      top: 220px;
       color: #836EF9;
       font-family: 'Segoe UI';
       border-radius: 20px;
@@ -532,6 +532,7 @@ get_header();
                                        while ($query->have_posts()) {
                                           $query->the_post();
                                           $custom_link = get_post_meta(get_the_ID(), '_custom_link', true);
+                                          $artist = get_post_meta(get_the_ID(), '_artist_name', true);
                                  ?>
                                           <!-- <div class="col-lg-6 col-md-6 col-12 mb-3">
                                                 <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo get_the_ID(); ?>">
@@ -556,7 +557,7 @@ get_header();
                                                       <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Image Description" class="image-home">
                                                    </div>
                                                    <div class="box-artist">
-                                                      <a href="<?php echo !empty($custom_link) ? $custom_link : "#"; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php the_author(); ?></span></a>　
+                                                      <a href="<?php echo !empty($custom_link) ? $custom_link : "#"; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php echo !empty($artist) ?  $artist : get_the_author(); ?></span></a>　
                                                    </div>
                                                    <div class="box-content">
                                                       <h3 class="home-title"><?php the_title(); ?></h3>
@@ -594,6 +595,7 @@ get_header();
                                  $post_id = get_the_ID();
 
                                  $post_link = get_permalink($post_id);
+      
                               ?>
 
                                  <div class="col-lg-6 col-md-6 col-12 mb-3">

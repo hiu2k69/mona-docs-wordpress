@@ -744,7 +744,7 @@ add_action('admin_footer-post-new.php', 'restrict_to_single_type');
 function add_custom_meta_box() {
     add_meta_box(
         'custom_meta_box', 
-        'Custom Link', 
+        'For Artist', 
         'display_custom_meta_box', 
         'post', 
         'normal', 
@@ -754,23 +754,35 @@ function add_custom_meta_box() {
 add_action('add_meta_boxes', 'add_custom_meta_box');
 
 function display_custom_meta_box($post) {
-    
+    // Retrieve the existing values from the database
     $custom_link = get_post_meta($post->ID, '_custom_link', true);
+    $artist_name = get_post_meta($post->ID, '_artist_name', true); // New field
+
     ?>
-    <label for="custom_link">Custom Link:</label>
+    <label for="custom_link">Link X:</label>
     <input type="text" name="custom_link" id="custom_link" value="<?php echo esc_attr($custom_link); ?>" style="width: 100%;" />
+
+    <br><br> <!-- Add some space between fields -->
+
+    <label for="artist_name">Artist Name:</label>
+    <input type="text" name="artist_name" id="artist_name" value="<?php echo esc_attr($artist_name); ?>" style="width: 100%;" />
     <?php
 }
 
 function save_custom_meta_box($post_id) {
-   
+    // Check if the user has the ability to save the post
     if (!current_user_can('edit_post', $post_id)) {
         return $post_id;
     }
 
-   
+    // Save or update the custom link
     if (isset($_POST['custom_link'])) {
         update_post_meta($post_id, '_custom_link', sanitize_text_field($_POST['custom_link']));
+    }
+
+    // Save or update the artist name
+    if (isset($_POST['artist_name'])) {
+        update_post_meta($post_id, '_artist_name', sanitize_text_field($_POST['artist_name']));
     }
 }
 add_action('save_post', 'save_custom_meta_box');
