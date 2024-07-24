@@ -319,7 +319,6 @@ get_header();
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
-        font-size: 1.25rem;
     }
 
     .d-flex {
@@ -504,7 +503,11 @@ get_header();
                     }
                     ?>
 
-                    <div class="container">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="container">
                         <h2 class="title-last-post text-white text-center p-5">
                             - Last post -
                         </h2>
@@ -545,9 +548,6 @@ get_header();
                             <?php } ?>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 <?php get_footer(); ?>
