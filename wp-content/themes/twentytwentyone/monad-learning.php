@@ -12,7 +12,7 @@ if (!defined("ABSPATH")) {
 get_header();
 ?>
 <style>
-      img[src*="Writer.svg"] {
+   img[src*="Writer.svg"] {
       filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
    }
 
@@ -23,9 +23,11 @@ get_header();
    .box-por {
       display: flex;
    }
+
    footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relative {
-    height: 41px;
-}
+      height: 41px;
+   }
+
    .header-container {
       display: flex;
       justify-content: space-between;
@@ -111,7 +113,7 @@ get_header();
       border-right: none;
    }
 
- 
+
 
    table td,
    table th,
@@ -183,10 +185,12 @@ get_header();
    .box-image-last:hover {
       transform: scale(1.2);
    }
+
    img.icon-title {
-    width: 35px;
-    margin-right: 4px;
-}
+      width: 35px;
+      margin-right: 4px;
+   }
+
    .color-content p,
    .color-content ul li,
    .color-content h1,
@@ -196,51 +200,200 @@ get_header();
       font-size: 18px;
       color: white !important;
    }
-   .content-comingsoon{
+
+   .content-comingsoon {
       height: 50vh;
       position: relative;
    }
-   .content-comingsoon h2{
-   top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-   font-size: 50px;
-   font-family: 'Calibri';
-   color: #949494;
-   }
-   .fixed-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;}
-/* Fixed sidebar styling */
-.col-lg-2.col-md-3 {
-   position: fixed;
-   top: 6.5%; /* Adjust as needed */
-   left: 0;
-   width: 16.66667%; /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
-   height: calc(100vh - 10.5%); /* Adjust height based on top position */
-   display: flex;
-   flex-wrap: wrap;
-   align-items: baseline;
-   justify-content: center;
-   flex-direction: column;
-   z-index: 1; 
-}
-.col-lg-9.col-md-9 {
-   margin-left: 16.66667%; /* Space for fixed sidebar */
-   padding-left: 20px; /* Additional space between sidebar and content */
-}
 
-    header#masthead {
+   .content-comingsoon h2 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      font-size: 50px;
+      font-family: 'Calibri';
+      color: #949494;
+   }
+
+   .fixed-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 1000;
+   }
+
+   /* Fixed sidebar styling */
+   .col-lg-2.col-md-3 {
+      position: fixed;
+      top: 6.5%;
+      /* Adjust as needed */
+      left: 0;
+      width: 16.66667%;
+      /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
+      height: calc(100vh - 10.5%);
+      /* Adjust height based on top position */
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 1;
+   }
+
+   .col-lg-9.col-md-9 {
+      margin-left: 16.66667%;
+      /* Space for fixed sidebar */
+      padding-left: 20px;
+      /* Additional space between sidebar and content */
+   }
+
+   header#masthead {
       width: 100%;
       background-color: #000;
       padding: 1rem 0;
       box-sizing: border-box;
       position: fixed;
       z-index: 100;
-  }
+   }
+
+   .pt-10 {
+      padding-top: 10rem;
+   }
+
+   .tabs {
+      width: 100%;
+      display: block;
+   }
+
+   .tab-links:after {
+      display: block;
+      clear: both;
+      content: '';
+   }
+
+   ul.tab-links {
+      margin-bottom: 20px;
+   }
+
+   .tab-links li {
+      float: left;
+      margin: 0 10px 0 0;
+      list-style: none;
+   }
+
+   .tab-links a {
+      padding: 9px 15px;
+      display: inline-block;
+      border-radius: 3px 3px 0 0;
+      /* background: #7FB5DA; */
+      font-size: 30px;
+      font-weight: 600;
+      color: #949494;
+      transition: all linear 0.15s;
+   }
+
+   .tab-links a:hover {
+      /* background: #a7cce5; */
+      text-decoration: none;
+   }
+
+   /* .tab-content {
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    background: #fff;
+} */
+
+   .tab-post {
+      display: none;
+   }
+
+   .tab-post.active {
+      display: block;
+   }
+
+   .tab-links li.active a {
+      color: #836EF9;
+      text-decoration: underline !important;
+   }
+
+   .box-content-main {
+      transition: box-shadow 0.3s;
+   }
+
+   .box-content-main:hover {
+      box-shadow: 0 0 20px #5A3DFF;
+   }
+
+   .box-content-main {
+      background-color: #1b1b1b;
+      overflow: hidden;
+      color: #fff;
+      font-family: 'mona-font', sans-serif !important;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+   }
+
+   .image-home {
+      width: 100%;
+      height: 260px !important;
+      object-fit: cover;
+   }
+
+   a.artist {
+      color: #836EF9;
+   }
+
+   .box-artist {
+      background-color: #00FFF2;
+      padding: 0.2rem 0.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+      position: absolute;
+      right: 10px;
+      top: 200px;
+      color: #836EF9;
+      font-family: 'Segoe UI';
+      border-radius: 20px;
+      border: 3px solid #836EF9;
+   }
+
+   .box-content {
+      padding: 1rem;
+      height: 140px;
+   }
+
+   .box-content h3 {
+      font-size: 1.5rem;
+      margin: 0;
+      color: #836EF9;
+      text-align: left;
+      font-family: 'seguisb.ttf';
+   }
+
+   .box-content span {
+      font-size: 18px;
+      color: #836EF9;
+      font-family: 'Calibri';
+   }
+
+   .box-content p {
+      margin: 0.2rem 0 1rem 0;
+      font-size: 0.9rem;
+      color: #949494;
+      text-align: left;
+      font: normal normal normal 19px / 26px Segoe UI;
+      letter-spacing: 0px;
+      font-family: 'Segoe UI';
+   }
+
+   .box-content a:hover {
+      text-decoration: underline;
+   }
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -250,7 +403,7 @@ get_header();
    <div class="container-fluid">
       <div class="row">
          <div class="col-lg-2 col-md-3 relative  bg-090909">
-         <div class="tab-container ">
+            <div class="tab-container ">
                <?php
                $categories = get_terms(array(
                   'taxonomy' => 'category',
@@ -266,10 +419,10 @@ get_header();
                   $tab = $category->slug;
                   if ($image_url) {
 
-                     echo  '<a class="tab gap-05" href="'.home_url('/'. $category->slug .'') .'"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
+                     echo  '<a class="tab gap-05" href="' . home_url('/' . $category->slug . '') . '"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
                 </a>';
                   } else {
-                     echo '<a class="tab gap-05" href="'.home_url('/'. $category->slug .'') .'"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </a>';
+                     echo '<a class="tab gap-05" href="' . home_url('/' . $category->slug . '') . '"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </a>';
                   }
                }
                ?>
@@ -295,9 +448,6 @@ get_header();
                <?php
 
                foreach ($categories as $category) {
-                  // var_dump($category);
-                  // $cate = get_term_by('id', $category->term_id, 'category');
-                  // $count_post = $cate->count;
                   $tab = $category->slug;
 
                ?>
@@ -321,14 +471,131 @@ get_header();
 
                               </div>
                            </div>
-                           <div class="row pb-5">
+                           <?php
+
+                           $args = array(
+                              'post_type' => 'post',
+                              'cat' => $category->term_id,
+                              'posts_per_page' => -1,
+                           );
+                           $query = new WP_Query($args);
+
+                           $types = array();
+                           if ($query->have_posts()) {
+                              while ($query->have_posts()) {
+                                 $query->the_post();
+                                 $post_types = wp_get_post_terms(get_the_ID(), 'type');
+                                 foreach ($post_types as $post_type) {
+                                    $types[$post_type->slug] = $post_type->name;
+                                 }
+                              }
+                              wp_reset_postdata();
+                           }
+                           if(count($types) > 0){
+                           ?>
+                         
+                           <div class="tabs ">
+                              <ul class="tab-links">
+
+                                 <?php
+                                 $first = true;
+                                 foreach ($types as $slug => $name) {
+                                    echo '<li' . ($first ? ' class="active"' : '') . '><a href="#tab-' . esc_attr($slug) . '">' . esc_html($name) . '</a></li>';
+                                    $first = false;
+                                 }
+                                 ?>
+                              </ul>
+
+                              <div class="tab-content ">
+                                 <?php
+
+                                 $first = true;
+                                 foreach ($types as $slug => $name) {
+                                    echo '<div id="tab-' . esc_attr($slug) . '" class="tab-post' . ($first ? ' active' : '') . '">';
+                                    $first = false;
+
+                                    $args = array(
+                                       'post_type' => 'post',
+                                       'cat' => $category->term_id,
+                                       'tax_query' => array(
+                                          array(
+                                             'taxonomy' => 'type',
+                                             'field'    => 'slug',
+                                             'terms'    => $slug,
+                                          ),
+                                       ),
+                                    );
+                                    $query = new WP_Query($args);
+
+                                    if ($query->have_posts()) {
+                                       echo '<div class="row">';
+                                       while ($query->have_posts()) {
+                                          $query->the_post();
+                                          $custom_link = get_post_meta(get_the_ID(), '_custom_link', true);
+                                 ?>
+                                          <!-- <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                                <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo get_the_ID(); ?>">
+                                                   <div class="box-last">
+                                                      <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Image Description" class="box-image-last">
+                                                      <div class="box-content-t1 ">
+                                                         <h2 class="home-title"><?php the_title(); ?></h2>
+                                                         <p class="ml-2 home-content"><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
+                                                         <span class="text-secondary-foreground flex items-center">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
+                                                            &nbsp; Last update <?php echo esc_html(get_the_date()); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"> <?php echo get_the_author(); ?></span></span>
+                                                         </span>
+                                                      </div>
+                                                   </div>
+                                                </a>
+                                             </div> -->
+
+                                          <div class="col-lg-4 col-md-6 col-sm-12">
+                                             <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo get_the_ID(); ?>">
+                                                <div class="box-content-main">
+                                                   <div class="box-image">
+                                                      <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Image Description" class="image-home">
+                                                   </div>
+                                                   <div class="box-artist">
+                                                      <a href="<?php echo !empty($custom_link) ? $custom_link : "#"; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php the_author(); ?></span></a>　
+                                                   </div>
+                                                   <div class="box-content">
+                                                      <h3 class="home-title"><?php the_title(); ?></h3>
+                                                      <p class="ml-2 home-content"><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
+                                                      <span class="text-secondary-foreground flex items-center">
+                                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
+                                                         &nbsp; Last update <?php echo esc_html(get_the_date()); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"> <?php echo get_the_author(); ?></span></span>
+                                                      </span>
+                                                   </div>
+                                                </div>
+                                             </a>
+                                          </div>
+
+                                 <?php
+                                       }
+                                       echo '</div>';
+                                    } else {
+                                       echo '<p>No posts found.</p>';
+                                    }
+
+
+                                    echo '</div>';
+                                    wp_reset_postdata();
+                                 }
+                                 ?>
+                              </div>
+                           </div>
+                          
                               <?php
+                           }else{
+                              echo ' <div class="row pb-5">';
+                           
                               foreach ($posts as $post) {
                                  setup_postdata($post);
-                                 $post_id = get_the_ID(); // Lấy ID của bài viết hiện tại
+                                 $post_id = get_the_ID();
 
-                                 $post_link = get_permalink($post_id); // Lấy đường dẫn của bài viết
+                                 $post_link = get_permalink($post_id);
                               ?>
+
                                  <div class="col-lg-6 col-md-6 col-12 mb-3">
                                     <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
                                        <div class="box-last">
@@ -336,7 +603,7 @@ get_header();
                                           <div class="box-content-t1 ">
                                              <h2 class="home-title"><?php the_title(); ?></h2>
                                              <p class="ml-2 home-content"><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
-                                                                        echo $trimmed_content; ?></p>
+                                                                           echo $trimmed_content; ?></p>
 
                                              <span class="text-secondary-foreground flex items-center">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
@@ -345,14 +612,18 @@ get_header();
                                        </div>
                                     </a>
                                  </div>
-                              <?php } ?>
-                           </div>
+                              <?php } 
+                           ?>
+                            </div>
+                           <?php
+                              }?>
+                          
                         </div>
                         <?php } elseif (count($posts) == 1) {
                         foreach ($posts as $post) {
                            setup_postdata($post);
-                           $post_id = get_the_ID(); // Lấy ID của bài viết hiện tại
-                           $post_link = get_permalink($post_id); // Lấy đường dẫn của bài viết 
+                           $post_id = get_the_ID();
+                           $post_link = get_permalink($post_id);
                         ?>
                            <div class="container pb-5 color-content">
                               <!-- <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="" class="banner img-fluid mb-5"> -->
@@ -388,7 +659,7 @@ get_header();
                                              <div class="box-content-t1 ">
                                                 <h2 class="home-title"><?php the_title(); ?></h2>
                                                 <p class="ml-2 home-content"><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
-                                                                           echo $trimmed_content; ?></p>
+                                                                              echo $trimmed_content; ?></p>
 
                                                 <span class="text-secondary-foreground flex items-center">
                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
@@ -546,5 +817,21 @@ get_header();
          });
          paneToActivate.classList.add('active');
       }
+   });
+</script>
+
+<script>
+   jQuery(document).ready(function() {
+      jQuery('.tab-links a').on('click', function(e) {
+         var currentAttrValue = jQuery(this).attr('href');
+
+         // Show/Hide Tabs
+         jQuery('.tab-post' + currentAttrValue).show().siblings().hide();
+
+         // Change/remove current tab to active
+         jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+         e.preventDefault();
+      });
    });
 </script>

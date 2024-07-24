@@ -695,3 +695,82 @@ function custom_rewrite_rules() {
     );
 }
 add_action('init', 'custom_rewrite_rules');
+
+
+function create_type_taxonomy() {
+    $labels = array(
+        'name' => _x('Types', 'taxonomy general name'),
+        'singular_name' => _x('Type', 'taxonomy singular name'),
+        'search_items' => __('Search Types'),
+        'all_items' => __('All Types'),
+        'parent_item' => __('Parent Type'),
+        'parent_item_colon' => __('Parent Type:'),
+        'edit_item' => __('Edit Type'),
+        'update_item' => __('Update Type'),
+        'add_new_item' => __('Add New Type'),
+        'new_item_name' => __('New Type Name'),
+        'menu_name' => __('Types'),
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'type'),
+    );
+
+    register_taxonomy('type', array('post'), $args);
+}
+add_action('init', 'create_type_taxonomy', 0);
+
+
+function restrict_to_single_type() {
+    ?>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $('#taxonomy-type input[type="checkbox"]').each(function() {
+                $(this).attr('type', 'radio');
+            });
+        });
+    </script>
+    <?php
+}
+add_action('admin_footer-post.php', 'restrict_to_single_type');
+add_action('admin_footer-post-new.php', 'restrict_to_single_type');
+
+
+function add_custom_meta_box() {
+    add_meta_box(
+        'custom_meta_box', 
+        'Custom Link', 
+        'display_custom_meta_box', 
+        'post', 
+        'normal', 
+        'high' 
+    );
+}
+add_action('add_meta_boxes', 'add_custom_meta_box');
+
+function display_custom_meta_box($post) {
+    
+    $custom_link = get_post_meta($post->ID, '_custom_link', true);
+    ?>
+    <label for="custom_link">Custom Link:</label>
+    <input type="text" name="custom_link" id="custom_link" value="<?php echo esc_attr($custom_link); ?>" style="width: 100%;" />
+    <?php
+}
+
+function save_custom_meta_box($post_id) {
+   
+    if (!current_user_can('edit_post', $post_id)) {
+        return $post_id;
+    }
+
+   
+    if (isset($_POST['custom_link'])) {
+        update_post_meta($post_id, '_custom_link', sanitize_text_field($_POST['custom_link']));
+    }
+}
+add_action('save_post', 'save_custom_meta_box');
