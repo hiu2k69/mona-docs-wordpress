@@ -174,7 +174,12 @@ get_header();
       -webkit-box-orient: vertical;
       font-size: 1.25rem !important;
    }
-
+   .box-content {
+    margin: 0;
+    background: #090909;
+    padding: 6px;
+    border-radius: 6px;
+}
    .box-image-last {
       width: 150px;
       object-fit: cover;
@@ -205,15 +210,27 @@ get_header();
       height: 50vh;
       position: relative;
    }
-
-   .content-comingsoon h2 {
-      top: 50%;
+   img.coming-soon {
+    width: 200px;
+    top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       position: absolute;
-      font-size: 50px;
+}
+
+   .content-comingsoon h3 {
+      top: 73%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      width: 500px;
+	font-weight:bolder;
+
+      font-size: 30px;
       font-family: 'Calibri';
-      color: #949494;
+      color: #836EF9;
+    line-height: 1.6;
+
    }
 
    .fixed-footer {
@@ -564,7 +581,7 @@ get_header();
                                                       <p class="ml-2 home-content"><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
                                                       <span class="text-secondary-foreground flex items-center">
                                                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                                         &nbsp; Last update <?php echo esc_html(get_the_date()); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"> <?php echo get_the_author(); ?></span></span>
+                                                         &nbsp; Last update <?php echo esc_html(get_the_date()); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"><?php echo !empty($artist) ?  $artist : get_the_author(); ?></span></span>
                                                       </span>
                                                    </div>
                                                 </div>
@@ -680,7 +697,7 @@ get_header();
                         ?>
                         <div class="container">
                            <div class="flex justify-between items-center mb-4">
-                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> &nbsp; <?php echo $category->name ?></h1>
+                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> <?php echo $category->name ?></h1>
                               <div class="relative">
                                  <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
@@ -691,8 +708,9 @@ get_header();
                            </div>
                            <div class="row pb-5 text-center">
                               <div class="content-comingsoon">
-                                 <h2 class="text-2xl ">Coming soon...</h2>
-
+                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banhmi-moyaki-512.gif" alt="" class="coming-soon">
+                                 <br>
+                                 <h3 class="text-2xl">"nothing here, but you can eat banhmi moyaki before leave"</h3>
                               </div>
                            </div>
                         </div>

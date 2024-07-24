@@ -166,7 +166,7 @@ get_header();
 
     .box-content {
         padding: 1rem;
-        height: 250px;
+        /* height: 250px; */
     }
 
     .box-content h3 {
@@ -200,17 +200,21 @@ get_header();
         border-radius: 8px;
     } */
     a.see-more {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background-color: #836EF9;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-        font-family: 'Segoe UI';
-        font-weight: bolder;
-    }
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    background-color: #836EF9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: 'Segoe UI';
+    font-weight: bolder;
+    margin-bottom: 14px;
+    width: 94%;
+    text-align: center;
+    margin-left: 14px;
+}
 
     a.see-more:hover {
         background-color: #00FFF2;
@@ -282,11 +286,12 @@ for ($i = 1;$i < 10;$i++)
                                 <div class="box-content">
                                     <h3 class="home-title">How to Contribute</h3>
                                     <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
-                                    <a href="<?php echo esc_url(home_url("/monad-learning")); ?>" class="see-more">
-                                        <img aria-hidden="true" alt="chat-bubble" class="see" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" />
-                                        &nbsp; &nbsp; Read more
-                                    </a>
+                                   
                                 </div>
+                                <a href="<?php echo esc_url(home_url("/monad-learning")); ?>" class="see-more">
+                                        <!-- <img aria-hidden="true" alt="chat-bubble" class="see" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" /> -->
+                                        Explore now
+                                                                        </a>
                             </div>
                         </a>
                     </div>
@@ -321,9 +326,9 @@ foreach ($posts as $post)
                                 <div class="box-content-t1 ">
                                     <h2 class="home-title"><?php the_title(); ?></h2>
                                     <p class="ml-2 home-content text-xl"><?php
-    $trimmed_content = wp_trim_words(get_the_content() , 20, "...");
-    echo $trimmed_content;
-?></p>
+                                        $trimmed_content = wp_trim_words(get_the_content() , 20, "...");
+                                        echo $trimmed_content;
+                                    ?></p>
 
                                     <span class="text-secondary-foreground flex items-center">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">

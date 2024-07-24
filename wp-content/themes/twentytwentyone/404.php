@@ -8,20 +8,64 @@
  * @subpackage Twenty_Twenty_One
  * @since Twenty Twenty-One 1.0
  */
+if (!defined("ABSPATH"))
+{
+    exit();
+}
 
 get_header();
 ?>
+<style>
+	   section.not-found {
+	background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/BG-ss1.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   z-index: 1;
+   padding-top: 4rem;
+   min-height: 100vh; 
+   background-position: center; 
+   }
+   header#masthead {
+    position: fixed;
+    z-index: 1000;
+}
+   .box-notfoud {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 500px;
+}
 
-	<header class="page-header alignwide">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'twentytwentyone' ); ?></h1>
-	</header><!-- .page-header -->
+.fixed-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 1000;
+   }
+   h3.content-not {
+    font-family: 'Calibri';
+    line-height: 1.6;
+    text-align: center;
+    color: #836EF9;	
+	font-size: 30px;
+	font-weight:bolder;
 
-	<div class="error-404 not-found default-max-width">
-		<div class="page-content">
-			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentytwentyone' ); ?></p>
-			<?php get_search_form(); ?>
-		</div><!-- .page-content -->
-	</div><!-- .error-404 -->
+}
+img.not-found{
+	width: 80%;
+}
+</style>
+
+	<section class="not-found">
+		<div class="box-notfoud">
+   				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/salmonadrub.gif" alt="" class="not-found w-80">
+				<h3 class="content-not">"Oh no, you visit wrong page, you have
+			to run out of this place, run! runnn"</h3>
+		</div>
+	</section>
 
 <?php
 get_footer();
+?>
