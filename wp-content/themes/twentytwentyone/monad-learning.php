@@ -415,6 +415,10 @@ get_header();
    .box-content a:hover {
       text-decoration: underline;
    }
+
+   .col-lg-2.col-md-3 {
+      top: 10.5%;
+   }
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -557,10 +561,11 @@ get_header();
                                     $query->the_post();
                                     $custom_link = get_post_meta(get_the_ID(), '_custom_link', true);
                                     $artist = get_post_meta(get_the_ID(), '_artist_name', true);
+                                    $post_slug = get_post_field('post_name', get_the_ID());
                         ?>
 
                                     <div class="col-lg-4 col-md-6 col-sm-12">
-                                        <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo get_the_ID(); ?>">
+                                        <a href="<?php echo esc_url(home_url('/detail/')).$post_slug; ?>">
                                             <div class="box-content-main">
                                                 <div class="box-image">
                                                     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Image Description" class="image-home">
@@ -607,10 +612,11 @@ get_header();
                     setup_postdata($post);
                     $post_id = get_the_ID();
                     $post_link = get_permalink($post_id);
+                    $post_slug = get_post_field('post_name', get_the_ID());
             ?>
 
                     <div class="col-lg-6 col-md-6 col-12 mb-3">
-                        <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
+                        <a href="<?php echo esc_url(home_url('/detail/')).$post_slug; ?>">
                             <div class="box-last">
                                 <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
                                 <div class="box-content-t1 ">
@@ -662,9 +668,10 @@ get_header();
                         setup_postdata($post);
                         $post_id = get_the_ID();
                         $post_link = get_permalink($post_id);
+                        $post_slug = get_post_field('post_name', get_the_ID());
                     ?>
                         <div class="col-lg-6 col-md-6 col-12 mb-3">
-                            <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
+                            <a href="<?php echo esc_url(home_url('/detail/')).$post_slug; ?>">
                                 <div class="box-last">
                                     <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
                                     <div class="box-content-t1 ">

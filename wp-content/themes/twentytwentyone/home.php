@@ -318,9 +318,10 @@ foreach ($posts as $post)
     $post_id = get_the_ID();
 
     $post_link = get_permalink($post_id);
+    $post_slug = get_post_field('post_name', get_the_ID());
 ?>
                     <div class="col-lg-6 col-md-6 col-12 mb-3">
-                        <a href="<?php echo esc_url(home_url("/detail")); ?>?post_id=<?php echo $post->ID; ?>">
+                        <a href="<?php echo esc_url(home_url("/detail/")).$post_slug; ?>">
                             <div class="box-last">
                                 <img src="<?php echo get_the_post_thumbnail_url($post_id); ?>" alt="Image Description" class="box-image-last">
                                 <div class="box-content-t1 ">
