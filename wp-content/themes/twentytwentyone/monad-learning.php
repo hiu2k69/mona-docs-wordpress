@@ -160,7 +160,9 @@ get_header();
    .gap-05 {
       gap: 0.5rem;
       padding: 14px 52px !important;
-   }
+   }h2.home-title {
+    margin-bottom: -11px;
+}
 
    .home-title {
       overflow: hidden;
@@ -172,7 +174,7 @@ get_header();
    .home-content {
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
    }
    .box-content {
@@ -472,257 +474,241 @@ get_header();
                   $tab = $category->slug;
 
                ?>
-                  <div class="tab-pane " id="<?php echo $tab ?>">
-                     <?php
-                     $args = array(
-                        'category' => $category->term_id,
-                        'posts_per_page' => -1,
-                     );
+               <div class="tab-pane " id="<?php echo $tab ?>">
+    <?php
+    $args = array(
+        'category' => $category->term_id,
+        'posts_per_page' => -1,
+    );
 
-                     $posts = get_posts($args);
-                     if (count($posts) > 1) {
-                     ?>
-                        <div class="container">
-                           <div class="flex justify-between items-center mb-4">
-                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name ?></h1>
-                              <div class="relative">
-                                 <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                                    <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                                 </span>
-                                 <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+    $posts = get_posts($args);
+    if (count($posts) > 1) {
+    ?>
+        <div class="container">
+            <div class="flex justify-between items-center mb-4">
+                <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name ?></h1>
+                <div class="relative">
+                    <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                        <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                    </span>
+                    <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                </div>
+            </div>
 
-                              </div>
-                           </div>
-                           <?php
+            <?php
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+            $args = array(
+                'post_type' => 'post',
+                'cat' => $category->term_id,
+                'posts_per_page' => 8,
+                'paged' => $paged,
+            );
+            $query = new WP_Query($args);
 
-                           $args = array(
-                              'post_type' => 'post',
-                              'cat' => $category->term_id,
-                              'posts_per_page' => -1,
-                           );
-                           $query = new WP_Query($args);
+            $types = array();
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    $post_types = wp_get_post_terms(get_the_ID(), 'type');
+                    foreach ($post_types as $post_type) {
+                        $types[$post_type->slug] = $post_type->name;
+                    }
+                }
+                wp_reset_postdata();
+            }
+            if(count($types) > 0){
+            ?>
+                <div class="tabs ">
+                    <ul class="tab-links">
+                        <?php
+                        $first = true;
+                        foreach ($types as $slug => $name) {
+                            echo '<li' . ($first ? ' class="active"' : '') . '><a href="#tab-' . esc_attr($slug) . '">' . esc_html($name) . '</a></li>';
+                            $first = false;
+                        }
+                        ?>
+                    </ul>
 
-                           $types = array();
-                           if ($query->have_posts()) {
-                              while ($query->have_posts()) {
-                                 $query->the_post();
-                                 $post_types = wp_get_post_terms(get_the_ID(), 'type');
-                                 foreach ($post_types as $post_type) {
-                                    $types[$post_type->slug] = $post_type->name;
-                                 }
-                              }
-                              wp_reset_postdata();
-                           }
-                           if(count($types) > 0){
-                           ?>
-                         
-                           <div class="tabs ">
-                              <ul class="tab-links">
+                    <div class="tab-content ">
+                        <?php
+                        $first = true;
+                        foreach ($types as $slug => $name) {
+                            echo '<div id="tab-' . esc_attr($slug) . '" class="tab-post' . ($first ? ' active' : '') . '">';
+                            $first = false;
 
-                                 <?php
-                                 $first = true;
-                                 foreach ($types as $slug => $name) {
-                                    echo '<li' . ($first ? ' class="active"' : '') . '><a href="#tab-' . esc_attr($slug) . '">' . esc_html($name) . '</a></li>';
-                                    $first = false;
-                                 }
-                                 ?>
-                              </ul>
+                            $args = array(
+                                'post_type' => 'post',
+                                'cat' => $category->term_id,
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'type',
+                                        'field'    => 'slug',
+                                        'terms'    => $slug,
+                                    ),
+                                ),
+                                'posts_per_page' => 8,
+                                'paged' => $paged,
+                            );
+                            $query = new WP_Query($args);
 
-                              <div class="tab-content ">
-                                 <?php
+                            if ($query->have_posts()) {
+                                echo '<div class="row">';
+                                while ($query->have_posts()) {
+                                    $query->the_post();
+                                    $custom_link = get_post_meta(get_the_ID(), '_custom_link', true);
+                                    $artist = get_post_meta(get_the_ID(), '_artist_name', true);
+                        ?>
 
-                                 $first = true;
-                                 foreach ($types as $slug => $name) {
-                                    echo '<div id="tab-' . esc_attr($slug) . '" class="tab-post' . ($first ? ' active' : '') . '">';
-                                    $first = false;
-
-                                    $args = array(
-                                       'post_type' => 'post',
-                                       'cat' => $category->term_id,
-                                       'tax_query' => array(
-                                          array(
-                                             'taxonomy' => 'type',
-                                             'field'    => 'slug',
-                                             'terms'    => $slug,
-                                          ),
-                                       ),
-                                    );
-                                    $query = new WP_Query($args);
-
-                                    if ($query->have_posts()) {
-                                       echo '<div class="row">';
-                                       while ($query->have_posts()) {
-                                          $query->the_post();
-                                          $custom_link = get_post_meta(get_the_ID(), '_custom_link', true);
-                                          $artist = get_post_meta(get_the_ID(), '_artist_name', true);
-                                 ?>
-                                          <!-- <div class="col-lg-6 col-md-6 col-12 mb-3">
-                                                <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo get_the_ID(); ?>">
-                                                   <div class="box-last">
-                                                      <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Image Description" class="box-image-last">
-                                                      <div class="box-content-t1 ">
-                                                         <h2 class="home-title"><?php the_title(); ?></h2>
-                                                         <p class="ml-2 home-content"><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
-                                                         <span class="text-secondary-foreground flex items-center">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                                            &nbsp; Last update <?php echo esc_html(get_the_date()); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"> <?php echo get_the_author(); ?></span></span>
-                                                         </span>
-                                                      </div>
-                                                   </div>
-                                                </a>
-                                             </div> -->
-
-                                          <div class="col-lg-4 col-md-6 col-sm-12">
-                                             <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo get_the_ID(); ?>">
-                                                <div class="box-content-main">
-                                                   <div class="box-image">
-                                                      <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Image Description" class="image-home">
-                                                   </div>
-                                                   <div class="box-artist">
-                                                      <a href="<?php echo !empty($custom_link) ? $custom_link : "#"; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php echo !empty($artist) ?  $artist : get_the_author(); ?></span></a>　
-                                                   </div>
-                                                   <div class="box-content">
-                                                      <h3 class="home-title"><?php the_title(); ?></h3>
-                                                      <p class="ml-2 home-content"><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
-                                                      <span class="text-secondary-foreground flex items-center">
-                                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                                         &nbsp; Last update <?php echo esc_html(get_the_date()); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"><?php echo !empty($artist) ?  $artist : get_the_author(); ?></span></span>
-                                                      </span>
-                                                   </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo get_the_ID(); ?>">
+                                            <div class="box-content-main">
+                                                <div class="box-image">
+                                                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="Image Description" class="image-home">
                                                 </div>
-                                             </a>
-                                          </div>
-
-                                 <?php
-                                       }
-                                       echo '</div>';
-                                    } else {
-                                       echo '<p>No posts found.</p>';
-                                    }
-
-
-                                    echo '</div>';
-                                    wp_reset_postdata();
-                                 }
-                                 ?>
-                              </div>
-                           </div>
-                          
-                              <?php
-                           }else{
-                              echo ' <div class="row pb-5">';
-                              foreach ($posts as $post) {
-                                 setup_postdata($post);
-                                 $post_id = get_the_ID();
-
-                                 $post_link = get_permalink($post_id);
-      
-                              ?>
-
-                                 <div class="col-lg-6 col-md-6 col-12 mb-3">
-                                    <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
-                                       <div class="box-last">
-                                          <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
-                                          <div class="box-content-t1 ">
-                                             <h2 class="home-title"><?php the_title(); ?></h2>
-                                             <p class="ml-2 home-content"><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
-                                                                           echo $trimmed_content; ?></p>
-
-                                             <span class="text-secondary-foreground flex items-center">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                                &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1">  <?php echo get_the_author(); ?></span></span></span>
-                                          </div>
-                                       </div>
-                                    </a>
-                                 </div>
-                              <?php } 
-                           ?>
-                            </div>
-                           <?php
-                              }?>
-                          
-                        </div>
-                        <?php } elseif (count($posts) == 1) {
-                        foreach ($posts as $post) {
-                           setup_postdata($post);
-                           $post_id = get_the_ID();
-                           $post_link = get_permalink($post_id);
-                        ?>
-                           <div class="container pb-5 color-content">
-                              <!-- <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="" class="banner img-fluid mb-5"> -->
-                              <h1 class="text-2xl font-bold text-white text-foreground title"><?php the_title(); ?></h1>
-                              <p class="mt-4 p-content italic "><?php the_content(); ?></p>
-                           </div>
-
-                           <div class="container">
-                              <h2 class="title-last-post text-white text-center p-5">
-                                 - Last post -
-                              </h2>
-                              <div class="row pb-5">
-                                 <?php
-                                 $args = array(
-                                    'posts_per_page' => -1,
-                                    'post_type' => 'post',
-                                    'post_status' => 'publish',
-                                    'orderby' => 'date',
-                                    'order' => 'ASC'
-                                 );
-
-                                 $posts = get_posts($args);
-                                 foreach ($posts as $post) {
-                                    setup_postdata($post);
-                                    $post_id = get_the_ID();
-
-                                    $post_link = get_permalink($post_id);
-                                 ?>
-                                    <div class="col-lg-6 col-md-6 col-12 mb-3">
-                                       <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
-                                          <div class="box-last">
-                                             <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
-                                             <div class="box-content-t1 ">
-                                                <h2 class="home-title"><?php the_title(); ?></h2>
-                                                <p class="ml-2 home-content"><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
-                                                                              echo $trimmed_content; ?></p>
-
-                                                <span class="text-secondary-foreground flex items-center">
-                                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                                   &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1"> <?php echo get_the_author(); ?></span></span></span>
-                                             </div>
-                                          </div>
-                                       </a>
+                                                <div class="box-artist">
+                                                    <a href="<?php echo !empty($custom_link) ? $custom_link : "#"; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php echo !empty($artist) ?  $artist : get_the_author(); ?></span></a>　
+                                                </div>
+                                                <div class="box-content">
+                                                    <h3 class="home-title"><?php the_title(); ?></h3>
+                                                    <p class="ml-2 home-content"><?php echo wp_trim_words(get_the_content(), 50, '...'); ?></p>
+                                                    <span class="text-secondary-foreground flex items-center">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
+                                                        &nbsp; Last update <?php echo esc_html(get_the_date()); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"><?php echo !empty($artist) ?  $artist : get_the_author(); ?></span></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-                                 <?php } ?>
-                              </div>
-                           </div>
 
+                        <?php
+                                }
+                                echo '</div>';
 
-                        <?php }
-                     } else {
+                                // Pagination
+                                echo '<div class="pagination">';
+                                echo paginate_links(array(
+                                    'total' => $query->max_num_pages,
+                                ));
+                                echo '</div>';
+                            } else {
+                                echo '<p>No posts found.</p>';
+                            }
+
+                            echo '</div>';
+                            wp_reset_postdata();
+                        }
                         ?>
-                        <div class="container">
-                           <div class="flex justify-between items-center mb-4">
-                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> <?php echo $category->name ?></h1>
-                              <div class="relative">
-                                 <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                                    <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                                 </span>
-                                 <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                    </div>
+                </div>
+            <?php
+            } else {
+                echo '<div class="row pb-5">';
+                foreach ($posts as $post) {
+                    setup_postdata($post);
+                    $post_id = get_the_ID();
+                    $post_link = get_permalink($post_id);
+            ?>
 
-                              </div>
-                           </div>
-                           <div class="row pb-5 text-center">
-                              <div class="content-comingsoon">
-                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banhmi-moyaki-512.gif" alt="" class="coming-soon">
-                                 <br>
-                                 <h3 class="text-2xl">"nothing here, but you can eat banhmi moyaki before leave"</h3>
-                              </div>
-                           </div>
+                    <div class="col-lg-6 col-md-6 col-12 mb-3">
+                        <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
+                            <div class="box-last">
+                                <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
+                                <div class="box-content-t1 ">
+                                    <h2 class="home-title"><?php the_title();  ?></h2>
+                                    <p class="ml-2 home-content"><?php $trimmed_content = wp_trim_words(get_the_content(), 50, '...');
+                                                                  echo $trimmed_content; ?></p>
+                                    <span class="text-secondary-foreground flex items-center">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
+                                        &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1">  <?php echo get_the_author(); ?></span></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                <?php } ?>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    <?php } elseif (count($posts) == 1) {
+        foreach ($posts as $post) {
+            setup_postdata($post);
+            $post_id = get_the_ID();
+            $post_link = get_permalink($post_id);
+        ?>
+            <div class="container pb-5 color-content">
+                <!-- <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="" class="banner img-fluid mb-5"> -->
+                <h1 class="text-2xl font-bold text-white text-foreground title"><?php the_title(); ?></h1>
+                <p class="mt-4 p-content italic "><?php the_content(); ?></p>
+            </div>
+
+            <div class="container">
+                <h2 class="title-last-post text-white text-center p-5">
+                    - Last post -
+                </h2>
+                <div class="row pb-5">
+                    <?php
+                    $args = array(
+                        'posts_per_page' => -1,
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                        'orderby' => 'date',
+                        'order' => 'ASC'
+                    );
+
+                    $posts = get_posts($args);
+                    foreach ($posts as $post) {
+                        setup_postdata($post);
+                        $post_id = get_the_ID();
+                        $post_link = get_permalink($post_id);
+                    ?>
+                        <div class="col-lg-6 col-md-6 col-12 mb-3">
+                            <a href="<?php echo esc_url(home_url('/detail/')); ?>?post_id=<?php echo $post->ID; ?>">
+                                <div class="box-last">
+                                    <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
+                                    <div class="box-content-t1 ">
+                                        <h2 class="home-title"><?php the_title(); ?></h2>
+                                        <p class="ml-2 home-content"><?php $trimmed_content = wp_trim_words(get_the_content(), 10, '...');
+                                                                      echo $trimmed_content; ?></p>
+                                        <span class="text-secondary-foreground flex items-center">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
+                                            &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1"> <?php echo get_the_author(); ?></span></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        </script>
-                     <?php
-                     }
-                     ?>
-                  </div>
+                    <?php } ?>
+                </div>
+            </div>
+
+        <?php }
+    } else {
+        ?>
+        <div class="container">
+            <div class="flex justify-between items-center mb-4">
+                <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> <?php echo $category->name ?></h1>
+                <div class="relative">
+                    <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                        <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                    </span>
+                    <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                </div>
+            </div>
+            <div class="row pb-5 text-center">
+                <div class="content-comingsoon">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banhmi-moyaki-512.gif" alt="" class="coming-soon">
+                    <br>
+                    <h3 class="text-2xl">"nothing here, but you can eat banhmi moyaki before leave"</h3>
+                </div>
+            </div>
+        </div>
+    <?php
+    }
+    ?>
+</div>
+
                <?php } ?>
             </div>
          </div>

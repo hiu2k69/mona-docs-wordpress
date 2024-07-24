@@ -490,7 +490,7 @@ header#masthead {
                                         <div class="box-last">
                                             <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
                                             <div class="box-content-t1 ">
-                                                <h2 class="home-title"><?php the_title(); ?></h2>
+                                                <h2 class="home-title"><?php the_title();  ?></h2>
                                                 <p class="ml-2 home-content"><?php $trimmed_content = wp_trim_words(get_the_content(), 20, '...');
                                                                             echo $trimmed_content; ?></p>
 
