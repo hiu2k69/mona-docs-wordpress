@@ -509,7 +509,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container box-last-">
                         <h2 class="title-last-post text-white text-center p-5">
                             - Last post -
                         </h2>
