@@ -423,7 +423,9 @@ get_header();
       <div class="row">
          <div class="col-lg-2 col-md-3 relative  bg-090909">
             <div class="tab-container ">
-               <?php
+            <?php
+               $current_page_url = get_permalink();
+               $current_page_path = str_replace("/", "", parse_url($current_page_url, PHP_URL_PATH));
                $categories = get_terms(array(
                   'taxonomy' => 'category',
                   'hide_empty' => false,
@@ -435,13 +437,13 @@ get_header();
                   $image_url =  z_taxonomy_image_url($category->term_id);
                   $cate = get_term_by('id', $category->term_id, 'category');
                   $count_post = $cate->count;
-                  $tab = $category->slug;
+                  $active = $category->slug == $current_page_path ? "active" : "";
                   if ($image_url) {
 
-                     echo  '<a class="tab gap-05" href="' . home_url('/' . $category->slug . '') . '"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
+                     echo  '<a class="tab gap-05 '. $active .'" href="' . home_url('/' . $category->slug . '') . '"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
                 </a>';
                   } else {
-                     echo '<a class="tab gap-05" href="' . home_url('/' . $category->slug . '') . '"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </a>';
+                     echo '<a class="tab gap-05 '. $active .'" href="' . home_url('/' . $category->slug . '') . '"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </a>';
                   }
                }
                ?>
@@ -474,6 +476,7 @@ get_header();
                      <?php
                      $args = array(
                         'category' => $category->term_id,
+                        'posts_per_page' => -1,
                      );
 
                      $posts = get_posts($args);
@@ -608,7 +611,6 @@ get_header();
                               <?php
                            }else{
                               echo ' <div class="row pb-5">';
-                           
                               foreach ($posts as $post) {
                                  setup_postdata($post);
                                  $post_id = get_the_ID();
