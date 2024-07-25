@@ -170,12 +170,12 @@ get_header();
       object-fit: cover;
    }
    .color-content p {
-        color: white !important;
+        color: #D4D4D4;
         line-height: 2;
     }
    .gap-05 {
       gap: 0.5rem;
-      padding:11px 54px !important
+      padding:9px 54px !important
    }h2.home-title {
     margin-bottom: -11px;
 }
@@ -265,7 +265,7 @@ get_header();
    /* Fixed sidebar styling */
    .col-lg-2.col-md-3 {
       position: fixed;
-      top: 4.5%;
+      top: 2.5%;
       left: -1.7%;
       width: 16.66667%;
       /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
