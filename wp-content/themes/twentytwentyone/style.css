@@ -7820,7 +7820,7 @@ h2.title-last-post.text-white.text-center.p-5 {
 
    }
    h1.text-3xl.font-bold.text-white {
-    font-size: 40px;
+    font-size: 30px;
 	font-family: 'Calibri';
 
 }
@@ -7893,7 +7893,7 @@ p.dis {
     transition: color 0.3s;  /* Smooth transition effect */
 }
 
-.name-title:hover {
+a.tab.gap-05:hover {
     color: #836EF9;
 }
    .tab-content .tab-pane {
