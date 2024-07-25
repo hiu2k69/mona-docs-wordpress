@@ -21,7 +21,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <?php
-get_template_part('template-custom-single');
 
   // Default values
   $default_description = 'Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community.';
