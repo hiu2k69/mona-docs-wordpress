@@ -12,6 +12,15 @@ if (!defined("ABSPATH")) {
 get_header();
 ?>
 <style>
+   @media only screen and (min-width: 1780px) {
+      h2.name-title.ml-5 {
+    font-size: 15px;
+}
+.gap-05 {
+    gap: 0.5rem;
+    padding: 5px 54px !important;
+}
+}
    img[src*="Writer.svg"] {
       filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
       width: 17px;
@@ -255,6 +264,7 @@ get_header();
 
    }.box-bottom.d-flex.mt-2 img {
     width: 24px;
+    margin-left: 11px;
 }
 
    .fixed-footer {

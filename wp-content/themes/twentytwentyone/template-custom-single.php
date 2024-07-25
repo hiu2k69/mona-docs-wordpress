@@ -556,13 +556,11 @@ get_header();
         } else {
             echo '<p>No posts found.</p>';
         }
-        // Reset post data
         wp_reset_postdata();
         ?>
     </div>
     <div class="pagination">
         <?php
-        // Display pagination
         echo paginate_links(array(
             'total' => $posts->max_num_pages
         ));
