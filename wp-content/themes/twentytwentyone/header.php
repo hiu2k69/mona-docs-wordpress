@@ -17,44 +17,52 @@
 <html <?php language_attributes(); ?> <?php twentytwentyone_the_html_classes(); ?>>
 
 <head>
-  <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+  <meta charset="<?php bloginfo('charset'); ?>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   
-  <?php if (is_single()): ?>
-    <!-- Single post meta tags -->
-    <meta property="og:description" content="<?php echo get_the_excerpt() ?: 'Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community.'; ?>" />
-    <meta property="og:title" content="<?php echo get_the_title(); ?>" />
-    <meta property="og:url" content="<?php echo get_permalink(); ?>" />
-    <meta property="og:image" content="<?php echo get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/assets/images/default-image.png'; ?>" />
-    <meta property="og:locale" content="<?php echo get_locale(); ?>" />
-    
-    <!-- Twitter Card meta tags for single posts -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<?php echo get_the_title(); ?>" />
-    <meta name="twitter:description" content="<?php echo get_the_excerpt() ?: 'Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community.'; ?>" />
-    <meta name="twitter:image" content="<?php echo get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/assets/images/default-image.png'; ?>" />
-    <meta name="twitter:site" content="@yoursite" />
-    <meta name="twitter:creator" content="@yourhandle" />
-  <?php else: ?>
-    <!-- Default meta tags for other pages -->
-    <meta property="og:description" content="Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community." />
-    <meta property="og:title" content="<?php bloginfo('name'); ?>" />
-    <meta property="og:url" content="<?php echo home_url(); ?>" />
-    <meta property="og:image" content="<?php echo get_template_directory_uri() . '/assets/images/default-image.png'; ?>" />
-    <meta property="og:locale" content="<?php echo get_locale(); ?>" />
-    
-    <!-- Twitter Card meta tags for other pages -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<?php bloginfo('name'); ?>" />
-    <meta name="twitter:description" content="Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community." />
-    <meta name="twitter:image" content="<?php echo get_template_directory_uri() . '/assets/images/default-image.png'; ?>" />
-    <meta name="twitter:site" content="@yoursite" />
-    <meta name="twitter:creator" content="@yourhandle" />
-  <?php endif; ?>
-
+  <?php
+  // Default values
+  $default_description = 'Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community.';
+  $default_image = get_template_directory_uri() . '/assets/images/favicon.png';
+  $site_name = get_bloginfo('name');
+  
+  // Post-specific values
+  if (is_single()) {
+    $post_title = get_the_title();
+    $post_description = get_the_excerpt() ?: $default_description;
+    $post_url = get_permalink();
+    $post_image = get_the_post_thumbnail_url() ?: $default_image;
+  } else {
+    // Default values for non-single pages
+    $post_title = $site_name;
+    $post_description = $default_description;
+    $post_url = home_url();
+    $post_image = $default_image;
+  }
+  ?>
+  
+  <!-- Open Graph meta tags -->
+  <meta property="og:site_name" content="<?php echo $site_name; ?>" />
+  <meta property="og:description" content="<?php echo $post_description; ?>" />
+  <meta property="og:title" content="<?php echo $post_title; ?>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="<?php echo $post_url; ?>" />
+  <meta property="og:image" content="<?php echo $post_image; ?>" />
+  <meta property="og:locale" content="<?php echo get_locale(); ?>" />
+  
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<?php echo $post_title; ?>" />
+  <meta name="twitter:description" content="<?php echo $post_description; ?>" />
+  <meta name="twitter:image" content="<?php echo $post_image; ?>" />
+  <meta name="twitter:site" content="@yoursite" />
+  <meta name="twitter:creator" content="@yourhandle" />
+  
   <?php wp_head(); ?>
   <title><?php wp_title(' - ', true, 'right'); ?><?php bloginfo('name'); ?></title>
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
 </head>
+
 
 
 <style>
