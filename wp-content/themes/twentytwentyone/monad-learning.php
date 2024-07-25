@@ -212,9 +212,11 @@ get_header();
    }
 
    img.icon-title {
-      width: 35px;
-      margin-right: 4px;
-   }
+    width: 29px;
+    margin-right: 6px;
+    height: 30px;
+    margin-top: 1px;
+}
 
    .color-content p,
    .color-content ul li,
