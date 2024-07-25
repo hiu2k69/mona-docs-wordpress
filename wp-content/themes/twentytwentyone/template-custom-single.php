@@ -25,10 +25,10 @@ get_header();
         font-size: 15px !important;
     }
     .container.box-last- {
-        margin-left: 19%;
+        margin-left: 19% !important;
     }
     .tab-content.mt-5 {
-        width: 80%;
+        width: 80% !important;
         margin-top: 7rem !important;
     }
     .col-lg-9.col-md-9 {
