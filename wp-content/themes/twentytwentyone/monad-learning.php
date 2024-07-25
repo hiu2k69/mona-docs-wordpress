@@ -17,9 +17,24 @@ get_header();
     font-size: 15px;
 }
 .gap-05 {
-    gap: 0.5rem;
-    padding: 5px 54px !important;
+    gap: 0.5rem ;
+    padding: 9px 54px ;
 }
+
+}
+@media only screen and (min-width: 1920px) {
+      h2.name-title.ml-5 {
+    font-size: 18px;
+}
+.gap-05 {
+    gap: 0.5rem ;
+    padding: 9px 54px !important;
+}
+.col-lg-2.col-md-3 {
+    position: fixed;
+    top: 7.5% !important;
+}
+
 }
    img[src*="Writer.svg"] {
       filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
@@ -184,7 +199,7 @@ get_header();
     }
    .gap-05 {
       gap: 0.5rem;
-      padding:12px 54px !important
+      padding:12px 54px ;
    }h2.home-title {
     margin-bottom: -11px;
 }
@@ -537,7 +552,7 @@ get_header();
     ];
 
     $posts = get_posts($args);
-    if (count($posts) > 1) { ?>
+    if (count($posts) >= 1) { ?>
         <div class="container">
             <div class="flex justify-between items-center mb-4">
                 <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
@@ -668,10 +683,10 @@ get_header();
                                                         &nbsp; Last update <?php echo esc_html(
                                                             get_the_date()
                                                         ); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"><?php echo !empty(
-     $artist
- )
-     ? $artist
-     : get_the_author(); ?></span></span>
+                                                $artist
+                                             )
+                                                ? $artist
+                                                : get_the_author(); ?></span></span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -742,79 +757,7 @@ get_header();
             <?php }
             ?>
         </div>
-    <?php } elseif (count($posts) == 1) {
-        foreach ($posts as $post) {
-
-            setup_postdata($post);
-            $post_id = get_the_ID();
-            $post_link = get_permalink($post_id);
-            ?>
-            <div class="container pb-5 color-content">
-                <!-- <img src="<?php echo get_the_post_thumbnail_url(
-                    $post_id
-                ); ?>" alt="" class="banner img-fluid mb-5"> -->
-                <h1 class="text-2xl font-bold text-white text-foreground title"><?php the_title(); ?></h1>
-                <p class="mt-4 p-content italic "><?php the_content(); ?></p>
-            </div>
-
-            <div class="container">
-                <h2 class="title-last-post text-white text-center p-5">
-                    - Last post -
-                </h2>
-                <div class="row pb-5">
-                    <?php
-                    $args = [
-                        "posts_per_page" => -1,
-                        "post_type" => "post",
-                        "post_status" => "publish",
-                        "orderby" => "date",
-                        "order" => "ASC",
-                    ];
-
-                    $posts = get_posts($args);
-                    foreach ($posts as $post) {
-
-                        setup_postdata($post);
-                        $post_id = get_the_ID();
-                        $post_link = get_permalink($post_id);
-                        $post_slug = get_post_field("post_name", get_the_ID());
-                        ?>
-                        <div class="col-lg-6 col-md-6 col-12 mb-3">
-                            <a href="<?php echo esc_url(home_url("/detail/")) .
-                                $post_slug; ?>">
-                                <div class="box-last">
-                                    <img src="<?php echo get_the_post_thumbnail_url(
-                                        $post_id
-                                    ); ?>" alt="Image Description" class="box-image-last">
-                                    <div class="box-content-t1 ">
-                                        <h2 class="home-title"><?php the_title(); ?></h2>
-                                        <p class="ml-2 home-content"><?php
-                                        $trimmed_content = wp_trim_words(
-                                            get_the_content(),
-                                            10,
-                                            "..."
-                                        );
-                                        echo $trimmed_content;
-                                        ?></p>
-                                        <span class="text-secondary-foreground flex items-center">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                            &nbsp; Last update <?php echo esc_html(
-                                                get_the_date()
-                                            ); ?> &nbsp; <span class="text"> <span class="by-t">by</span> <span class="text-primary ml-1"> <?php echo get_the_author(); ?></span></span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    <?php
-                    }
-                    ?>
-                </div>
-            </div>
-
-        <?php
-        }
-    } else {
+    <?php }  else {
          ?>
         <div class="container">
             <div class="flex justify-between items-center mb-4">
