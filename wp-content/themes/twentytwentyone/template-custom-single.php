@@ -8,6 +8,27 @@ get_header();
 
 ?>
 <style>
+
+@media only screen and (min-width: 1920px) {
+.col-lg-2.col-md-3 {
+    position: fixed;
+    top: 7.5% !important;
+}
+.gap-05 {
+    gap: 0.5rem;
+    padding: 9px 54px !important;
+}
+}
+.box-bottom.d-flex.mt-2 {
+    /* background: red; */
+    box-shadow: 0px 3px 6px #00000059;
+    border-radius: 7px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0px 3px 6px #00000059;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
     .box-last-post blockquote .twitter-tweet .twitter-tweet-rendered iframe {
         width: 100% !important;
         height: 100% !important;
@@ -227,7 +248,7 @@ get_header();
 
     .gap-05 {
       gap: 0.5rem;
-      padding:7px 54px !important
+      padding:9px 54px;
    }
     .box-bottom.d-flex.mt-2 img {
     width: 24px;
@@ -338,7 +359,7 @@ get_header();
     box.disclaimer {
     text-align: center;
     justify-content: center;
-    margin-left: 62px;
+    margin-left: 23px;
     align-content: center;
     align-self: center;
     justify-items: center;
