@@ -19,7 +19,7 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
   <?php
   // Default values
   $default_description = 'Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community.';
@@ -32,6 +32,7 @@
   $meta_url = home_url();
   $meta_image = $default_image;
 
+  if (is_single()) {
     if (have_posts()) {
       while (have_posts()) {
         the_post();
@@ -42,22 +43,30 @@
       }
       wp_reset_postdata();
     }
+  }
   ?>
+
+  <title><?php echo esc_html($meta_title); ?> - <?php bloginfo('name'); ?></title>
 
   <!-- Open Graph meta tags -->
   <meta property="og:title" content="<?php echo esc_attr($meta_title); ?>" />
   <meta property="og:description" content="<?php echo esc_attr($meta_description); ?>" />
   <meta property="og:image" content="<?php echo esc_url($meta_image); ?>" />
-  
+  <meta property="og:url" content="<?php echo esc_url($meta_url); ?>" />
+  <meta property="og:type" content="article" />
+
   <!-- Twitter Card meta tags -->
   <meta name="twitter:title" content="<?php echo esc_attr($meta_title); ?>" />
   <meta name="twitter:description" content="<?php echo esc_attr($meta_description); ?>" />
   <meta name="twitter:image" content="<?php echo esc_url($meta_image); ?>" />
-  
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/favicon.png'); ?>">
+
   <?php wp_head(); ?>
-  <title><?php wp_title(' - ', true, 'right'); ?><?php bloginfo('name'); ?></title>
-  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
 </head>
+
 
 
 

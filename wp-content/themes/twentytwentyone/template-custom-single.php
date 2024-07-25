@@ -5,7 +5,31 @@
  */
 
 get_header();
+get_template_part('template-custom-single');
 
+?>
+
+<?php
+  if (have_posts()) {
+    while (have_posts()) {
+      the_post();
+      $meta_title = get_the_title();
+      $meta_description = get_the_excerpt() ?: $default_description;
+      $meta_url = get_permalink();
+      $meta_image = get_the_post_thumbnail_url() ?: $default_image;
+?>
+      <!-- Open Graph meta tags -->
+      <meta property="og:title" content="<?php echo esc_attr($meta_title); ?>" />
+      <meta property="og:description" content="<?php echo esc_attr($meta_description); ?>" />
+      <meta property="og:image" content="<?php echo esc_url($meta_image); ?>" />
+      
+      <!-- Twitter Card meta tags -->
+      <meta name="twitter:title" content="<?php echo esc_attr($meta_title); ?>" />
+      <meta name="twitter:description" content="<?php echo esc_attr($meta_description); ?>" />
+      <meta name="twitter:image" content="<?php echo esc_url($meta_image); ?>" />
+<?php
+    }
+  }
 ?>
 <style>
 
