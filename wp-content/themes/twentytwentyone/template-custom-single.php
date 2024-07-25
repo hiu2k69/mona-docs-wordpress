@@ -16,7 +16,7 @@ get_header();
     }
     .gap-05 {
         gap: 0.5rem;
-        padding: 9px 54px !important;
+        padding: 6px 54px !important;
     }
     h2.name-title.ml-5 {
     font-size: 18px;
@@ -25,10 +25,10 @@ get_header();
 
 @media only screen and (min-width: 1780px) {
     h2.name-title.ml-5 {
-        font-size: 15px !important;
+        font-size: 15px;
     }
     .container.box-last- {
-        margin-left: 19% !important;
+        margin-left: 21% !important;
     }
     .tab-content.mt-5 {
         width: 80% !important;
@@ -40,7 +40,7 @@ get_header();
     }
     .gap-05 {
         gap: 0.5rem;
-        padding: 5px 54px !important;
+        padding: 5px 54px ;
     }
     .col-lg-2.col-md-3 {
         position: fixed;

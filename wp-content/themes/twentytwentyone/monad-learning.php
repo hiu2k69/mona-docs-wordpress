@@ -36,7 +36,7 @@ get_header();
 }
 .col-lg-2.col-md-3 {
     position: fixed;
-    top: 6.5% !important;
+    top: 5.5% !important;
 }
 
 }
