@@ -10,41 +10,43 @@ get_header();
 <style>
 
 @media only screen and (min-width: 1920px) {
-.col-lg-2.col-md-3 {
-    position: fixed;
-    top: 6.5% ;
-}
-.gap-05 {
-    gap: 0.5rem;
-    padding: 9px 54px !important;
+    .col-lg-2.col-md-3 {
+        position: fixed;
+        top: 6.5%;
+    }
+    .gap-05 {
+        gap: 0.5rem;
+        padding: 9px 54px !important;
+    }
 }
 
-}
 @media only screen and (min-width: 1780px) {
-      h2.name-title.ml-5 {
-    font-size: 15px;
-}
-.container.box-last- {
-    margin-left: 19%;
-}
-.tab-content.mt-5 {
-    width: 80%;
-    margin-top: 7rem !important;
-}
-.col-lg-9.col-md-9 {
-    margin-left: 24.66667%;
-    padding-left: 20px;
-}
-.gap-05 {
-    gap: 0.5rem;
-    padding: 8px 54px;
-}
-.col-lg-2.col-md-3 {
-    position: fixed;
-    top: 5.5% ;
+    h2.name-title.ml-5 {
+        font-size: 15px !important;
+    }
+    .container.box-last- {
+        margin-left: 19%;
+    }
+    .tab-content.mt-5 {
+        width: 80%;
+        margin-top: 7rem !important;
+    }
+    .col-lg-9.col-md-9 {
+        margin-left: 24.66667%;
+        padding-left: 20px;
+    }
+    .gap-05 {
+        gap: 0.5rem;
+        padding: 5px 54px !important;
+    }
+    .col-lg-2.col-md-3 {
+        position: fixed;
+        top: 6.5%;
+    }
 }
 
-}
+
+
 
 .box-bottom.d-flex.mt-2 {
     /* background: red; */
@@ -275,7 +277,7 @@ get_header();
 
     .gap-05 {
       gap: 0.5rem;
-      padding:9px 54px;
+      padding: 7px 54px;
    }
     .box-bottom.d-flex.mt-2 img {
     width: 24px;
@@ -431,7 +433,7 @@ get_header();
     /* Fixed sidebar styling */
     .col-lg-2.col-md-3 {
       position: fixed;
-      top: 1.5%;
+      top: 6.5%;
       left: -1.7%;
       width: 16.66667%;
       /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
