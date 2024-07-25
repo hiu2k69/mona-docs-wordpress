@@ -435,47 +435,74 @@ get_header();
 <section class="detail-post">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-2 col-md-3 relative  bg-090909">
-                <div class="tab-container ">
-                    <?php
-                    $categories = get_terms(array(
-                        'taxonomy' => 'category',
-                        'hide_empty' => false,
-                        'orderby' => 'term_id',
-                        'order' => 'ASC'
-                    ));
-                    foreach ($categories as $category) {
+        <div class="col-lg-2 col-md-3 relative  bg-090909">
+            <div class="tab-container ">
+            <?php
+            $current_page_url = get_permalink();
+            $current_page_path = str_replace(
+                "/",
+                "",
+                parse_url($current_page_url, PHP_URL_PATH)
+            );
+            $categories = get_terms([
+                "taxonomy" => "category",
+                "hide_empty" => false,
+                "orderby" => "term_id",
+                "order" => "ASC",
+            ]);
+            foreach ($categories as $category) {
+               $image_url = z_taxonomy_image_url($category->term_id);
+               $cate = get_term_by("id", $category->term_id, "category");
+               $count_post = $cate->count;
+               $active = $category->slug == $current_page_path ? "active" : "";
+               $data_target = esc_attr($category->slug);
+           
+               if ($image_url) {
+                   echo '<a class="tab gap-05 ' .
+                       $active .
+                       '" href="' .
+                       home_url("/" . $category->slug . "") .
+                       '" data-target="' .
+                       $data_target .
+                       '"><img src="' .
+                       esc_url($image_url) .
+                       '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' .
+                       $category->name .
+                       '</h2>
+                   </a>';
+               } else {
+                   echo '<a class="tab gap-05 ' .
+                       $active .
+                       '" href="' .
+                       home_url("/" . $category->slug . "") .
+                       '" data-target="' .
+                       $data_target .
+                       '"><img src="' .
+                       get_template_directory_uri() .
+                       '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' .
+                       $category->name .
+                       "</h2></a>";
+               }
+           }
+           
+            ?>
 
-                        $image_url =  z_taxonomy_image_url($category->term_id);
-                        $cate = get_term_by('id', $category->term_id, 'category');
-                        $count_post = $cate->count;
-                        $tab = $category->slug;
-                        if ($image_url) {
 
-                            echo  '<a class="tab gap-05" href="' . home_url('/' . $category->slug . '') . '"><img src="' . esc_url($image_url) . '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' . $category->name . '</h2>
-                </a>';
-                        } else {
-                            echo '<a class="tab gap-05" href="' . home_url('/' . $category->slug . '') . '"><img src="' . get_template_directory_uri() . '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' . $category->name . '</h2> </a>';
-                        }
-                    }
-                    ?>
-
-
-                    <box class="disclaimer">
-                        <div class="box-top">
-                            <h1 class="title-disc text-white text-bold">Disclaimer</h1>
-                            <p class="dis">
-                                "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
-                            </p>
-                        </div>
-                        <div class="box-bottom d-flex mt-2">
-                            <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact.svg" />
-                            &nbsp; &nbsp; <span class="text-right text-white">Contact Us</span>
-                        </div>
-                    </box>
-                </div>
-
+               <box class="disclaimer p-4">
+                  <div class="box-top">
+                     <h1 class="title-disc text-white text-bold">Disclaimer</h1>
+                     <p class="dis">
+                        "No connect wallet on any site. We never provide any links that require connecting a wallet. If you see one, perhaps our site has been hacked."
+                     </p>
+                  </div>
+                  <div class="box-bottom d-flex mt-2">
+                     <img aria-hidden="true" alt="chat-bubble" src="<?php echo get_template_directory_uri(); ?>/assets/images/Contact.svg" />
+                     &nbsp; &nbsp; <span class="text-right text-white">Contact Us</span>
+                  </div>
+               </box>
             </div>
+
+         </div>
             <div class="col-lg-9 col-md-9">
                 <div class="tab-content mt-5">
                     <?php
