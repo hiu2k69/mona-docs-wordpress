@@ -32,7 +32,6 @@
   $meta_url = home_url();
   $meta_image = $default_image;
 
-  if (is_single()) {
     if (have_posts()) {
       while (have_posts()) {
         the_post();
@@ -43,7 +42,6 @@
       }
       wp_reset_postdata();
     }
-  }
   ?>
 
   <!-- Open Graph meta tags -->
