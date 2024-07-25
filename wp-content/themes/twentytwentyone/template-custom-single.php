@@ -75,6 +75,9 @@ get_header();
         color: #836EF9;
     }
 
+    .mt-4.p-content.text-lg.text-white.italic.color-content a {
+    color: #00FFF2;
+}
     .mt-4.p-content.text-lg.text-white.italic.color-content li {
         line-height: 3;
         font-size: 25px;
