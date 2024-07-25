@@ -7962,15 +7962,15 @@ p.text-sm.text-purple-400.mb-6 {
     color: #949494;
     opacity: 1;
 }
-   .box-bottom.d-flex.mt-2 {
+.box-bottom.d-flex.mt-2 {
     /* background: red; */
     box-shadow: 0px 3px 6px #00000059;
     border-radius: 7px;
-    padding: 5px;
+    padding: 0.5rem 1rem;
     box-shadow: 0px 3px 6px #00000059;
     border-radius: 10px;
-	position: relative;
-	z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .box-bottom.d-flex.mt-2 ::before {
