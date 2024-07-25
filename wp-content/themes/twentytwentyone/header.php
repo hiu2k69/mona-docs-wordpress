@@ -19,42 +19,42 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
   <?php
   // Default values
   $default_description = 'Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community.';
   $default_image = get_template_directory_uri() . '/assets/images/favicon.png';
   $site_name = get_bloginfo('name');
   
-  // Post-specific values
+  // Initialize variables for post-specific data
+  $post_title = $site_name;
+  $post_description = $default_description;
+  $post_url = home_url();
+  $post_image = $default_image;
+
+  // Check if we are on a single post page
   if (is_single()) {
     $post_title = get_the_title();
     $post_description = get_the_excerpt() ?: $default_description;
     $post_url = get_permalink();
     $post_image = get_the_post_thumbnail_url() ?: $default_image;
-  } else {
-    // Default values for non-single pages
-    $post_title = $site_name;
-    $post_description = $default_description;
-    $post_url = home_url();
-    $post_image = $default_image;
   }
   ?>
-  
+
   <!-- Open Graph meta tags -->
-  <meta property="og:site_name" content="<?php echo $site_name; ?>" />
-  <meta property="og:description" content="<?php echo $post_description; ?>" />
-  <meta property="og:title" content="<?php echo $post_title; ?>" />
+  <meta property="og:site_name" content="<?php echo esc_attr($site_name); ?>" />
+  <meta property="og:description" content="<?php echo esc_attr($post_description); ?>" />
+  <meta property="og:title" content="<?php echo esc_attr($post_title); ?>" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="<?php echo $post_url; ?>" />
-  <meta property="og:image" content="<?php echo $post_image; ?>" />
-  <meta property="og:locale" content="<?php echo get_locale(); ?>" />
+  <meta property="og:url" content="<?php echo esc_url($post_url); ?>" />
+  <meta property="og:image" content="<?php echo esc_url($post_image); ?>" />
+  <meta property="og:locale" content="<?php echo esc_attr(get_locale()); ?>" />
   
   <!-- Twitter Card meta tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<?php echo $post_title; ?>" />
-  <meta name="twitter:description" content="<?php echo $post_description; ?>" />
-  <meta name="twitter:image" content="<?php echo $post_image; ?>" />
+  <meta name="twitter:title" content="<?php echo esc_attr($post_title); ?>" />
+  <meta name="twitter:description" content="<?php echo esc_attr($post_description); ?>" />
+  <meta name="twitter:image" content="<?php echo esc_url($post_image); ?>" />
   <meta name="twitter:site" content="@yoursite" />
   <meta name="twitter:creator" content="@yourhandle" />
   
@@ -62,7 +62,6 @@
   <title><?php wp_title(' - ', true, 'right'); ?><?php bloginfo('name'); ?></title>
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
 </head>
-
 
 
 <style>
