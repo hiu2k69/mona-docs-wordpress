@@ -17,27 +17,29 @@
 <html <?php language_attributes(); ?> <?php twentytwentyone_the_html_classes(); ?>>
 
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="Title of the content" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="<?php echo get_template_directory_uri(); ?>" />
-  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/monad.png ?>" />
-  <meta property="og:description" content="Description of the content" />
-  <meta property="og:site_name" content="Site Name" />
-  <meta property="og:locale" content="en_US" />
-    <!-- Twitter Card meta tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Title of the content" />
-    <meta name="twitter:description" content="Description of the content" />
-    <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/monad.png ?>" />
-    <meta name="twitter:site" content="@yoursite" />
-    <meta name="twitter:creator" content="@yourhandle" />
-    <?php wp_head(); ?>
-    <title><?php wp_title(); ?></title>
-    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
+  <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+  <meta property="og:description" content="<?php echo get_the_excerpt() ?: 'Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community.'; ?>" />
 
+  <meta charset="<?php bloginfo('charset'); ?>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:title" content="<?php echo get_the_title(); ?>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="<?php echo get_permalink(); ?>" />
+  <meta property="og:image" content="<?php echo get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/assets/images/favicon.png'; ?>" />
+  <meta property="og:locale" content="<?php echo get_locale(); ?>" />
+
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<?php echo get_the_title(); ?>" />
+  <meta name="twitter:description" content="<?php echo get_the_excerpt() ?: 'Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community.'; ?>" />
+  <meta name="twitter:image" content="<?php echo get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/assets/images/favicon.png'; ?>" />
+  <meta name="twitter:site" content="@yoursite" />
+  <meta name="twitter:creator" content="@yourhandle" />
+  <?php wp_head(); ?>
+  <title><?php echo get_the_title(); ?> - <?php bloginfo('name'); ?></title>
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
 </head>
+
 <style>
     .main-navigation .menu li a:hover {
         color: #836EF9;
