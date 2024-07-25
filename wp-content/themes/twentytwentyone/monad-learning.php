@@ -175,7 +175,7 @@ get_header();
     }
    .gap-05 {
       gap: 0.5rem;
-      padding:9px 54px !important
+      padding:12px 54px !important
    }h2.home-title {
     margin-bottom: -11px;
 }
@@ -267,7 +267,7 @@ get_header();
    /* Fixed sidebar styling */
    .col-lg-2.col-md-3 {
       position: fixed;
-      top: 2.5%;
+      top: 6.5%;
       left: -1.7%;
       width: 16.66667%;
       /* Ensure this is the width of col-lg-2 (2/12 of the grid) */
