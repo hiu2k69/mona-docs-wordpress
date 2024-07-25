@@ -6,28 +6,7 @@
 
 get_header();
 
-if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-<head>
-    <!-- Include your meta tags, CSS, and JS files here -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php wp_title(''); ?></title>
-    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.0.min.js">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-XX+q43XXb5v2nYp12xNX+PGerfIy/4mU5AXf1F8gH15i0LY0+eERn3nifds5xP/7" crossorigin="anonymous">
-    
-    <!-- Open Graph meta tags for social sharing -->
-    <meta property="og:title" content="<?php the_title(); ?>">
-    <meta property="og:description" content="<?php echo get_the_excerpt(); ?>">
-    <meta property="og:image" content="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>">
-    <meta property="og:url" content="<?php the_permalink(); ?>">
-    
-    <?php wp_head(); // Ensure WordPress hooks are included ?>
-</head>
-
-<?php endwhile; endif; ?>
-
-
+?>
 <style>
 
 @media only screen and (min-width: 1920px) {

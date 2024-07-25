@@ -16,6 +16,48 @@
 <!doctype html>
 <html <?php language_attributes(); ?> <?php twentytwentyone_the_html_classes(); ?>>
 
+<head>
+  <meta charset="<?php bloginfo('charset'); ?>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <?php
+  // Default values
+  $default_description = 'Welcome to Monadhub.xyz. At MonadHub, you can explore in-depth articles, stay updated with the latest news, and discover exciting projects within the Monad community.';
+  $default_image = get_template_directory_uri() . '/assets/images/favicon.png';
+  $site_name = get_bloginfo('name');
+  
+  // Initialize variables for meta tag values
+  $meta_title = $site_name;
+  $meta_description = $default_description;
+  $meta_url = home_url();
+  $meta_image = $default_image;
+
+  if (is_single()) {
+    global $post;
+    setup_postdata($post);
+    $meta_title = get_the_title();
+    $meta_description = get_the_excerpt() ?: $default_description;
+    $meta_url = get_permalink();
+    $meta_image = get_the_post_thumbnail_url() ?: $default_image;
+    wp_reset_postdata();
+  }
+  ?>
+
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="<?php echo esc_attr($meta_title); ?>" />
+  <meta property="og:description" content="<?php echo esc_attr($meta_description); ?>" />
+  <meta property="og:image" content="<?php echo esc_url($meta_image); ?>" />
+  
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:title" content="<?php echo esc_attr($meta_title); ?>" />
+  <meta name="twitter:description" content="<?php echo esc_attr($meta_description); ?>" />
+  <meta name="twitter:image" content="<?php echo esc_url($meta_image); ?>" />
+  
+  <?php wp_head(); ?>
+  <title><?php wp_title(' - ', true, 'right'); ?><?php bloginfo('name'); ?></title>
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png">
+</head>
+
 
 
 <style>
