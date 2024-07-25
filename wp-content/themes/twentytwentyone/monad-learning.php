@@ -18,7 +18,7 @@ get_header();
 }
 .gap-05 {
     gap: 0.5rem;
-    padding: 8px 54px;
+    padding: 6px 54px !important;
 }
 .col-lg-2.col-md-3 {
     position: fixed;
@@ -32,11 +32,11 @@ get_header();
 }
 .gap-05 {
     gap: 0.5rem ;
-    padding: 10px 54px !important;
+    padding: 6px 54px !important;
 }
 .col-lg-2.col-md-3 {
     position: fixed;
-    top: 5.5% !important;
+    top: 6.5% !important;
 }
 
 }
@@ -195,7 +195,7 @@ get_header();
    .img-cate {
       width: 21px;
       /* height: 25px; */
-      /* margin-bottom: 8px; */
+      margin-bottom: 8px;
       object-fit: cover;
    }
    .color-content p {
@@ -204,7 +204,7 @@ get_header();
     }
    .gap-05 {
       gap: 0.5rem;
-      padding:12px 54px ;
+      padding:6px 54px ;
    }h2.home-title {
     margin-bottom: -11px;
 }
