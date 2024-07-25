@@ -394,6 +394,9 @@ get_header();
    }
    .container.box-last- {
     margin-left: 23%;
+}.gallery-columns-4 .gallery-item {
+    max-width: 23%;
+    margin: 6px;
 }
 
     .box-top {
