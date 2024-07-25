@@ -33,13 +33,16 @@
   $meta_image = $default_image;
 
   if (is_single()) {
-    global $post;
-    setup_postdata($post);
-    $meta_title = get_the_title();
-    $meta_description = get_the_excerpt() ?: $default_description;
-    $meta_url = get_permalink();
-    $meta_image = get_the_post_thumbnail_url() ?: $default_image;
-    wp_reset_postdata();
+    if (have_posts()) {
+      while (have_posts()) {
+        the_post();
+        $meta_title = get_the_title();
+        $meta_description = get_the_excerpt() ?: $default_description;
+        $meta_url = get_permalink();
+        $meta_image = get_the_post_thumbnail_url() ?: $default_image;
+      }
+      wp_reset_postdata();
+    }
   }
   ?>
 
