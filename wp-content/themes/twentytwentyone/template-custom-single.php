@@ -19,27 +19,27 @@ get_header();
         padding: 6px 54px !important;
     }
     h2.name-title.ml-5 {
-    font-size: 17px !important;
-}
-.col-lg-9.col-md-9 {
-    margin-left: 28.66667%;
-    padding-left: 20px;
-}
-.tab-content.mt-5 {
-    width: 73% !important;
-    margin-top: 7rem !important;
-}
+        font-size: 17px !important;
+    }
+    .col-lg-9.col-md-9 {
+        margin-left: 28.66667%;
+        padding-left: 20px;
+    }
+    .tab-content.mt-5 {
+        width: 73% !important;
+        margin-top: 7rem !important;
+    }
 }
 
-@media only screen and (min-width: 1780px) {
+@media only screen and (min-width: 1780px) and (max-width: 1919px) {
     h2.name-title.ml-5 {
-        font-size: 15px ;
+        font-size: 15px;
     }
     .container.box-last- {
         margin-left: 21% !important;
     }
     .tab-content.mt-5 {
-        width: 80% ;
+        width: 80%;
         margin-top: 7rem !important;
     }
     .col-lg-9.col-md-9 {
