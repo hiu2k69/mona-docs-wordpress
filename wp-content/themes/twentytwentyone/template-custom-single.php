@@ -183,7 +183,7 @@ h2.name-title.ml-5 {
     }
 
     .box-image-last {
-        width: auto;
+        width: 150px;
         object-fit: cover;
         transition: all .2s ease-in-out;
 
