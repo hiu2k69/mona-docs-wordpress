@@ -28,10 +28,7 @@ get_header();
         margin-left: 28.66667%;
         padding-left: 20px;
     } */
-    .tab-content.mt-5 {
-        width: 73% !important;
-        margin-top: 7rem !important;
-    }
+  
 }
 
 @media only screen and (min-width: 1780px) and (max-width: 1919px) {
@@ -41,10 +38,7 @@ get_header();
     .container.box-last- {
         margin-left: 21% !important;
     }
-    .tab-content.mt-5 {
-        width: 80%;
-        margin-top: 7rem !important;
-    }
+ 
     /* .col-lg-9.col-md-9 {
         margin-left: 24.66667%;
         padding-left: 20px;
