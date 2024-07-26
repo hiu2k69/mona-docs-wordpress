@@ -19,7 +19,7 @@ get_header();
         padding: 6px 54px !important;
     }
     h2.name-title.ml-5 {
-    font-size: 18px;
+    font-size: 17px !important;
 }
 .col-lg-9.col-md-9 {
     margin-left: 28.66667%;
@@ -33,7 +33,7 @@ get_header();
 
 @media only screen and (min-width: 1780px) {
     h2.name-title.ml-5 {
-        font-size: 15px;
+        font-size: 15px !important;
     }
     .container.box-last- {
         margin-left: 21% !important;
@@ -487,11 +487,6 @@ get_header();
         padding-bottom: 4rem;
         height: 81px;
 
-    }
-
-    .tab-content.mt-5 {
-        width: 73%;
-        margin-top: 7rem !important;
     }
 </style>
 <section class="detail-post">
