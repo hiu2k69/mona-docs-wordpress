@@ -88,7 +88,7 @@ h2.name-title.ml-5 {
 }
 @media only screen and (min-width: 992px) and (max-width: 1779px) {
     h2.name-title.ml-5 {
-        font-size: 14px; /* Adjust as needed */
+        font-size: 13px; /* Adjust as needed */
     }
     .container.box-last- {
         margin-left: 18%; /* Adjust as needed */
@@ -103,12 +103,24 @@ h2.name-title.ml-5 {
     }
     .gap-05 {
         gap: 0.5rem;
-        padding: 6px 54px;
+        padding: 8px 46px !important;;
     }
     .col-lg-2.col-md-3 {
         position: fixed;
         top: 10%;
     }
+    .container.box-last- {
+        margin-left: 0%;
+}
+    .main-navigation .menu {
+    list-style: none;
+    display: flex;
+    gap: 4.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+
 }
 
 
@@ -147,6 +159,7 @@ h2.name-title.ml-5 {
         font-family: 'Calibri';
     }
 
+    
     .box-last-post img {
         width: 100% !important;
         height: auto !important;
