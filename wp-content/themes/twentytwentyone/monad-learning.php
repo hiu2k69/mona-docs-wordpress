@@ -487,6 +487,9 @@ get_header();
    a.tab.gap-05:hover img {
    filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
 }
+.tab.active img {
+   filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
+}
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
