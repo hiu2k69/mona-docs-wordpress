@@ -19,7 +19,7 @@ get_header();
     }
     .gap-05 {
         gap: 0.5rem;
-        padding: 6px 54px !important;
+        padding: 8px 54px !important;
     }
     h2.name-title.ml-5 {
         font-size: 17px !important;
