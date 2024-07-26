@@ -27,9 +27,9 @@ get_header();
 
 }
 @media only screen and (min-width: 1920px) {
-      h2.name-title.ml-5 {
-    font-size: 18px;
-}
+   h2.name-title.ml-5 {
+        font-size: 17px;
+    }
 .gap-05 {
     gap: 0.5rem ;
     padding: 6px 54px !important;
