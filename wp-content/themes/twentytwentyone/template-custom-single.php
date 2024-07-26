@@ -472,11 +472,7 @@ get_header();
     opacity: 1;
     padding: 5px;
 }
-    .col-lg-9.col-md-9 {
-        margin-left: 28.66667%;
-        padding-left: 20px;
-    }
-
+    
     header#masthead {
         width: 100%;
         background-color: #000;
