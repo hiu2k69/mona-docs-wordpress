@@ -45,7 +45,7 @@ get_header();
     } */
     .gap-05 {
         gap: 0.5rem;
-        padding: 6px 54px !important;
+        padding: 8px 52px !important
     }
     .col-lg-2.col-md-3 {
         position: fixed;
