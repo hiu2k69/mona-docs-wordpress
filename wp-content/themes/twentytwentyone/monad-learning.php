@@ -42,10 +42,7 @@ get_header();
     margin-bottom: 0px !important;
     object-fit: cover;
 }
-.col-lg-9.col-md-9 {
-    margin-left: 28.66667% !important;
-    padding-left: 20px;
-}
+
 .gap-05 {
     gap: 0.5rem ;
     padding: 10px 54px !important;
