@@ -18,7 +18,7 @@ get_header();
 }
 .gap-05 {
     gap: 0.5rem;
-    padding: 6px 54px !important;
+    padding: 8px 54px !important;
 }
 .col-lg-2.col-md-3 {
     position: fixed;
@@ -32,7 +32,7 @@ get_header();
     }
 .gap-05 {
     gap: 0.5rem ;
-    padding: 6px 54px !important;
+    padding: 10px 54px !important;
 }
 .col-lg-2.col-md-3 {
     position: fixed;
@@ -195,7 +195,7 @@ get_header();
    .img-cate {
       width: 21px;
       /* height: 25px; */
-      margin-bottom: 8px;
+      /* margin-bottom: 8px; */
       object-fit: cover;
    }
    .color-content p {
