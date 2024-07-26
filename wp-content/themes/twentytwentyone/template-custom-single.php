@@ -8,29 +8,31 @@ get_header();
 
 ?>
 <style>
-
-@media only screen and (min-width: 1920px) {
-    .col-lg-2.col-md-3 {
-        position: fixed;
-        top: 6.5%;
-    }
-    .gap-05 {
-        gap: 0.5rem;
-        padding: 7px 54px !important;
-    }
-    h2.name-title.ml-5 {
-        font-size: 17px !important;
-    }
-    .col-lg-9.col-md-9 {
-        margin-left: 28.66667%;
-        padding-left: 20px;
-    }
-    .tab-content.mt-5 {
-        width: 73% !important;
-        margin-top: 7rem !important;
-    }
+/* Default styles (for screens smaller than 1780px) */
+h2.name-title.ml-5 {
+    font-size: 14px; /* Adjust as needed */
+}
+.container.box-last- {
+    margin-left: 18%; /* Adjust as needed */
+}
+.tab-content.mt-5 {
+    width: 85%; /* Adjust as needed */
+    margin-top: 5rem; /* Adjust as needed */
+}
+.col-lg-9.col-md-9 {
+    margin-left: 20%;
+    padding-left: 15px;
+}
+.gap-05 {
+    gap: 0.5rem;
+    padding: 5px 50px; /* Adjust as needed */
+}
+.col-lg-2.col-md-3 {
+    position: relative;
+    top: auto; /* Remove fixed positioning */
 }
 
+/* For screens between 1780px and 1919px */
 @media only screen and (min-width: 1780px) and (max-width: 1919px) {
     h2.name-title.ml-5 {
         font-size: 15px;
@@ -53,6 +55,29 @@ get_header();
     .col-lg-2.col-md-3 {
         position: fixed;
         top: 8.5%;
+    }
+}
+
+/* For screens wider than 1920px */
+@media only screen and (min-width: 1920px) {
+    .col-lg-2.col-md-3 {
+        position: fixed;
+        top: 6.5%;
+    }
+    .gap-05 {
+        gap: 0.5rem;
+        padding: 7px 54px !important;
+    }
+    h2.name-title.ml-5 {
+        font-size: 17px !important;
+    }
+    .col-lg-9.col-md-9 {
+        margin-left: 28.66667%;
+        padding-left: 20px;
+    }
+    .tab-content.mt-5 {
+        width: 73% !important;
+        margin-top: 7rem !important;
     }
 }
 
