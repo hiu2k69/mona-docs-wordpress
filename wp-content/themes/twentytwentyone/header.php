@@ -32,18 +32,18 @@
   $meta_url = home_url();
   $meta_image = $default_image;
 
-  if (is_single()) {
-    if (have_posts()) {
-      while (have_posts()) {
-        the_post();
+    global $wp_query;
+    $post_slug = $wp_query->query_vars['custom_post_slug'];
+
+    $post = get_page_by_path($post_slug, OBJECT, 'post');
+
+    if ($post) {
+        $post_slug = get_post_field('post_name', get_the_ID());
         $meta_title = get_the_title();
-        $meta_description = get_the_excerpt() ?: $default_description;
-        $meta_url = get_permalink();
-        $meta_image = get_the_post_thumbnail_url() ?: $default_image;
+        $meta_description = wp_trim_words(get_the_excerpt(), 55) ?: $default_description;
+        $meta_url = esc_url(home_url('/detail/')).$post_slug;
+        $meta_image = get_the_post_thumbnail_url(get_the_ID()) ?: $default_image;
       }
-      wp_reset_postdata();
-    }
-  }
   ?>
 
   <title><?php echo esc_html($meta_title); ?> - <?php bloginfo('name'); ?></title>

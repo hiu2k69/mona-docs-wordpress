@@ -1,18 +1,18 @@
 <?php
+
 /**
  * Template Name: home
  */
 
 // Exit if accessed directly.
-if (!defined("ABSPATH"))
-{
+if (!defined("ABSPATH")) {
     exit();
 }
 
 get_header();
 ?>
 <style>
-        .box-last-post blockquote .twitter-tweet .twitter-tweet-rendered iframe {
+    .box-last-post blockquote .twitter-tweet .twitter-tweet-rendered iframe {
         width: 100% !important;
         height: 100% !important;
     }
@@ -200,21 +200,21 @@ get_header();
         border-radius: 8px;
     } */
     a.see-more {
-    display: inline-block;
-    padding: 0.5rem 3rem;
-    background-color: #836EF9;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    font-family: 'Segoe UI';
-    font-weight: bolder;
-    margin-bottom: 14px;
-    width: 94%;
-    text-align: center;
-    margin-left: 14px;
-}
+        display: inline-block;
+        padding: 0.5rem 3rem;
+        background-color: #836EF9;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+        font-family: 'Segoe UI';
+        font-weight: bolder;
+        margin-bottom: 14px;
+        width: 94%;
+        text-align: center;
+        margin-left: 14px;
+    }
 
     a.see-more:hover {
         background-color: #00FFF2;
@@ -269,11 +269,10 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/monad.png" alt="Description" class="img-title"> - All you need is here
             </div>
             <div class="row pb-5">
-            <?php
-$artists = [["name" => "Hagen", "url" => "https://x.com/hagen_eth"], ["name" => "monadocs", "url" => "https://x.com/monadocs_eth"], ["name" => "Hung", "url" => "https://x.com/hung_eth"], ];
-for ($i = 1;$i < 10;$i++)
-{
-    $artist = $artists[($i - 1) % count($artists) ]; ?>
+                <?php
+                $artists = [["name" => "Hagen", "url" => "https://x.com/hagen_eth"], ["name" => "monadocs", "url" => "https://x.com/monadocs_eth"], ["name" => "Hung", "url" => "https://x.com/hung_eth"],];
+                for ($i = 1; $i < 10; $i++) {
+                    $artist = $artists[($i - 1) % count($artists)]; ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <a href="<?php echo esc_url(home_url("/monad-learning")); ?>">
                             <div class="box-content-main">
@@ -281,23 +280,23 @@ for ($i = 1;$i < 10;$i++)
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="image-home">
                                 </div>
                                 <div class="box-artist">
-                                <a href="<?php echo $artist["url"]; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php echo $artist["name"]; ?></span></a>　
+                                    <a href="<?php echo $artist["url"]; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php echo $artist["name"]; ?></span></a>　
                                 </div>
                                 <div class="box-content">
                                     <h3 class="home-title">How to Contribute</h3>
                                     <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
-                                   
+
                                 </div>
                                 <a href="<?php echo esc_url(home_url("/monad-learning")); ?>" class="see-more">
-                                        <!-- <img aria-hidden="true" alt="chat-bubble" class="see" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" /> -->
-                                        Explore now
-                                                                        </a>
+                                    <!-- <img aria-hidden="true" alt="chat-bubble" class="see" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" /> -->
+                                    Explore now
+                                </a>
                             </div>
                         </a>
                     </div>
                 <?php
-}
-?>
+                }
+                ?>
             </div>
         </div>
     </section>
@@ -306,30 +305,29 @@ for ($i = 1;$i < 10;$i++)
             <h2 class="title-last-post text-white text-center p-5">
                 - Last post -
             </h2>
-            <div class="row pb-5">
+            <!-- <div class="row pb-5">
                 <?php
-$args = ["posts_per_page" => - 1, "post_type" => "post", "post_status" => "publish", "orderby" => "date", "order" => "DESC", ];
+                $args = ["posts_per_page" => -1, "post_type" => "post", "post_status" => "publish", "orderby" => "date", "order" => "DESC",];
 
-$posts = get_posts($args);
-foreach ($posts as $post)
-{
+                $posts = get_posts($args);
+                foreach ($posts as $post) {
 
-    setup_postdata($post);
-    $post_id = get_the_ID();
+                    setup_postdata($post);
+                    $post_id = get_the_ID();
 
-    $post_link = get_permalink($post_id);
-    $post_slug = get_post_field('post_name', get_the_ID());
-?>
+                    $post_link = get_permalink($post_id);
+                    $post_slug = get_post_field('post_name', get_the_ID());
+                ?>
                     <div class="col-lg-6 col-md-6 col-12 mb-3">
-                        <a href="<?php echo esc_url(home_url("/detail/")).$post_slug; ?>">
+                        <a href="<?php echo esc_url(home_url("/detail/")) . $post_slug; ?>">
                             <div class="box-last">
                                 <img src="<?php echo get_the_post_thumbnail_url($post_id); ?>" alt="Image Description" class="box-image-last">
                                 <div class="box-content-t1 ">
                                     <h2 class="home-title"><?php the_title(); ?></h2>
                                     <p class="ml-2 home-content text-xl"><?php
-                                        $trimmed_content = wp_trim_words(get_the_content() , 20, "...");
-                                        echo $trimmed_content;
-                                    ?></p>
+                                                                            $trimmed_content = wp_trim_words(get_the_content(), 20, "...");
+                                                                            echo $trimmed_content;
+                                                                            ?></p>
 
                                     <span class="text-secondary-foreground flex items-center">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
@@ -339,9 +337,10 @@ foreach ($posts as $post)
                         </a>
                     </div>
                 <?php
-}
-?>
-            </div>
+                }
+                ?>
+            </div> -->
+            <?php echo do_shortcode('[ajax_pagination_lastpost post_type="post"  posts_per_page="4" paged="1"]'); ?>
         </div>
     </section>
     <section class="last-post">

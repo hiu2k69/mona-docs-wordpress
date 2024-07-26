@@ -484,6 +484,10 @@ get_header();
         height: 81px;
 
     }
+
+    a.tab.gap-05:hover img {
+   filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
+}
 </style>
 <section class="detail-post">
     <div class="container-fluid">
@@ -595,7 +599,7 @@ get_header();
     <h2 class="title-last-post text-white text-center p-5">
         - Last post -
     </h2>
-    <div class="row pb-5">
+    <!-- <div class="row pb-5">
         <?php
         // Set up the query arguments
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -641,14 +645,9 @@ get_header();
         }
         wp_reset_postdata();
         ?>
-    </div>
-    <div class="pagination">
-        <?php
-        echo paginate_links(array(
-            'total' => $posts->max_num_pages
-        ));
-        ?>
-    </div>
+    </div> -->
+    <?php echo do_shortcode('[ajax_pagination_lastpost post_type="post"  posts_per_page="4" paged="1"]'); ?>
+   
 </div>
 
     </div>
