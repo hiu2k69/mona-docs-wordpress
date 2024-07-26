@@ -21,6 +21,14 @@ get_header();
     h2.name-title.ml-5 {
     font-size: 18px;
 }
+.col-lg-9.col-md-9 {
+    margin-left: 28.66667%;
+    padding-left: 20px;
+}
+.tab-content.mt-5 {
+    width: 73% !important;
+    margin-top: 7rem !important;
+}
 }
 
 @media only screen and (min-width: 1780px) {
@@ -423,11 +431,7 @@ get_header();
     font-family: 'Calibri';
     display: flex;
 }
-    h2.name-title.ml-5 {
-        font-size: 18px;
-        font-family: 'Segoe UI';
-        letter-spacing: 0px;
-    }
+ 
     .mr-2 {
     margin-right: 0.5rem;
 }
