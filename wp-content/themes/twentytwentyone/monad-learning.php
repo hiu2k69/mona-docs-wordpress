@@ -775,7 +775,7 @@ get_header();
                </div>
             -->
            <!-- </div> -->
-           <?php echo do_shortcode('[ajax_pagination post_type="post" cat="' . $category->term_id . '" posts_per_page="6" paged="1"]'); ?>
+           <?php echo do_shortcode('[ajax_pagination post_type="post" cat="' . $category->term_id . '" posts_per_page="8" paged="1"]'); ?>
 
             <?php }
             ?>
