@@ -86,7 +86,7 @@ h2.name-title.ml-5 {
         margin-top: 7rem !important;
     }
 }
-@media only screen and (min-width: 991px) and (max-width: 1779px) {
+@media only screen and (min-width: 992px) and (max-width: 1779px) {
     h2.name-title.ml-5 {
         font-size: 14px; /* Adjust as needed */
     }
@@ -111,7 +111,29 @@ h2.name-title.ml-5 {
     }
 }
 
-
+@media only screen and (max-width: 991px) {
+    h2.name-title.ml-5 {
+        font-size: 13px; /* Adjust as needed */
+    }
+    .container.box-last- {
+        margin-left: 15%; /* Adjust as needed */
+    }
+    .tab-content.mt-5 {
+        width: 90%; /* Adjust as needed */
+        margin-top: 4rem; /* Adjust as needed */
+    }
+    .col-lg-9.col-md-9 {
+        margin-left: 15%;
+        padding-left: 10px;
+    }
+    .gap-05 {
+        gap: 0.5rem;
+        padding: 4px 40px; /* Adjust as needed */
+    }
+    .col-lg-2.col-md-3 {
+        display: none;
+    }
+}
 
 
 .box-bottom.d-flex.mt-2 {
@@ -183,7 +205,7 @@ h2.name-title.ml-5 {
     }
 
     .box-image-last {
-        width: 150px;
+        width: auto;
         object-fit: cover;
         transition: all .2s ease-in-out;
 
@@ -615,7 +637,7 @@ h2.name-title.ml-5 {
             </div>
 
          </div>
-            <div class="col-lg-9 col-md-9">
+            <div class="col-lg-9 col-md-12 col-12">
                 <div class="tab-content mt-5">
                     <?php
 
@@ -678,7 +700,7 @@ h2.name-title.ml-5 {
                 $post_link = get_permalink($post_id);
                 $post_slug = get_post_field('post_name', get_the_ID());
         ?>
-                <div class="col-lg-6 col-md-6 col-12 mb-3">
+                <div class="col-lg-6 col-md-12 col-12 mb-3">
                     <a href="<?php echo esc_url(home_url('/detail/')).$post_slug; ?>">
                         <div class="box-last">
                             <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
