@@ -6,62 +6,67 @@
 
 // Exit if accessed directly.
 if (!defined("ABSPATH")) {
-    exit();
+   exit();
 }
 
 get_header();
 ?>
 <style>
-@media only screen and (min-width: 1920px) {
-    .col-lg-2.col-md-3 {
-        position: fixed;
-        top: 6.5%;
-    }
-    .gap-05 {
-        gap: 0.5rem;
-        padding: 8px 54px !important;
-    }
-    h2.name-title.ml-5 {
-        font-size: 17px !important;
-        font-family  : 'seguisb.ttf';
-        
-    }
-    /* .col-lg-9.col-md-9 {
+   @media only screen and (min-width: 1920px) {
+      .col-lg-2.col-md-3 {
+         position: fixed;
+         top: 6.5%;
+      }
+
+      .gap-05 {
+         gap: 0.5rem;
+         padding: 8px 54px !important;
+      }
+
+      h2.name-title.ml-5 {
+         font-size: 17px !important;
+         font-family: 'seguisb.ttf';
+
+      }
+
+      /* .col-lg-9.col-md-9 {
         margin-left: 28.66667%;
         padding-left: 20px;
     } */
-  
-}
 
-@media only screen and (min-width: 1780px) and (max-width: 1919px) {
-    h2.name-title.ml-5 {
-        font-size: 15px;
-        font-family  : 'seguisb.ttf';
+   }
 
-    }
-    .container.box-last- {
-        margin-left: 21% !important;
-    }
- 
-    /* .col-lg-9.col-md-9 {
+   @media only screen and (min-width: 1780px) and (max-width: 1919px) {
+      h2.name-title.ml-5 {
+         font-size: 15px;
+         font-family: 'seguisb.ttf';
+
+      }
+
+      .container.box-last- {
+         margin-left: 21% !important;
+      }
+
+      /* .col-lg-9.col-md-9 {
         margin-left: 24.66667%;
         padding-left: 20px;
     } */
-    .gap-05 {
-        gap: 0.5rem;
-        padding: 8px 52px !important
-    }
-    .col-lg-2.col-md-3 {
-        position: fixed;
-        top: 8.5%;
-    }
-}
+      .gap-05 {
+         gap: 0.5rem;
+         padding: 8px 52px !important
+      }
+
+      .col-lg-2.col-md-3 {
+         position: fixed;
+         top: 8.5%;
+      }
+   }
 
 
    img[src*="Writer.svg"] {
       filter: invert(52%) sepia(67%) saturate(1981%) hue-rotate(213deg) brightness(103%) contrast(99%);
       width: 17px;
-    margin-bottom: 1px;
+      margin-bottom: 1px;
    }
 
    .purple-icon {
@@ -113,7 +118,7 @@ get_header();
 
    h2.name-title.ml-5.art {
       margin-left: 23px;
-      font-family  : 'seguisb.ttf';
+      font-family: 'seguisb.ttf';
 
    }
 
@@ -172,20 +177,24 @@ get_header();
       padding: calc(0.5* var(--global--spacing-unit));
       border: none;
    }
+
    .mt-4.p-content.text-lg.text-white.italic.color-content img {
-        width: 100%;
-        color: white;
-    }
+      width: 100%;
+      color: white;
+   }
 
-    .mt-4.p-content.text-lg.text-white.italic.color-content h3, .mt-4.p-content.text-lg.text-white.italic.color-content h4, .mt-4.p-content.text-lg.text-white.italic.color-content h5 {
-        color: #836EF9;
-    }
+   .mt-4.p-content.text-lg.text-white.italic.color-content h3,
+   .mt-4.p-content.text-lg.text-white.italic.color-content h4,
+   .mt-4.p-content.text-lg.text-white.italic.color-content h5 {
+      color: #836EF9;
+   }
 
-    .mt-4.p-content.text-lg.text-white.italic.color-content li {
-        line-height: 3;
-        font-size: 25px;
-        font-family: 'Calibri';
-    }
+   .mt-4.p-content.text-lg.text-white.italic.color-content li {
+      line-height: 3;
+      font-size: 25px;
+      font-family: 'Calibri';
+   }
+
    th.py-3.px-4:first-child {
       border-left: 1px solid #836EF9;
    }
@@ -218,16 +227,20 @@ get_header();
       /* margin-bottom: 8px; */
       object-fit: cover;
    }
+
    .color-content p {
-        color: #D4D4D4;
-        line-height: 2;
-    }
+      color: #D4D4D4;
+      line-height: 2;
+   }
+
    .gap-05 {
       gap: 0.5rem;
-      padding:6px 54px ;
-   }h2.home-title {
-    margin-bottom: -11px;
-}
+      padding: 6px 54px;
+   }
+
+   h2.home-title {
+      margin-bottom: -11px;
+   }
 
    .home-title {
       overflow: hidden;
@@ -242,13 +255,15 @@ get_header();
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
    }
+
    .box-content {
-    margin: 0;
-    background: #090909;
-    padding: 6px;
-    border-radius: 6px;
-    border-left : none !important;
-}
+      margin: 0;
+      background: #090909;
+      padding: 6px;
+      border-radius: 6px;
+      border-left: none !important;
+   }
+
    .box-image-last {
       width: 150px;
       object-fit: cover;
@@ -261,11 +276,11 @@ get_header();
    }
 
    img.icon-title {
-    width: 29px;
-    margin-right: 6px;
-    height: 30px;
-    margin-top: 1px;
-}
+      width: 29px;
+      margin-right: 6px;
+      height: 30px;
+      margin-top: 1px;
+   }
 
    .color-content p,
    .color-content ul li,
@@ -281,13 +296,14 @@ get_header();
       height: 50vh;
       position: relative;
    }
+
    img.coming-soon {
-    width: 200px;
-    top: 50%;
+      width: 200px;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       position: absolute;
-}
+   }
 
    .content-comingsoon h3 {
       top: 73%;
@@ -295,17 +311,19 @@ get_header();
       transform: translate(-50%, -50%);
       position: absolute;
       width: 500px;
-	font-weight:bolder;
+      font-weight: bolder;
 
       font-size: 30px;
       font-family: 'Calibri';
       color: #836EF9;
-    line-height: 1.6;
+      line-height: 1.6;
 
-   }.box-bottom.d-flex.mt-2 img {
-    width: 24px;
-    margin-left: 11px;
-}
+   }
+
+   .box-bottom.d-flex.mt-2 img {
+      width: 24px;
+      margin-left: 11px;
+   }
 
    .fixed-footer {
       position: fixed;
@@ -331,7 +349,7 @@ get_header();
       z-index: 1;
    }
 
-  
+
    .col-lg-9.col-md-9 {
       margin-left: 16.66667%;
       /* Space for fixed sidebar */
@@ -377,16 +395,16 @@ get_header();
 
    .tab-links a {
       font-family: 'Calibri';
-    /* padding: 9px 15px; */
-    display: inline-block;
-    border-radius: 3px 3px 0 0;
-    /* background: #7FB5DA; */
-    font-size: 20px;
-    font-weight: 600;
-    color: #949494;
-    transition: all linear 0.15s;
-    border-bottom: 3px solid #836EF9;
-    font-weight: bold;
+      /* padding: 9px 15px; */
+      display: inline-block;
+      border-radius: 3px 3px 0 0;
+      /* background: #7FB5DA; */
+      font-size: 20px;
+      font-weight: 600;
+      color: #949494;
+      transition: all linear 0.15s;
+      border-bottom: 3px solid #836EF9;
+      font-weight: bold;
    }
 
    .tab-links a:hover {
@@ -491,11 +509,12 @@ get_header();
    }
 
    a.tab.gap-05:hover img {
-   filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
-}
-.tab.active img {
-   filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
-}
+      filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
+   }
+
+   .tab.active img {
+      filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
+   }
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -506,55 +525,55 @@ get_header();
       <div class="row">
          <div class="col-lg-2 col-md-3 relative  bg-090909">
             <div class="tab-container ">
-            <?php
-            $current_page_url = get_permalink();
-            $current_page_path = str_replace(
-                "/",
-                "",
-                parse_url($current_page_url, PHP_URL_PATH)
-            );
-            $categories = get_terms([
-                "taxonomy" => "category",
-                "hide_empty" => false,
-                "orderby" => "term_id",
-                "order" => "ASC",
-            ]);
-            foreach ($categories as $category) {
-               $image_url = z_taxonomy_image_url($category->term_id);
-               $cate = get_term_by("id", $category->term_id, "category");
-               $count_post = $cate->count;
-               $active = $category->slug == $current_page_path ? "active" : "";
-               $data_target = esc_attr($category->slug);
-           
-               if ($image_url) {
-                   echo '<a class="tab gap-05 ' .
-                       $active .
-                       '" href="' .
-                       home_url("/" . $category->slug . "") .
-                       '" data-target="' .
-                       $data_target .
-                       '"><img src="' .
-                       esc_url($image_url) .
-                       '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' .
-                       $category->name .
-                       '</h2>
+               <?php
+               $current_page_url = get_permalink();
+               $current_page_path = str_replace(
+                  "/",
+                  "",
+                  parse_url($current_page_url, PHP_URL_PATH)
+               );
+               $categories = get_terms([
+                  "taxonomy" => "category",
+                  "hide_empty" => false,
+                  "orderby" => "term_id",
+                  "order" => "ASC",
+               ]);
+               foreach ($categories as $category) {
+                  $image_url = z_taxonomy_image_url($category->term_id);
+                  $cate = get_term_by("id", $category->term_id, "category");
+                  $count_post = $cate->count;
+                  $active = $category->slug == $current_page_path ? "active" : "";
+                  $data_target = esc_attr($category->slug);
+
+                  if ($image_url) {
+                     echo '<a class="tab gap-05 ' .
+                        $active .
+                        '" href="' .
+                        home_url("/" . $category->slug . "") .
+                        '" data-target="' .
+                        $data_target .
+                        '"><img src="' .
+                        esc_url($image_url) .
+                        '" alt="" class="img-cate"><h2 class="name-title ml-5 active ml-again">' .
+                        $category->name .
+                        '</h2>
                    </a>';
-               } else {
-                   echo '<a class="tab gap-05 ' .
-                       $active .
-                       '" href="' .
-                       home_url("/" . $category->slug . "") .
-                       '" data-target="' .
-                       $data_target .
-                       '"><img src="' .
-                       get_template_directory_uri() .
-                       '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' .
-                       $category->name .
-                       "</h2></a>";
+                  } else {
+                     echo '<a class="tab gap-05 ' .
+                        $active .
+                        '" href="' .
+                        home_url("/" . $category->slug . "") .
+                        '" data-target="' .
+                        $data_target .
+                        '"><img src="' .
+                        get_template_directory_uri() .
+                        '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' .
+                        $category->name .
+                        "</h2></a>";
+                  }
                }
-           }
-           
-            ?>
+
+               ?>
 
 
                <box class="disclaimer p-4">
@@ -575,202 +594,111 @@ get_header();
          <div class="col-lg-9 col-md-9">
             <div class="tab-content mt-5">
                <?php foreach ($categories as $category) {
-                   $tab = $category->slug; ?>
-               <div class="tab-pane " id="<?php echo $tab; ?>">
-    <?php
-    $args = [
-        "category" => $category->term_id,
-        "posts_per_page" => -1,
-    ];
+                  $tab = $category->slug; ?>
+                  <div class="tab-pane " id="<?php echo $tab; ?>">
+                     <?php
+                     $args = [
+                        "category" => $category->term_id,
+                        "posts_per_page" => -1,
+                     ];
 
-    $posts = get_posts($args);
-    if (count($posts) >= 1) { ?>
-        <div class="container">
-            <div class="flex justify-between items-center mb-4">
-                <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
-                <div class="relative">
-                    <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                        <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                    </span>
-                    <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                </div>
-            </div>
+                     $posts = get_posts($args);
+                     if (count($posts) >= 1) { ?>
+                        <div class="container">
+                           <div class="flex justify-between items-center mb-4">
+                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
+                              <div class="relative">
+                                 <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                                    <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                                 </span>
+                                 <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                              </div>
+                           </div>
 
-            <?php
-            $paged = get_query_var("paged") ? get_query_var("paged") : 1;
-            $args = [
-                "post_type" => "post",
-                "cat" => $category->term_id,
-                "posts_per_page" => 8,
-                "paged" => $paged,
-            ];
-            $query = new WP_Query($args);
+                           <?php
+                           $paged = get_query_var("paged") ? get_query_var("paged") : 1;
+                           $args = [
+                              "post_type" => "post",
+                              "cat" => $category->term_id,
+                              "posts_per_page" => 8,
+                              "paged" => $paged,
+                           ];
+                           $query = new WP_Query($args);
 
-            $types = [];
-            if ($query->have_posts()) {
-                while ($query->have_posts()) {
-                    $query->the_post();
-                    $post_types = wp_get_post_terms(get_the_ID(), "type");
-                    foreach ($post_types as $post_type) {
-                        $types[$post_type->slug] = $post_type->name;
-                    }
-                }
-                wp_reset_postdata();
-            }
-            if (count($types) > 0) { ?>
-                <div class="tabs ">
-                    <ul class="tab-links">
-                        <?php
-                        $first = true;
-                        foreach ($types as $slug => $name) {
-                            echo "<li" .
-                                ($first ? ' class="active"' : "") .
-                                '><a href="#tab-' .
-                                esc_attr($slug) .
-                                '">' .
-                                esc_html($name) .
-                                "</a></li>";
-                            $first = false;
-                        }
-                        ?>
-                    </ul>
-
-                    <div class="tab-content ">
-                        <?php
-                        $first = true;
-                        foreach ($types as $slug => $name) {
-                            echo '<div id="tab-' .
-                                esc_attr($slug) .
-                                '" class="tab-post' .
-                                ($first ? " active" : "") .
-                                '">';
-                            $first = false;
-
-                            $args = [
-                                "post_type" => "post",
-                                "cat" => $category->term_id,
-                                "tax_query" => [
-                                    [
-                                        "taxonomy" => "type",
-                                        "field" => "slug",
-                                        "terms" => $slug,
-                                    ],
-                                ],
-                                "posts_per_page" => 8,
-                                "paged" => $paged,
-                            ];
-                            $query = new WP_Query($args);
-
-                            if ($query->have_posts()) {
-                                echo '<div class="row">';
-                                while ($query->have_posts()) {
-
-                                    $query->the_post();
-                                    $custom_link = get_post_meta(
-                                        get_the_ID(),
-                                        "_custom_link",
-                                        true
-                                    );
-                                    $artist = get_post_meta(
-                                        get_the_ID(),
-                                        "_artist_name",
-                                        true
-                                    );
-                                    $post_slug = get_post_field(
-                                        "post_name",
-                                        get_the_ID()
-                                    );
+                           $types = [];
+                           if ($query->have_posts()) {
+                              while ($query->have_posts()) {
+                                 $query->the_post();
+                                 $post_types = wp_get_post_terms(get_the_ID(), "type");
+                                 foreach ($post_types as $post_type) {
+                                    $types[$post_type->slug] = $post_type->name;
+                                 }
+                              }
+                              wp_reset_postdata();
+                           }
+                           if (count($types) > 0) { ?>
+                              <div class="tabs ">
+                                 <ul class="tab-links">
+                                    <?php
+                                    $first = true;
+                                    foreach ($types as $slug => $name) {
+                                       echo "<li" .
+                                          ($first ? ' class="active"' : "") .
+                                          '><a href="#tab-' .
+                                          esc_attr($slug) .
+                                          '">' .
+                                          esc_html($name) .
+                                          "</a></li>";
+                                       $first = false;
+                                    }
                                     ?>
+                                 </ul>
 
-                                    <div class="col-lg-4 col-md-6 col-sm-12">
-                                        <a href="<?php echo esc_url(
-                                            home_url("/detail/")
-                                        ) . $post_slug; ?>">
-                                            <div class="box-content-main">
-                                                <div class="box-image">
-                                                    <img src="<?php echo get_the_post_thumbnail_url(
-                                                        get_the_ID()
-                                                    ); ?>" alt="Image Description" class="image-home">
-                                                </div>
-                                                <div class="box-artist">
-                                                    <a href="<?php echo !empty(
-                                                        $custom_link
-                                                    )
-                                                        ? $custom_link
-                                                        : "#"; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php echo !empty(
-    $artist
-)
-    ? $artist
-    : get_the_author(); ?></span></a>　
-                                                </div>
-                                                <div class="box-content">
-                                                    <h3 class="home-title"><?php the_title(); ?></h3>
-                                                    <p class="ml-2 home-content"><?php echo wp_trim_words(
-                                                        get_the_content(),
-                                                        50,
-                                                        "..."
-                                                    ); ?></p>
-                                                    <span class="text-secondary-foreground flex items-center">
-                                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                                        &nbsp; Last update <?php echo esc_html(
-                                                            get_the_date()
-                                                        ); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"><?php echo !empty(
-                                                $artist
-                                             )
-                                                ? $artist
-                                                : get_the_author(); ?></span></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                                 <div class="tab-content">
+                                    <?php
+                                    $first = true;
+                                    foreach ($types as $slug => $name) {
+                                       echo '<div id="tab-' . esc_attr($slug) . '" class="tab-post' . ($first ? " active" : "") . '">';
+                                       $first = false;
 
-                        <?php
-                                }
-                                echo "</div>";
+                                     
+                                       echo do_shortcode('[ajax_pagination_type post_type="post" type="' . esc_attr($slug) . '" cat="' . esc_attr($category->term_id) . '" posts_per_page="6" paged="1"]');
 
-                            
-                            } else {
-                                echo "<p>No posts found.</p>";
-                            }
+                                       echo '</div>'; 
+                                    }
+                                    ?>
+                                 </div>
+                              </div>
+                           <?php } else {
 
-                            echo "</div>";
-                            wp_reset_postdata();
-                        }
-                        ?>
-                    </div>
-                </div>
-            <?php } else {
-               ?>
-           <?php echo do_shortcode('[ajax_pagination post_type="post" cat="' . $category->term_id . '" posts_per_page="8" paged="1"]'); ?>
-
-            <?php }
-            ?>
-        </div>
-    <?php }  else {
-         ?>
-        <div class="container">
-            <div class="flex justify-between items-center mb-4">
-                <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> <?php echo $category->name; ?></h1>
-                <div class="relative">
-                    <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                        <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                    </span>
-                    <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                </div>
-            </div>
-            <div class="row pb-5 text-center">
-                <div class="content-comingsoon">
-                    <img src="https://monadocs.xyz/wp-content/uploads/2024/07/banhmi-moyaki-512.gif" alt="" class="coming-soon">
-                    <br>
-                    <h3 class="text-2xl">"nothing here, but you can eat banhmi moyaki before leave"</h3>
-                </div>
-            </div>
-        </div>
-    <?php
-    }
-    ?>
-</div>
+                              echo do_shortcode('[ajax_pagination post_type="post" cat="' . $category->term_id . '" posts_per_page="8" paged="1"]');
+                           }
+                           ?>
+                        </div>
+                     <?php } else {
+                     ?>
+                        <div class="container">
+                           <div class="flex justify-between items-center mb-4">
+                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> <?php echo $category->name; ?></h1>
+                              <div class="relative">
+                                 <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                                    <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                                 </span>
+                                 <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                              </div>
+                           </div>
+                           <div class="row pb-5 text-center">
+                              <div class="content-comingsoon">
+                                 <img src="https://monadocs.xyz/wp-content/uploads/2024/07/banhmi-moyaki-512.gif" alt="" class="coming-soon">
+                                 <br>
+                                 <h3 class="text-2xl">"nothing here, but you can eat banhmi moyaki before leave"</h3>
+                              </div>
+                           </div>
+                        </div>
+                     <?php
+                     }
+                     ?>
+                  </div>
 
                <?php
                } ?>
