@@ -667,53 +667,7 @@ h2.name-title.ml-5 {
     <h2 class="title-last-post text-white text-center p-5">
         - Last post -
     </h2>
-    <!-- <div class="row pb-5">
-        <?php
-        // Set up the query arguments
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        $args = array(
-            'posts_per_page' => 4,
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'orderby' => 'date',
-            'order' => 'DESC',
-            'paged' => $paged
-        );
-
-        // Execute the query
-        $posts = new WP_Query($args);
-
-        // Loop through the posts
-        if ($posts->have_posts()) {
-            while ($posts->have_posts()) {
-                $posts->the_post();
-                $post_id = get_the_ID();
-                $post_link = get_permalink($post_id);
-                $post_slug = get_post_field('post_name', get_the_ID());
-        ?>
-                <div class="col-lg-6 col-md-12 col-12 mb-3">
-                    <a href="<?php echo esc_url(home_url('/detail/')).$post_slug; ?>">
-                        <div class="box-last">
-                            <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="Image Description" class="box-image-last">
-                            <div class="box-content-t1">
-                                <h2 class="home-title"><?php the_title(); ?></h2>
-                                <p class="ml-2 home-content"><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
-                                <span class="text-secondary-foreground flex items-center">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                    &nbsp; Last update <?php echo esc_html(get_the_date()) ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"> <?php echo get_the_author(); ?></span></span>
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-        <?php
-            }
-        } else {
-            echo '<p>No posts found.</p>';
-        }
-        wp_reset_postdata();
-        ?>
-    </div> -->
+   
     <?php echo do_shortcode('[ajax_pagination_lastpost post_type="post"  posts_per_page="4" paged="1"]'); ?>
    
 </div>
