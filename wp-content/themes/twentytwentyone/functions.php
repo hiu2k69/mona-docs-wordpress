@@ -819,4 +819,12 @@ function load_custom_template($template) {
 }
 add_filter('template_include', 'load_custom_template');
 
+include 'AjaxPagination/ajax_pagination_wp.php';
+include 'AjaxPaginationLastPost/ajax_pagination_wp.php';
+
+function my_theme_enqueue_styles() {
+    wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
 
