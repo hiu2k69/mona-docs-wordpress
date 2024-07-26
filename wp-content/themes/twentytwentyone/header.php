@@ -31,7 +31,19 @@
   $meta_description = $default_description;
   $meta_url = home_url();
   $meta_image = $default_image;
+    $title = "Home";
 
+    $current_page_url = get_permalink();
+    $current_page_path = str_replace(
+        "/",
+        "",
+        parse_url($current_page_url, PHP_URL_PATH)
+    );
+    $category = get_category_by_slug($current_page_path);
+
+if ($category) {
+    $title = $category->name;
+}
     global $wp_query;
     $post_slug = $wp_query->query_vars['custom_post_slug'];
 
@@ -46,7 +58,7 @@
       }
   ?>
 
-  <title><?php echo esc_html($meta_title); ?> - <?php bloginfo('name'); ?></title>
+  <title><?php echo $title ?> - <?php bloginfo('name'); ?></title>
 
   <!-- Open Graph meta tags -->
   <meta property="og:title" content="<?php echo esc_attr($meta_title); ?>" />
