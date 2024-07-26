@@ -740,44 +740,7 @@ get_header();
                     </div>
                 </div>
             <?php } else {
-                     //  echo '<div class="row pb-5">';
-               //  foreach ($posts as $post) {
-
-               //      setup_postdata($post);
-               //      $post_id = get_the_ID();
-               //      $post_link = get_permalink($post_id);
-               //      $post_slug = get_post_field("post_name", get_the_ID());
                ?>
-
-               <!-- <div class="col-lg-6 col-md-6 col-12 mb-3">
-                   <a href="<?php echo esc_url(home_url("/detail/")) .
-                       $post_slug; ?>">
-                       <div class="box-last">
-                           <img src="<?php echo get_the_post_thumbnail_url(
-                               $post_id
-                           ); ?>" alt="Image Description" class="box-image-last">
-                           <div class="box-content-t1 ">
-                               <h2 class="home-title"><?php the_title(); ?></h2>
-                               <p class="ml-2 home-content"><?php
-                               $trimmed_content = wp_trim_words(
-                                   get_the_content(),
-                                   50,
-                                   "..."
-                               );
-                               echo $trimmed_content;
-                               ?></p>
-                               <span class="text-secondary-foreground flex items-center">
-                                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                   &nbsp; Last update <?php echo esc_html(
-                                       get_the_date()
-                                   ); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1">  <?php echo get_the_author(); ?></span></span>
-                               </span>
-                           </div>
-                       </div>
-                   </a>
-               </div>
-            -->
-           <!-- </div> -->
            <?php echo do_shortcode('[ajax_pagination post_type="post" cat="' . $category->term_id . '" posts_per_page="8" paged="1"]'); ?>
 
             <?php }
