@@ -17,11 +17,16 @@ ul.pagination li a {
   font-size: 18px;
 }
 ul.pagination li.active {
-  padding: 5px 10px;
+  padding: 5px 14px;
   background: #836EF9;
   color: white;
   font-size: 18px;
+  font-family: 'Calibri';
 
+}
+@font-face {
+  font-family: 'Calibri';
+  src: local("SourceCodePro"), url('../twentytwentyone/assets/font/calibri.ttf') format("truetype")
 }
 div#result_ajaxp {
   position: relative;

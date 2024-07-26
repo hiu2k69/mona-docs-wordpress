@@ -723,12 +723,7 @@ get_header();
                                 }
                                 echo "</div>";
 
-                                // Pagination
-                                echo '<div class="pagination">';
-                                echo paginate_links([
-                                    "total" => $query->max_num_pages,
-                                ]);
-                                echo "</div>";
+                            
                             } else {
                                 echo "<p>No posts found.</p>";
                             }

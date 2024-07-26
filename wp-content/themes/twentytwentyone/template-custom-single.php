@@ -278,7 +278,7 @@ get_header();
 
 
     .box-content {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .box-content h3 {
@@ -383,7 +383,7 @@ get_header();
     .home-content {
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
     }
 
