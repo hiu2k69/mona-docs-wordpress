@@ -23,6 +23,8 @@ get_header();
     }
     h2.name-title.ml-5 {
         font-size: 17px !important;
+        font-family  : 'seguisb.ttf';
+        
     }
     /* .col-lg-9.col-md-9 {
         margin-left: 28.66667%;
@@ -34,6 +36,8 @@ get_header();
 @media only screen and (min-width: 1780px) and (max-width: 1919px) {
     h2.name-title.ml-5 {
         font-size: 15px;
+        font-family  : 'seguisb.ttf';
+
     }
     .container.box-last- {
         margin-left: 21% !important;
@@ -109,6 +113,8 @@ get_header();
 
    h2.name-title.ml-5.art {
       margin-left: 23px;
+      font-family  : 'seguisb.ttf';
+
    }
 
    .ml-5 {

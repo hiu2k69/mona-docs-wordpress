@@ -11,6 +11,8 @@ get_header();
 /* Default styles (for screens smaller than 1780px) */
 h2.name-title.ml-5 {
     font-size: 14px; /* Adjust as needed */
+    font-family  : 'seguisb.ttf';
+
 }
 .container.box-last- {
     margin-left: 18%; /* Adjust as needed */
@@ -36,6 +38,8 @@ h2.name-title.ml-5 {
 @media only screen and (min-width: 1780px) and (max-width: 1919px) {
     h2.name-title.ml-5 {
         font-size: 15px;
+        font-family  : 'seguisb.ttf';
+
     }
     .container.box-last- {
         margin-left: 21% !important;
@@ -70,6 +74,8 @@ h2.name-title.ml-5 {
     }
     h2.name-title.ml-5 {
         font-size: 17px !important;
+        font-family  : 'seguisb.ttf';
+
     }
     .col-lg-9.col-md-9 {
         margin-left: 28.66667%;
@@ -78,6 +84,30 @@ h2.name-title.ml-5 {
     .tab-content.mt-5 {
         width: 73% !important;
         margin-top: 7rem !important;
+    }
+}
+@media only screen and (min-width: 991px) and (max-width: 1779px) {
+    h2.name-title.ml-5 {
+        font-size: 14px; /* Adjust as needed */
+    }
+    .container.box-last- {
+        margin-left: 18%; /* Adjust as needed */
+    }
+    .tab-content.mt-5 {
+        width: 80%; /* Adjust as needed */
+        margin-top: 6rem; /* Adjust as needed */
+    }
+    .col-lg-9.col-md-9 {
+        margin-left: 22%;
+        padding-left: 18px;
+    }
+    .gap-05 {
+        gap: 0.5rem;
+        padding: 6px 54px;
+    }
+    .col-lg-2.col-md-3 {
+        position: fixed;
+        top: 10%;
     }
 }
 
