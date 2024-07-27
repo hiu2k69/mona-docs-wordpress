@@ -556,11 +556,35 @@ h2.name-title.ml-5 {
     a.tab.gap-05:hover img {
    filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
 }
+
+@media (max-width: 431px){
+      .col-lg-9.col-md-9{
+         margin: 0;
+         padding: 0;
+         margin-top: 1rem;
+      }
+
+      .tab-content{
+        width: 100% !important;
+      }
+
+      .container.box-last-{
+        margin-left: 0;
+      }
+      h1.text-2xl.font-bold.text-white.text-foreground{
+        margin-bottom: 0;
+        font-size: 28px;
+      }
+
+      .tab-content.mt-5 .container{
+        padding: 0 30px;
+      }
+    }
 </style>
 <section class="detail-post">
     <div class="container-fluid">
         <div class="row">
-        <div class="col-lg-2 col-md-3 relative  bg-090909">
+        <div class="col-lg-2 col-md-3 relative d-none-sm  bg-090909">
             <div class="tab-container ">
             <?php
             $current_page_url = get_permalink();
@@ -628,7 +652,7 @@ h2.name-title.ml-5 {
             </div>
 
          </div>
-            <div class="col-lg-9 col-md-9">
+            <div class="col-lg-9 col-md-9 ">
                 <div class="tab-content mt-5">
                     <?php
 
@@ -664,9 +688,14 @@ h2.name-title.ml-5 {
             </div>
         </div>
         <div class="container box-last-">
-    <h2 class="title-last-post text-white text-center p-5">
-        - Last post -
-    </h2>
+        <div  class="d-flex align-items-center justify-content-center gap-1 p-3">
+            <a href="<?php echo home_url(); ?>" >
+                    <img src="<?php echo get_template_directory_uri().'/assets/images/favicon.png' ?>" alt="Logo" class="favicon">
+                </a>
+                <h2 class="title-last-post text-white text-center">
+                 Last post 
+            </h2>
+            </div>
    
     <?php echo do_shortcode('[ajax_pagination_lastpost post_type="post"  posts_per_page="4" paged="1"]'); ?>
    
