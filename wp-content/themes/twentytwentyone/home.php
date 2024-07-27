@@ -261,33 +261,88 @@ get_header();
         height: 260px !important;
         object-fit: cover;
     }
+
+    .d-mobile {
+        display: none !important;
+    }
+
+    @media (max-width: 415px) {
+       
+
+        .image-home {
+            height: 120px !important;
+        }
+
+        .box-content {
+            margin: 0;
+            background: none;
+            border-left: none;
+        }
+
+        .box-content h3 {
+            font-size: 1rem;
+            color: white;
+        }
+
+        .box-content-t1 h2 {
+            font-size: 1.5rem;
+        }
+
+        .box-last {
+            flex-direction: column;
+        }
+
+        .box-image-last {
+            width: 100%;
+            object-fit: cover;
+            transition: all .2s ease-in-out;
+        }
+
+        .box-content-t1 p {
+            margin: 0.5rem 0;
+        }
+
+        .home-content {
+            -webkit-line-clamp: 3;
+        }
+
+        .text-secondary-foreground,
+        span.text span {
+            font-size: 1.375rem !important;
+        }
+
+        .d-mobile{
+            display: flex !important;
+        }
+
+    }
 </style>
 <div class="main relative">
     <section class="main-content-center">
         <div class="container">
-            <div class="h2 title-content-main text-center p-5">
+            <div class="h2 title-content-main text-center p-5 d-none-sm">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/monad.png" alt="Description" class="img-title"> - All you need is here
             </div>
-            <div class="row pb-5">
+            <div class="row py-5">
                 <?php
                 $artists = [["name" => "Hagen", "url" => "https://x.com/hagen_eth"], ["name" => "monadocs", "url" => "https://x.com/monadocs_eth"], ["name" => "Hung", "url" => "https://x.com/hung_eth"],];
                 for ($i = 1; $i < 10; $i++) {
                     $artist = $artists[($i - 1) % count($artists)]; ?>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-6">
                         <a href="<?php echo esc_url(home_url("/monad-learning")); ?>">
                             <div class="box-content-main">
                                 <div class="box-image">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="image-home">
                                 </div>
-                                <div class="box-artist">
+                                <div class="box-artist d-none-sm">
                                     <a href="<?php echo $artist["url"]; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php echo $artist["name"]; ?></span></a>　
                                 </div>
-                                <div class="box-content">
+                                <div class="box-content ">
                                     <h3 class="home-title">How to Contribute</h3>
-                                    <p>This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
+                                    <p class="d-none-sm">This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
 
                                 </div>
-                                <a href="<?php echo esc_url(home_url("/monad-learning")); ?>" class="see-more">
+                                <a href="<?php echo esc_url(home_url("/monad-learning")); ?>" class="see-more d-none-sm">
                                     <!-- <img aria-hidden="true" alt="chat-bubble" class="see" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" /> -->
                                     Explore now
                                 </a>
@@ -305,41 +360,7 @@ get_header();
             <h2 class="title-last-post text-white text-center p-5">
                 - Last post -
             </h2>
-            <!-- <div class="row pb-5">
-                <?php
-                $args = ["posts_per_page" => -1, "post_type" => "post", "post_status" => "publish", "orderby" => "date", "order" => "DESC",];
 
-                $posts = get_posts($args);
-                foreach ($posts as $post) {
-
-                    setup_postdata($post);
-                    $post_id = get_the_ID();
-
-                    $post_link = get_permalink($post_id);
-                    $post_slug = get_post_field('post_name', get_the_ID());
-                ?>
-                    <div class="col-lg-6 col-md-6 col-12 mb-3">
-                        <a href="<?php echo esc_url(home_url("/detail/")) . $post_slug; ?>">
-                            <div class="box-last">
-                                <img src="<?php echo get_the_post_thumbnail_url($post_id); ?>" alt="Image Description" class="box-image-last">
-                                <div class="box-content-t1 ">
-                                    <h2 class="home-title"><?php the_title(); ?></h2>
-                                    <p class="ml-2 home-content text-xl"><?php
-                                                                            $trimmed_content = wp_trim_words(get_the_content(), 20, "...");
-                                                                            echo $trimmed_content;
-                                                                            ?></p>
-
-                                    <span class="text-secondary-foreground flex items-center">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Writer.svg" alt="Image Description" class="">
-                                        &nbsp; Last update <?php echo esc_html(get_the_date()); ?> &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1"><?php echo get_the_author(); ?></span></span></span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                <?php
-                }
-                ?>
-            </div> -->
             <?php echo do_shortcode('[ajax_pagination_lastpost post_type="post"  posts_per_page="4" paged="1"]'); ?>
         </div>
     </section>
@@ -388,7 +409,7 @@ get_header();
             </div>
         </div>
     </section>
-    <box class="disclaimer1">
+    <box class="disclaimer1 d-none-sm">
         <div class="box-top">
             <h1 class="title-disc text-white text-bold">Disclaimer</h1>
             <p class="dis">

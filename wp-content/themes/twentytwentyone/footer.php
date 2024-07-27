@@ -68,7 +68,12 @@ a.text-account {
     </div>
 </footer>
 <?php wp_footer(); ?>
-
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+    var menu = document.getElementById('site-navigation-mobile');
+    menu.classList.toggle('active');
+});
+</script>
 </body>
 </html>
 
