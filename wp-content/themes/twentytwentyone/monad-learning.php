@@ -75,6 +75,7 @@ get_header();
 
    .box-por {
       display: flex;
+      align-items: center;
    }
 
    footer.bg-black.text-white.py-4.flex.items-center.justify-center.space-x-4.relative {
@@ -515,6 +516,44 @@ get_header();
    .tab.active img {
       filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
    }
+
+   @media (max-width: 431px){
+      .col-lg-9.col-md-9{
+         margin: 0;
+         padding: 0;
+      }
+      h1.text-3xl.font-bold.text-white{
+         font-size: 1.6rem;
+      }
+
+      .tab-links{
+         margin-left: 1.5rem;
+      }
+
+      .box-content-main{
+         margin:10px 20px;
+      }
+
+      .box-content p{
+         font-size: 1rem;
+         margin: 0.5rem 0;
+      }
+
+      .image-home{
+         height: 200px !important;
+      }
+
+      .box-artist{
+         top: 160px;
+      }
+      .mt-5{
+         margin-top: 0.5rem !important;
+      }
+
+      h1.text-3xl.pl-3.font-bold.text-white.d-flex{
+         margin: 0;
+      }
+   }
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -523,7 +562,7 @@ get_header();
 <section class="learn">
    <div class="container-fluid">
       <div class="row">
-         <div class="col-lg-2 col-md-3 relative  bg-090909">
+         <div class="col-lg-2 col-md-3 d-none-sm relative  bg-090909">
             <div class="tab-container ">
                <?php
                $current_page_url = get_permalink();
@@ -591,7 +630,7 @@ get_header();
             </div>
 
          </div>
-         <div class="col-lg-9 col-md-9">
+         <div class="col-lg-9 col-md-9 col-12">
             <div class="tab-content mt-5">
                <?php foreach ($categories as $category) {
                   $tab = $category->slug; ?>
@@ -604,10 +643,10 @@ get_header();
 
                      $posts = get_posts($args);
                      if (count($posts) >= 1) { ?>
-                        <div class="container">
+                        <div class="container ">
                            <div class="flex justify-between items-center mb-4">
-                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
-                              <div class="relative">
+                              <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
+                              <div class="relative d-none-sm">
                                  <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
                                  </span>

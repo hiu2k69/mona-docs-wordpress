@@ -262,11 +262,8 @@ get_header();
         object-fit: cover;
     }
 
-    .d-mobile {
-        display: none !important;
-    }
 
-    @media (max-width: 415px) {
+    @media (max-width: 431px) {
        
 
         .image-home {
@@ -290,6 +287,7 @@ get_header();
 
         .box-last {
             flex-direction: column;
+            margin: 20px;
         }
 
         .box-image-last {
@@ -300,6 +298,7 @@ get_header();
 
         .box-content-t1 p {
             margin: 0.5rem 0;
+            font-size: 1rem !important;
         }
 
         .home-content {
@@ -308,12 +307,10 @@ get_header();
 
         .text-secondary-foreground,
         span.text span {
-            font-size: 1.375rem !important;
+            font-size: 1.175rem !important;
         }
 
-        .d-mobile{
-            display: flex !important;
-        }
+
 
     }
 </style>
@@ -357,9 +354,15 @@ get_header();
     </section>
     <section class="second">
         <div class="container">
-            <h2 class="title-last-post text-white text-center p-5">
-                - Last post -
+            <div  class="d-flex align-items-center justify-content-center gap-1 p-3">
+            <a href="<?php echo home_url(); ?>" >
+                    <img src="<?php echo get_template_directory_uri().'/assets/images/favicon.png' ?>" alt="Logo"class="favicon">
+                </a>
+                <h2 class="title-last-post text-white text-center">
+                 Last post 
             </h2>
+            </div>
+            
 
             <?php echo do_shortcode('[ajax_pagination_lastpost post_type="post"  posts_per_page="4" paged="1"]'); ?>
         </div>
