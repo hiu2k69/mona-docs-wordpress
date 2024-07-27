@@ -106,13 +106,71 @@ if ($category) {
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/monad.png" alt="Logo">
                 </a>
             </div>
+            <span id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></span>
             <nav id="site-navigation" class="main-navigation">
-                <ul class="menu">
+                <ul  class="menu">
                     <li><a href="<?php echo home_url(); ?>" class="item-nav active">Home</a></li>
                     <li><a href="<?php echo home_url('/monad-learning'); ?>" class="item-nav">Monad Learning</a></li>
                     <li><a href="<?php echo home_url('/community-culture'); ?>" class="item-nav">Community Culture</a></li>
                     <li><a href="<?php echo home_url('/news'); ?>" class="item-nav">News</a></li>
                     <li><a href="<?php echo home_url('/about-monadhub'); ?>" class="item-nav">About MonadHub</a></li>
+                </ul>
+            </nav>
+            <nav id="site-navigation-mobile" class="main-navigation-mobile">
+                <ul id="primary-menu" class="menu-mobile">
+                    <div class="position-relative px-3 my-3">
+                                 <span class="position-absolute left-mobile-2 top-1/2 transform -translate-y-1/2 text-white">
+                                    <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" class="icon" />
+                                 </span>
+                                 <input type="text" placeholder="Search" id="search-input-mobile" class="focus:outline-none" />
+                    </div>
+                    <?php 
+                    $current_page_url = get_permalink();
+                    $current_page_path = str_replace(
+                       "/",
+                       "",
+                       parse_url($current_page_url, PHP_URL_PATH)
+                    );
+                    $categories = get_terms([
+                  "taxonomy" => "category",
+                  "hide_empty" => false,
+                  "orderby" => "term_id",
+                  "order" => "ASC",
+               ]);
+               foreach($categories as $category){
+                $image_url = z_taxonomy_image_url($category->term_id);
+                $cate = get_term_by("id", $category->term_id, "category");
+                $count_post = $cate->count;
+                $active = $category->slug == $current_page_path ? "active" : "";
+                $data_target = esc_attr($category->slug);
+
+                if ($image_url) {
+                   echo '<a class=" gap-05 ' .
+                      $active .
+                      '" href="' .
+                      home_url("/" . $category->slug . "") .
+                      '" data-target="' .
+                      $data_target .
+                      '"><img src="' .
+                      esc_url($image_url) .
+                      '" alt="" class="img-cate"><h2 class="name-title active ml-again">' .
+                      $category->name .
+                      '</h2>
+                 </a>';
+                } else {
+                   echo '<a class=" gap-05 ' .
+                      $active .
+                      '" href="' .
+                      home_url("/" . $category->slug . "") .
+                      '" data-target="' .
+                      $data_target .
+                      '"><img src="' .
+                      get_template_directory_uri() .
+                      '/assets/images/Community-News.svg" alt=""><h2 class="name-title ml-5 ml-again">' .
+                      $category->name .
+                      "</h2></a>";
+                }
+               } ?>
                 </ul>
             </nav>
         </div>

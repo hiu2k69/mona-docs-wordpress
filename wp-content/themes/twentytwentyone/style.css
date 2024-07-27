@@ -2665,6 +2665,7 @@ figure.wp-caption a:focus img {
     background-color: #000;
     padding: 1rem 0;
     box-sizing: border-box;
+	position: relative;
 }
 
 .header-container {
@@ -8137,8 +8138,149 @@ span.text-primary.ml-1 {
 			font: normal normal normal 13px / 27px Segoe UI;
 		}
 		.site-branding {
-			float: right;
-			margin-left: 100px;
+
+			margin-right: 0;
 		}
 		
+}
+
+nav#site-navigation-mobile {
+	display: none;
+}
+
+.main-navigation-mobile .menu {
+    list-style: none;
+    display: flex;
+	flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-toggle i{
+	font-size: 2rem;
+}
+
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+	color: #836EF9;
+    cursor: pointer;
+	z-index: 10001;
+}
+
+
+
+
+.menu-mobile {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.menu-mobile a {
+    display: flex;
+    padding: 10px 0 10px 35px;
+    text-decoration: none;
+	justify-content: start;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.menu-mobile a img{
+		width: 15px;
+		object-fit: cover;
+}
+
+.menu-mobile a h2{
+	font-size: 16px;
+	color: #949494;
+	margin: 0;
+}
+
+.menu-mobile a:hover,
+.menu-mobile a.active {
+    background-color: #836EF9;
+}
+
+@media only screen and (max-width: 415px) {
+	nav#site-navigation-mobile {
+		display: block;
+	}
+	
+	.main-navigation-mobile {
+		position: fixed;
+		top: 0;
+		right: -275px;
+		width: 275px;
+		height: 100%;
+		background-color: #222;
+		overflow-y: auto;
+		transition: left 0.3s;
+		z-index: 9999;
+	}
+	
+	.main-navigation-mobile.active {
+		padding-top: 50px;
+		right: 0;
+	}
+    .menu-toggle {
+        display: block;
+		
+    }
+
+    .main-navigation-mobile {
+        display: block;
+    }
+
+	.logo img{
+		height: 22px;
+	}
+
+	
+	.d-none-sm {
+		display: none !important;
+	}
+	
+}
+
+.left-mobile-2 {
+    left: 1.7rem;
+}
+
+.top-1\/2 {
+    top: 50%;
+}
+
+.transform {
+    transform: translateY(-50%);
+}
+
+.icon {
+    width: 16px; 
+    height: 16px;
+}
+
+#search-input-mobile {
+    width: 100%; 
+    background-color: black;
+    color: #949494;
+	border: none;
+    border-radius: 9999px; 
+    padding-left: 2.5rem;
+    padding-right: 1rem; 
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#search-input-mobile::placeholder {
+    color: #a0a0a0; 
 }
