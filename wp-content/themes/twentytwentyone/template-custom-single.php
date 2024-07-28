@@ -555,6 +555,9 @@ h2.name-title.ml-5 {
    filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
 }
 
+.mt-4.p-content.text-lg.text-white.italic.color-content{
+    font-family: 'Calibri';
+}
 @media (max-width: 431px){
       .col-lg-9.col-md-9{
          margin: 0;
@@ -575,6 +578,7 @@ h2.name-title.ml-5 {
       }
       h1.text-2xl.font-bold.text-white.text-foreground{
         margin-bottom: 0;
+        margin-top: 1rem;
         font-size: 28px;
       }
 
