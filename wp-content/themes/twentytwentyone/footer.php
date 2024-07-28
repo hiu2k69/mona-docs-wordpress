@@ -69,10 +69,22 @@ a.text-account {
 </footer>
 <?php wp_footer(); ?>
 <script>
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-    var menu = document.getElementById('site-navigation-mobile');
-    menu.classList.toggle('active');
-});
+    document.addEventListener('DOMContentLoaded', function () {
+        var menuToggle = document.getElementById('menu-toggle');
+        var menu = document.getElementById('site-navigation-mobile');
+
+        
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation(); 
+            menu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!menu.contains(e.target) && e.target !== menuToggle) {
+                menu.classList.remove('active');
+            }
+        });
+    });
 </script>
 </body>
 </html>
