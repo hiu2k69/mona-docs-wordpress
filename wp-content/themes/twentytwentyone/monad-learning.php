@@ -298,28 +298,6 @@ get_header();
       position: relative;
    }
 
-   img.coming-soon {
-      width: 200px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      position: absolute;
-   }
-
-   .content-comingsoon h3 {
-      top: 73%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      position: absolute;
-      width: 500px;
-      font-weight: bolder;
-
-      font-size: 30px;
-      font-family: 'Calibri';
-      color: #836EF9;
-      line-height: 1.6;
-
-   }
 
    .box-bottom.d-flex.mt-2 img {
       width: 24px;
@@ -553,6 +531,16 @@ get_header();
       h1.text-3xl.pl-3.font-bold.text-white.d-flex{
          margin: 0;
       }
+
+      .flex.justify-between.items-center.mb-4{
+         margin-top: 0.5rem;
+      }
+
+      section.learn{
+         padding-top: 0 !important;
+      }
+
+     
    }
 </style>
 
@@ -717,9 +705,9 @@ get_header();
                      <?php } else {
                      ?>
                         <div class="container">
-                           <div class="flex justify-between items-center mb-4">
-                              <h1 class="text-3xl font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> <?php echo $category->name; ?></h1>
-                              <div class="relative">
+                           <div class="flex justify-between items-center  mb-4">
+                              <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> <?php echo $category->name; ?></h1>
+                              <div class="relative d-none-sm">
                                  <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
                                  </span>
@@ -731,6 +719,7 @@ get_header();
                                  <img src="https://monadocs.xyz/wp-content/uploads/2024/07/banhmi-moyaki-512.gif" alt="" class="coming-soon">
                                  <br>
                                  <h3 class="text-2xl">"nothing here, but you can eat banhmi moyaki before leave"</h3>
+                                 <a href="<?php echo home_url(); ?>" class="d-mobile button-home">Go to Homepage</a>
                               </div>
                            </div>
                         </div>
