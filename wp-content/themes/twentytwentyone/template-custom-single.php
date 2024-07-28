@@ -548,8 +548,6 @@ h2.name-title.ml-5 {
         box-sizing: border-box;
         position: fixed;
         z-index: 100;
-        padding-bottom: 4rem;
-        height: 81px;
 
     }
 
@@ -561,15 +559,19 @@ h2.name-title.ml-5 {
       .col-lg-9.col-md-9{
          margin: 0;
          padding: 0;
-         margin-top: 1rem;
       }
 
       .tab-content{
         width: 100% !important;
       }
 
+      .tab-content.mt-5{
+        margin-top: 0 !important;
+      }
+
       .container.box-last-{
         margin-left: 0;
+        margin-top: 2rem;
       }
       h1.text-2xl.font-bold.text-white.text-foreground{
         margin-bottom: 0;
@@ -579,6 +581,10 @@ h2.name-title.ml-5 {
       .tab-content.mt-5 .container{
         padding: 0 30px;
       }
+
+      
+  
+      
     }
 </style>
 <section class="detail-post">
@@ -680,6 +686,18 @@ h2.name-title.ml-5 {
                     <?php
                         wp_reset_postdata();
                     } else {
+                        ?>
+                    <div class="container">
+                           <div class="row pb-5 text-center">
+                              <div class="content-comingsoon">
+                                 <img src="https://monadocs.xyz/wp-content/uploads/2024/07/banhmi-moyaki-512.gif" alt="" class="coming-soon">
+                                 <br>
+                                 <h3 class="text-2xl">"nothing here, but you can eat banhmi moyaki before leave"</h3>
+                                 <a href="<?php echo home_url(); ?>" class="d-mobile button-home">Go to Homepage</a>
+                              </div>
+                           </div>
+                        </div>
+                        <?php
                     }
                     ?>
 
