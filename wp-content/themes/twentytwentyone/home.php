@@ -274,11 +274,14 @@ get_header();
             margin: 0;
             background: none;
             border-left: none;
+            padding: 1rem 0.5rem;
         }
 
         .box-content h3 {
-            font-size: 1rem;
+            font-size: 0.875rem;
             color: white;
+            text-align: center;
+            text-transform: uppercase;
         }
 
         .box-content-t1 h2 {
@@ -322,8 +325,14 @@ get_header();
             </div>
             <div class="row py-5">
                 <?php
+                 $categories = get_terms([
+                    "taxonomy" => "category",
+                    "hide_empty" => false,
+                    "orderby" => "term_id",
+                    "order" => "ASC",
+                 ]);
                 $artists = [["name" => "Hagen", "url" => "https://x.com/hagen_eth"], ["name" => "monadocs", "url" => "https://x.com/monadocs_eth"], ["name" => "Hung", "url" => "https://x.com/hung_eth"],];
-                for ($i = 1; $i < 10; $i++) {
+                for ($i = 1; $i <= count($categories); $i++) {
                     $artist = $artists[($i - 1) % count($artists)]; ?>
                     <div class="col-lg-4 col-md-6 col-6">
                         <a href="<?php echo esc_url(home_url("/monad-learning")); ?>">
@@ -335,7 +344,7 @@ get_header();
                                     <a href="<?php echo $artist["url"]; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php echo $artist["name"]; ?></span></a>　
                                 </div>
                                 <div class="box-content ">
-                                    <h3 class="home-title">How to Contribute</h3>
+                                    <h3 class="home-title"><?php echo $categories[$i-1]->name; ?></h3>
                                     <p class="d-none-sm">This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
 
                                 </div>
