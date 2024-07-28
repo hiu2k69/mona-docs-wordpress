@@ -148,10 +148,11 @@ h2.name-title.ml-5 {
 
     .mt-4.p-content.text-lg.text-white.italic.color-content h3, .mt-4.p-content.text-lg.text-white.italic.color-content h4, .mt-4.p-content.text-lg.text-white.italic.color-content h5 {
         color: #836EF9;
+        font-weight: bolder;
     }
 
     .mt-4.p-content.text-lg.text-white.italic.color-content a {
-    color: #00FFF2;
+    color: #2F9BEE !important;
 }
     .mt-4.p-content.text-lg.text-white.italic.color-content li {
         line-height: 3;
