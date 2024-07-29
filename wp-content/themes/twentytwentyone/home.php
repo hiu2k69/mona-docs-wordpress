@@ -290,7 +290,7 @@ get_header();
 
         .box-last {
             flex-direction: column;
-            margin: 20px;
+            margin: 12px;
         }
 
         .box-image-last {
@@ -311,6 +311,10 @@ get_header();
         .text-secondary-foreground,
         span.text span {
             font-size: 1.175rem !important;
+        }
+
+        .box-image img:hover{
+            transform: none;
         }
 
 

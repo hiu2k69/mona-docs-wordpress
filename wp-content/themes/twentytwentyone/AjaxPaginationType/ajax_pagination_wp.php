@@ -57,7 +57,7 @@ function query_ajax_pagination_type($post_type = 'post',$cat = 22, $type="" , $p
     /*Tổng số page*/
     $total_pages = ceil($total_records / $posts_per_page);
     if ($q_svl->have_posts()) {  
-        $allpost = '<div class="row pb-5 position-relative ajax_pagination_type_'.$type.'"  posts_per_page="' . $posts_per_page . '" cat="'.$cat.'" type="' . $type . '" post_type="' . $post_type . '">';
+        $allpost = '<div class="row pb-paginate position-relative ajax_pagination_type_'.$type.'"  posts_per_page="' . $posts_per_page . '" cat="'.$cat.'" type="' . $type . '" post_type="' . $post_type . '">';
         while ($q_svl->have_posts()) {
             $q_svl->the_post();
             $post_id = get_the_ID();

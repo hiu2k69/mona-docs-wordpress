@@ -38,7 +38,7 @@ function query_ajax_pagination($post_type = 'post', $cat = 19, $posts_per_page =
     /*Tổng số page*/
     $total_pages = ceil($total_records / $posts_per_page);
     if ($q_svl->have_posts()) {
-        $allpost = '<div class="row pb-5 position-relative ajax_pagination" cat="'. $cat .'" posts_per_page="' . $posts_per_page . '" post_type="' . $post_type . '">';
+        $allpost = '<div class="row pb-paginate position-relative ajax_pagination" cat="'. $cat .'" posts_per_page="' . $posts_per_page . '" post_type="' . $post_type . '">';
         while ($q_svl->have_posts()) {
             $q_svl->the_post();
             $post_id = get_the_ID();
@@ -46,7 +46,7 @@ function query_ajax_pagination($post_type = 'post', $cat = 19, $posts_per_page =
             $artist = get_post_meta(get_the_ID(), '_artist_name', true);
             $post_slug = get_post_field('post_name', get_the_ID());
             $trimmed_content = wp_trim_words(get_the_content(), 50, '...');
-            $allpost .= '<div class="col-lg-6 col-md-12 col-12 mb-3">';
+            $allpost .= '<div class="col-lg-6 col-md-12 col-12 ">';
             $allpost .= '<a href="' . esc_url(home_url('/detail/')) . $post_slug . '">';
             $allpost .= ' <div class="box-last">';
             $allpost .= '<img src="' . get_the_post_thumbnail_url($post_id) . '" alt="Image Description" class="box-image-last">';

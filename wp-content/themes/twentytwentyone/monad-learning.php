@@ -540,6 +540,9 @@ get_header();
          padding-top: 0 !important;
       }
 
+      .box-image-last:hover{
+         transform: none;
+      }
      
    }
 </style>
@@ -732,6 +735,7 @@ get_header();
                } ?>
             </div>
          </div>
+         <div style="height: 41px;">&nbsp;</div>
       </div>
    </div>
 </section>
