@@ -65,7 +65,7 @@ function query_ajax_pagination_type($post_type = 'post',$cat = 22, $type="" , $p
             $artist = get_post_meta(get_the_ID(), '_artist_name', true);
             $post_slug = get_post_field('post_name', get_the_ID());
             $trimmed_content = wp_trim_words(get_the_content(), 50, '...');
-            $allpost .= '  <div class="col-lg-4 col-md-6 col-sm-12">';
+            $allpost .= '  <div class="col-lg-4 col-md-6 col-12">';
             $allpost .= '<a href="' . esc_url(home_url('/detail/')) . $post_slug . '">';
             $allpost .= ' <div class="box-content-main">';
             $allpost .= '  <div class="box-image">';
@@ -76,7 +76,7 @@ function query_ajax_pagination_type($post_type = 'post',$cat = 22, $type="" , $p
             $allpost .= ' <div class="box-content">';
             $allpost .= ' <h3 class="home-title">'. get_the_title().'</h3>';
             $allpost .= '  <p class="ml-2 home-content">'. $trimmed_content .'</p>';
-            $allpost .= '  <span class="text-secondary-foreground flex items-center d-none-sm">';
+            $allpost .= '  <span class="text-secondary-foreground flex items-center d-none-time">';
             $allpost .= '<img src="' . get_template_directory_uri() . '/assets/images/Writer.svg" alt="Image Description" class="">&nbsp; Last update ' . esc_html(get_the_date()) . ' &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1">' . (!empty($artist) ? $artist : get_the_author()) . '</span></span>';
             $allpost .= '   </span>';
             $allpost .= '  <span class="text-secondary-foreground flex items-center d-mobile">';
