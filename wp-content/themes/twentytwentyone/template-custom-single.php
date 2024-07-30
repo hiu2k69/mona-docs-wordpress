@@ -576,7 +576,7 @@ h2.name-title.ml-5 {
 
       .container.box-last-{
         margin-left: 0;
-        margin-top: 2rem;
+        padding: 0;
       }
       h1.text-2xl.font-bold.text-white.text-foreground{
         margin-bottom: 0;
@@ -587,7 +587,9 @@ h2.name-title.ml-5 {
       .tab-content.mt-5 .container{
         padding: 0 30px;
       }
-
+      .box-image-last:hover{
+         transform: none;
+      }
       
   
       
@@ -722,7 +724,7 @@ h2.name-title.ml-5 {
             </div>
    
     <?php echo do_shortcode('[ajax_pagination_lastpost post_type="post"  posts_per_page="4" paged="1"]'); ?>
-   
+   <div style="height: 41px;">&nbsp;</div>
 </div>
 
     </div>

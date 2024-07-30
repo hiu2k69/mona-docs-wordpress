@@ -8241,16 +8241,19 @@ img.coming-soon {
 
  .button-home{
         
-	padding: 5px 20px;
+	padding: 5px 18px;
 	background: #836EF9;
-	top: 330px;
+	top: 335px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	position: absolute;
 	font-weight: bolder;
-	font-size: 18px;
+	font-size: 20px;
 	color: white;
 	border-radius: 10px;
+   }
+   .pb-paginate{
+		padding-bottom: 3rem;
    }
 @media only screen and (max-width: 431px) {
 	nav#site-navigation-mobile {
@@ -8366,11 +8369,12 @@ img.coming-soon {
 	}
 	h3.content-not{
 		font-size: 20px !important;
-		top: 210px;
+		top: 235px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 	width: 100%;
+	line-height: 1.1 !important;
 	}
 
 	img.not-found{
@@ -8382,16 +8386,25 @@ img.coming-soon {
 	}
 
 	img.coming-soon{
-		width: 150px;
+		width: 180px;
 		top: 150px;
 	 }
 
 	 .content-comingsoon h3{
 		width: 330px;
-		font-size: 25px;
-		top: 250px;
+		font-size: 20px;
+		top: 275px;
+		line-height: 1.1;
+	 }
+
+	 .pb-paginate{
+		padding-bottom: 1.6rem !important;
 	 }
 	
+	 ul.pagination{
+		padding: 0;
+		margin: 13px 0 0 0;
+	 }
 }
 
 .left-mobile-2 {
