@@ -249,9 +249,9 @@ get_header();
     .home-content {
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-        font-size: 1.25rem !important;
+        /* font-size: 1.25rem !important; */
     }
 
     .image-home {
