@@ -63,8 +63,8 @@ a.text-account {
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-footer.png" alt="Logo" class="img-logo-footer img-fluid" style="width:100px;">
     &nbsp;
   <span class="text-muted-foreground mr-2">A Project By</span>
-  <a href="https://twitter.com/Zhangliu_Eth" class="text-account">@Zhangliu_Eth</a>
-  <span class="text-muted-poin ml-2 mr-2">•</span><a href="https://twitter.com/Audi_Sneakers" class="text-account">@Audi_Sneakers</a>
+  <a href="https://twitter.com/Zhangliu_Eth" target="_blank" class="text-account">@Zhangliu_Eth</a>
+  <span class="text-muted-poin ml-2 mr-2">•</span><a href="https://twitter.com/Audi_Sneakers" target="_blank" class="text-account">@Audi_Sneakers</a>
     </div>
 </footer>
 <?php wp_footer(); ?>
