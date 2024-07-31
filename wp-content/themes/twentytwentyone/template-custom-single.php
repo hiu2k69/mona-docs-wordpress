@@ -750,7 +750,7 @@ a.share-button:hover{
                     if ($post) {
                         setup_postdata($post);
                         $desc = get_the_title();
-                        $desc .= "\n ". wp_trim_words(get_the_content(), 50);
+                        $desc .= "\n ". wp_trim_words(get_the_content(), 20, '...');
                     ?>
 
                         <div class="container">
