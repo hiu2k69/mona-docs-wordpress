@@ -376,7 +376,7 @@ get_header();
                 for ($i = 1; $i <= count($categories); $i++) {
                     $artist = $artists[($i - 1) % count($artists)]; ?>
                     <div class="col-lg-4 col-md-6 col-6">
-                        <a href="<?php echo esc_url(home_url("/monad-learning")); ?>">
+                        <a href="<?php echo esc_url(home_url("/". $categories[$i-1]->slug)); ?>">
                             <div class="box-content-main">
                                 <div class="box-image">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="image-home">
@@ -389,7 +389,7 @@ get_header();
                                     <p class="home-content d-none-sm">This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
 
                                 </div>
-                                <a href="<?php echo esc_url(home_url("/monad-learning")); ?>" class="see-more d-none-sm">
+                                <a href="<?php echo esc_url(home_url("/". $categories[$i-1]->slug)); ?>" class="see-more d-none-sm">
                                     <!-- <img aria-hidden="true" alt="chat-bubble" class="see" src="<?php echo get_template_directory_uri(); ?>/assets/images/Readmore icon.svg" /> -->
                                     Explore now
                                 </a>

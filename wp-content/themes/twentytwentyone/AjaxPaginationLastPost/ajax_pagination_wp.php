@@ -45,7 +45,8 @@ function query_ajax_pagination_lastpost($post_type = 'post', $posts_per_page = 4
             $artist = get_post_meta(get_the_ID(), '_artist_name', true);
             $post_slug = get_post_field('post_name', get_the_ID());
             $content = get_the_content(); 
-            $clean_content = wp_strip_all_tags($content);
+            $content_without_shortcodes = strip_shortcodes($content);
+            $clean_content = wp_strip_all_tags($content_without_shortcodes);
             $trimmed_content = wp_trim_words($clean_content, 50, '...');
             $allpost .= '<div class="col-lg-6 col-md-6 col-12 ">';
             $allpost .= '<a href="' . esc_url(home_url('/detail/')) . $post_slug . '">';

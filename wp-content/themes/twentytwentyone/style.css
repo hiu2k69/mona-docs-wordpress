@@ -8214,9 +8214,18 @@ nav#site-navigation-mobile {
 	margin: 0;
 }
 
+.menu-mobile a:hover h2{
+	color: #FFFFFF;
+}
+
+.menu-mobile a:hover img {
+	filter: brightness(100%) contrast(100%) grayscale(100%) sepia(0) hue-rotate(0deg) saturate(0) brightness(2);
+ }
+
 .menu-mobile a:hover,
 .menu-mobile a.active {
     background-color: #836EF9;
+	
 }
 .d-mobile {
 	display: none !important;
@@ -8312,7 +8321,7 @@ img.coming-soon {
 		right: -275px;
 		width: 275px;
 		height: 100%;
-		background-color: #222;
+		background-color: #111119;
 		overflow-y: auto;
 		transition: left 0.3s;
 		z-index: 9999;
@@ -8373,6 +8382,7 @@ img.coming-soon {
 
 	.box-image-last {
 		width: 100% !important;
+		height: 200px;
 	}
 
 	.box-content-t1 p {
@@ -8480,7 +8490,7 @@ img.coming-soon {
 			right: -350px;
 			width: 350px;
 			height: 100%;
-			background-color: #222;
+			background: #111119;
 			overflow-y: auto;
 			transition: left 0.3s;
 			z-index: 9999;
@@ -8547,9 +8557,6 @@ img.coming-soon {
 			transform: none;
 		 }
 
-		 .box-image-last:hover{
-			transform: none;
-		 }
 
 		 .box-last {
             flex-direction: column;
