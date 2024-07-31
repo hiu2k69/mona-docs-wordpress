@@ -59,9 +59,6 @@ get_header();
 
     }
 
-    .box-image-last:hover {
-        transform: scale(1.2);
-    }
 
     .box-content-t {
         padding: 10px;
@@ -262,7 +259,9 @@ get_header();
         object-fit: cover;
     }
 
-
+    .pd-tweet{
+        padding:  1.875rem 2rem;
+    }
     @media (max-width: 431px) {
        
 
@@ -278,7 +277,7 @@ get_header();
         }
 
         .box-content h3 {
-            font-size: 0.875rem;
+            font-size: 0.875rem !important;
             color: white;
             text-align: center;
             text-transform: uppercase;
@@ -317,9 +316,47 @@ get_header();
             transform: none;
         }
 
+        .main.relative{
+            background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/detail_mobile.jpg');
+        }
+        /* .main-content-center{
+            background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/detail_mobile.jpg');
+        } */
 
+        section.second{
+            background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/detail_mobile.jpg');
+        }
+
+        .last-post{
+            background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/home_mobile.jpg');
+        }
+        
+       
+
+      
 
     }
+
+    @media (max-width: 1025px) and (min-width: 431px) {
+        .image-home {
+            height: 200px !important;
+        }
+
+        
+
+        .box-content h3{
+            font-size: 1.25rem;
+        }
+
+        .home-content{
+            font-size: 1rem !important;
+        }
+    }
+
+    
+
+    
+
 </style>
 <div class="main relative">
     <section class="main-content-center">
@@ -327,7 +364,7 @@ get_header();
             <div class="h2 title-content-main text-center p-5 d-none-sm">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/monad.png" alt="Description" class="img-title"> - All you need is here
             </div>
-            <div class="row py-5">
+            <div class="row pt-5">
                 <?php
                  $categories = get_terms([
                     "taxonomy" => "category",
@@ -349,7 +386,7 @@ get_header();
                                 </div>
                                 <div class="box-content ">
                                     <h3 class="home-title"><?php echo $categories[$i-1]->name; ?></h3>
-                                    <p class="d-none-sm">This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
+                                    <p class="home-content d-none-sm">This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
 
                                 </div>
                                 <a href="<?php echo esc_url(home_url("/monad-learning")); ?>" class="see-more d-none-sm">
@@ -382,44 +419,30 @@ get_header();
     </section>
     <section class="last-post">
         <div class="container">
-            <h2 class="title-last-post text-white text-center p-5">
-                - Monad hub Tweet -
+            <h2 class="title-last-post text-white text-center pd-tweet">
+                Monad hub Tweet
             </h2>
-            <div class="row pb-5">
-                <div class="col-lg-3 col-md-3 col-12 mb-5">
+            <div class="row ">
+                <div class="col-lg-3 col-md-6 col-12 ">
                     <div class="box-last-post" id="tweet-container">
-                        <blockquote class="twitter-tweet">
-                            <p lang="en" dir="ltr">i and Lollipop hang out and put ice bear into jail, that&#39;s life :)))<br>Thanks <a href="https://twitter.com/Hagen_web3?ref_src=twsrc%5Etfw">@Hagen_web3</a> for put me into his art, i love itttttttttttttttttttttttttttttttttttttttttttttt <a href="https://t.co/P1qIlDUebz">https://t.co/P1qIlDUebz</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1808699644144406603?ref_src=twsrc%5Etfw">July 4, 2024</a>
-                        </blockquote>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Gmonad!<a href="https://t.co/an9HNw4Ua7">https://t.co/an9HNw4Ua7</a> is coming soon…. Thank you to all the amazing artists who supported us. We will have a dedicated page for artists to showcase all their works on one screen, and you can easily access their personal Twitter page through the tag attached to the… <a href="https://t.co/8sGm9iKSTf">pic.twitter.com/8sGm9iKSTf</a></p>&mdash; Monad Hub (@Monadhub_xyz) <a href="https://twitter.com/Monadhub_xyz/status/1817737273053782329?ref_src=twsrc%5Etfw">July 29, 2024</a></blockquote>
+                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-12 mb-5">
+                <div class="col-lg-3 col-md-6 col-12 ">
                     <div class="box-last-post" id="tweet-container">
-                        <blockquote class="twitter-tweet">
-                            <p lang="en" dir="ltr">Omgggg i love itttttttt <a href="https://t.co/uvgTB6P2hQ">https://t.co/uvgTB6P2hQ</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1808895817132167320?ref_src=twsrc%5Etfw">July 4, 2024</a>
-                        </blockquote>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I have been working on this UI/UX design for three weeks, and everything seems fine at the moment. The website&#39;s launch time is longer than expected, but we are trying to make it the best it can be within our capabilities. <br><br>By the way, we are looking for someone to take charge… <a href="https://t.co/vIhgAG9mVU">pic.twitter.com/vIhgAG9mVU</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1817381164371595610?ref_src=twsrc%5Etfw">July 28, 2024</a></blockquote>
+                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-12 mb-5">
+                <div class="col-lg-3 col-md-6 col-12 ">
                     <div class="box-last-post" id="tweet-container">
-                        <blockquote class="twitter-tweet">
-                            <p lang="en" dir="ltr">Recap NPC DRAW EVENT Last night<br>ⓃⓅⒸ 18 pfps was made by <a href="https://twitter.com/medusa_apple?ref_src=twsrc%5Etfw">@medusa_apple</a> <br>ⓃⓅⒸ 18 ID Card &amp; animated pfps was made by me <a href="https://twitter.com/zhangliu_eth?ref_src=twsrc%5Etfw">@zhangliu_eth</a> <br>ⓃⓅⒸ Gathering great singers like:<br>♥️ <a href="https://twitter.com/cryptoaga_?ref_src=twsrc%5Etfw">@cryptoaga_</a> Sweet prince gunha<br>♥️ <a href="https://twitter.com/reganz211?ref_src=twsrc%5Etfw">@reganz211</a> Reganz the king of sad song<br>♥️ <a href="https://twitter.com/Toadster69?ref_src=twsrc%5Etfw">@Toadster69</a> Leading the… <a href="https://t.co/Iqvhknf7nu">pic.twitter.com/Iqvhknf7nu</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1810521540456591582?ref_src=twsrc%5Etfw">July 9, 2024</a>
-                        </blockquote>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Deep in the shadows, twelve words intertwined,<br><br>Horcruxes hidden, a seed phrase designed.<br><br>Whispered secrets, each fragment’s plight,<br><br>Crack for glory, your house’s delight. <a href="https://t.co/yP6Iu3szzg">pic.twitter.com/yP6Iu3szzg</a></p>&mdash; Monad ⨀ (@monad_xyz) <a href="https://twitter.com/monad_xyz/status/1816126435129434206?ref_src=twsrc%5Etfw">July 24, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-12 mb-5">
+                <div class="col-lg-3 col-md-6 col-12 ">
                     <div class="box-last-post" id="tweet-container">
-                        <blockquote class="twitter-tweet">
-                            <p lang="en" dir="ltr">Recap NPC DRAW EVENT Last night<br>ⓃⓅⒸ 18 pfps was made by <a href="https://twitter.com/medusa_apple?ref_src=twsrc%5Etfw">@medusa_apple</a> <br>ⓃⓅⒸ 18 ID Card &amp; animated pfps was made by me <a href="https://twitter.com/zhangliu_eth?ref_src=twsrc%5Etfw">@zhangliu_eth</a> <br>ⓃⓅⒸ Gathering great singers like:<br>♥️ <a href="https://twitter.com/cryptoaga_?ref_src=twsrc%5Etfw">@cryptoaga_</a> Sweet prince gunha<br>♥️ <a href="https://twitter.com/reganz211?ref_src=twsrc%5Etfw">@reganz211</a> Reganz the king of sad song<br>♥️ <a href="https://twitter.com/Toadster69?ref_src=twsrc%5Etfw">@Toadster69</a> Leading the… <a href="https://t.co/Iqvhknf7nu">pic.twitter.com/Iqvhknf7nu</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1810521540456591582?ref_src=twsrc%5Etfw">July 9, 2024</a>
-                        </blockquote>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/Monadhub_xyz?ref_src=twsrc%5Etfw">@Monadhub_xyz</a> <a href="https://t.co/M0alDUgHaj">https://t.co/M0alDUgHaj</a> is a small project of mine and <a href="https://twitter.com/Audi_sneakers?ref_src=twsrc%5Etfw">@Audi_sneakers</a> . It is your ultimate destination for all information related to Monad, the advanced Layer 1 blockchain, and its diverse ecosystem. At MonadHub, you can explore in-depth articles, stay updated… <a href="https://t.co/7YHaIVcQBs">https://t.co/7YHaIVcQBs</a> <a href="https://t.co/Xy8OZDunhb">pic.twitter.com/Xy8OZDunhb</a></p>&mdash; ZhangLiu.eth (evm/acc) (@zhangliu_eth) <a href="https://twitter.com/zhangliu_eth/status/1812017002892181908?ref_src=twsrc%5Etfw">July 13, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
             </div>

@@ -329,7 +329,7 @@ get_header();
    }
 
 
-   .col-lg-9.col-md-9 {
+   .col-lg-9.col-md-12 {
       margin-left: 16.66667%;
       /* Space for fixed sidebar */
       padding-left: 20px;
@@ -496,7 +496,7 @@ get_header();
    }
 
    @media (max-width: 431px){
-      .col-lg-9.col-md-9{
+      .col-lg-9.col-md-12{
          margin: 0;
          padding: 0;
       }
@@ -545,6 +545,91 @@ get_header();
       }
      
    }
+
+   @media (max-width: 1025px) and (min-width: 431px){
+      .col-lg-9.col-md-12{
+         margin: 0;
+         padding: 0;
+      }
+      h1.text-3xl.font-bold.text-white{
+         font-size: 1.6rem;
+      }
+
+      .tab-links{
+         margin-left: 1.5rem;
+      }
+
+      .box-content-main{
+         margin:10px 0;
+      }
+
+      .box-content p{
+         font-size: 1rem;
+         margin: 0.5rem 0;
+      }
+
+      .image-home{
+         height: 200px !important;
+      }
+
+      .box-artist{
+         top: 160px;
+      }
+      .mt-5{
+         margin-top: 0.5rem !important;
+      }
+
+      h1.text-3xl.pl-3.font-bold.text-white.d-flex{
+         margin: 0;
+      }
+
+      .flex.justify-between.items-center.mb-4{
+         margin-top: 0.5rem;
+      }
+
+      section.learn{
+         padding-top: 0 !important;
+      }
+
+      .box-image-last:hover{
+         transform: none;
+      }
+      .d-none-sm{
+         display: none !important;
+      }
+
+      .col-lg-9.col-md-12.col-sm-12{
+         margin-top: 5rem;
+      }
+
+      .box-content h3{
+         font-size: 1.25rem;
+      }
+      .box-content span{
+         font-size: 1rem;
+      }
+
+
+
+      #result_ajaxp{
+         padding: 20px;
+      }
+
+      .result_ajaxp_type 
+      { 
+         padding: 20px;
+
+      }
+
+     
+   }
+
+   @media (min-width: 992px) and (max-width: 1025px){
+      .col-lg-9{
+         width: 100%;
+      }
+  
+}
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -621,7 +706,7 @@ get_header();
             </div>
 
          </div>
-         <div class="col-lg-9 col-md-9 col-12">
+         <div class="col-lg-9 col-md-12 col-sm-12">
             <div class="tab-content mt-5">
                <?php foreach ($categories as $category) {
                   $tab = $category->slug; ?>

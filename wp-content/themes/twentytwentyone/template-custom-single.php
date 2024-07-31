@@ -21,7 +21,7 @@ h2.name-title.ml-5 {
     width: 85%; /* Adjust as needed */
     margin-top: 5rem; /* Adjust as needed */
 }
-.col-lg-9.col-md-9 {
+.col-lg-9.col-md-12 {
     margin-left: 20%;
     padding-left: 15px;
 }
@@ -48,7 +48,7 @@ h2.name-title.ml-5 {
         width: 80%;
         margin-top: 7rem !important;
     }
-    .col-lg-9.col-md-9 {
+    .col-lg-9.col-md-12 {
         margin-left: 24.66667%;
         padding-left: 20px;
     }
@@ -77,7 +77,7 @@ h2.name-title.ml-5 {
         font-family  : 'seguisb.ttf';
 
     }
-    .col-lg-9.col-md-9 {
+    .col-lg-9.col-md-12 {
         margin-left: 28.66667%;
         padding-left: 20px;
     }
@@ -97,7 +97,7 @@ h2.name-title.ml-5 {
         width: 80%; /* Adjust as needed */
         margin-top: 6rem; /* Adjust as needed */
     }
-    .col-lg-9.col-md-9 {
+    .col-lg-9.col-md-12 {
         margin-left: 22%;
         padding-left: 18px;
     }
@@ -561,7 +561,7 @@ h2.name-title.ml-5 {
     font-family: 'Calibri';
 }
 @media (max-width: 431px){
-      .col-lg-9.col-md-9{
+      .col-lg-9.col-md-12{
          margin: 0;
          padding: 0;
       }
@@ -594,6 +594,78 @@ h2.name-title.ml-5 {
   
       
     }
+
+    @media (max-width: 1025px) and (min-width: 431px){
+      .col-lg-9.col-md-12{
+         margin:  0;
+         padding: 0;
+      }
+
+      .tab-content{
+        width: 100% !important;
+      }
+
+      .tab-content.mt-5{
+        margin-top: 5rem !important;
+      }
+
+      .container.box-last-{
+        margin-left: 0;
+        padding: 0;
+      }
+      h1.text-2xl.font-bold.text-white.text-foreground{
+        margin-bottom: 0;
+        margin-top: 1rem;
+        font-size: 28px;
+      }
+
+      .tab-content.mt-5 .container{
+        padding: 0 30px;
+      }
+      .box-image-last:hover{
+         transform: none;
+      }
+      
+      .d-none-sm{
+        display: none !important;
+      }
+  
+      .col-lg-6.col-md-6.col-12 {
+      padding: 0;
+      }
+
+      #result_ajaxp_last{
+        padding: 0 15px;
+      }
+      
+    }
+
+    .share-button {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #836EF9;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10002;
+}
+a.share-button:hover{
+    color: white;
+}
+
+.share-button i {
+    font-size: 24px;
+}
+
+
 </style>
 <section class="detail-post">
     <div class="container-fluid">
@@ -666,7 +738,7 @@ h2.name-title.ml-5 {
             </div>
 
          </div>
-            <div class="col-lg-9 col-md-9 ">
+            <div class="col-lg-9 col-md-12 ">
                 <div class="tab-content mt-5">
                     <?php
 
@@ -690,6 +762,9 @@ h2.name-title.ml-5 {
                                     <div class="mt-4 p-content text-lg text-white italic color-content"><?php the_content(); ?></div>
                                 </div>
                             </div>
+                            <a class="share-button" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>&text=<?php urlencode(the_title()) ?>">
+                            <i class="fa-solid fa-share"></i>
+                            </a>
                         </div>
                     <?php
                         wp_reset_postdata();
@@ -704,13 +779,14 @@ h2.name-title.ml-5 {
                                  <a href="<?php echo home_url(); ?>" class="d-mobile button-home">Go to Homepage</a>
                               </div>
                            </div>
+                          
                         </div>
                         <?php
                     }
                     ?>
-
                    
                 </div>
+                
             </div>
         </div>
         <div class="container box-last-">
