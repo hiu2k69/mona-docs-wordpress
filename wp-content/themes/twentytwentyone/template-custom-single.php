@@ -749,7 +749,8 @@ a.share-button:hover{
 
                     if ($post) {
                         setup_postdata($post);
-
+                        $desc = get_the_title();
+                        $desc .= "\n ". wp_trim_words(get_the_content(), 50);
                     ?>
 
                         <div class="container">
@@ -762,8 +763,8 @@ a.share-button:hover{
                                     <div class="mt-4 p-content text-lg text-white italic color-content"><?php the_content(); ?></div>
                                 </div>
                             </div>
-                            <a class="share-button" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>&text=<?php urlencode(the_title()) ?>">
-                            <i class="fa-solid fa-share"></i>
+                            <a class="share-button" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(esc_url(home_url('/detail/')) . $post_slug); ?>&text=<?php echo urlencode($desc) ?>">
+                                <i class="fa-solid fa-share"></i>
                             </a>
                         </div>
                     <?php
