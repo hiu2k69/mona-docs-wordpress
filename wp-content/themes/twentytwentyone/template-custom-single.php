@@ -742,8 +742,13 @@ a.share-button:hover{
 
                     if ($post) {
                         setup_postdata($post);
+                        $content = get_the_content(); 
+                        $content_without_shortcodes = strip_shortcodes($content);
+                        $clean_content = wp_strip_all_tags($content_without_shortcodes);
+                        $trimmed_content = wp_trim_words($clean_content, 20, '...');
                         $desc = get_the_title();
-                        $desc .= "\n ". wp_trim_words(get_the_content(), 20, '...');
+
+                        $desc .= "\n ". $trimmed_content;
                     ?>
 
                         <div class="container">
