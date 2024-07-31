@@ -112,14 +112,6 @@ get_header();
 
    }
 
-   h1.text-2xl.font-bold.text-foreground {
-      color: white !important;
-      font-family: 'Segoe UI';
-   }
-   h1.text-2xl.font-bold.text-white.text-foreground {
-      color: white !important;
-      font-family: 'Segoe UI';
-   }
 
    h2.name-title.ml-5.art {
       margin-left: 23px;
@@ -496,141 +488,151 @@ get_header();
       filter: sepia(1) hue-rotate(203deg) saturate(8) brightness(0.9);
    }
 
-   @media (max-width: 431px){
-      .col-lg-9.col-md-12{
+   @media (max-width: 431px) {
+      .col-lg-9.col-md-12 {
          margin: 0;
          padding: 0;
       }
-      h1.text-3xl.font-bold.text-white{
+
+      h1.text-3xl.font-bold.text-white {
          font-size: 1.6rem;
       }
 
-      .tab-links{
+      .tab-links {
          margin-left: 1.5rem;
       }
 
-      .box-content-main{
-         margin:10px 20px;
+      .box-content-main {
+         margin: 10px 20px;
       }
 
-      .box-content p{
+      .box-content p {
          font-size: 1rem;
          margin: 0.5rem 0;
       }
 
-      .image-home{
+      .image-home {
          height: 200px !important;
       }
 
-      .box-artist{
+      .box-artist {
          top: 160px;
       }
-      .mt-5{
+
+      .mt-5 {
          margin-top: 0.5rem !important;
       }
 
-      h1.text-3xl.pl-3.font-bold.text-white.d-flex{
+      h1.text-3xl.pl-3.font-bold.text-white.d-flex {
          margin: 0;
       }
 
-      .flex.justify-between.items-center.mb-4{
+      .flex.justify-between.items-center.mb-4 {
          margin-top: 0.5rem;
       }
 
-      section.learn{
+      section.learn {
          padding-top: 0 !important;
       }
 
-      .box-image-last:hover{
+      .box-image-last:hover {
          transform: none;
       }
-     
+
    }
 
-   @media (max-width: 1025px) and (min-width: 431px){
-      .col-lg-9.col-md-12{
+   @media (max-width: 1025px) and (min-width: 431px) {
+      .col-lg-9.col-md-12 {
          margin: 0;
          padding: 0;
       }
-      h1.text-3xl.font-bold.text-white{
+
+      h1.text-3xl.font-bold.text-white {
          font-size: 1.6rem;
       }
 
-      .tab-links{
+      .tab-links {
          margin-left: 1.5rem;
       }
 
-      .box-content-main{
-         margin:10px 0;
+      .box-content-main {
+         margin: 10px 0;
       }
 
-      .box-content p{
+      .box-content p {
          font-size: 1rem;
          margin: 0.5rem 0;
       }
 
-      .image-home{
+      .image-home {
          height: 200px !important;
       }
 
-      .box-artist{
+      .box-artist {
          top: 160px;
       }
-      .mt-5{
+
+      .mt-5 {
          margin-top: 0.5rem !important;
       }
 
-      h1.text-3xl.pl-3.font-bold.text-white.d-flex{
+      h1.text-3xl.pl-3.font-bold.text-white.d-flex {
          margin: 0;
       }
 
-      .flex.justify-between.items-center.mb-4{
+      .flex.justify-between.items-center.mb-4 {
          margin-top: 0.5rem;
       }
 
-      section.learn{
+      section.learn {
          padding-top: 0 !important;
       }
 
-      .box-image-last:hover{
+      .box-image-last:hover {
          transform: none;
       }
-      .d-none-sm{
+
+      .d-none-sm {
          display: none !important;
       }
 
-      .col-lg-9.col-md-12.col-sm-12{
+      .col-lg-9.col-md-12.col-sm-12 {
          margin-top: 5rem;
       }
 
-      .box-content h3{
+      .box-content h3 {
          font-size: 1.25rem;
       }
-      .box-content span{
+
+      .box-content span {
          font-size: 1rem;
       }
 
 
 
-      #result_ajaxp{
+      #result_ajaxp {
          padding: 20px;
       }
 
-      .result_ajaxp_type 
-      { 
+      .result_ajaxp_type {
          padding: 20px;
 
       }
 
-     
+
    }
 
-   @media (min-width: 992px) and (max-width: 1025px){
-      .col-lg-9{
+   .col-lg-3.col-md-4.col-6{
+
+      padding: 0;
+   }
+
+   @media (min-width: 992px) and (max-width: 1025px) {
+      .col-lg-9 {
          width: 100%;
       }
-  
-}
+
+   }
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -642,12 +644,86 @@ get_header();
          <div class="col-lg-2 col-md-3 d-none-sm relative  bg-090909">
             <div class="tab-container ">
                <?php
-               $current_page_url = get_permalink();
-               $current_page_path = str_replace(
-                  "/",
-                  "",
-                  parse_url($current_page_url, PHP_URL_PATH)
-               );
+
+               $coreteam = [
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_keone.png",
+                     'link' => "https://x.com/keoneHD"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_james.png",
+                     'link' => "https://x.com/_jhunsaker"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_eunice.png",
+                     'link' => "https://x.com/0x_eunice"
+                  ],
+               ];
+
+               $communityteam = [
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_billmonday.png",
+                     'link' => " https://x.com/billmondays"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_sailornini.png",
+                     'link' => "https://x.com/sailorninis"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/community-team-card.png",
+                     'link' => "https://x.com/opendanny"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_benads.png",
+                     'link' => "https://x.com/be_kindplss"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_mike.png",
+                     'link' => "https://x.com/mikeinweb"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_kingloui.png",
+                     'link' => "https://x.com/KinglouiEth"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_cryptunez.png",
+                     'link' => "https://x.com/cryptunez"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_gizmo.png",
+                     'link' => "https://x.com/gizmoatmidnight"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_port.png",
+                     'link' => "https://x.com/port_dev"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_sungmo.png",
+                     'link' => "https://x.com/sungmo_nad"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_unahh.png",
+                     'link' => "https://x.com/0xunahh"
+                  ],
+
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_chris.png",
+                     'link' => "https://x.com/christiadarma"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_fin.png",
+                     'link' => "https://x.com/thisisfin_"
+                  ],
+                  [
+                     'img' => get_template_directory_uri() . "/assets/images/card_john.png",
+                     'link' => "https://x.com/johnwrichkid"
+                  ],
+                 
+               ];
+
+               $request_uri = $_SERVER['REQUEST_URI'];
+               $parsed_url = parse_url($request_uri);
+               $pathname = str_replace("/", "", $parsed_url['path']);
                $categories = get_terms([
                   "taxonomy" => "category",
                   "hide_empty" => false,
@@ -658,7 +734,7 @@ get_header();
                   $image_url = z_taxonomy_image_url($category->term_id);
                   $cate = get_term_by("id", $category->term_id, "category");
                   $count_post = $cate->count;
-                  $active = $category->slug == $current_page_path ? "active" : "";
+                  $active = $category->slug == $pathname ? "active" : "";
                   $data_target = esc_attr($category->slug);
 
                   if ($image_url) {
@@ -719,8 +795,11 @@ get_header();
                      ];
 
                      $posts = get_posts($args);
+                     
+                     $teamMembers = $tab == "team-members" ? "d-none" : "";
+
                      if (count($posts) >= 1) { ?>
-                        <div class="container ">
+                        <div class="container <?php echo $teamMembers;  ?> ">
                            <div class="flex justify-between items-center mb-4">
                               <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
                               <div class="relative d-none-sm">
@@ -777,10 +856,10 @@ get_header();
                                        echo '<div id="tab-' . esc_attr($slug) . '" class="tab-post' . ($first ? " active" : "") . '">';
                                        $first = false;
 
-                                     
+
                                        echo do_shortcode('[ajax_pagination_type post_type="post" type="' . esc_attr($slug) . '" cat="' . esc_attr($category->term_id) . '" posts_per_page="6" paged="1"]');
 
-                                       echo '</div>'; 
+                                       echo '</div>';
                                     }
                                     ?>
                                  </div>
@@ -793,7 +872,7 @@ get_header();
                         </div>
                      <?php } else {
                      ?>
-                        <div class="container">
+                        <div class="container <?php echo $teamMembers;  ?>">
                            <div class="flex justify-between items-center  mb-4">
                               <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> <?php echo $category->name; ?></h1>
                               <div class="relative d-none-sm">
@@ -815,6 +894,57 @@ get_header();
                      <?php
                      }
                      ?>
+                      <div class="container <?php echo ($tab == "team-members" ? "" : "d-none")  ?>">
+                        <div class="flex justify-between items-center mb-4">
+                           <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
+                           <div class="relative d-none-sm">
+                              <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                                 <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                              </span>
+                              <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                           </div>
+                        </div>
+                        <div class="tabs ">
+                           <ul class="tab-links">
+                              <li class="active">
+                                 <a href="#tab-core-team">Core team</a>
+                              </li>
+                              <li class="">
+                                 <a href="#tab-community-team">Community team</a>
+                              </li>
+                           </ul>
+                           <div class="tab-content">
+                              <div id="tab-core-team" class="tab-post active">
+                              <div class="row pb-paginate px-4">
+                                    <?php for($i =0; $i < count($coreteam); $i++){
+                                    ?>
+                                          <div class="col-lg-3 col-md-4 col-6">
+                                          <a href="<?php echo $coreteam[$i]['link'] ?>" target="_blank">
+                                                <img src="<?php echo $coreteam[$i]['img'] ?>" class="img-team" alt="">
+                                                </a>
+                                          </div>
+                                          
+                                    <?php } ?>
+                                    </div>
+                                 </div>
+                                 <div id="tab-community-team" class="tab-post">
+                              <div class="row pb-paginate px-4">
+                                    <?php for($i =0; $i < count($communityteam); $i++){
+                                    ?>
+                                          <div class="col-lg-3 col-md-4 col-6">
+                                          <a href="<?php echo $communityteam[$i]['link'] ?>" target="_blank">
+                                                <img src="<?php echo $communityteam[$i]['img'] ?>" class="img-team" alt="">
+                                                </a>
+                                          </div>
+                                          
+                                    <?php } ?>
+                                    </div>
+                                 </div>
+                              </div>
+                        </div>
+
+                     </div>
+
                   </div>
 
                <?php
@@ -830,14 +960,6 @@ get_header();
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-XX+q43XXb5v2nYp12xNX+PGerfIy/4mU5AXf1F8gH15i0LY0+eERn3nifds5xP/7" crossorigin="anonymous">
 <script>
    $(document).ready(function() {
-      $(".tab").click(function() {
-         var targetId = $(this).data("target");
-         $(".tab").removeClass("active");
-         $(this).addClass("active");
-
-         $(".tab-pane").removeClass("active");
-         $("#" + targetId).addClass("active");
-      });
 
       $('#search-input').on('focus', function() {
          $('#search-label').addClass('hidden');
