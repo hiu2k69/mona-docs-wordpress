@@ -112,6 +112,10 @@ get_header();
 
    }
 
+   h1.text-2xl.font-bold.text-foreground {
+      color: white !important;
+      font-family: 'Segoe UI';
+   }
    h1.text-2xl.font-bold.text-white.text-foreground {
       color: white !important;
       font-family: 'Segoe UI';
@@ -239,9 +243,6 @@ get_header();
       padding: 6px 54px;
    }
 
-   h2.home-title {
-      margin-bottom: -11px;
-   }
 
    .home-title {
       overflow: hidden;

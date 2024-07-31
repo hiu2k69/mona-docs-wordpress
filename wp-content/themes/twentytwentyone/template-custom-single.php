@@ -167,16 +167,6 @@ h2.name-title.ml-5 {
         height: auto !important;
     }
 
-    .box-last {
-        display: flex;
-        background-color: #2a2a2a;
-        border-radius: 10px;
-        overflow: hidden;
-        color: white;
-        font-family: Arial, sans-serif;
-        margin: 10px;
-
-    }
 
     .box-last {
         transition: box-shadow 0.3s;
@@ -578,7 +568,7 @@ h2.name-title.ml-5 {
         margin-left: 0;
         padding: 0;
       }
-      h1.text-2xl.font-bold.text-white.text-foreground{
+      h1.text-2xl.font-bold.text-foreground{
         margin-bottom: 0;
         margin-top: 1rem;
         font-size: 28px;
@@ -613,7 +603,7 @@ h2.name-title.ml-5 {
         margin-left: 0;
         padding: 0;
       }
-      h1.text-2xl.font-bold.text-white.text-foreground{
+      h1.text-2xl.font-bold.text-foreground{
         margin-bottom: 0;
         margin-top: 1rem;
         font-size: 28px;
@@ -665,6 +655,9 @@ a.share-button:hover{
     font-size: 24px;
 }
 
+.detail-title{
+    color: #FFFFFF !important;
+}
 
 </style>
 <section class="detail-post">
@@ -758,7 +751,7 @@ a.share-button:hover{
                                 <div class=" pb-5 color-content">
                                     <!-- <img src="<?php echo get_the_post_thumbnail_url($post_id) ?>" alt="" class="banner img-fluid mb-5"> -->
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h1 class="text-2xl font-bold text-white text-foreground title"><?php the_title(); ?></h1>
+                                        <h1 class="text-2xl font-bold text-foreground title "><?php the_title(); ?></h1>
                                     </div>
                                     <div class="mt-4 p-content text-lg text-white italic color-content"><?php the_content(); ?></div>
                                 </div>
