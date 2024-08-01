@@ -1074,37 +1074,39 @@ get_header();
                                        6. Do not outline the logo
                                     </div>
                                     <div class="text-2xl font-bold pt-2">Brand colors</div>
-                                    <div class="row d-flex justify-content-center align-items-center gap-3">
-                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                    <div class="container">
+                                    <div class="row ">
+                                       <div class="col-lg-2 col-md-4  col-6 d-flex flex-column  align-items-center">
                                           <div class="div-block-13" style="background-color: #836EF9;"></div>
-                                          <div class="text-sm"> MONAD PURPLE</div>
-                                          <div class="text-sm"> #836EF9</div>
+                                          <div class="text-sm uppercase"> MONAD PURPLE</div>
+                                          <div class="text-sm uppercase"> #836EF9</div>
                                        </div>
-                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                       <div class="col-lg-2 col-md-4  col-6 d-flex flex-column  align-items-center">
                                           <div class="div-block-13" style="background-color: #200052;"></div>
-                                          <div class="text-sm"> MONAD BLUE</div>
-                                          <div class="text-sm"> #200052</div>
+                                          <div class="text-sm uppercase"> MONAD BLUE</div>
+                                          <div class="text-sm uppercase"> #200052</div>
                                        </div>
-                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                       <div class="col-lg-2 col-md-4  col-6 d-flex flex-column align-items-center">
                                           <div class="div-block-13" style="background-color: #5feddf;"></div>
-                                          <div class="text-sm"> Electric Ice</div>
-                                          <div class="text-sm"> #5feddf</div>
+                                          <div class="text-sm uppercase"> ELECTRIC ICE</div>
+                                          <div class="text-sm uppercase"> #5feddf</div>
                                        </div>
-                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                       <div class="col-lg-2 col-md-4  col-6 d-flex flex-column  align-items-center">
                                           <div class="div-block-13" style="background-color: #a0055d;"></div>
-                                          <div class="text-sm"> BERRY</div>
-                                          <div class="text-sm"> #a0055d</div>
+                                          <div class="text-sm uppercase"> BERRY</div>
+                                          <div class="text-sm uppercase"> #a0055d</div>
                                        </div>
-                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                       <div class="col-lg-2 col-md-4 col-6 d-flex flex-column justify-content-center align-items-center">
                                           <div class="div-block-13" style="background-color: #61004f;"></div>
-                                          <div class="text-sm"> WINE</div>
-                                          <div class="text-sm"> #61004f</div>
+                                          <div class="text-sm uppercase"> WINE</div>
+                                          <div class="text-sm uppercase"> #61004f</div>
                                        </div>
-                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                       <div class="col-lg-2 col-md-4  col-6 d-flex flex-column justify-content-center align-items-center">
                                           <div class="div-block-13" style="background-color: #f7ede8;"></div>
-                                          <div class="text-sm"> White Rabbit</div>
-                                          <div class="text-sm"> #f7ede8</div>
+                                          <div class="text-sm uppercase"> WHITE RABBIT</div>
+                                          <div class="text-sm uppercase"> #f7ede8</div>
                                        </div>
+                                    </div>
                                     </div>
 
                                     <div class="w-layout-blockcontainer container add-margin ">

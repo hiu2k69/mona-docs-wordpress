@@ -408,7 +408,7 @@ get_header();
             <a href="<?php echo home_url(); ?>" >
                     <img src="<?php echo get_template_directory_uri().'/assets/images/favicon.png' ?>" alt="Logo"class="favicon">
                 </a>
-                <h2 class="title-last-post text-white text-center text-bold">
+                <h2 class="title-last-post text-white text-center fw-bold">
                  Last post 
             </h2>
             </div>
@@ -419,7 +419,7 @@ get_header();
     </section>
     <section class="last-post">
         <div class="container">
-            <h2 class="title-last-post text-white text-center pd-tweet text-bold">
+            <h2 class="title-last-post text-white text-center pd-tweet fw-bold">
                 Monad hub Tweet
             </h2>
             <div class="row ">
