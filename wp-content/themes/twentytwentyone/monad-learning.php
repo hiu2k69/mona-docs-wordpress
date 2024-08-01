@@ -622,7 +622,7 @@ get_header();
 
    }
 
-   .col-lg-3.col-md-4.col-6{
+   .col-lg-3.col-md-4.col-6 {
 
       padding: 0;
    }
@@ -632,6 +632,103 @@ get_header();
          width: 100%;
       }
 
+   }
+
+   .div-block-13 {
+      text-align: center;
+      border: 1px solid #000;
+      border-radius: 7px;
+      justify-content: flex-start;
+      width: auto;
+      min-width: 100px;
+      height: 100%;
+      min-height: 60px;
+      margin: 10px 10px;
+      padding: 10px 60px;
+      display: block;
+   }
+
+   .container.add-margin {
+      margin-top: 20px;
+      margin-bottom: 20px;
+   }
+
+
+   .w-layout-blockcontainer {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+   }
+
+   .h3-purple-light.no-margin {
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+
+   .h3-purple-light {
+      color: #FFFFFF;
+      font-weight: bold;
+   }
+
+   .h2-eyebrow-purple {
+      color: #FFFFFF;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 110%;
+   }
+
+   .collection-list-2 {
+      margin-top: 20px;
+   }
+
+   .collection-item {
+      text-align: left;
+      margin-bottom: 40px;
+   }
+
+   .image-7 {
+      max-height: 150px;
+      padding: 20px 40px;
+   }
+
+   .div-block-12 {
+      text-align: center;
+   }
+
+   a:active,
+   a:hover {
+      outline: 0;
+   }
+
+   .link-block-2 {
+      border: 1.5px solid white;
+      background-color: rgba(61, 36, 135, .57);
+      border-radius: 7px;
+     margin: 5px;
+      padding-left: 40px;
+      padding-right: 40px;
+      text-decoration: none;
+   }
+
+   .w-inline-block {
+      max-width: 100%;
+      display: inline-block;
+   }
+
+   .asset-dl-text {
+      color: #836EF9;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 15px;
+   }
+
+   .div-block-13 img {
+
+      vertical-align: middle;
+      max-width: 100%;
+      display: inline-block;
    }
 </style>
 
@@ -718,7 +815,7 @@ get_header();
                      'img' => get_template_directory_uri() . "/assets/images/card_john.png",
                      'link' => "https://x.com/johnwrichkid"
                   ],
-                 
+
                ];
 
                $request_uri = $_SERVER['REQUEST_URI'];
@@ -795,8 +892,8 @@ get_header();
                      ];
 
                      $posts = get_posts($args);
-                     
-                     $teamMembers = $tab == "team-members" ? "d-none" : "";
+
+                     $teamMembers = (($tab == "team-members") || ($tab == "monad-media-kit")) ? "d-none" : "";
 
                      if (count($posts) >= 1) { ?>
                         <div class="container <?php echo $teamMembers;  ?> ">
@@ -894,7 +991,7 @@ get_header();
                      <?php
                      }
                      ?>
-                      <div class="container <?php echo ($tab == "team-members" ? "" : "d-none")  ?>">
+                     <div class="container <?php echo ($tab == "team-members" ? "" : "d-none")  ?>">
                         <div class="flex justify-between items-center mb-4">
                            <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
                            <div class="relative d-none-sm">
@@ -915,36 +1012,232 @@ get_header();
                            </ul>
                            <div class="tab-content">
                               <div id="tab-core-team" class="tab-post active">
-                              <div class="row pb-paginate px-4">
-                                    <?php for($i =0; $i < count($coreteam); $i++){
+                                 <div class="row pb-paginate px-4">
+                                    <?php for ($i = 0; $i < count($coreteam); $i++) {
                                     ?>
-                                          <div class="col-lg-3 col-md-4 col-6">
+                                       <div class="col-lg-3 col-md-4 col-6">
                                           <a href="<?php echo $coreteam[$i]['link'] ?>" target="_blank">
-                                                <img src="<?php echo $coreteam[$i]['img'] ?>" class="img-team" alt="">
-                                                </a>
-                                          </div>
-                                          
+                                             <img src="<?php echo $coreteam[$i]['img'] ?>" class="img-team" alt="">
+                                          </a>
+                                       </div>
+
                                     <?php } ?>
-                                    </div>
-                                 </div>
-                                 <div id="tab-community-team" class="tab-post">
-                              <div class="row pb-paginate px-4">
-                                    <?php for($i =0; $i < count($communityteam); $i++){
-                                    ?>
-                                          <div class="col-lg-3 col-md-4 col-6">
-                                          <a href="<?php echo $communityteam[$i]['link'] ?>" target="_blank">
-                                                <img src="<?php echo $communityteam[$i]['img'] ?>" class="img-team" alt="">
-                                                </a>
-                                          </div>
-                                          
-                                    <?php } ?>
-                                    </div>
                                  </div>
                               </div>
+                              <div id="tab-community-team" class="tab-post">
+                                 <div class="row pb-paginate px-4">
+                                    <?php for ($i = 0; $i < count($communityteam); $i++) {
+                                    ?>
+                                       <div class="col-lg-3 col-md-4 col-6">
+                                          <a href="<?php echo $communityteam[$i]['link'] ?>" target="_blank">
+                                             <img src="<?php echo $communityteam[$i]['img'] ?>" class="img-team" alt="">
+                                          </a>
+                                       </div>
+
+                                    <?php } ?>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
 
                      </div>
+                     <div class="container <?php echo ($tab == "monad-media-kit" ? "" : "d-none")  ?>">
+                        <div class="flex justify-between items-center mb-4">
+                           <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
+                           <div class="relative d-none-sm">
+                              <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                                 <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                              </span>
+                              <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                           </div>
+                        </div>
+                        <div class="container">
+                           <div class="row">
+                              <div class=" pb-5 color-content">
+                                 <div class=" p-content text-lg text-white  color-content">
+                                    <div class="text-2xl font-bold">Logo Guidelines</div>
+                                    <div class="pt-2">To ensure the logo remains clear and legible in all uses, there is to be clear space surrounding the logo that should be kept free of text and other elements. This area is to be equivalent to the full height and width of the logomark. Always use more where possible.</div>
+                                    <p class="pt-2">To maintain consistency in the logo usage, do not do any of the following with the logo:</p>
+                                    <div class="pt-2">
+                                       1. Do not stretch, rotate, or distort the logo<br>
+                                       2. Do not use unapproved colors<br>
+                                       3. Do not decrease the opacity of the logo<br>
+                                       4. Do not disassemble logo<br>
+                                       5. Do not use text or image effects<br>
+                                       6. Do not outline the logo
+                                    </div>
+                                    <div class="text-2xl font-bold pt-2">Brand colors</div>
+                                    <div class="row d-flex justify-content-center align-items-center gap-3">
+                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                          <div class="div-block-13" style="background-color: #836EF9;"></div>
+                                          <div class="text-sm"> MONAD PURPLE</div>
+                                          <div class="text-sm"> #836EF9</div>
+                                       </div>
+                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                          <div class="div-block-13" style="background-color: #200052;"></div>
+                                          <div class="text-sm"> MONAD BLUE</div>
+                                          <div class="text-sm"> #200052</div>
+                                       </div>
+                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                          <div class="div-block-13" style="background-color: #5feddf;"></div>
+                                          <div class="text-sm"> Electric Ice</div>
+                                          <div class="text-sm"> #5feddf</div>
+                                       </div>
+                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                          <div class="div-block-13" style="background-color: #a0055d;"></div>
+                                          <div class="text-sm"> BERRY</div>
+                                          <div class="text-sm"> #a0055d</div>
+                                       </div>
+                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                          <div class="div-block-13" style="background-color: #61004f;"></div>
+                                          <div class="text-sm"> WINE</div>
+                                          <div class="text-sm"> #61004f</div>
+                                       </div>
+                                       <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column justify-content-center align-items-center">
+                                          <div class="div-block-13" style="background-color: #f7ede8;"></div>
+                                          <div class="text-sm"> White Rabbit</div>
+                                          <div class="text-sm"> #f7ede8</div>
+                                       </div>
+                                    </div>
 
+                                    <div class="w-layout-blockcontainer container add-margin ">
+                                       <div class="h3-purple-light no-margin text-2xl">Primary Logo </div>
+                                       <div class="h2-eyebrow-purple no-hover ">HORIZONTAL</div>
+                                       <div class="collection-list-wrapper-2 w-dyn-list">
+                                          <div role="list" class="collection-list-2 w-dyn-items row">
+                                             <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529500570063c3be7b85987_monad-horizontal-logo-black-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/65294f94eb4436f38e597942_monad-horizontal-logo-black-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529500570063c3be7b85987_monad-horizontal-logo-black-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                             <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529bca3516fb5b0227b6dcb_monad-horizontal-logo-white-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bca71c34481e820aa1ed_monad-horizontal-logo-white-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bca3516fb5b0227b6dcb_monad-horizontal-logo-white-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                             <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529bcd9516fb5b0227b9cd0_monad-horizontal-logo-full-color-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bcddd18b14276225e974_monad-horizontal-logo-full-color-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bcd9516fb5b0227b9cd0_monad-horizontal-logo-full-color-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                             <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529bd4f4611e9ca1e59b7ef_monad-horizontal-logo-inverted-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bd52022a253f20ea9574_monad-horizontal-logo-inverted-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bd4f4611e9ca1e59b7ef_monad-horizontal-logo-inverted-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="w-layout-blockcontainer container add-margin ">
+                                       <div class="h3-purple-light no-margin text-2xl">Primary Logo </div>
+                                       <div class="h2-eyebrow-purple no-hover ">STACKED</div>
+                                       <div class="w-dyn-list">
+                                          <div role="list" class="collection-list-2 w-dyn-items row">
+                                             <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c82e675e9e3c34a4e4a8_monad-stacked-logo-black-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c831e4e95fb82fa0e08a_monad-stacked-logo-black-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c82e675e9e3c34a4e4a8_monad-stacked-logo-black-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                             <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c860e3e8f97337c1d7ed_monad-stacked-logo-white-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c863b05ba5609da4ba79_monad-stacked-logo-white-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c860e3e8f97337c1d7ed_monad-stacked-logo-white-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                             <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c8a0372f70ad0416a37c_monad-stacked-logo-full-color-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c8b479cbf4ed0751ccd7_monad-stacked-logo-full-color-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c8a0372f70ad0416a37c_monad-stacked-logo-full-color-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                             <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c9a9e4e95fb82fa271b0_monad-stacked-logo-inverted-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c9ab022a253f20f7e483_monad-stacked-logo-inverted-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c9a9e4e95fb82fa271b0_monad-stacked-logo-inverted-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="w-layout-blockcontainer container ">
+                                       <div class="h3-purple-light no-margin text-2xl">Logomark</div>
+                                       <div class="collection-list-wrapper w-dyn-list">
+                                          <div role="list" class="collection-list-2 w-dyn-items row">
+                                             <div role="listitem" class="collection-item w-dyn-item col-lg-4 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c7409cc925522834f61b_monad-logo-mark-white-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c74287d36e6c66d28753_monad-logo-mark-white-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c7409cc925522834f61b_monad-logo-mark-white-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                             <div role="listitem" class="collection-item w-dyn-item  col-lg-4 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c64279cbf4ed074f0c55_monad-logo-mark-black-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c645a2320208246ef786_monad-logo-mark-black-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c64279cbf4ed074f0c55_monad-logo-mark-black-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                             <div role="listitem" class="collection-item w-dyn-item  col-lg-4 col-md-6 col-12">
+                                                <div class="div-block-11">
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c5fdb05ba5609da216c9_monad-logo-mark-full-color-rgb.svg" class="image-7"></div>
+                                                   <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c601763ab4f5236a0a27_monad-logo-mark-full-color-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">PNG</h2>
+                                                      </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c5fdb05ba5609da216c9_monad-logo-mark-full-color-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
+                                                         <h2 class="asset-dl-text">SVG</h2>
+                                                      </a></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
 
                <?php
