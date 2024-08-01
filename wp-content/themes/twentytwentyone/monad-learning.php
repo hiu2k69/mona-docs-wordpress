@@ -112,6 +112,13 @@ get_header();
 
    }
 
+   .img-team {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .img-team:hover  {
+        transform: scale(1.1); 
+    }
 
    h2.name-title.ml-5.art {
       margin-left: 23px;
