@@ -382,7 +382,7 @@ get_header();
       font-weight: 600;
       color: #949494;
       transition: all linear 0.15s;
-      border-bottom: 3px solid #836EF9;
+      /* border-bottom: 3px solid #836EF9; */
       font-weight: bold;
    }
 
@@ -408,6 +408,7 @@ get_header();
 
    .tab-links li.active a {
       color: #836EF9;
+      border-bottom: 3px solid #836EF9;
    }
 
    .box-content-main {
@@ -455,7 +456,7 @@ get_header();
    }
 
    .box-content {
-      padding: 1rem;
+      padding: 1rem 1rem 1.25rem 1rem;
       height: 140px;
    }
 
@@ -474,7 +475,7 @@ get_header();
    }
 
    .box-content p {
-      margin: 0.2rem 0 1rem 0;
+      margin: 0.5rem 0;
       font-size: 0.9rem;
       color: #949494;
       text-align: left;
@@ -1116,7 +1117,7 @@ get_header();
                                           <div role="list" class="collection-list-2 w-dyn-items row">
                                              <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529500570063c3be7b85987_monad-horizontal-logo-black-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529500570063c3be7b85987_monad-horizontal-logo-black-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/65294f94eb4436f38e597942_monad-horizontal-logo-black-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529500570063c3be7b85987_monad-horizontal-logo-black-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
@@ -1126,7 +1127,7 @@ get_header();
                                              </div>
                                              <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529bca3516fb5b0227b6dcb_monad-horizontal-logo-white-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529bca3516fb5b0227b6dcb_monad-horizontal-logo-white-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bca71c34481e820aa1ed_monad-horizontal-logo-white-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bca3516fb5b0227b6dcb_monad-horizontal-logo-white-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
@@ -1136,7 +1137,7 @@ get_header();
                                              </div>
                                              <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529bcd9516fb5b0227b9cd0_monad-horizontal-logo-full-color-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529bcd9516fb5b0227b9cd0_monad-horizontal-logo-full-color-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bcddd18b14276225e974_monad-horizontal-logo-full-color-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bcd9516fb5b0227b9cd0_monad-horizontal-logo-full-color-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
@@ -1146,7 +1147,7 @@ get_header();
                                              </div>
                                              <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529bd4f4611e9ca1e59b7ef_monad-horizontal-logo-inverted-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529bd4f4611e9ca1e59b7ef_monad-horizontal-logo-inverted-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bd52022a253f20ea9574_monad-horizontal-logo-inverted-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529bd4f4611e9ca1e59b7ef_monad-horizontal-logo-inverted-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
@@ -1164,7 +1165,7 @@ get_header();
                                           <div role="list" class="collection-list-2 w-dyn-items row">
                                              <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c82e675e9e3c34a4e4a8_monad-stacked-logo-black-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c82e675e9e3c34a4e4a8_monad-stacked-logo-black-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c831e4e95fb82fa0e08a_monad-stacked-logo-black-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c82e675e9e3c34a4e4a8_monad-stacked-logo-black-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
@@ -1174,7 +1175,7 @@ get_header();
                                              </div>
                                              <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c860e3e8f97337c1d7ed_monad-stacked-logo-white-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c860e3e8f97337c1d7ed_monad-stacked-logo-white-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c863b05ba5609da4ba79_monad-stacked-logo-white-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c860e3e8f97337c1d7ed_monad-stacked-logo-white-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
@@ -1184,7 +1185,7 @@ get_header();
                                              </div>
                                              <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c8a0372f70ad0416a37c_monad-stacked-logo-full-color-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c8a0372f70ad0416a37c_monad-stacked-logo-full-color-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c8b479cbf4ed0751ccd7_monad-stacked-logo-full-color-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c8a0372f70ad0416a37c_monad-stacked-logo-full-color-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
@@ -1194,7 +1195,7 @@ get_header();
                                              </div>
                                              <div role="listitem" class="collection-item w-dyn-item col-lg-6 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c9a9e4e95fb82fa271b0_monad-stacked-logo-inverted-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c9a9e4e95fb82fa271b0_monad-stacked-logo-inverted-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c9ab022a253f20f7e483_monad-stacked-logo-inverted-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c9a9e4e95fb82fa271b0_monad-stacked-logo-inverted-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
@@ -1211,7 +1212,7 @@ get_header();
                                           <div role="list" class="collection-list-2 w-dyn-items row">
                                              <div role="listitem" class="collection-item w-dyn-item col-lg-4 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c7409cc925522834f61b_monad-logo-mark-white-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c7409cc925522834f61b_monad-logo-mark-white-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c74287d36e6c66d28753_monad-logo-mark-white-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c7409cc925522834f61b_monad-logo-mark-white-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
@@ -1221,7 +1222,7 @@ get_header();
                                              </div>
                                              <div role="listitem" class="collection-item w-dyn-item  col-lg-4 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c64279cbf4ed074f0c55_monad-logo-mark-black-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#f7ede8" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c64279cbf4ed074f0c55_monad-logo-mark-black-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c645a2320208246ef786_monad-logo-mark-black-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c64279cbf4ed074f0c55_monad-logo-mark-black-rgb.svg" target="_blank" class="link-block-2 w-inline-block">
@@ -1231,7 +1232,7 @@ get_header();
                                              </div>
                                              <div role="listitem" class="collection-item w-dyn-item  col-lg-4 col-md-6 col-12">
                                                 <div class="div-block-11">
-                                                   <div style="background-color:#200052" class="div-block-13"><img alt="" loading="lazy" src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c5fdb05ba5609da216c9_monad-logo-mark-full-color-rgb.svg" class="image-7"></div>
+                                                   <div style="background-color:#200052" class="div-block-13"><img alt=""  src="https://assets-global.website-files.com/64c26cc84790d118b80c38c9/6529c5fdb05ba5609da216c9_monad-logo-mark-full-color-rgb.svg" class="image-7"></div>
                                                    <div class="div-block-12"><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c601763ab4f5236a0a27_monad-logo-mark-full-color-rgb-1080px-w-300ppi.png" target="_blank" class="link-block-2 w-inline-block">
                                                          <h2 class="asset-dl-text">PNG</h2>
                                                       </a><a href="https://cdn.prod.website-files.com/64c26cc84790d118b80c38c9/6529c5fdb05ba5609da216c9_monad-logo-mark-full-color-rgb.svg" target="_blank" class="link-block-2 w-inline-block">

@@ -26,7 +26,7 @@ ul.pagination li.active {
 }
 @font-face {
   font-family: 'Calibri';
-  src: local("SourceCodePro"), url('../twentytwentyone/assets/font/calibri.ttf') format("truetype")
+  src: local("SourceCodePro"), url('../assets/font/calibri.ttf') format("truetype")
 }
 div#result_ajaxp {
   position: relative;

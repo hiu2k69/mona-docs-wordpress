@@ -56,11 +56,11 @@ function query_ajax_pagination($post_type = 'post', $cat = 19, $posts_per_page =
             $allpost .= '<div class="box-content-t1 ">';
             $allpost .= '<h2 class="home-title">'. get_the_title().'</h2>';
             $allpost .= ' <p class="ml-2 home-content">' . $trimmed_content . '</p>';
-            $allpost .= '  <span class="text-secondary-foreground flex items-center d-none-time">';
-            $allpost .= '<img src="' . get_template_directory_uri() . '/assets/images/Writer.svg" alt="Image Description" class="">&nbsp; Last update ' . esc_html(get_the_date()) . ' &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1">' . (!empty($artist) ? $artist : get_the_author()) . '</span></span>';
+            $allpost .= '  <span class="text-secondary-foreground flex align-items-center d-none-time">';
+            $allpost .= '<i class="fa-solid fa-user-pen"></i>&nbsp; Last update ' . esc_html(get_the_date()) . ' &nbsp; <span class="text"> <span class="by-t">by</span>&nbsp; <span class="text-primary ml-1">' . (!empty($artist) ? $artist : get_the_author()) . '</span></span>';
             $allpost .= '   </span>';
-            $allpost .= '  <span class="text-secondary-foreground flex items-center d-mobile">';
-            $allpost .= '<img src="' . get_template_directory_uri() . '/assets/images/Writer.svg" alt="Image Description" class=""> &nbsp; ' . esc_html(get_the_date()) . ' &nbsp; <span class="text"><span class="by-t">-</span>&nbsp; &nbsp; <span class="text-primary ml-1">' . (!empty($artist) ? $artist : get_the_author()) . '</span></span>';
+            $allpost .= '  <span class="text-secondary-foreground flex align-items-center d-mobile">';
+            $allpost .= '<i class="fa-solid fa-user-pen"></i> &nbsp; ' . esc_html(get_the_date()) . ' &nbsp; <span class="text"><span class="by-t">-</span>&nbsp; &nbsp; <span class="text-primary ml-1">' . (!empty($artist) ? $artist : get_the_author()) . '</span></span>';
             $allpost .= '   </span>';
             $allpost .= '</div>';
             $allpost .= '</div>';
