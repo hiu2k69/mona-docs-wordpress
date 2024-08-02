@@ -376,7 +376,7 @@ get_header();
                     [   
                         "name" => "Hagen", 
                         "url" => "https://x.com/Hagen_web3",
-                        "img" => "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_Community-culture.png",
+                        "img" => "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_monadlearn.png",
                     ],
                     [
                         "name" => "auroraxbt x empressitta", 
