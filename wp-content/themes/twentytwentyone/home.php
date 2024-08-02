@@ -372,17 +372,70 @@ get_header();
                     "orderby" => "term_id",
                     "order" => "ASC",
                  ]);
-                $artists = [["name" => "Hagen", "url" => "https://x.com/hagen_eth"], ["name" => "monadocs", "url" => "https://x.com/monadocs_eth"], ["name" => "Hung", "url" => "https://x.com/hung_eth"],];
+                $artists = [
+                    [   
+                        "name" => "Hagen", 
+                        "url" => "https://x.com/Hagen_web3",
+                        "img" => "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_Community-culture.png",
+                    ],
+                    [
+                        "name" => "auroraxbt x empressitta", 
+                        "url" => "https://x.com/empressitta",
+                        'img' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_monad-eco.png",
+                    ],
+                        
+                    [
+                        "name" => "",
+                        "url" => "#",
+                        'img' =>  get_template_directory_uri() . "/assets/images/3.png",
+                    ],
+                    [
+                        "name" => "callmexenom",
+                        "url" => "https://x.com/callmexenom",
+                        'img' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_Community-culture.png",
+                    ],
+                    [
+                        "name" => "Linad",
+                        "url" => "https://x.com/zhangliu_eth",
+                        'img' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_contribute.png",
+                    ],
+                    [
+                        "name" => "Puichii",
+                        "url" => "https://x.com/NPuichii",
+                        'img' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_Artists-and-Arts.png",
+                    ],
+                    [
+                        "name" => "VU HUNG",
+                        "url" => "https://x.com/vuvanhungxd9",
+                        'img' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_Monad-team-members.png",
+                    ],
+                     
+                     [
+                        "name" => "",
+                        "url" => "#",
+                        'img' =>  get_template_directory_uri() . "/assets/images/8.png",
+                    ],
+                    [
+                        "name" => "",
+                        "url" => "#",
+                        'img' =>  get_template_directory_uri() . "/assets/images/9.png",
+                    ],
+                    [
+                        "name" => "",
+                        "url" => "#",
+                        'img' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_faq.png",
+                    ],
+                    ];
                 for ($i = 1; $i <= count($categories); $i++) {
-                    $artist = $artists[($i - 1) % count($artists)]; ?>
+                     ?>
                     <div class="col-lg-4 col-md-6 col-6">
                         <a href="<?php echo esc_url(home_url("/". $categories[$i-1]->slug)); ?>">
                             <div class="box-content-main">
                                 <div class="box-image">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $i; ?>.png" alt="Image Description" class="image-home">
+                                    <img src="<?php echo $artists[$i-1]["img"] ?>" alt="Image Description" class="image-home">
                                 </div>
-                                <div class="box-artist d-none-sm">
-                                    <a href="<?php echo $artist["url"]; ?>" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span><?php echo $artist["name"]; ?></span></a>　
+                                <div class="box-artist d-none-sm <?php echo ($artists[$i-1]["name"] == "" ? "d-none" : ""); ?>">
+                                    <a href="<?php echo $artists[$i-1]["url"]; ?>" target="_blank" rel="noopener noreferrer" class="artist ">Artist: <span><?php echo $artists[$i - 1]["name"]; ?></span></a>　
                                 </div>
                                 <div class="box-content ">
                                     <h3 class="home-title"><?php echo $categories[$i-1]->name; ?></h3>
