@@ -550,6 +550,14 @@ h2.name-title.ml-5 {
 .mt-4.p-content.text-lg.text-white.italic.color-content{
     font-family: 'Calibri';
 }
+
+.set-position{
+    justify-content: start;
+}
+
+h1.text-2xl.font-bold.text-foreground{
+    line-height: 1.2;
+}
 @media (max-width: 431px){
       .col-lg-9.col-md-12{
          margin: 0;
@@ -581,6 +589,9 @@ h2.name-title.ml-5 {
          transform: none;
       }
       
+      .set-position{
+        justify-content: center;
+      }
   
       
     }
@@ -658,6 +669,7 @@ a.share-button:hover{
 .detail-title{
     color: #FFFFFF !important;
 }
+
 
 </style>
 <section class="detail-post">
@@ -789,7 +801,7 @@ a.share-button:hover{
             </div>
         </div>
         <div class="container box-last-">
-        <div  class="d-flex align-items-center justify-content-center gap-1 p-3">
+        <div  class="d-flex align-items-center set-position fw-bold gap-1 p-3">
             <a href="<?php echo home_url(); ?>" >
                     <img src="<?php echo get_template_directory_uri().'/assets/images/favicon.png' ?>" alt="Logo" class="favicon">
                 </a>
