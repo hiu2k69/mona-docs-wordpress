@@ -527,7 +527,7 @@ get_header();
    }
 
    .box-content-artist {
-      padding: 1rem 1rem 1.25rem 1rem;
+      padding: 1rem;
       height: 140px;
    }
 
@@ -648,6 +648,18 @@ get_header();
    padding: 0;
 }
 
+.home-title-artist{
+   font-size: 1rem !important;
+}
+
+.home-content-artist{
+   line-height: 1.3 !important;
+}
+
+.box-content-artist{
+   height: 115px !important;
+}
+
    }
 
    @media (max-width: 1025px) and (min-width: 431px) {
@@ -733,7 +745,7 @@ get_header();
 
    }
    #result_ajaxp_new {
-         padding: 20px;
+         padding: 0 20px;
       }
 
    .col-lg-3.col-md-4.col-6 {
