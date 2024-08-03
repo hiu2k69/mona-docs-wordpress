@@ -286,11 +286,27 @@ get_header();
       -webkit-box-orient: vertical;
    }
 
+   .home-title-artist {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      font-size: 1.25rem !important;
+   }
+
    .home-content {
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
+   }
+
+   .home-content-artist {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      font-size: 0.875rem !important;
    }
 
    .box-content {
@@ -774,6 +790,39 @@ get_header();
       max-width: 100%;
       display: inline-block;
    }
+
+   .labels {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.box-new {
+    background-color: #FF9900;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: 'Segoe UI';
+    border-radius: 20px;
+    border: 3px solid #FFFFFF;
+    margin-right: 5px;
+}
+
+.box-artist-new {
+    background-color: #00FFF2;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #836EF9;
+    font-family: 'Segoe UI';
+    border-radius: 20px;
+    border: 3px solid #836EF9;
+}
 </style>
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -926,10 +975,10 @@ get_header();
          </div>
          <div class="col-lg-9 col-md-12 col-sm-12">
             <div class="tab-content mt-5">
-               <?php foreach ($categories as $category) {
-                  $tab = $category->slug; ?>
-                  <div class="tab-pane " id="<?php echo $tab; ?>">
+                  <div class="tab-pane active ">
                      <?php
+                     $category = get_category_by_slug($pathname);
+                     $tab = $category->slug;
                      $args = [
                         "category" => $category->term_id,
                         "posts_per_page" => -1,
@@ -937,7 +986,7 @@ get_header();
 
                      $posts = get_posts($args);
 
-                     $teamMembers = (($tab == "team-members") || ($tab == "monad-media-kit")) ? "d-none" : "";
+                     $teamMembers = (($tab == "team-members") || ($tab == "monad-media-kit") || ($tab == "artists-and-gallery")) ? "d-none" : "";
 
                      if (count($posts) >= 1) { ?>
                         <div class="container <?php echo $teamMembers;  ?> ">
@@ -1035,6 +1084,7 @@ get_header();
                      <?php
                      }
                      ?>
+                     <!-- team-member -->
                      <div class="container <?php echo ($tab == "team-members" ? "" : "d-none")  ?>">
                         <div class="flex justify-between items-center mb-4">
                            <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
@@ -1085,6 +1135,9 @@ get_header();
                         </div>
 
                      </div>
+                     <!-- --- -->
+
+                     <!-- monad media kit -->
                      <div class="container <?php echo ($tab == "monad-media-kit" ? "" : "d-none")  ?>">
                         <div class="flex justify-between items-center mb-4">
                            <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
@@ -1284,10 +1337,23 @@ get_header();
                            </div>
                         </div>
                      </div>
-                  </div>
+                     <!-- ----- -->
 
-               <?php
-               } ?>
+                     <!-- artist -->
+                     <div class="container <?php echo ($tab == "artists-and-gallery" ? "" : "d-none")  ?> ">
+                           <div class="flex justify-between items-center mb-4">
+                              <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
+                              <div class="relative d-none-sm">
+                                 <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                                    <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                                 </span>
+                                 <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                              </div>
+                           </div>
+                           <?php  echo do_shortcode('[ajax_pagination_artist post_type="post" cat="' . $category->term_id . '" posts_per_page="12" paged="1"]'); ?>
+                     </div>
+                     <!-- ----- -->
+                  </div>
             </div>
          </div>
          <div style="height: 41px;">&nbsp;</div>

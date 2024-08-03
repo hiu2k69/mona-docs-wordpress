@@ -8214,11 +8214,13 @@ nav#site-navigation-mobile {
 	margin: 0;
 }
 
-.menu-mobile a:hover h2{
+.menu-mobile a:hover h2, .menu-mobile a:active h2{
 	color: #FFFFFF;
 }
 
-.menu-mobile a:hover img {
+
+
+.menu-mobile a:hover img, .menu-mobile a:active img {
 	filter: brightness(100%) contrast(100%) grayscale(100%) sepia(0) hue-rotate(0deg) saturate(0) brightness(2);
  }
 
