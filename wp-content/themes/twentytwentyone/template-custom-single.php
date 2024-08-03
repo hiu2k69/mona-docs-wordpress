@@ -70,7 +70,7 @@ h2.name-title.ml-5 {
     }
     .gap-05 {
         gap: 0.5rem;
-        padding: 7px 54px !important;
+        padding: 5.275px 54px !important;
     }
     h2.name-title.ml-5 {
         font-size: 17px !important;

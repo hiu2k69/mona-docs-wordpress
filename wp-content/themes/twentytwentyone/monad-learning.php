@@ -35,6 +35,42 @@ get_header();
     } */
 
    }
+   @media only screen and (min-width: 992px) and (max-width: 1779px) {
+    h2.name-title.ml-5 {
+        font-size: 13px; /* Adjust as needed */
+    }
+    .container.box-last- {
+        margin-left: 18%; /* Adjust as needed */
+    }
+    .tab-content.mt-5 {
+        width: 80%; /* Adjust as needed */
+        margin-top: 6rem; /* Adjust as needed */
+    }
+    .col-lg-9.col-md-12 {
+        margin-left: 22%;
+        padding-left: 18px;
+    }
+    .gap-05 {
+        gap: 0.5rem;
+        padding: 8px 46px !important;;
+    }
+    .col-lg-2.col-md-3 {
+        position: fixed;
+        top: 10%;
+    }
+    .container.box-last- {
+        margin-left: 0%;
+}
+    .main-navigation .menu {
+    list-style: none;
+    display: flex;
+    gap: 4.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+}
 
    @media only screen and (min-width: 1780px) and (max-width: 1919px) {
       h2.name-title.ml-5 {
