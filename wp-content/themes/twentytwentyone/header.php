@@ -41,8 +41,24 @@
     );
     $category = get_category_by_slug($current_page_path);
 
+    $cat_title = null;
+    $image = null;
+    $img_cat = [
+            "monad-learning" => "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_monadlearn.png",
+            'monad-ecosystem' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_monad-eco.png",
+            'community-news' =>  get_template_directory_uri() . "/assets/images/3.png",
+            'community-culture' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_Community-culture.png",
+            'how-to-contribute' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_contribute.png",
+            'artists-and-gallery' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_Artists-and-Arts.png",
+            'team-members' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_Monad-team-members.png",
+            'monacomics' =>  get_template_directory_uri() . "/assets/images/8.png",
+            'monad-media-kit' =>  get_template_directory_uri() . "/assets/images/9.png",
+            'faqs' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_faq.png",
+        ];
 if ($category) {
     $title = $category->name;
+    $cat_title = $title;
+    $image = $img_cat[$category->slug];
 }
     global $wp_query;
     $post_slug = $wp_query->query_vars['custom_post_slug'];
@@ -61,16 +77,16 @@ if ($category) {
   <title><?php echo $title ?> - <?php bloginfo('name'); ?></title>
 
   <!-- Open Graph meta tags -->
-  <meta property="og:title" content="<?php echo esc_attr($meta_title); ?>" />
+  <meta property="og:title" content="<?php echo ($cat_title) ? $cat_title : esc_attr($meta_title); ?>" />
   <meta property="og:description" content="<?php echo esc_attr($meta_description); ?>" />
-  <meta property="og:image" content="<?php echo esc_url($meta_image); ?>" />
+  <meta property="og:image" content="<?php echo $image ? $image : esc_url($meta_image); ?>" />
   <meta property="og:url" content="<?php echo esc_url($meta_url); ?>" />
   <meta property="og:type" content="article" />
 
   <!-- Twitter Card meta tags -->
-  <meta name="twitter:title" content="<?php echo esc_attr($meta_title); ?>" />
+  <meta name="twitter:title" content="<?php echo ($cat_title) ? $cat_title : esc_attr($meta_title); ?>" />
   <meta name="twitter:description" content="<?php echo esc_attr($meta_description); ?>" />
-  <meta name="twitter:image" content="<?php echo esc_url($meta_image); ?>" />
+  <meta name="twitter:image" content="<?php echo $image ? $image : esc_url($meta_image); ?>" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicon -->

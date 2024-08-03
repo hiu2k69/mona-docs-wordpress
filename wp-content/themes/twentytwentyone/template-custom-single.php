@@ -645,7 +645,7 @@ h2.name-title.ml-5 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: background-color 0.3s ease;
-    z-index: 10002;
+    z-index: 10001;
 }
 a.share-button:hover{
     color: white;
