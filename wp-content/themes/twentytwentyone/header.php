@@ -43,6 +43,7 @@
 
     $cat_title = null;
     $image = null;
+    $desc_cat = null;
     $img_cat = [
             "monad-learning" => "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_monadlearn.png",
             'monad-ecosystem' =>  "https://monadocs.xyz/wp-content/uploads/2024/08/homepage_monad-eco.png",
@@ -59,6 +60,7 @@ if ($category) {
     $title = $category->name;
     $cat_title = $title;
     $image = $img_cat[$category->slug];
+    $desc_cat = $category->description;
 }
     global $wp_query;
     $post_slug = $wp_query->query_vars['custom_post_slug'];
@@ -78,14 +80,14 @@ if ($category) {
 
   <!-- Open Graph meta tags -->
   <meta property="og:title" content="<?php echo ($cat_title) ? $cat_title : esc_attr($meta_title); ?>" />
-  <meta property="og:description" content="<?php echo esc_attr($meta_description); ?>" />
+  <meta property="og:description" content="<?php echo $desc_cat ? $desc_cat : esc_attr($meta_description); ?>" />
   <meta property="og:image" content="<?php echo $image ? $image : esc_url($meta_image); ?>" />
   <meta property="og:url" content="<?php echo esc_url($meta_url); ?>" />
   <meta property="og:type" content="article" />
 
   <!-- Twitter Card meta tags -->
   <meta name="twitter:title" content="<?php echo ($cat_title) ? $cat_title : esc_attr($meta_title); ?>" />
-  <meta name="twitter:description" content="<?php echo esc_attr($meta_description); ?>" />
+  <meta name="twitter:description" content="<?php echo $desc_cat ? $desc_cat : esc_attr($meta_description); ?>" />
   <meta name="twitter:image" content="<?php echo $image ? $image : esc_url($meta_image); ?>" />
   <meta name="twitter:card" content="summary_large_image" />
 

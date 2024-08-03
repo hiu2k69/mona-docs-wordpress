@@ -163,7 +163,7 @@ get_header();
 
     .box-content {
         padding: 1rem;
-        /* height: 250px; */
+        height: 150px;
     }
 
     .box-content h3 {
@@ -274,6 +274,7 @@ get_header();
             background: none;
             border-left: none;
             padding: 1rem 0.5rem;
+            height: auto;
         }
 
         .box-content h3 {
@@ -427,6 +428,7 @@ get_header();
                     ],
                     ];
                 for ($i = 1; $i <= count($categories); $i++) {
+                    $trimmed_content = wp_trim_words($categories[$i-1]->description, 50, '...');
                      ?>
                     <div class="col-lg-4 col-md-6 col-6">
                         <a href="<?php echo esc_url(home_url("/". $categories[$i-1]->slug)); ?>">
@@ -439,7 +441,7 @@ get_header();
                                 </div>
                                 <div class="box-content ">
                                     <h3 class="home-title"><?php echo $categories[$i-1]->name; ?></h3>
-                                    <p class="home-content d-none-sm">This is a place containing articles to help you understand monads and their technology; we will update regularly.</p>
+                                    <p class="home-content d-none-sm"><?php echo $categories[$i-1]->description; ?></p>
 
                                 </div>
                                 <a href="<?php echo esc_url(home_url("/". $categories[$i-1]->slug)); ?>" class="see-more d-none-sm">

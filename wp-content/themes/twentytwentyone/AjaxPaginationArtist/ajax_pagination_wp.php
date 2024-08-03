@@ -7,7 +7,12 @@ function ajax_pagination_artist_svl($atts)
             'posts_per_page' => 12,
             'paged' => 1,
             'post_type' => 'post',
-            'cat' => 19
+            'cat' => 19,
+            'orderby'   => array(
+                'modified' => 'DESC', 
+                'date'     => 'DESC', 
+            ),
+             "order" => "DESC"
         ),
         $atts,
         'ajax_pagination_artist'
@@ -29,7 +34,12 @@ function query_ajax_pagination_artist($post_type = 'post', $cat = 19, $posts_per
         'posts_per_page' => $posts_per_page,
         'cat' => $cat,
         'paged' => $paged,
-        'post_status' => 'publish'
+        'post_status' => 'publish',
+        'orderby'   => array(
+            'modified' => 'DESC', 
+            'date'     => 'DESC', 
+        ),
+        "order" => "DESC"
     );
     $q_svl = new WP_Query($args_svl);
     $total_records = $q_svl->found_posts;
@@ -46,11 +56,11 @@ function query_ajax_pagination_artist($post_type = 'post', $cat = 19, $posts_per
             $content_without_shortcodes = strip_shortcodes($content);
             $clean_content = wp_strip_all_tags($content_without_shortcodes);
             $trimmed_content = wp_trim_words($clean_content, 50, '...');
-            $allpost .= '<div class="col-lg-3 col-md-6 col-12">';
+            $allpost .= '<div class="col-lg-3 col-md-6 col-6">';
             $allpost .= '<a href="' . esc_url(home_url('/detail/')) . $post_slug . '">';
             $allpost .= '<div class="box-content-main">';
             $allpost .= '<div class="box-image">';
-            $allpost .= '<img src="' . get_the_post_thumbnail_url($post_id) . '" alt="Image Description" class="image-home">';
+            $allpost .= '<img src="' . get_the_post_thumbnail_url($post_id) . '" alt="Image Description" class="image-home-artist">';
            
 $current_time = current_time('timestamp');
 $post_time = get_the_time('U', $post_id);
@@ -75,7 +85,7 @@ if ($post_time >= $five_minutes_ago || $post_modified_time >= $five_minutes_ago)
 }
 
 $allpost .= '</div>'; 
-$allpost .= '<div class="box-content">';
+$allpost .= '<div class="box-content-artist">';
 $allpost .= '<h3 class="home-title-artist text-center">'. get_the_title() .'</h3>';
 $allpost .= '<p class="ml-2 home-content-artist text-sm text-center">'. $trimmed_content .'</p>';
 $allpost .= '</div>';
