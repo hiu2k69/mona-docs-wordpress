@@ -54,7 +54,7 @@ h2.name-title.ml-5 {
     }
     .gap-05 {
         gap: 0.5rem;
-        padding: 6px 54px !important;
+        padding: 4px 54px !important;
     }
     .col-lg-2.col-md-3 {
         position: fixed;
@@ -70,7 +70,7 @@ h2.name-title.ml-5 {
     }
     .gap-05 {
         gap: 0.5rem;
-        padding: 5.275px 54px !important;
+        padding: 4px 54px !important;
     }
     h2.name-title.ml-5 {
         font-size: 17px !important;
