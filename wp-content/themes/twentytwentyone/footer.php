@@ -86,6 +86,34 @@ a.text-account {
         });
     });
 </script>
+<script>
+    document.getElementById('search-form-mobile').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var keyword = document.getElementById('search-input-mobile').value;
+        if (keyword.trim() === "") {
+            event.preventDefault(); 
+            return;
+        }
+        var url = new URL(window.location.href);
+        var baseUrl = url.origin;
+        var newUrl = baseUrl + '/search?k=' + encodeURIComponent(keyword);
+        window.location.href = newUrl;
+    });
+
+    document.getElementById('click-search-mobile').addEventListener('click', function(event) {
+        event.preventDefault();
+        var keyword = document.getElementById('search-input-mobile').value;
+        if (keyword.trim() === "") {
+            event.preventDefault(); 
+            return;
+        }
+        var url = new URL(window.location.href);
+        var baseUrl = url.origin;
+        var newUrl = baseUrl + '/search?k=' + encodeURIComponent(keyword);
+        window.location.href = newUrl;
+    });
+    
+</script>
 </body>
 </html>
 

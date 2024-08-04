@@ -137,10 +137,12 @@ if ($category) {
             <nav id="site-navigation-mobile" class="main-navigation-mobile">
                 <ul id="primary-menu" class="menu-mobile">
                     <div class="position-relative px-3 my-3">
-                                 <span class="position-absolute left-mobile-2 top-1/2 transform -translate-y-1/2 text-white">
+                        <form id="search-form-mobile" action="<?php echo  home_url("/") ?>" method="get">
+                                 <span id="click-search-mobile" class="position-absolute cursor-pointer left-mobile-2 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" class="icon" />
                                  </span>
                                  <input type="text" placeholder="Search" id="search-input-mobile" class="focus:outline-none" />
+                        </form>
                     </div>
                     <?php 
                     $current_page_url = get_permalink();
