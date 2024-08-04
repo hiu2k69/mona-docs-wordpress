@@ -660,6 +660,9 @@ get_header();
    height: 115px !important;
 }
 
+#result_ajaxp_search{
+        padding: 10px;
+      }
    }
 
    @media (max-width: 1025px) and (min-width: 431px) {
@@ -1047,6 +1050,7 @@ get_header();
                      <?php
                      $category = get_category_by_slug($pathname);
                      $tab = $category->slug;
+                     $keyword = isset($_GET['k']) ? sanitize_text_field($_GET['k']) : '';
                      $args = [
                         "category" => $category->term_id,
                         "posts_per_page" => -1,
@@ -1055,16 +1059,19 @@ get_header();
                      $posts = get_posts($args);
 
                      $teamMembers = (($tab == "team-members") || ($tab == "monad-media-kit") || ($tab == "artists-and-gallery")) ? "d-none" : "";
-
+                     if((($tab != "team-members") || ($tab != "monad-media-kit") || ($tab != "artists-and-gallery")) && empty($keyword))
+                     {
                      if (count($posts) >= 1) { ?>
                         <div class="container <?php echo $teamMembers;  ?> ">
                            <div class="flex justify-between items-center mb-4">
                               <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
                               <div class="relative d-none-sm">
-                                 <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                              <form id="search-form" action="<?php echo  home_url("/" . $category->slug . "") ?>" method="get">
+                                 <span id="click-search" class="absolute cursor-pointer right-3 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
                                  </span>
                                  <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                              </form>
                               </div>
                            </div>
 
@@ -1133,12 +1140,6 @@ get_header();
                         <div class="container <?php echo $teamMembers;  ?>">
                            <div class="flex justify-between items-center  mb-4">
                               <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""> <?php echo $category->name; ?></h1>
-                              <div class="relative d-none-sm">
-                                 <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                                    <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                                 </span>
-                                 <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                              </div>
                            </div>
                            <div class="row pb-5 text-center">
                               <div class="content-comingsoon">
@@ -1151,17 +1152,13 @@ get_header();
                         </div>
                      <?php
                      }
+                  }
                      ?>
                      <!-- team-member -->
-                     <div class="container <?php echo ($tab == "team-members" ? "" : "d-none")  ?>">
+                      <?php if($tab == "team-members"){ ?>
+                     <div class="container ">
                         <div class="flex justify-between items-center mb-4">
                            <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
-                           <div class="relative d-none-sm">
-                              <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                                 <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                              </span>
-                              <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                           </div>
                         </div>
                         <div class="tabs ">
                            <ul class="tab-links">
@@ -1204,17 +1201,13 @@ get_header();
 
                      </div>
                      <!-- --- -->
-
+                     <?php }
+                     
+                     if($tab == "monad-media-kit"){ ?>
                      <!-- monad media kit -->
-                     <div class="container <?php echo ($tab == "monad-media-kit" ? "" : "d-none")  ?>">
+                     <div class="container">
                         <div class="flex justify-between items-center mb-4">
                            <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
-                           <div class="relative d-none-sm">
-                              <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
-                                 <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
-                              </span>
-                              <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
-                           </div>
                         </div>
                         <div class="container">
                            <div class="row">
@@ -1406,21 +1399,67 @@ get_header();
                         </div>
                      </div>
                      <!-- ----- -->
-
+                        <?php }
+                        if($tab == "artists-and-gallery"){ ?>
                      <!-- artist -->
-                     <div class="container <?php echo ($tab == "artists-and-gallery" ? "" : "d-none")  ?> ">
+                     <div class="container ">
                            <div class="flex justify-between items-center mb-4">
                               <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
                               <div class="relative d-none-sm">
-                                 <span class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white">
+                              <form id="search-form" action="<?php echo  home_url("/" . $category->slug . "") ?>" method="get">
+                                 <span id="click-search" class="absolute cursor-pointer right-3 top-1/2 transform -translate-y-1/2 text-white">
                                     <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
                                  </span>
                                  <input type="text" placeholder="Search" id="search-input" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                              </form>
                               </div>
                            </div>
                            <?php  echo do_shortcode('[ajax_pagination_artist post_type="post" cat="' . $category->term_id . '" posts_per_page="12" paged="1"]'); ?>
                      </div>
                      <!-- ----- -->
+                      <?php } 
+                      if($keyword != ""){?>
+                        <div class="container  ">
+                           <div class="flex justify-between items-center mb-4">
+                              <h1 class="text-3xl pl-3 font-bold text-white d-flex"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" class="icon-title" alt=""><?php echo $category->name; ?></h1>
+                              <div class="relative d-none-sm">
+                              <form id="search-form" action="<?php echo  home_url("/" . $category->slug . "") ?>" method="get">
+                                 <span id="click-search" class="absolute cursor-pointer right-3 top-1/2 transform -translate-y-1/2 text-white">
+                                    <img aria-hidden="true" alt="search" src="<?php echo get_template_directory_uri(); ?>/assets/images/search.svg" />
+                                 </span>
+                                 <input type="text" placeholder="Search" id="search-input" value="<?php echo $keyword ?>" class="bg-black text-white rounded-full pl-4 pr-10 py-2 focus:outline-none" />
+                              </form>
+                              </div>
+                           </div>
+                           <?php $args = [
+                        "category" => $category->term_id,
+                        "posts_per_page" => -1,
+                        "s" => $keyword
+                     ];
+
+                     $posts = get_posts($args); 
+                      if(count($posts) > 0){
+                           
+                              echo do_shortcode('[ajax_pagination_search post_type="post" cat="' . $category->term_id . '" keyword="'. $keyword .'" posts_per_page="6" paged="1"]'); 
+                        } else{
+                           ?>
+                           
+                           <div class="row pb-5 text-center">
+                              <div class="content-comingsoon">
+                                 <img src="https://monadocs.xyz/wp-content/uploads/2024/07/banhmi-moyaki-512.gif" alt="" class="coming-soon">
+                                 <br>
+                                 <h3 class="text-2xl">"nothing here, but you can eat banhmi moyaki before leave"</h3>
+                                 <a href="<?php echo home_url(); ?>" class="d-mobile button-home">Go to Homepage</a>
+                              </div>
+                           </div>
+                       
+                        
+                      <?php
+                      }
+                      ?>
+                       </div>
+                       <?php
+                      } ?>
                   </div>
             </div>
          </div>
@@ -1442,6 +1481,32 @@ get_header();
          }
       });
    });
+</script>
+<script>
+    document.getElementById('search-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var keyword = document.getElementById('search-input').value;
+        if (keyword.trim() === "") {
+            event.preventDefault(); 
+            return;
+        }
+        var currentUrl = window.location.href.split('?')[0];
+        var newUrl = currentUrl + '?k=' + encodeURIComponent(keyword);
+        window.location.href = newUrl;
+    });
+
+    document.getElementById('click-search').addEventListener('click', function(event) {
+        event.preventDefault();
+        var keyword = document.getElementById('search-input').value;
+        if (keyword.trim() === "") {
+            event.preventDefault(); 
+            return;
+        }
+        var currentUrl = window.location.href.split('?')[0];
+        var newUrl = currentUrl + '?k=' + encodeURIComponent(keyword);
+        window.location.href = newUrl;
+    });
+    
 </script>
 <script>
    const data = [{
