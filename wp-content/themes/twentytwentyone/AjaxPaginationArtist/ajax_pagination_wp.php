@@ -69,11 +69,14 @@ $post_modified_time = get_the_modified_time('U', $post_id);
 $five_minutes_ago = strtotime('-5 minutes', $current_time);
 if ($post_time >= $five_minutes_ago || $post_modified_time >= $five_minutes_ago) {
     $allpost .= '<div class="labels">';
-    $allpost .= '<div class="box-new">';
+    $allpost .= '<div class="box-new d-none-sm">';
     $allpost .= '<span class="">New</span>';
     $allpost .= '</div>';
     $allpost .= '<div class="box-artist-new">';
     $allpost .= '<a href="'. (!empty($custom_link) ? $custom_link : "#").'" target="_blank" rel="noopener noreferrer" class="artist">Artist: <span>'. (!empty($artist) ? $artist : get_the_author()).'</span></a>';
+    $allpost .= '</div>';
+    $allpost .= '<div class="box-new d-mobile">';
+    $allpost .= '<span class="">New</span>';
     $allpost .= '</div>';
     $allpost .= '</div>';
 } else {

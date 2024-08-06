@@ -7714,10 +7714,10 @@ section.second{
 }
 
 .h2.title-content-main.text-center.p-5 {
-    font-size: 47px;
+    font-size: 40px;
     color: white;
 	font-family: 'Segoe UI';
-    font-weight: bolder;
+    font-weight: bold;
 }
 img.img-title {
     width: 220px;
