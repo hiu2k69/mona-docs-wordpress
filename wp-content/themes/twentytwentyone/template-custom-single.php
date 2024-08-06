@@ -670,16 +670,13 @@ a.share-button:hover{
 }
 
 .table-of-contents {
-    /* background: #090909; */
     padding: 20px;
-    /* border: 1px solid #333; */
     position: fixed;
     right: 20px;
     top: 155px;
     width: 250px;
-    /* max-height: 70vh; */
-    /* overflow-y: auto; */
     color: white;
+    z-index: 90;
 }
 .table-of-contents h2 {
     margin-top: 0;
