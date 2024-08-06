@@ -152,9 +152,7 @@ h2.name-title.ml-5 {
         line-height : 1.5;
     }
 
-    .mt-4.p-content.text-lg.text-white.italic.color-content a {
-    color: #2F9BEE !important;
-}
+
     .mt-4.p-content.text-lg.text-white.italic.color-content li {
         line-height: 3;
         font-size: 25px;
@@ -670,7 +668,52 @@ a.share-button:hover{
     color: #FFFFFF !important;
 }
 
+.table-of-contents {
+    /* background: #090909; */
+    padding: 20px;
+    /* border: 1px solid #333; */
+    position: fixed;
+    right: 20px;
+    top: 155px;
+    width: 250px;
+    /* max-height: 70vh; */
+    /* overflow-y: auto; */
+    color: white;
+}
+.table-of-contents h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #836EF9;
+}
+.table-of-contents ul {
+    list-style: none;
+    padding-left: 0;
+}
+.table-of-contents li {
+    margin-bottom: 5px;
+    line-height: 1.5 !important;
+    font-size: 20px !important;
 
+}
+.table-of-contents a {
+    text-decoration: none;
+    color: #949494 !important;
+    font-weight: normal !important;
+}
+.table-of-contents a:hover {
+    text-decoration: underline;
+}
+
+.mt-4.p-content.text-lg.text-white.italic.color-content a {
+    color: #2F9BEE ;
+}
+
+.toc-title {
+    position: relative;
+    padding-top: 80px; 
+    margin-top: -80px; 
+}
 </style>
 <section class="detail-post">
     <div class="container-fluid">
@@ -742,8 +785,8 @@ a.share-button:hover{
                </box>
             </div>
 
-         </div>
-            <div class="col-lg-9 col-md-12 ">
+        </div>
+        <div class="col-lg-9 col-md-12 ">
                 <div class="tab-content mt-5">
                     <?php
 
@@ -798,7 +841,8 @@ a.share-button:hover{
                    
                 </div>
                 
-            </div>
+        </div>
+
         </div>
         <div class="container box-last-">
         <div  class="d-flex align-items-center set-position fw-bold gap-1 p-3">
