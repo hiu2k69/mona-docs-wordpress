@@ -5165,10 +5165,10 @@ h1.page-title {
 	flex: 1 1 20%;
 	max-width: 20%;
 }
-
+/* 
 li {
 	list-style: none !important;
-}
+} */
 
 a {
 	text-decoration: none !important;

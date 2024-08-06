@@ -147,18 +147,19 @@ h2.name-title.ml-5 {
     }
 
     .mt-4.p-content.text-lg.text-white.italic.color-content h3, .mt-4.p-content.text-lg.text-white.italic.color-content h4, .mt-4.p-content.text-lg.text-white.italic.color-content h5 {
-        color: #836EF9;
+        color: #4DC4C8;
         font-weight: bolder;
         line-height : 1.5;
     }
 
 
     .mt-4.p-content.text-lg.text-white.italic.color-content li {
-        line-height: 3;
-        font-size: 25px;
-        font-family: 'Calibri';
-    }
-
+    font-family: 'Calibri';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #D4D4D4 !important;
+}
     
     .box-last-post img {
         width: 100% !important;
