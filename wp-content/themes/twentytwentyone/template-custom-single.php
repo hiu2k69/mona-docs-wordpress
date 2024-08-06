@@ -555,7 +555,7 @@ h2.name-title.ml-5 {
 }
 
 h1.text-2xl.font-bold.text-foreground{
-    line-height: 1.2;
+    line-height: 1.3;
 }
 @media (max-width: 431px){
       .col-lg-9.col-md-12{
