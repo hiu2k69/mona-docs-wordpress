@@ -159,6 +159,7 @@ h2.name-title.ml-5 {
     font-weight: 400;
     line-height: 1.8;
     color: #D4D4D4 !important;
+    list-style: unset !important;
 }
     
     .box-last-post img {
