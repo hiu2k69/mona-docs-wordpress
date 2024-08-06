@@ -365,7 +365,7 @@ get_header();
             <div class="h2 title-content-main text-center p-5 d-none-sm">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/monad.png" alt="Description" class="img-title"> - All you need is here
             </div>
-            <div class="row pt-5">
+            <div class="row pt-3">
                 <?php
                  $categories = get_terms([
                     "taxonomy" => "category",

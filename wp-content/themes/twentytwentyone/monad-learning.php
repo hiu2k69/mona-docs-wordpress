@@ -182,6 +182,7 @@ get_header();
       /* padding-top: 8px; */
       padding-bottom: 8px;
       outline: none;
+      box-shadow: none;
    }
 
    .text-center.just-content-center.box-social.flex.space-x-2 {
@@ -663,6 +664,12 @@ get_header();
 #result_ajaxp_search{
         padding: 10px;
       }
+
+      .labels{
+         flex-direction: column;
+         align-items: end !important;
+         gap: 0.2rem;
+      }
    }
 
    @media (max-width: 1025px) and (min-width: 431px) {
@@ -867,7 +874,7 @@ get_header();
     align-items: center;
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 5px;
 }
 
 .box-new {
