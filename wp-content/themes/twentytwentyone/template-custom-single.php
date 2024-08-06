@@ -681,7 +681,7 @@ a.share-button:hover{
 }
 .table-of-contents h2 {
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: 20px;
     font-weight: bold;
     color: #836EF9;
 }
@@ -694,6 +694,14 @@ a.share-button:hover{
     line-height: 1.5 !important;
     font-size: 20px !important;
 
+}
+.table-of-contents.d-none-sm a {
+    font-size: 18px;
+    font-family: 'Calibri';
+    font-weight: bolder;
+}
+i.fa-solid.fa-chevron-right {
+    display: none;
 }
 .table-of-contents a {
     text-decoration: none;
