@@ -830,5 +830,33 @@ function my_theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
+function create_table_of_contents($content) {
+   
+    preg_match_all('/<h([1-6])>(.*?)<\/h\1>/', $content, $matches, PREG_SET_ORDER);
+    
+    if (!$matches) {
+        return $content;
+    }
+
+    $toc = '<div class="table-of-contents d-none-sm"><h2>Content table</h2><ul>';
+    foreach ($matches as $match) {
+		$title_text = strip_tags($match[2]);
+        $toc .= '<li><a href="#'. sanitize_title($title_text) .'"><i class="fa-solid fa-chevron-right " style="font-size: 1rem"></i> &nbsp;'. $title_text .'</a></li>';
+    }
+    $toc .= '</ul></div>';
+
+    foreach ($matches as $match) {
+		$title_text = strip_tags($match[2]);
+        $content = str_replace($match[0], '<h'. $match[1] .' id="'. sanitize_title($title_text) .'" class="toc-title">'. $match[2] .'</h'. $match[1] .'>', $content);
+    }
+
+    return $content . $toc;
+}
+
+add_filter('the_content', 'create_table_of_contents');
+
+
+
+
 
 
