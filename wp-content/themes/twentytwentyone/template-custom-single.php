@@ -147,7 +147,7 @@ h2.name-title.ml-5 {
     }
 
     .mt-4.p-content.text-lg.text-white.italic.color-content h3, .mt-4.p-content.text-lg.text-white.italic.color-content h4, .mt-4.p-content.text-lg.text-white.italic.color-content h5 {
-        color: #4DC4C8;
+        color: #836EF9;
         font-weight: bolder;
         line-height : 1.5;
     }
