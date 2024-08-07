@@ -691,7 +691,7 @@ a.share-button:hover{
 }
 .table-of-contents li {
     margin-bottom: 5px;
-    line-height: 1.5 !important;
+    line-height: 1.2 !important;
     font-size: 20px !important;
 
 }
