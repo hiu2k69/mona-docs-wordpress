@@ -841,7 +841,7 @@ function create_table_of_contents($content) {
     $toc = '<div class="table-of-contents d-none-sm"><h2>Content table</h2><ul>';
     foreach ($matches as $match) {
 		$title_text = strip_tags($match[2]);
-        $toc .= '<li><a href="#'. sanitize_title($title_text) .'"><i class="fa-solid fa-chevron-right " style="font-size: 1rem"></i> &nbsp;'. $title_text .'</a></li>';
+        $toc .= '<li><a href="#'. sanitize_title($title_text) .'" class="toc-link"><i class="fa-solid fa-chevron-right " style="font-size: 1rem"></i> &nbsp;'. $title_text .'</a></li>';
     }
     $toc .= '</ul></div>';
 
