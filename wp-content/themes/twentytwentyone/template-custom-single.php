@@ -593,7 +593,9 @@ h1.text-2xl.font-bold.text-foreground{
         justify-content: center;
       }
   
-      
+      figure.wp-caption.alignnone {
+        max-width: 100% !important;
+        }
     }
 
     @media (max-width: 1025px) and (min-width: 431px){
@@ -722,9 +724,6 @@ i.fa-solid.fa-chevron-right {
     margin-top: -80px; 
 }
 
-figure.wp-caption.alignnone {
-    max-width: 100% !important;
-}
 
 .table-of-contents a.active {
     color: #836EF9 !important;

@@ -130,7 +130,7 @@ if ($category) {
                     <li><a href="<?php echo home_url(); ?>" class="item-nav active">Home</a></li>
                     <li><a href="<?php echo home_url('/monad-learning'); ?>" class="item-nav">Monad Learning</a></li>
                     <li><a href="<?php echo home_url('/community-culture'); ?>" class="item-nav">Community Culture</a></li>
-                    <li><a href="<?php echo home_url('/news'); ?>" class="item-nav">News</a></li>
+                    <li><a href="<?php echo home_url('/community-news'); ?>" class="item-nav">News</a></li>
                     <li><a href="<?php echo home_url('/about-monadhub'); ?>" class="item-nav">About MonadHub</a></li>
                 </ul>
             </nav>
